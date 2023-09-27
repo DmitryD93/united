@@ -1,0 +1,44 @@
+.hero {
+    padding: 122px 64px 64px 64px;
+    background-image: url(../img/hero-bg.jfif);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 40%;
+    }
+
+    &__pretitle {
+        display: inline-block;
+        color: var(--black);
+        font-family: "Ubuntu";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 29px;
+    }
+
+    &__title {
+        width: 100%;
+        display: inline-block;
+        color: var(--black);
+        font-family: "Russo One";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        &-fragment {
+            display: inline-block;
+            width: 100%;
+        }
+        &-fragment:nth-child(1) {
+            text-align: start;
+        }
+        &-fragment:nth-child(2) {
+            text-align: end;
+        }
+    }
+        
+    }

@@ -61,17 +61,17 @@ body {
   min-height: 100vh;
 }
 
-.section {
-  margin-bottom: 100px;
+// .section {
+//   margin-bottom: 100px;
 
-  @include _1200 {
-    margin-bottom: 80px;
-  }
+//   @include _1200 {
+//     margin-bottom: 80px;
+//   }
 
-  @include _767 {
-    margin-bottom: 50px;
-  }
-}
+//   @include _767 {
+//     margin-bottom: 50px;
+//   }
+// }
 
 .size-h1 {
   font-weight: 700;
@@ -260,4 +260,11 @@ body {
   @include _1200 {
     display: block;
   }
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
 }
