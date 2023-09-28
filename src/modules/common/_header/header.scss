@@ -2,20 +2,21 @@
   position: relative;
   display: flex;
   flex: 0 0 auto;
+  justify-content: space-between;
   height: 120px;
   padding: 19px 121px;
   align-items: center;
   background-color: var(--white);
 
     &__link {
-      margin-right: 122px;
+      margin-right: 85px;
     }
     &__logo {
       width: 284px;
       height: 45px;
     }
     &__nav {
-      padding-right: 50px;
+      padding-right: 10px;
     }
     &__nav-list {
       height: 100%;

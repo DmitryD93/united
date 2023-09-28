@@ -12,3 +12,12 @@
     font-weight: 600;
     line-height: 1.5; 
 }
+
+// Табы
+.tabs__panel--active {
+    display: block;
+  }
+  
+  .tabs__panel {
+    display: none;
+  }

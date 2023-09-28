@@ -1,44 +1,67 @@
 .hero {
-    padding: 122px 64px 64px 64px;
-    background-image: url(../img/hero-bg.jfif);
+  padding: 122px 64px 201px 64px;
+  background-image: url(../img/hero-bg.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 85.5%;
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 40%;
-    }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 42%;
+  }
 
-    &__pretitle {
-        display: inline-block;
-        color: var(--black);
-        font-family: "Ubuntu";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.5;
-        margin-bottom: 29px;
-    }
+  &__pretitle {
+    display: inline-block;
+    color: var(--black);
+    font-family: "Ubuntu";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 29px;
+  }
 
-    &__title {
-        width: 100%;
-        display: inline-block;
-        color: var(--black);
-        font-family: "Russo One";
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.5;
-        &-fragment {
-            display: inline-block;
-            width: 100%;
-        }
-        &-fragment:nth-child(1) {
-            text-align: start;
-        }
-        &-fragment:nth-child(2) {
-            text-align: end;
-        }
+  &__title {
+    width: 100%;
+    color: var(--black);
+    font-family: "Russo One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 9px;
+
+    &-fragment {
+      display: inline-block;
+      width: 100%;
     }
-        
+    &-fragment:nth-child(odd) {
+      text-align: start;
     }
+    &-fragment:nth-child(even) {
+      text-align: end;
+      font-size: 50px;
+    }
+  }
+
+  &__descr {
+    color: var(--black);
+    font-family: "Ubuntu";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 45px;
+  }
+
+  &__tel {
+    color: var(--black);
+    font-family: "Open Sans";
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+}

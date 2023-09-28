@@ -1,0 +1,175 @@
+.popular {
+  text-align: center;
+  padding: 60px 121px;
+
+  &__title {
+    font-family: "Open Sans";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+  }
+  &__nav {
+    display: flex;
+    gap: 36px;
+    padding: 20px 17px 33px 17px;
+    border-bottom: 2px solid var(--iron);
+    margin-bottom: 40px;
+
+    &-btn {
+      position: relative;
+      color: var(--black);
+      font-family: "Open Sans";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.6;
+      opacity: 0.6;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        background-color: var(--red);
+        height: 4px;
+        left: -15px;
+        bottom: -33px;
+        transition: width 0.5s ease;
+      }
+
+      &.tab-active {
+        font-family: "Open Sans";
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.6;
+        opacity: 1;
+        transition: width 0.5s ease;
+
+        &::before {
+          width: 122%;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+    gap: 23px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 40px;
+
+        &.tab-active {
+        display: grid;
+        }
+
+    &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+      grid-column: 1 span;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 24px 17px 24px 24px;
+      background-position: 53% 19%;
+
+      &:nth-child(1) {
+        background-image: url(../img/default_engine.svg);
+      }
+      &:nth-child(2) {
+        background-image: url(../img/default_gears.svg);
+      }
+      &:nth-child(3) {
+        background-image: url(../img/default_absorber.svg);
+      }
+      &:nth-child(4) {
+        background-image: url(../img/default_wheel.svg);
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+        padding: 10px 10px 20px 0;
+        min-height: 250px;
+        margin-bottom: 46px;
+      }
+
+      &-order {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &-price {
+        color: var(--black);
+        font-family: "Open Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &__product-name {
+    color: var(--black);
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  &__bottom-content {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding-bottom: 60px;
+
+      &-btn {
+        position: relative;
+        font-family: "Ubuntu";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--black);
+
+        &:focus {
+            text-transform: uppercase;
+            color: var(--semi-black);
+            text-align: center;
+            font-family: "Open Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        &::before {
+             content: "";
+            position: absolute;
+            width: 0;
+            background-color: var(--red);
+            height: 4px;
+            left: 0;
+            bottom: -10px;
+            transition: width 0.5s ease;
+        }
+        &:focus::before {
+           width: 100%;
+        }
+      }
+  }
+}
