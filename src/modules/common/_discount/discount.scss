@@ -1,0 +1,132 @@
+.discount {
+  background: var(--grey-gradient);
+  padding: 60px 164px;
+
+  &__slide-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    &-right {
+      max-width: 50%;
+    }
+  }
+
+  &__slide-img {
+    width: 540px;
+    height: 300px;
+    border-radius: 0 20px 20px 20px;
+  }
+
+  &__swiper-utility {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15%;
+
+    &-nav {
+      position: relative;
+      right: 0;
+      height: 60px;
+      width: 260px;
+    }
+  }
+
+  &__swiper-wrapper {
+    margin-bottom: 20px;
+  }
+
+  // Миниатюры под свайпером
+
+  &__swiper-thumbs {
+    height: 60px;
+    width: 540px;
+    margin-right: 0;
+    margin-left: 0;
+
+    &-slide {
+      opacity: 0.4;
+      scale: 1;
+      border-radius: 0 20px 20px 20px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: opacity 0.3s ease, scale 0.3s ease;
+
+      &:nth-child(1) {
+        background-image: url(../img/product_one_thumb.png);
+      }
+      &:nth-child(2) {
+        background-image: url(../img/default_thumbs_element.png);
+      }
+      &:nth-child(3) {
+        background-image: url(../img/product_one_thumb.png);
+      }
+      &:nth-child(4) {
+        background-image: url(../img/product_one_thumb.png);
+      }
+      &:nth-child(5) {
+        background-image: url(../img/product_one_thumb.png);
+      }
+
+      &.swiper-slide-thumb-active {
+        opacity: 1;
+        scale: 1.2;
+        transition: opacity 0.3s ease, scale 0.3s ease;
+      }
+    }
+  }
+  &__slider-btn--prev,
+  &__slider-btn--next {
+    z-index: 15;
+  }
+  &__slider-btn--prev::after,
+  &__slider-btn--next::after {
+    content: none;
+  }
+  &__slider-btn--next {
+    transform: rotate(180deg);
+  }
+  &__swiper-pagination {
+    transform: translate3d(0, -40%, 0);
+  }
+  &__swiper-pagination .swiper-pagination-bullet {
+    background-color: var(--black);
+    width: 15px;
+    height: 15px;
+    transition: width 0.3s ease;
+  }
+  &__swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--black);
+    width: 45px;
+    border-radius: 10px;
+    opacity: 1;
+    transition: width 0.3s ease;
+  }
+
+  &__slide-content-title {
+    font-family: "Russo One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 20px;
+    max-width: 75%;
+    word-wrap: break-word;
+  }
+  &__slide-content-descr {
+    color: var(--black);
+    font-family: "Ubuntu";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    max-width: 75%;
+  }
+}

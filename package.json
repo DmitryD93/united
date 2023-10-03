@@ -37,6 +37,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-strip-comments": "^2.5.2",
     "stylelint-config-idiomatic-order": "^9.0.0",
-    "stylelint-scss": "^5.2.1"
+    "stylelint-scss": "^5.2.1",
+    "swiper": "^10.3.1"
   }
 }
