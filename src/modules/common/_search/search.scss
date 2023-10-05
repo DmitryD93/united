@@ -1,21 +1,20 @@
 .search {
-  height: 149px;
+  height: 118px;
   background-color: var(--grey);
 
   &__form {
     // position: relative;
-    width: 85.5%;
-    transform: translate(11.3%, -50%);
+    transform: translate(0, -58%);
     display: flex;
     // z-index: 5;
-    padding: 44px;
+    padding: 42px 32px;
+    gap: 32px;
     border-radius: 10px;
     background-color: var(--white);
-    margin-bottom: 15px;
 
     &-label {
       width: 100%;
-      margin-right: 50px;
+      
     }
 
     &-input {
@@ -35,7 +34,12 @@
     }
 
     &-btn {
-      padding: 10px 46.5px;
+      padding: 7px 52px;
+      font-family: "Open Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 1.5;
     }
   }
 }

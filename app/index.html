@@ -24,8 +24,8 @@
   <title>Юнайтед Сервис</title>
   <meta name="description" content="Вы поставщик Wildberries, Ozon и хотите увеличить продажи? Сделайте это за счет прозрачной аналитики с сервисом Stat4Market! Попробуйте бесплатно.">
   <link rel="stylesheet" href="css/style.min.css">
-
-
+  <script src="https://api-maps.yandex.ru/2.1?apikey=5143295b-6e4c-4762-80f7-dd25151c4c7a&lang=ru_RU" type="text/javascript"></script>
+  
   
 
 
@@ -86,14 +86,18 @@
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation
     </p>
-    <span class="hero__tel">8-800-555-60-50</span>
-  </div>
+    <div class="hero__content-contacts">
+       <span class="hero__tel">8-800-555-60-50</span>
+       <span class="hero__tel">8-812-740-58-35</span>
+    </div>
+
+     </div>
 </section>
 
     <div class="container search">
     <form action="#" class="search__form">
       <label class="search__form-label">
-        <input name="Поиск" class="search__form-input" placeholder="Поиск по VIN, артикулу, названию, бренду">
+        <input name="Поиск" class="search__form-input" placeholder="Поиск по VIN, артикулу, названию, бренду, услугам, работам">
       </label>
       <button class="btn search__form-btn" type="button">Поиск</button>
     </form>
@@ -107,14 +111,14 @@
         type="button"
         data-tab="#tab-1"
       >
-        Популярные
+        Запчасти
       </button>
       <button
         class="popular__nav-btn tabs__nav-btn"
         type="button"
         data-tab="#tab-2"
       >
-        Акция
+        Услуги
       </button>
     </div>
     <ul class="popular__list tabs__item tab-active" id="tab-1">
@@ -391,7 +395,7 @@
         </p>
         </div>
 
-               <date class="news__list-item-content-date">
+               <date class="news__list-item-content-date" datetime="2023-12-08">
             08.12.2023
         </date>
       </div>
@@ -424,7 +428,7 @@
         </p>  
         </div>
 
-                <date class="news__list-item-content-date">
+                <date class="news__list-item-content-date" datetime="2023-12-08">
             08.12.2023
         </date>
       </div>
@@ -432,9 +436,63 @@
   </ul>
 </section>
 
+    <section class="container about-us">
+  <h2 class="about-us__title">О нас</h2>
+  <h3 class="about-us__pretitle">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </h3>
+  <div class="about-us__content">
+    <div class="about-us__content-left">
+      <picture>
+        <img
+          loading="lazy"
+          src="img/about_details.jpg"
+          class="about-us__content-left-image"
+          alt="Детали"
+        />
+      </picture>
+    </div>
+    <div class="about-us__content-right">
+      <p class="about-us__content-right-descr">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation.
+      </p>
+      <p class="about-us__content-right-descr">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua.
+      </p>
+      <p class="about-us__content-right-descr">
+        Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation.
+      </p>
+    </div>
+  </div>
+</section>
 
+    <section class="find">
+    <div class="container find__header">
+        <h2 class="find__header-title">Как нас найти</h2>
+        <p class="find__header-descr">Контакты и расположение компании и сервиса</p>
+    </div>
+    <div class="find__map-container" id="map">
+    </div>
+</section>
 
-    </main>
+</main>
 
 <footer class="footer">
 
@@ -444,4 +502,5 @@
 </body>
 
 </html>
+
 

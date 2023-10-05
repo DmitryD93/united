@@ -1,67 +1,70 @@
 .header {
   position: relative;
   display: flex;
-  flex: 0 0 auto;
+  // flex: 0 0 auto;
   justify-content: space-between;
-  height: 120px;
-  padding: 19px 121px;
+  gap: 30px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   align-items: center;
   background-color: var(--white);
 
-    &__link {
-      margin-right: 85px;
-    }
-    &__logo {
-      width: 284px;
-      height: 45px;
-    }
-    &__nav {
-      padding-right: 10px;
-    }
-    &__nav-list {
-      height: 100%;
-      display: flex;
-      gap: 30px;
-      align-items: center;
-    }
-    &__nav-link {
-      text-transform: uppercase;
-      color: var(--semi-black);
-      font-family: "Open Sans";
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 1.5; 
-    }
-    &__join-btn {
-      padding: 9px 49px;
-    }
+  &__logo {
+    width: 292px;
+    height: 83px;
+  }
+  &__nav {
+    padding-right: 10px;
+  }
+  &__nav-list {
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  &__nav-link {
+    text-transform: uppercase;
+    color: var(--semi-black);
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  &__join-btn {
+    padding: 7px 48px;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+  }
 
-    &__registration-link {
-      color: #1A202C;
-      font-family: "Open Sans";
-      font-size: 16px;
-      font-style: italic;
-      font-weight: 400;
-      line-height: 1.5;
-      margin-bottom: 15px;
-    }
-    &__login-block {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      padding-left: 46px;
+  &__registration-link {
+    color: #1a202c;
+    font-family: "Ubuntu";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  &__login-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 32px;
 
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: -10px;
-        width: 1px;
-        height: 100px;
-        background-color: var(--grey2);
-        opacity: 0.8;
-      }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0px;
+      width: 1px;
+      height: 85px;
+      background-color: var(--grey2);
+      opacity: 0.8;
     }
+  }
 }

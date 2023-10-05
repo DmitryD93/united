@@ -1,0 +1,24 @@
+.find {
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    &__map-container {
+        height: 600px;
+        max-width: 1920px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+// Убрать контролы из нижней части карты 
+[class*="copyrights-pane"] {
+    display: none !important;
+  }
+
+//   Серый фильтр для карты 
+  [class*="ground-pane"] {
+   filter: grayscale(1);
+  }
+
+
+  

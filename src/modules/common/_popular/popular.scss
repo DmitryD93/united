@@ -1,14 +1,14 @@
 .popular {
   text-align: center;
-  padding: 60px 121px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 
   &__title {
     font-family: "Open Sans";
-    font-size: 48px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5;
-    margin-bottom: 20px;
+    line-height: 1,2;
   }
 
   &__content {
@@ -18,19 +18,19 @@
   }
   &__nav {
     display: flex;
-    gap: 36px;
-    padding: 20px 17px 33px 17px;
+    padding: 32px 32px 8px 0;
     border-bottom: 2px solid var(--iron);
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 
     &-btn {
+      padding: 0 32px;
       position: relative;
       color: var(--black);
       font-family: "Open Sans";
-      font-size: 24px;
+      font-size: 20px;
       font-style: normal;
-      font-weight: 400;
-      line-height: 1.6;
+      font-weight: 600;
+      line-height: 1.2;
       opacity: 0.6;
 
       &::before {
@@ -39,8 +39,8 @@
         width: 0;
         background-color: var(--red);
         height: 4px;
-        left: -15px;
-        bottom: -33px;
+        left: 0;
+        bottom: -7px;
         transition: width 0.5s ease;
       }
 
@@ -49,12 +49,12 @@
         font-size: 24px;
         font-style: italic;
         font-weight: 700;
-        line-height: 1.6;
+        line-height: 1.2;
         opacity: 1;
         transition: width 0.5s ease;
 
         &::before {
-          width: 122%;
+          width: 100%;
         }
       }
     }

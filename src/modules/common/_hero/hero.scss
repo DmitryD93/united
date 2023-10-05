@@ -1,15 +1,22 @@
 .hero {
-  padding: 122px 64px 201px 64px;
-  background-image: url(../img/hero-bg.jfif);
+  padding-top: 64px;
+  padding-bottom: 110px;
+  background-image: url(../img/hero_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 85.5%;
+  background-position: 0 95%;
+  min-height: 650px;
 
   &__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 42%;
+    max-width: 45%;
+    
+    &-contacts {
+      display: flex;
+      gap: 36px;
+    }
   }
 
   &__pretitle {
@@ -20,18 +27,19 @@
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
-    margin-bottom: 29px;
+    margin-bottom: 16px;
   }
 
   &__title {
     width: 100%;
     color: var(--black);
     font-family: "Russo One";
-    font-size: 48px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
-    margin-bottom: 9px;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
 
     &-fragment {
       display: inline-block;
@@ -52,16 +60,16 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 45px;
+    line-height: 1.2;
+    margin-bottom: 16px;
   }
 
   &__tel {
     color: var(--black);
     font-family: "Open Sans";
-    font-size: 40px;
+    font-size: 36px;
     font-style: italic;
     font-weight: 700;
-    line-height: 1.6;
+    line-height: 1.2;
   }
 }
