@@ -23,7 +23,7 @@ function browsersync() {
 function styles() {
   return src([
     "node_modules/swiper/swiper-bundle.min.css",
-    "src/scss/style.scss",
+    "src/scss/style.scss"
   ])
     .pipe(scss({ outputStyle: "compressed" }))
     .pipe(concat("style.min.css"))

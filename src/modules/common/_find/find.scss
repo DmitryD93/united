@@ -1,24 +1,96 @@
 .find {
-    padding-top: 36px;
-    padding-bottom: 36px;
+  padding-top: 36px;
 
-    &__map-container {
-        height: 600px;
-        max-width: 1920px;
-        margin: 0 auto;
-        width: 100%;
+  &__header-title {
+    color: var(--black-grey);
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  &__header-descr {
+    text-align: center;
+    color: var(--black);
+    font-family: "Ubuntu";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 45px;
+  }
+
+  &__map-container {
+    position: relative;
+    height: 580px;
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+    background-image: url(../img/main_map.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 30%;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px 20px 50px;
+    width: 354px;
+    height: 230px;
+    background-color: var(--white);
+    border-radius: 10px;
+    position: absolute;
+    z-index: 10;
+    left: 17%;
+    top: 15%;
+
+    &-phone {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+
+      &-number {
+        color: var(--black-grey);
+        font-family: "Open Sans";
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.72px;
+      }
     }
+
+    &-address {
+      color: var(--black-grey);
+      font-family: "Ubuntu";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    &-email {
+      color: var(--black-grey);
+      font-family: "Ubuntu";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+  }
 }
 
-// Убрать контролы из нижней части карты 
+// Убрать контролы из нижней части карты
 [class*="copyrights-pane"] {
-    display: none !important;
-  }
+  display: none !important;
+}
 
-//   Серый фильтр для карты 
-  [class*="ground-pane"] {
-   filter: grayscale(1);
-  }
-
-
-  
+//   Серый фильтр для карты
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}

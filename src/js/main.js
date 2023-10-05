@@ -77,53 +77,6 @@ const discountSwiper = new Swiper(discountSwiperContent, {
 });
 
 
-// Яндекс карта [59.812049, 30.397624]
-function init(ymaps) {
-    let map = new ymaps.Map('map', {
-      center: [59.815292, 30.398208],
-      zoom: 16,
-      controls: ['routePanelControl']
-    });
 
-    let control = map.controls.get('routePanelControl');
-    let city = 'Санкт-Петербург'
-    // let startPoint = [59.800978, 30.398845]
-    control.routePanel.state.set({
-        type: 'masstransit',
-        fromEnabled: true,
-        toEnabled: false,
-        to: [59.815017, 30.397554],
-        from: [59.800978, 30.398845],
-    })
-  
-    let placemark = new ymaps.Placemark([59.815292, 30.398208], {}, {
-      iconLayout: 'default#image',
-      iconImageHref: '../img/placemark_one.png',
-      iconImageSize: [56, 73],
-      iconImageOffset: [-20, -50]
-    });
-    let placemark1 = new ymaps.Placemark([59.800978, 30.398845], {}, {
-      iconLayout: 'default#image',
-      iconImageHref: 'img/placemark_two.png',
-      iconImageSize: [56, 73],
-      iconImageOffset: [-20, -50]
-    });
-      map.controls.remove('geolocationControl'); // удаляем геолокацию
-    map.controls.remove('searchControl'); // удаляем поиск
-    map.controls.remove('trafficControl'); // удаляем контроль трафика
-    map.controls.remove('typeSelector'); // удаляем тип
-    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-    map.controls.remove('rulerControl'); // удаляем контрол правил
-    map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-    map.geoObjects.add(placemark) // передаем переменную placemark
-    map.geoObjects.add(placemark1) // передаем переменную placemark
-  
-  }
-  
-  ymaps.ready(init); // вызов функции карты
-  
-  
-  
 
 
