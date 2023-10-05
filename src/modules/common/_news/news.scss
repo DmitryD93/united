@@ -15,16 +15,16 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 56px;
 
     &-item {
       display: grid;
 
       &:nth-child(1) {
-        grid-column: 2 span;
+        grid-column: 1 span;
         & .news__list-item-content-pretitle {
-          max-width: 70%;
+          max-width: 100%;
         }
       }
       &:nth-child(2) {
