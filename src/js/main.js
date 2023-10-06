@@ -40,7 +40,7 @@ const discountThumbsContent = document.querySelector(
   ".discount__swiper-thumbs"
 );
 const discountThumbs = new Swiper(discountThumbsContent, {
-  spaceBetween: 70,
+  spaceBetween: 10,
   slidesPerView: 5,
   freeMode: true,
   watchSlidesVisibility: true,
