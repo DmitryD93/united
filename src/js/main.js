@@ -2,8 +2,6 @@
 // const menu = document.querySelector('.mobile-menu')
 // const body = document.body
 
-
-
 // burger.addEventListener('click', () => {
 //   burger.classList.toggle('active')
 //   menu.classList.toggle('active')
@@ -12,7 +10,7 @@
 
 // tabs
 
-    const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
+const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
 const tabsItems = document.querySelectorAll(".tabs__item");
 
 tabsBtn.forEach((item) => {
@@ -37,7 +35,6 @@ tabsBtn.forEach((item) => {
 // swiper
 
 // Свайпер для блока скидок
-
 
 const discountThumbsContent = document.querySelector(
   ".discount__swiper-thumbs"
@@ -76,7 +73,18 @@ const discountSwiper = new Swiper(discountSwiperContent, {
   },
 });
 
+// Проверка на наличие в блоке элемента с тегом img
+// Если тег есть - у контента убирается заглушка
+// Если тега нет - заглушка остается из стилей
 
+window.addEventListener("load", () => {
+  const cards = document.querySelectorAll(".popular__list-item");
 
-
-
+  cards.forEach((item) => {
+    if (item.querySelector(".popular__list-item-content-img")) {
+      item.style.backgroundImage = "none";
+    } else {
+      item.style.backgroundImage = " ";
+    }
+  });
+});

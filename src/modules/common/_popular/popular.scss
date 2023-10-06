@@ -79,7 +79,8 @@
       box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
       background-repeat: no-repeat;
       background-position: center;
-      padding: 24px 17px 24px 24px;
+      // padding: 24px 17px 24px 24px;
+      padding: 32px;
       background-position: 53% 19%;
 
       &:nth-child(1) {
@@ -100,15 +101,23 @@
         flex-direction: column;
         justify-content: center;
         text-align: start;
-        padding: 10px 10px 20px 0;
+        // padding: 10px 10px 16px 0;
+        padding-bottom: 16px;
         min-height: 250px;
-        margin-bottom: 46px;
+        
+
+
+        &-img {
+         margin-bottom: 16px;   
+        }
       }
 
       &-order {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        gap: 16px;
       }
 
       &-price {
