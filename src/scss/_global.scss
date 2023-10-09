@@ -4,6 +4,12 @@ html {
   height: 100%;
 }
 
+.site-wrapper {
+ max-width: 1920px;
+ margin: 0 auto;
+ width: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -15,6 +21,7 @@ body {
   color: var(--black);
   background-color: var(--white);
   scroll-behavior: smooth;
+
 
   &.lock {
     overflow: hidden;
@@ -33,9 +40,9 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 134px;
+  padding: 0 30px;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1232px;
 
   // @include _1679 {
   //   max-width: 1280px;

@@ -1,42 +1,39 @@
 .hero {
   padding-top: 64px;
   padding-bottom: 110px;
-  background-image: url(../img/hero_bg.jpg);
+  background-image: url(../img/truck_test.jfif);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 95%;
-  min-height: 650px;
+  background-position: 100% 90%;
+  min-height: 610px;
 
   &__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 40%;
+    max-width: 55%;
     
     &-contacts {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       gap: 16px;
-      width: 100%;
     }
   }
 
   &__pretitle {
     display: inline-block;
     color: var(--black);
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.2;
     margin-bottom: 16px;
   }
 
   &__title {
     color: var(--black);
-    font-family: "Russo One";
+    font-family: "Russo One", sans-serif;
     font-size: 50px;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 1.5px;
@@ -51,15 +48,13 @@
     }
     &-fragment:nth-child(even) {
       text-align: end;
-      font-size: 50px;
     }
   }
 
   &__descr {
     color: var(--black);
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 16px;
@@ -67,7 +62,7 @@
 
   &__tel {
     color: var(--black);
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 36px;
     font-style: italic;
     font-weight: 700;

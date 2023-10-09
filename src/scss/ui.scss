@@ -6,9 +6,8 @@
     border-radius: 4px;
     padding: 9px 32px;
     color: var(--white);
-    font-family: Open Sans;
-    font-size: 16px;
-    font-style: normal;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.5; 
 }
@@ -21,3 +20,26 @@
   .tabs__panel {
     display: none;
   }
+
+
+
+  // Пагинация для свайпера
+.site {
+   &__swiper-pagination {
+    transform: translate3d(0, -40%, 0);
+  }
+  &__swiper-pagination .swiper-pagination-bullet {
+    background-color: var(--black);
+    width: 15px;
+    height: 15px;
+    transition: width 0.3s ease;
+  }
+  &__swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--black);
+    width: 45px;
+    border-radius: 10px;
+    opacity: 1;
+    transition: width 0.3s ease;
+  }
+}
+ 

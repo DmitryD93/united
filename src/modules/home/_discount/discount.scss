@@ -1,21 +1,20 @@
 .discount {
   background: var(--grey-gradient);
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding: 64px 0;
 
   &__slide-content {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 30px;
 
     &-right {
-      max-width: 50%;
+      max-width: 45%;
     }
   }
 
   &__slide-img {
-    width: 540px;
-    height: 300px;
+    max-width: 546px;
+    max-height: 304px;
     border-radius: 0 20px 20px 20px;
   }
 
@@ -57,22 +56,6 @@
       background-repeat: no-repeat;
       transition: opacity 0.3s ease, scale 0.3s ease;
 
-      &:nth-child(1) {
-        background-image: url(../img/product_one_thumb.png);
-      }
-      &:nth-child(2) {
-        background-image: url(../img/default_thumbs_element.png);
-      }
-      &:nth-child(3) {
-        background-image: url(../img/thumbs_oil.png);
-      }
-      &:nth-child(4) {
-        background-image: url(../img/thumbs_truck.png);
-      }
-      &:nth-child(5) {
-        background-image: url(../img/product_one_thumb.png);
-      }
-
       &.swiper-slide-thumb-active {
         opacity: 1;
         scale: 1.2;
@@ -91,43 +74,23 @@
   &__slider-btn--next {
     transform: rotate(180deg);
   }
-  &__swiper-pagination {
-    transform: translate3d(0, -40%, 0);
-  }
-  &__swiper-pagination .swiper-pagination-bullet {
-    background-color: var(--black);
-    width: 15px;
-    height: 15px;
-    transition: width 0.3s ease;
-  }
-  &__swiper-pagination .swiper-pagination-bullet-active {
-    background-color: var(--black);
-    width: 45px;
-    border-radius: 10px;
-    opacity: 1;
-    transition: width 0.3s ease;
-  }
 
   &__slide-content-title {
-    font-family: "Russo One";
+    font-family: "Russo One", sans-serif;
     font-size: 48px;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.25;
     letter-spacing: 0.48px;
     text-transform: uppercase;
     color: var(--black);
     margin-bottom: 20px;
-    max-width: 75%;
     word-wrap: break-word;
   }
   &__slide-content-descr {
     color: var(--black);
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.2;
-    max-width: 75%;
   }
 }

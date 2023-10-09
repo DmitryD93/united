@@ -1,15 +1,21 @@
+
+// Глобальные стили
 @import "_vars";
 @import "_reset";
 @import "_fonts";
 @import "_global";
 @import "ui.scss";
+// Переиспользуемые
+@import "../modules/common/_product-card/product-cards.scss";
+
+// Главная страница
 @import "../modules/common/_header/header";
 @import "../modules/common/_footer/footer";
-@import "../modules/common/_hero/hero";
-@import "../modules/common/_search/search";
-@import "../modules/common/_popular/popular";
-@import "../modules/common/_discount/discount";
-@import "../modules/common/_about_us/about_us";
-@import "../modules/common/_news/news.scss";
-@import "../modules/common/_find/find";
+@import "../modules/home/_hero/hero";
+@import "../modules/home/_search/search";
+@import "../modules/home/_popular/popular";
+@import "../modules/home/_discount/discount";
+@import "../modules/home/_about_us/about_us";
+@import "../modules/home/_news/news.scss";
+@import "../modules/home/_find/find";
 
