@@ -1,11 +1,20 @@
 .footer {
-  padding-top: 64px;
-  padding-bottom: 64px;
+ padding: 64px 0;
   position: relative;
   display: flex;
+  flex-direction: column;
   z-index: 9;
   flex: 0 0 auto;
   background-color: var(--grey);
+
+  &-copyright {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--black);
+  }
 
   &__logo {
     width: 400px;
@@ -21,23 +30,14 @@
     border-bottom: 1px solid var(--dark-grey);
     padding-bottom: 45px;
 
-    &-copyright {
-      position: absolute;
-      bottom: -25px;
-      left: 0;
-      font-family: "Ubuntu";
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--black);
-    }
+    
 
     &-left {
       display: flex;
       flex-direction: column;
       max-width: 50%;
-      &-left-descr {
+
+      &-descr {
         color: var(--black);
         font-family: "Ubuntu";
         font-size: 16px;

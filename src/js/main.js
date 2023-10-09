@@ -40,7 +40,7 @@ const discountThumbsContent = document.querySelector(
   ".discount__swiper-thumbs"
 );
 const discountThumbs = new Swiper(discountThumbsContent, {
-  spaceBetween: 10,
+  spaceBetween: 30,
   slidesPerView: 5,
   freeMode: true,
   watchSlidesVisibility: true,
@@ -51,7 +51,7 @@ const discountSwiperContent = document.querySelector(".discount__swiper");
 
 const discountSwiper = new Swiper(discountSwiperContent, {
   slidesPerView: "auto",
-  spaceBetween: 40,
+  spaceBetween: 50,
   grabCursor: true,
 
   navigation: {
@@ -61,7 +61,7 @@ const discountSwiper = new Swiper(discountSwiperContent, {
   },
 
   pagination: {
-    el: ".discount__swiper-pagination",
+    el: ".site__swiper-pagination",
     type: "bullets",
     clickable: true,
     // renderBullet: function(index, className) {
@@ -73,18 +73,39 @@ const discountSwiper = new Swiper(discountSwiperContent, {
   },
 });
 
+
+// Слайдер новостей
+const newsSwiperContent = document.querySelector(".news__swiper");
+
+const newsSwiper = new Swiper(newsSwiperContent, {
+  slidesPerView: 2.2,
+  spaceBetween: 30,
+  grabCursor: true,
+  slideToClickedSlide: true,
+  initialSlide : 1,
+  centeredSlides: true,
+  loop: true,
+ 
+ 
+
+  pagination: {
+    el: ".site__swiper-pagination",
+    type: "bullets",
+    clickable: true,
+  },
+});
 // Проверка на наличие в блоке элемента с тегом img
 // Если тег есть - у контента убирается заглушка
 // Если тега нет - заглушка остается из стилей
 
-window.addEventListener("load", () => {
-  const cards = document.querySelectorAll(".popular__list-item");
+// window.addEventListener("load", () => {
+//   const cards = document.querySelectorAll(".popular__list-item");
 
-  cards.forEach((item) => {
-    if (item.querySelector(".popular__list-item-content-img")) {
-      item.style.backgroundImage = "none";
-    } else {
-      item.style.backgroundImage = " ";
-    }
-  });
-});
+//   cards.forEach((item) => {
+//     if (item.querySelector(".popular__list-item-content-img")) {
+//       item.style.backgroundImage = "none";
+//     } else {
+//       item.style.backgroundImage = " ";
+//     }
+//   });
+// });

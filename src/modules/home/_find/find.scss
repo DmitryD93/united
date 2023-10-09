@@ -26,7 +26,7 @@
   &__map-container {
     position: relative;
     height: 580px;
-    max-width: 1920px;
+    max-width: 1440px;
     margin: 0 auto;
     width: 100%;
     background-image: url(../img/main_map.jpg);
@@ -73,6 +73,7 @@
       font-weight: 400;
       line-height: 1.2;
       margin-bottom: 20px;
+      
     }
     &-email {
       color: var(--black-grey);
