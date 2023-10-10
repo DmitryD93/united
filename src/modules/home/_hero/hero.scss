@@ -12,6 +12,9 @@
     flex-direction: column;
     align-items: flex-start;
     max-width: 55%;
+    @include _1280 {
+      max-width: 47%;
+    }
     
     &-contacts {
       display: flex;

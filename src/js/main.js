@@ -45,6 +45,17 @@ const discountThumbs = new Swiper(discountThumbsContent, {
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
+  
+    // брейкпоинты миниатюр
+  breakpoints: {
+    1280: {
+      slidesPerView: 5,
+    },
+    640: {
+      slidesPerView: 4,
+      
+    }
+  }
 });
 
 const discountSwiperContent = document.querySelector(".discount__swiper");
@@ -86,6 +97,14 @@ const newsSwiper = new Swiper(newsSwiperContent, {
   centeredSlides: true,
   loop: true,
  
+  breakpoints: {
+    1280: {
+      slidesPerView: 2.2,
+    },
+    640: {
+      slidesPerView: 2,
+    }
+  },
  
 
   pagination: {

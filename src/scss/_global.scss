@@ -44,9 +44,9 @@ body {
   width: 100%;
   max-width: 1232px;
 
-  // @include _1679 {
-  //   max-width: 1280px;
-  // }
+  @include _1280 {
+    max-width: 956px;
+  }
 
   // @include _1200 {
   //   padding: 0 30px;

@@ -5,15 +5,13 @@
 
   &__title {
     color: var(--black-grey);
-    font-family: "Russo One", sans-serif;
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 32px;
   }
   &__pretitle {
-    font-family: "Open Sans";
-    font-size: 24px;
+    font-size: 23px;
     font-style: italic;
     font-weight: 700;
     line-height: 1.2;
@@ -32,8 +30,12 @@
       width: 46%;
     }
     &-right {
-      width: 46%;
+      max-width: 46%;
       text-align: start;
+
+      @include _1280 {
+        max-width: 65%;
+      }
 
       &-descr {
         color: var(--black);

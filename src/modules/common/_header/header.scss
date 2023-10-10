@@ -11,7 +11,7 @@
     width: calc(100% - 17px);
     top: 0;
     left: 0;
-    background-color: burlywood;
+    background-color: inherit;
     animation: header-translate 0.5s ease-in-out;
     @include _no-hover {
       width: 100%;
@@ -32,15 +32,20 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    padding: 24px 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
     align-items: center;
     background-color: inherit;
     font-family: "Ubuntu", sans-serif;
+
+    @include _1280 {
+      gap: 16px;
+    }
   }
 
   &__logo {
-    width: 292px;
-    height: 83px;
+    width: 220px;
+    height: 35px;
   }
   &__nav {
     padding-right: 10px;
@@ -50,6 +55,17 @@
     display: flex;
     gap: 30px;
     align-items: center;
+    @include _1280 {
+      gap: 16px;
+    }
+
+    &-item {
+      @include _1280 {
+        &:first-child {
+          display: none;
+        }
+      }
+    }
   }
   &__nav-link {
     text-transform: uppercase;
@@ -58,13 +74,7 @@
     font-weight: 400;
     line-height: 1.2;
   }
-  &__join-btn {
-    padding: 7px 48px;
-    font-family: "Open Sans";
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.5;
-  }
+  
 
   &__registration-link {
     color: var(--black);
