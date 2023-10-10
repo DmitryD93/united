@@ -26,8 +26,8 @@ $white: #fff;
 }
 
 // Медиазапросы
-@mixin _1780 {
-  @media (max-width: 1780px) {
+@mixin _1180 {
+  @media (max-width: 1180px) {
     @content;
   }
 }
@@ -66,4 +66,11 @@ $white: #fff;
   @media (max-width: 470px) {
     @content;
   }
+}
+
+@mixin _no-hover {
+ @media screen and (any-hover: none) {
+   @content;
+  
+ }
 }

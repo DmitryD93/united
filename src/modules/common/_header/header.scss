@@ -1,13 +1,42 @@
 .header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  align-items: center;
-  background-color: var(--white);
-  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: inherit;
+
+  &.fixed {
+    position: fixed;
+    width: calc(100% - 17px);
+    top: 0;
+    left: 0;
+    background-color: burlywood;
+    animation: header-translate 0.5s ease-in-out;
+    @include _no-hover {
+      width: 100%;
+    }
+  }
+
+  @keyframes header-translate {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  // Выше зона экспериментов!!!
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 24px 0;
+    align-items: center;
+    background-color: inherit;
+    font-family: "Ubuntu", sans-serif;
+  }
 
   &__logo {
     width: 292px;

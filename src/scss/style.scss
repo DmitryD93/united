@@ -4,9 +4,9 @@
 @import "_reset";
 @import "_fonts";
 @import "_global";
-@import "ui.scss";
+@import "ui";
 // Переиспользуемые
-@import "../modules/common/_product-card/product-cards.scss";
+@import "../modules/common/_product-card/product-cards";
 
 // Главная страница
 @import "../modules/common/_header/header";
@@ -16,6 +16,6 @@
 @import "../modules/home/_popular/popular";
 @import "../modules/home/_discount/discount";
 @import "../modules/home/_about_us/about_us";
-@import "../modules/home/_news/news.scss";
+@import "../modules/home/_news/news";
 @import "../modules/home/_find/find";
 
