@@ -4,12 +4,15 @@
     border: none;
     background-color: var(--red);
     border-radius: 4px;
-    padding: 9px 32px;
+    padding: 8px 40px;
     color: var(--white);
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     font-weight: 600;
     line-height: 1.5; 
+    @include _1280 {
+      padding: 8px 24px;
+    }
 }
 
 // Табы
