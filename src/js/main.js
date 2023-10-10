@@ -109,3 +109,29 @@ const newsSwiper = new Swiper(newsSwiperContent, {
 //     }
 //   });
 // });
+
+
+// Фиксированная шапка
+
+let header = document.querySelector(".header");
+let content = document.querySelector(".hero");
+
+
+
+let observer = new IntersectionObserver(
+  function(entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        header.classList.remove("fixed");
+      } else {
+        header.classList.add("fixed");
+      }
+    });
+  }, {
+    threshold: 0.4
+  })
+
+  observer.observe(content);
+
+
+ 

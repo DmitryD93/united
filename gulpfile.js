@@ -49,7 +49,8 @@ function html() {
   return (
     src(["src/*.html"])
       .pipe(fileinclude())
-      .pipe(replace("../", ""))
+      // .pipe(replace("../", ""))
+
       .pipe(strip())
       // .pipe(htmlmin({ collapseWhitespace: true }))
       .pipe(dest("app"))
@@ -94,6 +95,7 @@ function build() {
     ],
     {
       base: "src",
+      allowEmpty: true,
     }
   ).pipe(dest("app"));
 }
@@ -125,7 +127,9 @@ exports.watching = watching;
 exports.images = images;
 exports.font = font;
 exports.cleanapp = cleanapp;
-exports.build = series(cleanapp, images, build, font);
+exports.build = series(cleanapp, images, build, font, html, svgSprites, styles, scripts);
+
+// exports.build = series(cleanapp, images, build, font);
 
 exports.default = parallel(
   html,
