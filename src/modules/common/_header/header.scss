@@ -6,6 +6,49 @@
   z-index: 2;
   background-color: inherit;
 
+  &__search {
+    width: 100%;
+    display: flex;
+    height: 80px;
+    background-color: chocolate;
+    transform: translateY(-300%);
+    z-index: -100;
+    position: fixed;
+    transition: transform .4s ease;
+    
+
+
+    &.fixed {
+      transform: translateY(0);
+      z-index: 5;
+      transition: transform .4s ease;
+    }
+
+    &-form  {
+      width: 100%;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+
+      &-label {
+        width: 80%;
+        display: flex;
+      }
+
+      &-input {
+        width: 100%;
+        height: 45px;
+        padding: 0 10px;
+      }
+    }
+
+  }
+
+
+  .search-item {
+    display: none;
+  }
+
   &.fixed {
     position: fixed;
     width: calc(100% - 17px);
@@ -15,6 +58,10 @@
     animation: header-translate 0.5s ease-in-out;
     @include _no-hover {
       width: 100%;
+    }
+
+    & .search-item {
+      display: block;
     }
   }
 
