@@ -45,17 +45,16 @@ const discountThumbs = new Swiper(discountThumbsContent, {
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
-  
-    // брейкпоинты миниатюр
+
+  // брейкпоинты миниатюр
   breakpoints: {
     1280: {
       slidesPerView: 5,
     },
     640: {
       slidesPerView: 4,
-      
-    }
-  }
+    },
+  },
 });
 
 const discountSwiperContent = document.querySelector(".discount__swiper");
@@ -84,7 +83,6 @@ const discountSwiper = new Swiper(discountSwiperContent, {
   },
 });
 
-
 // Слайдер новостей
 const newsSwiperContent = document.querySelector(".news__swiper");
 
@@ -93,19 +91,18 @@ const newsSwiper = new Swiper(newsSwiperContent, {
   spaceBetween: 30,
   grabCursor: true,
   slideToClickedSlide: true,
-  initialSlide : 1,
+  initialSlide: 1,
   centeredSlides: true,
   loop: true,
- 
+
   breakpoints: {
     1280: {
       slidesPerView: 2.2,
     },
     640: {
       slidesPerView: 2,
-    }
+    },
   },
- 
 
   pagination: {
     el: ".site__swiper-pagination",
@@ -129,28 +126,41 @@ const newsSwiper = new Swiper(newsSwiperContent, {
 //   });
 // });
 
-
 // Фиксированная шапка
 
 let header = document.querySelector(".header");
 let content = document.querySelector(".hero");
 
-
-
 let observer = new IntersectionObserver(
-  function(entries) {
+  function (entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         header.classList.remove("fixed");
+        search();
       } else {
         header.classList.add("fixed");
       }
     });
-  }, {
-    threshold: 0.4
-  })
+  },
+  {
+    threshold: 0.4,
+  }
+);
 
-  observer.observe(content);
+observer.observe(content);
 
+let searchBtn = document.querySelector(".header__search-btn");
+let headerSearch = document.querySelector(".header__search");
+let closeBtn = document.querySelector(".header__search-close-btn");
 
- 
+function search() {
+  searchBtn.addEventListener("click", () => {
+    headerSearch.classList.add("fixed");
+  });
+  if (!header.fixed) {
+    headerSearch.classList.remove("fixed");
+  }
+  closeBtn.addEventListener("click", () => {
+    headerSearch.classList.remove("fixed");
+  });
+}
