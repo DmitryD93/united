@@ -99,11 +99,11 @@
           margin-bottom: 11px;
           transition: color 0.4s ease;
 
-          &:focus-within {
+          &:active {
             color: var(--dark-red);
           }
 
-          &:focus-within .news__list-item-content-icon {
+          &:active .news__list-item-content-icon {
             fill: var(--dark-red);
           }
         }
