@@ -10,7 +10,6 @@
   &-copyright {
     font-family: "Ubuntu", sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.2;
     color: var(--black);
@@ -43,9 +42,8 @@
 
       &-descr {
         color: var(--black);
-        font-family: "Ubuntu";
+        font-family: "Ubuntu", sans-serif;
         font-size: 16px;
-        font-style: normal;
         font-weight: 400;
         line-height: 1.2;
       }
@@ -66,7 +64,6 @@
 
       &-list-title {
         color: var(--black);
-        font-family: "Open Sans";
         font-size: 24px;
         font-style: italic;
         font-weight: 700;
@@ -78,9 +75,7 @@
       }
       &-link {
         color: var(--black-grey);
-        font-family: "Open Sans";
         font-size: 20px;
-        font-style: normal;
         font-weight: 600;
         line-height: 1.2;
         letter-spacing: 0.6px;
