@@ -63,46 +63,12 @@
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 40px;
 
+  
+
     &.tab-active {
       display: grid;
     }
 
-    &-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      grid-column: 1 span;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
-      padding: 32px;
-
-      &-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: start;
-        padding-bottom: 16px;
-
-        &-img {
-          margin-bottom: 16px;
-        }
-      }
-
-      &-order {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: 16px;
-      }
-
-      &-price {
-        color: var(--black);
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.5;
-      }
-    }
   }
 
   &__product-name {

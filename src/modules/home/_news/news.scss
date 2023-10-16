@@ -41,7 +41,7 @@
         transition: opacity 0.4s ease, scale 0.4s ease, filter 0.4s ease;
         opacity: 1;
 
-        & .news__list-item-content-link::before {
+        & .news__list-item-content a::before {
           z-index: 1;
         }
       }
@@ -70,7 +70,7 @@
           transition: fill 0.4s ease;
         }
 
-        &-link {
+        & a {
           &::before {
             content: "";
             position: absolute;
@@ -90,7 +90,7 @@
           text-overflow: ellipsis;
         }
 
-        &-pretitle {
+        & h3{
           font-size: 24px;
           font-style: italic;
           font-weight: 700;
@@ -107,7 +107,7 @@
             fill: var(--dark-red);
           }
         }
-        &-descr {
+        & p {
           font-family: "Ubuntu", sans-serif;
           font-size: 16px;
           font-weight: 400;
