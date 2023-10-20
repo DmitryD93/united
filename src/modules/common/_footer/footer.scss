@@ -34,7 +34,7 @@
     &-left {
       display: flex;
       flex-direction: column;
-      max-width: 50%;
+      max-width: 375px;
 
       @include _1280 {
         max-width: 40%;

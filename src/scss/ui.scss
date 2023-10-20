@@ -1,5 +1,6 @@
 // Кнопки
 .btn {
+    position: relative;
     display: block;
     border: none;
     background-color: var(--red);
@@ -10,11 +11,147 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 1.5; 
+    transition: background-color 0.3s ease;
+
+    
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--black-grey);
+        border-bottom-width: 2px;
+        opacity: 0; 
+        transition: opacity 0.3s ease;
+      }
+
+      &:focus {
+        outline: none;
+        background-color: var(--dark-red);
+        
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        background-color: var(--dark-red);
+      }
+
+      &:active {
+        background-color: var(--cherrywood);
+
+        &::before {
+          opacity: 0;
+        }
+      }
+      &:disabled {
+        cursor: not-allowed;
+        background-color: var(--super-silver);
+        color: var(--dark-grey);
+      }
     @include _1280 {
       padding: 8px 24px;
     }
 }
 
+.secondary-btn {
+    padding: 8px 32px;
+    position: relative;
+    color: var(--black);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.6;
+    transition: color 0.3s ease, background-color 0.5s ease;
+
+
+   @include _1280 {
+      padding: 8px 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      background-color: var(--red);
+      height: 4px;
+      left: 0;
+      bottom: -7px;
+      transition: background-color 0.5s ease, width 0.5s ease;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--red-brown);
+      border-bottom: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:focus {
+      outline: none;
+
+      &::before {
+        background-color: var(--red-brown);
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      &:before {
+        background-color: var(--dark-red);
+      }
+
+      &:after {
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      background-color: var(--grey);
+
+      &::after {
+        opacity: 0;
+      }
+    }
+    &:disabled {
+      cursor: not-allowed;
+      color: var(--dark-grey);
+
+      &::before {
+        background-color: var(--gainsboro);
+      }
+    }
+}
+
+.link {
+  color: var(--black);
+  transition: color 0.3s ease-in;
+
+
+
+  &:focus {
+    outline: none;
+    color: var(--cherrywood);
+  }
+  &:hover {
+    color: var(--red);
+  }
+  &:active {
+    color: var(--cherrywood);
+  }
+}
 // Табы
 .tabs__panel--active {
     display: block;

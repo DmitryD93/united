@@ -6,9 +6,13 @@
   --grey: #f5f5f5;
   --red: #e31e24;
   --dark-red: #9e2021;
+  --cherrywood:#651515;
+  --red-brown: #A62B2F;
   --semi-black: #303030;
   --silver: #c9c9c9;
   --alabaster: #fafbfd;
+  --super-silver: #eeeeee;
+  --gainsboro: #DCDCDC;
   --iron: #DDE0E4;
   --grey2: #D9D9D9;
   --dark-grey: #9B9B9B;
@@ -16,15 +20,15 @@
   --swiper-theme-color: #007aff;
   --swiper-navigation-size: 44px;
 }
-$text-color: rgb(51 26 47 / 80%);
-$title-color: #331a2f;
-$pink: #cf51ce;
-$white: #fff;
+// $text-color: rgb(51 26 47 / 80%);
+// $title-color: #331a2f;
+// $pink: #cf51ce;
+// $white: #fff;
 
-@mixin font($font_name, $weight) {
-  font-family: $font_name, sans-serif;
-  font-weight: #{$weight};
-}
+// @mixin font($font_name, $weight) {
+//   font-family: $font_name, sans-serif;
+//   font-weight: #{$weight};
+// }
 
 // Медиазапросы
 @mixin _1280 {
