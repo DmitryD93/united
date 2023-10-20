@@ -36,10 +36,12 @@
           opacity: 1;
         }
       }
-
-      &:hover {
+      @include _only-hover {
+         &:hover {
         background-color: var(--dark-red);
       }
+      }
+     
 
       &:active {
         background-color: var(--cherrywood);
@@ -66,6 +68,7 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 1.6;
+    outline: none;
     transition: color 0.3s ease, background-color 0.5s ease;
 
 
@@ -98,7 +101,6 @@
     }
 
     &:focus {
-      outline: none;
 
       &::before {
         background-color: var(--red-brown);
@@ -108,6 +110,7 @@
       }
     }
 
+  @include _only-hover {
     &:hover {
       &:before {
         background-color: var(--dark-red);
@@ -118,6 +121,7 @@
       }
     }
 
+  }
     &:active {
       background-color: var(--grey);
 
@@ -138,18 +142,41 @@
 .link {
   color: var(--black);
   transition: color 0.3s ease-in;
+  position: relative;   
+  outline: none;
 
-
-
-  &:focus {
-    outline: none;
-    color: var(--cherrywood);
+  &::before {
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    left: -3px;
+    opacity: 0;
+    bottom: -1px;
+    border: 1px solid var(--black-grey);    
+    transition: opacity 0.3s ease;
   }
+  &:focus {
+    color: var(--cherrywood);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+@include _only-hover {
   &:hover {
     color: var(--red);
+
+    &::before {
+      opacity: 0;
+    }
   }
+}
   &:active {
     color: var(--cherrywood);
+    &::before {
+      opacity: 0;
+    }
   }
 }
 // Табы

@@ -131,36 +131,40 @@ const newsSwiper = new Swiper(newsSwiperContent, {
 let header = document.querySelector(".header");
 let content = document.querySelector(".hero");
 
-let observer = new IntersectionObserver(
-  function (entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        header.classList.remove("fixed");
-        search();
-      } else {
-        header.classList.add("fixed");
-      }
-    });
-  },
-  {
-    threshold: 0.4,
-  }
-);
+// let observer = new IntersectionObserver(
+//   function (entries) {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         header.classList.remove("fixed");
+//         // search();
+//       } else {
+//         header.classList.add("fixed");
+//       }
+//     });
+//   },
+//   {
+//     threshold: 0.4,
+//   }
+// );
 
-observer.observe(content);
+// observer.observe(content);
 
 let searchBtn = document.querySelector(".header__search-btn");
 let headerSearch = document.querySelector(".header__search");
 let closeBtn = document.querySelector(".header__search-close-btn");
 
-function search() {
-  searchBtn.addEventListener("click", () => {
-    headerSearch.classList.add("fixed");
-  });
-  if (!header.fixed) {
-    headerSearch.classList.remove("fixed");
-  }
-  closeBtn.addEventListener("click", () => {
-    headerSearch.classList.remove("fixed");
-  });
-}
+// function search() {
+//   searchBtn.addEventListener("click", () => {
+//     headerSearch.classList.add("fixed");
+//   });
+//   if (!header.fixed) {
+//     headerSearch.classList.remove("fixed");
+//   }
+//   closeBtn.addEventListener("click", () => {
+//     headerSearch.classList.remove("fixed");
+//   });
+// }
+
+searchBtn.addEventListener("click", () => {
+  headerSearch.classList.toggle("fixed");
+});
