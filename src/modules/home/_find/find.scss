@@ -22,14 +22,22 @@
 
   &__map-container {
     position: relative;
-    height: 580px;
-    max-width: 1440px;
+    height: 720px;
+    max-width: 100%;
     margin: 0 auto;
     width: 100%;
     background-image: url(../img/main_map.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 30%;
+    background-position: center;
+
+    @include _1280 {
+      height: 570px;
+    }
+
+    @include _1024 {
+      height: 485px;
+    }
   }
 
   &__contacts {
@@ -46,10 +54,14 @@
     top: 15%;
 
     @include _1280 {
-      max-width: 266px;
       padding: 32px;
-      left: 26%;
+      left: 17%;
     top: 8%;
+    }
+
+    @include _1024 {
+      left: 14%;
+      top: 4%;
     }
 
     &-phone {

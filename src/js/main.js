@@ -1,12 +1,21 @@
-// const burger = document.querySelector('.burger')
-// const menu = document.querySelector('.mobile-menu')
-// const body = document.body
+const burger = document.querySelector('.burger')
+const menu = document.querySelector('.header__nav')
+const body = document.body
+const link = document.querySelectorAll('.link')
 
-// burger.addEventListener('click', () => {
-//   burger.classList.toggle('active')
-//   menu.classList.toggle('active')
-//   body.classList.toggle('lock')
-// })
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active')
+  menu.classList.toggle('active')
+  body.classList.toggle('lock')
+
+  link.forEach(e => {
+    e.addEventListener('click', () => {
+      burger.classList.remove('active')
+      menu.classList.remove('active')
+      body.classList.remove('lock')
+    })
+  })
+})
 
 // tabs
 
@@ -101,6 +110,7 @@ const newsSwiper = new Swiper(newsSwiperContent, {
     },
     640: {
       slidesPerView: 2,
+
     },
   },
 
@@ -126,7 +136,10 @@ const newsSwiper = new Swiper(newsSwiperContent, {
 //   });
 // });
 
+
+
 // Фиксированная шапка
+// Обсервер для появления кнопки и плашки поиска
 
 let header = document.querySelector(".header");
 let content = document.querySelector(".hero");
@@ -136,14 +149,16 @@ let observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         header.classList.remove("fixed");
+        searchBtn.classList.remove("fixed");
         search();
       } else {
         header.classList.add("fixed");
+        searchBtn.classList.add("fixed");
       }
     });
   },
   {
-    threshold: 0.4,
+    threshold: 0.2,
   }
 );
 
@@ -151,7 +166,7 @@ observer.observe(content);
 
 let searchBtn = document.querySelector(".header__search-btn");
 let headerSearch = document.querySelector(".header__search");
-let closeBtn = document.querySelector(".header__search-close-btn");
+// let closeBtn = document.querySelector(".header__search-close-btn");
 
 function search() {
   searchBtn.addEventListener("click", () => {
@@ -159,8 +174,50 @@ function search() {
   });
   if (!header.fixed) {
     headerSearch.classList.remove("fixed");
-  }
-  closeBtn.addEventListener("click", () => {
-    headerSearch.classList.remove("fixed");
-  });
+  };
+  // closeBtn.addEventListener("click", () => {
+  //   headerSearch.classList.remove("fixed");
+  // });
 }
+
+// searchBtn.addEventListener("click", () => {
+//   headerSearch.classList.toggle("fixed");
+// });
+
+
+// Убрать поиск шапки при клике на пустую область
+
+document.addEventListener("click", (e) => {
+    let elem = e.target;
+
+    if(!elem.classList.contains("header__search") && !elem.closest(".fixed")) {
+      headerSearch.classList.remove("fixed"); 
+    }
+
+    //  Убрать блок входа на низком разрешении при клике на пустую область
+
+    if(!elem.classList.contains("header__login-block") && !elem.closest(".header__join-visible-btn")) {
+      loginBlock.classList.remove("active"); 
+    }
+})
+
+// кнопка сброса формы поиска
+
+const searchInput = document.querySelector(".header__search-form-input");
+const clearBtn = document.querySelector(".header__search-clear-btn");
+
+clearBtn.addEventListener("click", () => {
+  searchInput.value = "";
+})
+
+// логика кнопки входа для открытия блока на низком разрешении
+
+const joinDoorBtn = document.querySelector(".header__join-visible-btn");
+const loginBlock = document.querySelector(".header__login-block");
+
+joinDoorBtn.addEventListener("click", () => {
+  loginBlock.classList.toggle("active");
+  headerSearch.classList.remove("fixed");
+})
+
+
