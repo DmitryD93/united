@@ -2,6 +2,14 @@
   height: 118px;
   background-color: var(--grey);
 
+  @include _1280 {
+    height: 110px;
+  }
+
+  @include _880 {
+    height: 80px;
+  }
+
   &__form {
     transform: translate(0, -50%);
     display: flex;
@@ -9,6 +17,31 @@
     gap: 32px;
     border-radius: 10px;
     background-color: var(--white);
+
+    @include _1280 {
+      padding: 32px;
+    }
+
+    @include _880 {
+      padding: 24px;
+    }
+
+    &-btn {
+      position: relative;
+      svg {
+        fill: var(--white);
+        display: none;
+      }
+      @include _880 {
+        svg {
+          display: block;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
 
     &-label {
       width: 100%;
@@ -19,7 +52,7 @@
       height: 45px;
       border-radius: 5px;
       border: 1px solid var(--silver);
-      padding: 0 10px 0 10px;
+      padding: 0 40px 0 10px;
       &::placeholder {
         text-align: center;
         font-family: "Ubuntu", sans-serif;
@@ -28,6 +61,10 @@
         line-height: 1.5;
         color: var(--silver);
         padding: 0 10px 0 10px;
+
+        @include _1280 {
+          font-size: 14px;
+        }
       }
     }
 
