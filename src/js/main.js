@@ -112,9 +112,10 @@ const newsSwiper = new Swiper(newsSwiperContent, {
       slidesPerView: 2.2,
     },
     640: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.6,
       centeredSlides: false,
-      spaceBetween: 50,
+      spaceBetween: 30,
+      loop: false,
     },
   },
 

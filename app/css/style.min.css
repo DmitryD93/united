@@ -2440,6 +2440,7 @@ body.lock {
   width: 545px;
   margin-right: 0;
   margin-left: 0;
+  background-size: cover;
 }
 @media (max-width: 1280px) {
   .discount__swiper-thumbs {
@@ -2453,7 +2454,6 @@ body.lock {
 }
 .discount__swiper-thumbs-slide {
   opacity: 0.4;
-  scale: 1;
   border-radius: 0 20px 20px 20px;
   background-size: contain;
   background-position: center;
@@ -2461,9 +2461,14 @@ body.lock {
   -webkit-transition: opacity 0.3s ease, scale 0.3s ease;
   transition: opacity 0.3s ease, scale 0.3s ease;
 }
+.discount__swiper-thumbs-slide:focus {
+  opacity: 1;
+}
+.discount__swiper-thumbs-slide:hover {
+  opacity: 1;
+}
 .discount__swiper-thumbs-slide.swiper-slide-thumb-active {
   opacity: 1;
-  scale: 1.2;
   -webkit-transition: opacity 0.3s ease, scale 0.3s ease;
   transition: opacity 0.3s ease, scale 0.3s ease;
 }
@@ -2669,6 +2674,7 @@ body.lock {
 }
 @media (max-width: 900px) {
   .news__list-item {
+    padding-left: 30px;
     scale: 1;
   }
 }
