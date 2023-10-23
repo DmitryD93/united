@@ -1,0 +1,87 @@
+<section class="popular">
+  <div class="container popular-wrapper">
+    <h2 class="popular__title">Популярные запчасти</h2>
+    <div class="popular__content">
+      <div class="popular__nav">
+        <button class="popular__nav-btn tabs__nav-btn tab-active secondary-btn" type="button" data-tab="#tab-1">
+          Запчасти
+        </button>
+        <button class="popular__nav-btn tabs__nav-btn secondary-btn" type="button" data-tab="#tab-2">
+          Услуги
+        </button>
+      </div>
+      <ul class="popular__list tabs__item tab-active" id="tab-1">
+
+        @@include('../../common/_product-card/_product-card.html', {
+        "title": "Горелка дизельная (без штифта)",
+        "price": "7 200 р.",
+        "img-path": "img/details_two.png",
+        "img-alt": "Горелка дизельная (без штифта)",
+        })
+
+        @@include('../../common/_product-card/_product-card.html', {
+        "title": "Втулка рычага переключения передач",
+        "price": "7 350 р.",
+        "img-path": "img/default_wheel.svg",
+        "img-alt": "Втулка рычага переключения передач",
+        })
+
+        @@include('../../common/_product-card/_product-card.html', {
+        "title": "Втулка рычага переключения передач",
+        "price": "7 350 р.",
+        "img-path": "img/default_engine.svg",
+        "img-alt": "Втулка рычага переключения передач",
+        })
+
+        @@include('../../common/_product-card/_product-card.html', {
+        "title": "Втулка рычага переключения передач",
+        "price": "97 350 р.",
+        "img-path": "img/details_one.png",
+        "img-alt": "Втулка рычага переключения передач",
+        })
+      </ul>
+      
+      <ul class="popular__list tabs__item" id="tab-2">
+
+        @@include('../../common/_product-card/_product-card.html', {
+        "title": "Втулка рычага переключения передач",
+        "price": "97 350 р.",
+        "img-path": "img/details_one.png",
+        "img-alt": "Втулка рычага переключения передач",
+        })
+
+        @@include('../../common/_product-card/_product-card.html', {
+        "title": "Втулка рычага переключения передач",
+        "price": "97 350 р.",
+        "img-path": "img/details_one.png",
+        "img-alt": "Втулка рычага переключения передач",
+        })
+
+
+        @@include('../../common/_product-card/_product-card.html', {
+        "title": "Втулка рычага переключения передач",
+        "price": "97 350 р.",
+        "img-path": "img/details_one.png",
+        "img-alt": "Втулка рычага переключения передач",
+        })
+
+
+        @@include('../../common/_product-card/_product-card.html', {
+        "title": "Втулка рычага переключения передач",
+        "price": "97 350 р.",
+        "img-path": "img/details_one.png",
+        "img-alt": "Втулка рычага переключения передач",
+        })
+
+      </ul>
+      <div class="popular__bottom-content">
+        <button class="popular__bottom-content-btn secondary-btn" type="button">
+          Все запчасти
+        </button>
+        <span class="popular__bottom-content-descr">
+          &gt;&gt; 55&nbsp;000 запчастей
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

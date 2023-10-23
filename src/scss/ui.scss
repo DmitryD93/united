@@ -112,11 +112,11 @@
 
   @include _only-hover {
     &:hover {
-      &:before {
+      &::before {
         background-color: var(--dark-red);
       }
 
-      &:after {
+      &::after {
         opacity: 0;
       }
     }

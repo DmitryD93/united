@@ -1269,10 +1269,10 @@ body.lock {
   opacity: 1;
 }
 @media screen and (any-hover: hover) {
-  .secondary-btn:hover:before {
+  .secondary-btn:hover::before {
     background-color: var(--dark-red);
   }
-  .secondary-btn:hover:after {
+  .secondary-btn:hover::after {
     opacity: 0;
   }
 }
