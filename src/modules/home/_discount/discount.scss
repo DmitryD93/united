@@ -7,28 +7,38 @@
     justify-content: space-between;
     gap: 30px;
 
+    @include _880 {
+      flex-direction: column;
+    }
+
     &-right {
       max-width: 45%;
+
       @include _1280 {
       max-width: 50%;
-
     }
+
+       @include _880 {
+        max-width: 100%;
+        text-align: center;
+      }
     }
 
     
   }
 
   &__slide-img {
-    max-width: 546px;
-    max-height: 300px;
+    // max-width: 546px;
+    // max-height: 300px;
     border-radius: 0 20px 20px 20px;
 
     @include _1280 {
-      max-width: 420px;
+      // max-width: 420px;
     }
   }
 
   &__swiper-utility {
+    position: relative;
     width: 100%;
     min-height: 60px;
     display: flex;
@@ -36,6 +46,11 @@
     justify-content: flex-end;
     align-items: center;
     gap: 15%;
+
+    @include _880 {
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
 
     &-nav {
       position: relative;
@@ -46,7 +61,7 @@
   }
 
   &__swiper-wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   // Миниатюры под свайпером
@@ -59,6 +74,10 @@
 
     @include _1280 {
       width: 420px;
+    }
+
+    @include _880 {
+      width: 100%;
     }
 
     &-slide {
@@ -103,6 +122,12 @@
     color: var(--black);
     margin-bottom: 20px;
     word-wrap: break-word;
+
+    @include _880 {
+      font-size: 36px;
+      line-height: 1.2;
+      letter-spacing: 0.36px;
+    }
   }
   &__slide-content-descr {
     color: var(--black);
@@ -110,5 +135,10 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 1.2;
+
+    @include _880 {
+      font-size: 14px;
+    }
   }
+
 }
