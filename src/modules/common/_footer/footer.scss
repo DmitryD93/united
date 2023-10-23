@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  z-index: 9;
+  z-index: 1;
   flex: 0 0 auto;
   background-color: var(--grey);
 
@@ -29,6 +29,10 @@
     border-bottom: 1px solid var(--dark-grey);
     padding-bottom: 45px;
 
+    @include _1280 {
+      flex-direction: column;
+    }
+
     
 
     &-left {
@@ -37,8 +41,11 @@
       max-width: 375px;
 
       @include _1280 {
-        max-width: 40%;
+        max-width: 100%;
+        flex-direction: row;
+        gap: 30px;
       }
+
 
       &-descr {
         color: var(--black);
@@ -59,7 +66,7 @@
       justify-content: space-between;
       max-width: 35%;
       @include _1280 {
-          max-width: 55%;
+          max-width: 100%;
         }
 
       &-list-title {
@@ -79,6 +86,11 @@
         font-weight: 600;
         line-height: 1.2;
         letter-spacing: 0.6px;
+
+        @include _880 {
+          font-size: 18px;
+          letter-spacing: normal;
+        }
       }
       &-company-list {
         display: flex;

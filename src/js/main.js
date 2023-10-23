@@ -50,7 +50,7 @@ const discountThumbsContent = document.querySelector(
 );
 const discountThumbs = new Swiper(discountThumbsContent, {
   spaceBetween: 30,
-  slidesPerView: 5,
+  // slidesPerView: 5,
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
@@ -60,8 +60,11 @@ const discountThumbs = new Swiper(discountThumbsContent, {
     1280: {
       slidesPerView: 5,
     },
-    640: {
+    900: {
       slidesPerView: 4,
+    },
+    300: {
+      slidesPerView: 5,
     },
   },
 });
@@ -109,8 +112,9 @@ const newsSwiper = new Swiper(newsSwiperContent, {
       slidesPerView: 2.2,
     },
     640: {
-      slidesPerView: 2,
-
+      slidesPerView: 1.5,
+      centeredSlides: false,
+      spaceBetween: 50,
     },
   },
 
