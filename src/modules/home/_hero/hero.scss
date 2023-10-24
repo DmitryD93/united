@@ -17,6 +17,12 @@
     min-height: 425px;
   }
 
+  @include _550 {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    min-height: 425px;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
