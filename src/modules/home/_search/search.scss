@@ -10,6 +10,10 @@
     height: 80px;
   }
 
+  @include _550 {
+    height: 0;
+  }
+
   &__form {
     transform: translate(0, -50%);
     display: flex;
@@ -24,6 +28,10 @@
 
     @include _880 {
       padding: 24px;
+    }
+
+    @include _550 {
+      transform: translate(0, -100%);
     }
 
     &-btn {

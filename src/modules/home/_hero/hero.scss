@@ -18,9 +18,8 @@
   }
 
   @include _550 {
-    padding-top: 80px;
-    padding-bottom: 50px;
-    min-height: 425px;
+    padding: 84px 0 110px 0;
+    min-height: 450px;
   }
 
   &__content {
