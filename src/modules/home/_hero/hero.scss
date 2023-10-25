@@ -18,9 +18,9 @@
   }
 
   @include _550 {
-    padding-top: 80px;
-    padding-bottom: 50px;
-    min-height: 425px;
+    padding: 84px 0 150px 0;
+    min-height: 450px;
+    background-position: 45% 90%;
   }
 
   &__content {
@@ -35,6 +35,10 @@
     @include _880 {
       max-width: 70%;
     }
+
+    @include _550 {
+      max-width: 280px;
+    }
     
     &-contacts {
       display: flex;
@@ -44,6 +48,7 @@
       @include _1280 {
         gap: 8px;
       }
+
     }
   }
 
@@ -86,6 +91,11 @@
       letter-spacing: 1.2px;
       line-height: 1.2;
     }
+
+    @include _550 {
+      font-size: 30px;
+      letter-spacing: 0.9px;
+    }
   }
 
   &__descr {
@@ -110,6 +120,10 @@
 
     @include _880 {
       font-size: 24px;
+    }
+
+    @include _550 {
+      font-size: 20px;
     }
   }
 }

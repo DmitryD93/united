@@ -2,6 +2,7 @@ const burger = document.querySelector('.burger')
 const menu = document.querySelector('.header__nav')
 const body = document.body
 const link = document.querySelectorAll('.link')
+const headerbBtn = document.querySelectorAll('.header__btn')
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('active')
@@ -9,6 +10,13 @@ burger.addEventListener('click', () => {
   body.classList.toggle('lock')
 
   link.forEach(e => {
+    e.addEventListener('click', () => {
+      burger.classList.remove('active')
+      menu.classList.remove('active')
+      body.classList.remove('lock')
+    })
+  })
+  headerbBtn.forEach(e => {
     e.addEventListener('click', () => {
       burger.classList.remove('active')
       menu.classList.remove('active')
