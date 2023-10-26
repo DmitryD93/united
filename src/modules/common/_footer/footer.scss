@@ -7,6 +7,10 @@
   flex: 0 0 auto;
   background-color: var(--grey);
 
+  @include _550 {
+    padding: 32px 0;
+  }
+
   &-copyright {
     font-family: "Ubuntu", sans-serif;
     font-size: 16px;
@@ -46,6 +50,11 @@
         gap: 30px;
       }
 
+      @include _550 {
+        flex-direction: column;
+        gap: 25px;
+      }
+
 
       &-descr {
         color: var(--black);
@@ -56,6 +65,10 @@
       }
       &-logo-link {
         margin-bottom: 40px;
+
+        @include _550 {
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -67,6 +80,10 @@
       max-width: 35%;
       @include _1280 {
           max-width: 100%;
+        }
+
+        @include _550 {
+          flex-direction: column;
         }
 
       &-list-title {
