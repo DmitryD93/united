@@ -23,13 +23,18 @@
   }
 
   &__join-visible-btn {
-    display: flex;
+    display: none;
     align-items: center;
     background-color: transparent;
 
     svg rect {
       fill: none;
     }
+
+    @include _880 {
+      display: flex;
+    }
+  
 
     @include _550 {
       width: 32px;

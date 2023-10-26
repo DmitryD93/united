@@ -195,7 +195,6 @@ function search() {
   //   headerSearch.classList.remove("fixed");
   // });
 }
-
 // searchBtn.addEventListener("click", () => {
 //   headerSearch.classList.toggle("fixed");
 // });

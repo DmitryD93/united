@@ -1504,9 +1504,7 @@ body.lock {
   }
 }
 .header__join-visible-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1514,6 +1512,13 @@ body.lock {
 }
 .header__join-visible-btn svg rect {
   fill: none;
+}
+@media (max-width: 900px) {
+  .header__join-visible-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 @media (max-width: 550px) {
   .header__join-visible-btn {
