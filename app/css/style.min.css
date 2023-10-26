@@ -1597,6 +1597,8 @@ body.lock {
 @media (max-width: 900px) {
   .header__search-btn svg {
     fill: var(--black);
+    width: 24px;
+    height: 24px;
   }
 }
 .header__search.fixed {
