@@ -81,6 +81,8 @@
     
   
       & svg {
+        width: 32px;
+        height: 32px;
         fill: red;
         transition: fill 0.4s ease, scale 0.4s ease;
       }

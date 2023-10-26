@@ -170,18 +170,18 @@ const newsSwiper = new Swiper(newsSwiperContent, {
 // Фиксированная шапка
 // Обсервер для появления кнопки и плашки поиска
 
-let header = document.querySelector(".header");
+// let header = document.querySelector(".header");
 let content = document.querySelector(".hero");
 
 let observer = new IntersectionObserver(
   function (entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        header.classList.remove("fixed");
+        // header.classList.remove("fixed");
         searchBtn.classList.remove("fixed");
         search();
       } else {
-        header.classList.add("fixed");
+        // header.classList.add("fixed");
         searchBtn.classList.add("fixed");
       }
     });
@@ -195,30 +195,20 @@ observer.observe(content);
 
 let searchBtn = document.querySelector(".header__search-btn");
 let headerSearch = document.querySelector(".header__search");
-// let closeBtn = document.querySelector(".header__search-close-btn");
 
 function search() {
-  searchBtn.addEventListener("click", () => {
-    if(headerSearch.classList.contains("fixed")) {
-      headerSearch.classList.remove("fixed");
-    } else {
-      headerSearch.classList.add("fixed");
-    }
-  });
-  // searchBtn.addEventListener("click", () => {
-  //   headerSearch.classList.add("fixed");
-  // });
-  if (!header.fixed) {
+  if (!searchBtn.fixed) {
     headerSearch.classList.remove("fixed");
   };
-  // closeBtn.addEventListener("click", () => {
-  //   headerSearch.classList.remove("fixed");
-  // });
 }
-// searchBtn.addEventListener("click", () => {
-//   headerSearch.classList.toggle("fixed");
-// });
 
+searchBtn.addEventListener("click", () => {
+  if(headerSearch.classList.contains("fixed")) {
+    headerSearch.classList.remove("fixed");
+  } else {
+    headerSearch.classList.add("fixed");
+  }
+});
 
 // Убрать поиск шапки при клике на пустую область
 
