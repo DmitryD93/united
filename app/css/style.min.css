@@ -1271,6 +1271,11 @@ body.lock {
     padding: 8px 24px;
   }
 }
+@media (max-width: 550px) {
+  .secondary-btn {
+    font-size: 16px;
+  }
+}
 .secondary-btn::before {
   content: "";
   position: absolute;
@@ -2440,11 +2445,6 @@ body.lock {
     padding: 32px 0;
   }
 }
-@media (max-width: 900px) {
-  .popular {
-    padding: 28px 0;
-  }
-}
 .popular__title {
   font-size: 40px;
   font-weight: 700;
@@ -2453,6 +2453,11 @@ body.lock {
 @media (max-width: 900px) {
   .popular__title {
     font-size: 32px;
+  }
+}
+@media (max-width: 550px) {
+  .popular__title {
+    font-size: 24px;
   }
 }
 .popular__content {
@@ -2476,6 +2481,12 @@ body.lock {
 @media (max-width: 1024px) {
   .popular__nav {
     margin-bottom: 28px;
+  }
+}
+@media (max-width: 550px) {
+  .popular__nav {
+    padding: 16px 16px 0 0;
+    margin-bottom: 16px;
   }
 }
 .popular__nav-btn {
@@ -2516,6 +2527,12 @@ body.lock {
     line-height: 1.5;
   }
 }
+@media (max-width: 550px) {
+  .popular__nav-btn.tab-active {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
 .popular__nav-btn.tab-active::before {
   width: 100%;
 }
@@ -2547,6 +2564,13 @@ body.lock {
     display: flex;
   }
 }
+@media (max-width: 550px) {
+  .popular__list {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 16px;
+  }
+}
 .popular__list.tab-active {
   display: -ms-grid;
   display: grid;
@@ -2570,6 +2594,11 @@ body.lock {
           align-items: center;
   gap: 15px;
 }
+@media (max-width: 550px) {
+  .popular__bottom-content {
+    gap: 8px;
+  }
+}
 .popular__bottom-content-descr {
   color: var(--black);
   font-family: "Ubuntu", sans-serif;
@@ -2585,6 +2614,11 @@ body.lock {
 .discount {
   background: var(--grey-gradient);
   padding: 64px 0;
+}
+@media (max-width: 550px) {
+  .discount {
+    padding: 32px 0;
+  }
 }
 .discount__slide-content {
   display: -webkit-box;

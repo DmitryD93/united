@@ -71,9 +71,12 @@ const discountThumbs = new Swiper(discountThumbsContent, {
     900: {
       slidesPerView: 4,
     },
-    300: {
+    550: {
       slidesPerView: 5,
     },
+    320: {
+      slidesPerView: 3,
+    }
   },
 });
 

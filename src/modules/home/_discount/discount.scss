@@ -2,6 +2,10 @@
   background: var(--grey-gradient);
   padding: 64px 0;
 
+  @include _550 {
+    padding: 32px 0;
+  }
+
   &__slide-content {
     display: flex;
     justify-content: space-between;
