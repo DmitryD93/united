@@ -1,1169 +1,1471 @@
-
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#9f00a7" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Stat4market.com" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="robots" content="" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-  <link rel="icon" type="image/png" href="img/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="manifest" href="img/site.webmanifest">
-  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#9f00a7">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Stat4market.com">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="robots" content="">
-  
-  
-  <title>Юнайтед Сервис</title>
-  <meta name="description" content="Автозапчасти в Санкт-Петербурге">
-  <link rel="stylesheet" href="css/style.min.css">
-  
-  
+    <title>Юнайтед Сервис</title>
+    <meta name="description" content="Автозапчасти в Санкт-Петербурге" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
 
-
-</head>
-
-
-<body>
-  <header class="header">
-    <div class="header-container container">
-      <a class="header__link link" href="#">
-        <img
-          class="header__logo"
-          src="img/united_logo.svg"
-          alt="Логотип Юнайтед Сервис"      
-          loading="lazy"
-        />
-      </a>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-list-item">
-            <a href="#" class="link header__nav-link">На главную</a>
-          </li>
-          <li class="header__nav-list-item">
-            <a href="#" class="link header__nav-link">Запчасти</a>
-          </li>
-          <li class="header__nav-list-item">
-            <a href="#" class="link header__nav-link">Сервис</a>
-          </li>
-          <li class="header__nav-list-item">
-            <a href="#" class="link header__nav-link">О компании</a>
-          </li>
-          <li class="header__nav-list-item">
-            <a href="#" class="link header__nav-link">Новости</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__buttons-block">
-        <button type="button" class="header__btn header__search-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18.9 16.776C20.4965 14.6424 21.2255 11.9832 20.9403 9.33375C20.6551 6.68427 19.3767 4.24121 17.3627 2.49634C15.3486 0.751469 12.7483 -0.165652 10.0852 -0.0704088C7.42209 0.0248339 4.89395 1.12537 3.00966 3.00966C1.12537 4.89395 0.0248339 7.42209 -0.0704088 10.0852C-0.165652 12.7483 0.751469 15.3486 2.49634 17.3627C4.24121 19.3767 6.68427 20.6551 9.33375 20.9403C11.9832 21.2255 14.6424 20.4965 16.776 18.9L21.876 24L24 21.88L18.9 16.776ZM10.5 18C9.01664 18 7.56659 17.5601 6.33322 16.736C5.09985 15.9119 4.13856 14.7406 3.5709 13.3701C3.00324 11.9997 2.85472 10.4917 3.14411 9.03682C3.4335 7.58196 4.1478 6.24559 5.19669 5.19669C6.24559 4.1478 7.58196 3.4335 9.03682 3.14411C10.4917 2.85472 11.9997 3.00324 13.3701 3.5709C14.7406 4.13856 15.9119 5.09985 16.736 6.33322C17.5601 7.56659 18 9.01664 18 10.5C17.9981 12.4886 17.2074 14.3951 15.8013 15.8012C14.3951 17.2074 12.4886 17.9981 10.5 18Z"/>
-          </svg>            
-      </button>
-
-      <button class="header__btn header__join-visible-btn">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="24" height="24" transform="translate(8 8)"/>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7927 8.0683C17.4298 8.15607 16.884 8.44907 16.5811 8.71885C16.2365 9.02556 15.9036 9.53626 15.7541 9.98741C15.6383 10.3369 15.6316 10.4035 15.6289 11.2362V12.2358C15.6289 12.2358 15.8359 12.2358 15.9367 12.2358C16.2398 12.2358 16.2232 12.2358 16.5429 12.2358C16.8623 12.2358 17.5841 12.2358 17.5841 12.2358C17.5841 12.2358 17.5841 12.1349 17.5841 11.3489C17.6099 10.4991 17.6346 10.4112 17.9171 10.1635C18.0043 10.087 18.1521 10.0032 18.2456 9.97729C18.3541 9.94723 19.2133 9.93092 20.6202 9.93222C22.694 9.93415 22.8141 9.9386 22.6448 10.0068C21.994 10.2689 21.5369 10.821 21.4079 11.5008C21.3786 11.6549 21.3625 14.3006 21.3625 18.9687V26.1978L19.889 26.1976C18.9997 26.1974 18.3482 26.1787 18.2456 26.1502C18.1521 26.1243 18.0043 26.0405 17.9171 25.964C17.6117 25.6961 17.6081 25.6787 17.5832 24.3104C17.5622 23.1567 17.5532 22.933 17.5532 22.933C17.5532 22.933 16.9396 22.933 16.5429 22.933C16.1462 22.933 15.6275 22.933 15.6275 22.933C15.6275 22.933 15.6261 23.1268 15.6275 24.4227V25.5569L15.7527 26.1401C15.9938 26.8593 16.5116 27.4665 17.1802 27.814C17.7547 28.1125 17.887 28.1289 19.7316 28.1296L21.3625 28.1303V28.6634C21.3625 29.5511 21.4907 29.9607 21.9056 30.3988C22.3397 30.8573 22.7669 31.0278 23.4031 30.9964C23.797 30.9769 23.9443 30.9325 26.845 29.9591C28.5117 29.3998 29.9614 28.8918 30.0664 28.8304C30.3549 28.6615 30.7419 28.2185 30.8632 27.9184L30.9682 27.6584L30.9907 22.6027C31.0031 19.822 31.0031 15.7168 30.9907 13.4799L30.9682 9.41285L30.8433 9.14636C30.5942 8.61517 30.186 8.25318 29.6475 8.08601C29.3689 7.99954 29.2168 7.99734 23.7086 8.00098C18.9985 8.00413 18.0118 8.01536 17.7927 8.0683ZM12.7241 12.8118V13.4495C12.7241 13.4495 12.7241 14.2342 12.7241 15.1626V16.6257H10.6912C8.70808 16.6257 8.40414 16.6257 8.40414 16.6257L8 16.6257C8 16.6257 8 17.2104 8 17.5559C8 17.9664 8 18.5581 8 18.5581C8 18.5581 8.53689 18.5581 10.7184 18.5581H12.7198L12.7332 20.1197L12.7466 21.6814V22.3697L13.6451 22.3697C13.6451 22.3697 13.9754 22.3683 14.1279 22.2945C14.2618 22.2297 14.954 21.5672 16.3756 20.1435C18.5762 17.9396 18.5286 17.997 18.5268 17.5469C18.5264 17.4481 18.4882 17.2863 18.442 17.1874C18.3855 17.0664 17.6759 16.33 16.2722 14.9352C14.3255 13.0011 14.1723 12.8594 13.9752 12.8118C13.6219 12.8118 12.7241 12.8118 12.7241 12.8118Z" fill="#1A202C"/>
-          </svg>  
-      </button>
-      <button class="header__burger burger">
-        <span class="burger__line"></span>
-      </button>
-      <div class="header__login-block">
-        <span class="header__login-block-triangle"></span>
-        <a href="#" class="link header__registration-link">Регистрация</a>
-        <button type="button" class="btn header__join-btn">Вход</button>
-      </div>
-      </div>
-      
-
-      
-    </div>
-
-    <div class="header__search">
-      <form action="#" class="container header__search-form">
-        <label class="header__search-form-label"> 
-          <input name="Поиск" class="header__search-form-input" placeholder="Поиск по VIN, артикулу, названию, бренду, услугам, работам">
-          <button type="button" class="header__search-clear-btn">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_438_1281)">
-              <mask id="path-1-inside-1_438_1281" fill="white">
-              <path d="M15.3333 1.34887L13.9845 0L7.66667 6.31844L1.34887 0L0 1.34887L6.31844 7.66667L0 13.9845L1.34887 15.3333L7.66667 9.0149L13.9845 15.3333L15.3333 13.9845L9.0149 7.66667L15.3333 1.34887Z"/>
-              </mask>
-              <path d="M15.3333 1.34887L13.9845 0L7.66667 6.31844L1.34887 0L0 1.34887L6.31844 7.66667L0 13.9845L1.34887 15.3333L7.66667 9.0149L13.9845 15.3333L15.3333 13.9845L9.0149 7.66667L15.3333 1.34887Z" fill="white"/>
-              <path d="M15.3333 1.34887L30.4175 16.4346L45.504 1.34962L30.4183 -13.7361L15.3333 1.34887ZM13.9845 0L29.0694 -15.085L13.9837 -30.1706L-1.10124 -15.0842L13.9845 0ZM7.66667 6.31844L-7.41904 21.4026L7.66667 36.4898L22.7524 21.4026L7.66667 6.31844ZM1.34887 0L16.4346 -15.0842L1.34962 -30.1706L-13.7361 -15.0849L1.34887 0ZM0 1.34887L-15.0849 -13.7361L-30.1706 1.34962L-15.0842 16.4346L0 1.34887ZM6.31844 7.66667L21.4026 22.7524L36.4898 7.66667L21.4026 -7.41904L6.31844 7.66667ZM0 13.9845L-15.0842 -1.10124L-30.1706 13.9837L-15.085 29.0694L0 13.9845ZM1.34887 15.3333L-13.7361 30.4183L1.34962 45.504L16.4346 30.4175L1.34887 15.3333ZM7.66667 9.0149L22.7524 -6.06929L7.66667 -21.1565L-7.41904 -6.06929L7.66667 9.0149ZM13.9845 15.3333L-1.10124 30.4175L13.9837 45.504L29.0694 30.4183L13.9845 15.3333ZM15.3333 13.9845L30.4183 29.0694L45.504 13.9837L30.4175 -1.10124L15.3333 13.9845ZM9.0149 7.66667L-6.06929 -7.41904L-21.1565 7.66667L-6.06929 22.7524L9.0149 7.66667ZM30.4183 -13.7361L29.0694 -15.085L-1.10047 15.085L0.248392 16.4338L30.4183 -13.7361ZM-1.10124 -15.0842L-7.41904 -8.76575L22.7524 21.4026L29.0702 15.0842L-1.10124 -15.0842ZM22.7524 -8.76575L16.4346 -15.0842L-13.7368 15.0842L-7.41904 21.4026L22.7524 -8.76575ZM-13.7361 -15.0849L-15.0849 -13.7361L15.0849 16.4338L16.4338 15.0849L-13.7361 -15.0849ZM-15.0842 16.4346L-8.76575 22.7524L21.4026 -7.41904L15.0842 -13.7368L-15.0842 16.4346ZM-8.76575 -7.41904L-15.0842 -1.10124L15.0842 29.0702L21.4026 22.7524L-8.76575 -7.41904ZM-15.085 29.0694L-13.7361 30.4183L16.4338 0.248392L15.085 -1.10047L-15.085 29.0694ZM16.4346 30.4175L22.7524 24.0991L-7.41904 -6.06929L-13.7368 0.249148L16.4346 30.4175ZM-7.41904 24.0991L-1.10124 30.4175L29.0702 0.249147L22.7524 -6.06929L-7.41904 24.0991ZM29.0694 30.4183L30.4183 29.0694L0.248387 -1.10048L-1.10048 0.248387L29.0694 30.4183ZM30.4175 -1.10124L24.0991 -7.41904L-6.06929 22.7524L0.249147 29.0702L30.4175 -1.10124ZM24.0991 22.7524L30.4175 16.4346L0.249148 -13.7368L-6.06929 -7.41904L24.0991 22.7524Z" fill="#E31E24" mask="url(#path-1-inside-1_438_1281)"/>
-              </g>
-              <defs>
-              <clipPath id="clip0_438_1281">
-              <rect width="16" height="16" fill="white"/>
-              </clipPath>
-              </defs>
-              </svg>              
-          </button>
-          <button class="btn header__search-form-btn" type="button">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18.9 16.776C20.4965 14.6424 21.2255 11.9832 20.9403 9.33375C20.6551 6.68427 19.3767 4.24121 17.3627 2.49634C15.3486 0.751469 12.7483 -0.165652 10.0852 -0.0704088C7.42209 0.0248339 4.89395 1.12537 3.00966 3.00966C1.12537 4.89395 0.0248339 7.42209 -0.0704088 10.0852C-0.165652 12.7483 0.751469 15.3486 2.49634 17.3627C4.24121 19.3767 6.68427 20.6551 9.33375 20.9403C11.9832 21.2255 14.6424 20.4965 16.776 18.9L21.876 24L24 21.88L18.9 16.776ZM10.5 18C9.01664 18 7.56659 17.5601 6.33322 16.736C5.09985 15.9119 4.13856 14.7406 3.5709 13.3701C3.00324 11.9997 2.85472 10.4917 3.14411 9.03682C3.4335 7.58196 4.1478 6.24559 5.19669 5.19669C6.24559 4.1478 7.58196 3.4335 9.03682 3.14411C10.4917 2.85472 11.9997 3.00324 13.3701 3.5709C14.7406 4.13856 15.9119 5.09985 16.736 6.33322C17.5601 7.56659 18 9.01664 18 10.5C17.9981 12.4886 17.2074 14.3951 15.8013 15.8012C14.3951 17.2074 12.4886 17.9981 10.5 18Z"/>
-              </svg> 
-          </button>
-        </label>
-        
-        
-
-      </form>
-    </div>
-  </header>
-
-
-<main class="main home">
-    <div class="site-wrapper">
-    <section class="hero">
-  <div class="container hero-wrapper">
-    <div class="hero__content">
-    <span class="hero__pretitle"
-      >Сервисный центр, продажа грузовиков и запчастей</span
-    >
-    <h1 class="hero__title">
-      <span class="hero__title-fragment">ЮнайтедСервис</span>
-    </h1>
-    <p class="hero__descr">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation
-    </p>
-    <address class="hero__content-contacts">
-       <a href="88005556050" class="link hero__tel">8-800-555-60-50</a>
-       <a href="88127405835" class="link hero__tel">8-812-740-58-35</a>
-    </address>
-
-     </div>
-  </div>
-
-  </section>
-
-    <div class="search">
-  <div class="container search-wrapper">
-    <form action="#" class="search__form">
-      <label class="search__form-label">
-        <input name="Поиск" class="search__form-input" placeholder="Поиск по VIN, артикулу, названию, бренду, услугам, работам">
-      </label>
-      <button class="btn search__form-btn" type="button">
-        <span>Поиск</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18.9 16.776C20.4965 14.6424 21.2255 11.9832 20.9403 9.33375C20.6551 6.68427 19.3767 4.24121 17.3627 2.49634C15.3486 0.751469 12.7483 -0.165652 10.0852 -0.0704088C7.42209 0.0248339 4.89395 1.12537 3.00966 3.00966C1.12537 4.89395 0.0248339 7.42209 -0.0704088 10.0852C-0.165652 12.7483 0.751469 15.3486 2.49634 17.3627C4.24121 19.3767 6.68427 20.6551 9.33375 20.9403C11.9832 21.2255 14.6424 20.4965 16.776 18.9L21.876 24L24 21.88L18.9 16.776ZM10.5 18C9.01664 18 7.56659 17.5601 6.33322 16.736C5.09985 15.9119 4.13856 14.7406 3.5709 13.3701C3.00324 11.9997 2.85472 10.4917 3.14411 9.03682C3.4335 7.58196 4.1478 6.24559 5.19669 5.19669C6.24559 4.1478 7.58196 3.4335 9.03682 3.14411C10.4917 2.85472 11.9997 3.00324 13.3701 3.5709C14.7406 4.13856 15.9119 5.09985 16.736 6.33322C17.5601 7.56659 18 9.01664 18 10.5C17.9981 12.4886 17.2074 14.3951 15.8013 15.8012C14.3951 17.2074 12.4886 17.9981 10.5 18Z"/>
-          </svg>
-      </button>
-      <span class="search__form-low-placeholder">Поиск по VIN, артикулу, названию, бренду, услугам, работам</span>
-    </form>
-  </div>
-
-    </div>
-    <section class="popular">
-  <div class="container popular-wrapper">
-    <h2 class="popular__title">Популярные запчасти</h2>
-    <div class="popular__content">
-      <div class="popular__nav">
-        <button class="popular__nav-btn tabs__nav-btn tab-active secondary-btn" type="button" data-tab="#tab-1">
-          Запчасти
-        </button>
-        <button class="popular__nav-btn tabs__nav-btn secondary-btn" type="button" data-tab="#tab-2">
-          Услуги
-        </button>
-      </div>
-      <ul class="popular__list tabs__item tab-active" id="tab-1">
-
-        <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
+  <body>
+    <header class="header">
+      <div class="header-container container">
+        <a class="header__link link" href="#">
           <img
-        src="img/details_two.png"
-        alt="Горелка дизельная (без штифта)"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Горелка дизельная (без штифта)
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>7 200 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/default_wheel.svg"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>7 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/default_engine.svg"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>7 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/details_one.png"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>97 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-        </ul>
-
-            <ul class="popular__list tabs__item" id="tab-2">
-
-        <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/details_one.png"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>97 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/details_one.png"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>97 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/details_one.png"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>97 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/details_one.png"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>97 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-        </ul>
-      <div class="popular__bottom-content">
-        <button class="popular__bottom-content-btn secondary-btn" type="button">
-          Все запчасти
-        </button>
-        <span class="popular__bottom-content-descr">
-          &gt;&gt; 55&nbsp;000 запчастей
-        </span>
-      </div>
-    </div>
-  </div>
-</section>
-    <section class="discount">
-  <div class="container discount-wrapper">
-    <h2 class="discount__title hidden">Накопительные скидки</h2>
-    <div class="discount__swiper swiper">
-      <div class="swiper-wrapper discount__swiper-wrapper">
-        <div class="swiper-slide discount__swiper-slide">
-          <div class="discount__slide-content">
-            <picture>
-              <source
-                srcset="img/product_slide_img_one_1280.jpg"
-                media="(min-width: 901px) and (max-width: 1200px)"
-              />
-
-              <source
-                srcset="img/sl
-              ide_img_640.jpg"
-                media="(min-width: 551px) and (max-width: 900px)"
-              />
-              <source srcset="img/slide_img_320.jpg" media="(min-width: 320px) and (max-width: 550px)">
-              <img
-                class="discount__slide-img"
-                src="img/product_slide_img_one.jpg"
-                alt="Картинка товара"
-              />
-            </picture>
-
-            <div class="discount__slide-content-right">
-              <h3 class="discount__slide-content-title">
-                НАКОПИТЕЛЬНЫЕ СКИДКИ
-              </h3>
-              <p class="discount__slide-content-descr">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide discount__swiper-slide">
-          <div class="discount__slide-content">
-            <picture>
-              <source
-                srcset="img/product_slide_img_one_1280.jpg"
-                media="(min-width: 901px) and (max-width: 1200px)"
-              />
-
-              <source
-                srcset="img/sl
-              ide_img_640.jpg"
-                media="(min-width: 551px) and (max-width: 900px)"
-              />
-              <source srcset="img/slide_img_320.jpg" media="(min-width: 320px) and (max-width: 550px)">
-              <img
-                class="discount__slide-img"
-                src="img/product_slide_img_one.jpg"
-                alt="Картинка товара"
-              />
-            </picture>
-            <div class="discount__slide-content-right">
-              <h3 class="discount__slide-content-title">
-                НАКОПИТЕЛЬНЫЕ СКИДКИ
-              </h3>
-              <p class="discount__slide-content-descr">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide discount__swiper-slide">
-          <div class="discount__slide-content">
-            <picture>
-              <source
-                srcset="img/product_slide_img_one_1280.jpg"
-                media="(min-width: 901px) and (max-width: 1200px)"
-              />
-
-              <source
-                srcset="img/sl
-              ide_img_640.jpg"
-                media="(min-width: 551px) and (max-width: 900px)"
-              />
-              <source srcset="img/slide_img_320.jpg" media="(min-width: 320px) and (max-width: 550px)">
-              <img
-                class="discount__slide-img"
-                src="img/product_slide_img_one.jpg"
-                alt="Картинка товара"
-              />
-            </picture>
-            <div class="discount__slide-content-right">
-              <h3 class="discount__slide-content-title">
-                НАКОПИТЕЛЬНЫЕ СКИДКИ
-              </h3>
-              <p class="discount__slide-content-descr">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide discount__swiper-slide">
-          <div class="discount__slide-content">
-            <picture>
-              <source
-                srcset="img/product_slide_img_one_1280.jpg"
-                media="(min-width: 901px) and (max-width: 1200px)"
-              />
-
-              <source
-                srcset="img/sl
-              ide_img_640.jpg"
-                media="(min-width: 551px) and (max-width: 900px)"
-              />
-              <source srcset="img/slide_img_320.jpg" media="(min-width: 320px) and (max-width: 550px)">
-              <img
-                class="discount__slide-img"
-                src="img/product_slide_img_one.jpg"
-                alt="Картинка товара"
-              />
-            </picture>
-            <div class="discount__slide-content-right">
-              <h3 class="discount__slide-content-title">
-                НАКОПИТЕЛЬНЫЕ СКИДКИ
-              </h3>
-              <p class="discount__slide-content-descr">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide discount__swiper-slide">
-          <div class="discount__slide-content">
-            <picture>
-              <source
-                srcset="img/product_slide_img_one_1280.jpg"
-                media="(min-width: 901px) and (max-width: 1200px)"
-              />
-
-              <source
-                srcset="img/sl
-              ide_img_640.jpg"
-                media="(min-width: 551px) and (max-width: 900px)"
-              />
-              <source srcset="img/slide_img_320.jpg" media="(min-width: 320px) and (max-width: 550px)">
-              <img
-                class="discount__slide-img"
-                src="img/product_slide_img_one.jpg"
-                alt="Картинка товара"
-              />
-            </picture>
-            <div class="discount__slide-content-right">
-              <h3 class="discount__slide-content-title">
-                НАКОПИТЕЛЬНЫЕ СКИДКИ
-              </h3>
-              <p class="discount__slide-content-descr">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="discount__swiper-utility">
-        <div class="discount__swiper-utility-nav">
-          <button
-            type="button"
-            class="swiper-button-next discount__slider-btn--next"
-          >
-            <svg
-              width="37"
-              height="30"
-              viewBox="0 0 37 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M29 13.7496H11.21L16.655 8.29961C16.9096 8.04434 17.0321 7.71524 16.9955 7.38471C16.959 7.05417 16.7663 6.74929 16.46 6.53711C16.1537 6.32494 15.7588 6.22286 15.3621 6.25334C14.9655 6.28381 14.5996 6.44434 14.345 6.69961L6.845 14.1996C6.79454 14.2593 6.74942 14.3219 6.71 14.3871C6.71 14.4496 6.71 14.4871 6.605 14.5496C6.53701 14.6929 6.50141 14.8455 6.5 14.9996C6.50141 15.1537 6.53701 15.3063 6.605 15.4496C6.605 15.5121 6.605 15.5496 6.71 15.6121C6.74942 15.6773 6.79454 15.74 6.845 15.7996L14.345 23.2996C14.486 23.4407 14.6626 23.5542 14.8623 23.632C15.0619 23.7097 15.2796 23.7499 15.5 23.7496C15.8505 23.7502 16.1901 23.6485 16.46 23.4621C16.6119 23.3572 16.7374 23.2283 16.8295 23.0829C16.9215 22.9374 16.9782 22.7783 16.9963 22.6146C17.0144 22.4509 16.9936 22.2858 16.935 22.1288C16.8765 21.9718 16.7813 21.8259 16.655 21.6996L11.21 16.2496H29C29.3978 16.2496 29.7794 16.1179 30.0607 15.8835C30.342 15.6491 30.5 15.3311 30.5 14.9996C30.5 14.6681 30.342 14.3501 30.0607 14.1157C29.7794 13.8813 29.3978 13.7496 29 13.7496Z"
-                fill="#1A202C"
-              />
-            </svg>
-          </button>
-          <button
-            type="button"
-            class="swiper-button-prev discount__slider-btn--prev"
-          >
-            <svg
-              width="37"
-              height="30"
-              viewBox="0 0 37 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M29 13.7496H11.21L16.655 8.29961C16.9096 8.04434 17.0321 7.71524 16.9955 7.38471C16.959 7.05417 16.7663 6.74929 16.46 6.53711C16.1537 6.32494 15.7588 6.22286 15.3621 6.25334C14.9655 6.28381 14.5996 6.44434 14.345 6.69961L6.845 14.1996C6.79454 14.2593 6.74942 14.3219 6.71 14.3871C6.71 14.4496 6.71 14.4871 6.605 14.5496C6.53701 14.6929 6.50141 14.8455 6.5 14.9996C6.50141 15.1537 6.53701 15.3063 6.605 15.4496C6.605 15.5121 6.605 15.5496 6.71 15.6121C6.74942 15.6773 6.79454 15.74 6.845 15.7996L14.345 23.2996C14.486 23.4407 14.6626 23.5542 14.8623 23.632C15.0619 23.7097 15.2796 23.7499 15.5 23.7496C15.8505 23.7502 16.1901 23.6485 16.46 23.4621C16.6119 23.3572 16.7374 23.2283 16.8295 23.0829C16.9215 22.9374 16.9782 22.7783 16.9963 22.6146C17.0144 22.4509 16.9936 22.2858 16.935 22.1288C16.8765 21.9718 16.7813 21.8259 16.655 21.6996L11.21 16.2496H29C29.3978 16.2496 29.7794 16.1179 30.0607 15.8835C30.342 15.6491 30.5 15.3311 30.5 14.9996C30.5 14.6681 30.342 14.3501 30.0607 14.1157C29.7794 13.8813 29.3978 13.7496 29 13.7496Z"
-                fill="#1A202C"
-              />
-            </svg>
-          </button>
-
-          <div
-            class="discount__swiper-pagination swiper-pagination site__swiper-pagination"
-          ></div>
-        </div>
-
-        <div class="swiper discount__swiper-thumbs">
-          <div class="swiper-wrapper">
-            <button
-              type="button"
-              class="swiper-slide discount__swiper-thumbs-slide"
-              style="background-image: url(img/product_one_thumb.png)"
-            ></button>
-            <button
-              type="button"
-              class="swiper-slide discount__swiper-thumbs-slide"
-              style="background-image: url(img/default_thumbs_element.png)"
-            ></button>
-            <button
-              type="button"
-              class="swiper-slide discount__swiper-thumbs-slide"
-              style="background-image: url(img/thumbs_oil.png)"
-            ></button>
-            <button
-              type="button"
-              class="swiper-slide discount__swiper-thumbs-slide"
-              style="background-image: url(img/thumbs_truck.png)"
-            ></button>
-            <button
-              type="button"
-              class="swiper-slide discount__swiper-thumbs-slide"
-              style="background-image: url(img/product_one_thumb.png)"
-            ></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <section class="news">
-  <div class="container news-wrapper">
-      <h2 class="news__title">Новости и статьи</h2>
-      <div class="swiper news__swiper">
-         <ul class="news__list swiper-wrapper news-swiper-wrapper">
-    <li class="news__list-item swiper-slide">
-      <div class="news__list-item-content">
-        <h3>
-          <a href="#">Сезонные скидки на популярные запчасти</a>
-        </h3>
-        <svg class="news__list-item-content-icon" width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="59" height="59"/>
-          <line x1="8" y1="14" x2="31" y2="14" stroke="white" stroke-width="4"/>
-          <path d="M8 25H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 34H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 43H49.5" stroke="white" stroke-width="4"/>
-          </svg>
-        <div class="news__list-item-content-text-wrapper">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </p>
-        </div>
-
-        <date class="news__list-item-content-date" datetime="2023-12-08">
-          08.12.2023
-        </date>
-      </div>
-    </li>
-    <li class="news__list-item swiper-slide">
-      <div class="news__list-item-content">
-        <h3>
-          <a href="#">Сезонные скидки на популярные запчасти</a>
-        </h3>
-        <svg class="news__list-item-content-icon" width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="59" height="59"/>
-          <line x1="8" y1="14" x2="31" y2="14" stroke="white" stroke-width="4"/>
-          <path d="M8 25H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 34H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 43H49.5" stroke="white" stroke-width="4"/>
-          </svg>
-        <div class="news__list-item-content-text-wrapper">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </p>
-        </div>
-
-        <date class="news__list-item-content-date" datetime="2023-12-08">
-          08.12.2023
-        </date>
-      </div>
-    </li>
-    <li class="news__list-item swiper-slide">
-      <div class="news__list-item-content">
-        <h3>
-          <a href="#">Сезонные скидки на популярные запчасти</a>
-        </h3>
-        <svg class="news__list-item-content-icon" width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="59" height="59"/>
-          <line x1="8" y1="14" x2="31" y2="14" stroke="white" stroke-width="4"/>
-          <path d="M8 25H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 34H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 43H49.5" stroke="white" stroke-width="4"/>
-          </svg>
-        <div class="news__list-item-content-text-wrapper">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </p>
-        </div>
-
-        <date class="news__list-item-content-date" datetime="2023-12-08">
-          08.12.2023
-        </date>
-      </div>
-    </li>
-    <li class="news__list-item swiper-slide">
-      <div class="news__list-item-content">
-        <h3>
-          <a href="#">Сезонные скидки на популярные запчасти</a>
-        </h3>
-        <svg class="news__list-item-content-icon" width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="59" height="59"/>
-          <line x1="8" y1="14" x2="31" y2="14" stroke="white" stroke-width="4"/>
-          <path d="M8 25H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 34H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 43H49.5" stroke="white" stroke-width="4"/>
-          </svg>
-        <div class="news__list-item-content-text-wrapper">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </p>
-        </div>
-
-        <date class="news__list-item-content-date" datetime="2023-12-08">
-          08.12.2023
-        </date>
-      </div>
-    </li>
-    <li class="news__list-item swiper-slide">
-      <div class="news__list-item-content">
-        <h3>
-          <a href="#">Сезонные скидки на популярные запчасти</a>
-        </h3>
-        <svg class="news__list-item-content-icon" width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="59" height="59"/>
-          <line x1="8" y1="14" x2="31" y2="14" stroke="white" stroke-width="4"/>
-          <path d="M8 25H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 34H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 43H49.5" stroke="white" stroke-width="4"/>
-          </svg>
-        <div class="news__list-item-content-text-wrapper">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </p>
-        </div>
-
-        <date class="news__list-item-content-date" datetime="2023-12-08">
-          08.12.2023
-        </date>
-      </div>
-    </li>
-    <li class="news__list-item swiper-slide">
-      <div class="news__list-item-content">
-        <h3>
-          <a href="#">Сезонные скидки на популярные запчасти</a>
-        </h3>
-        <svg class="news__list-item-content-icon" width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="59" height="59"/>
-          <line x1="8" y1="14" x2="31" y2="14" stroke="white" stroke-width="4"/>
-          <path d="M8 25H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 34H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 43H49.5" stroke="white" stroke-width="4"/>
-          </svg>
-        <div class="news__list-item-content-text-wrapper">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </p>
-        </div>
-
-        <date class="news__list-item-content-date" datetime="2023-12-08">
-          08.12.2023
-        </date>
-      </div>
-    </li>
-    <li class="news__list-item swiper-slide">
-      <div class="news__list-item-content">
-        <h3>
-          <a href="#">Сезонные скидки на популярные запчасти</a>
-        </h3>
-        <svg class="news__list-item-content-icon" width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="59" height="59"/>
-          <line x1="8" y1="14" x2="31" y2="14" stroke="white" stroke-width="4"/>
-          <path d="M8 25H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 34H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 43H49.5" stroke="white" stroke-width="4"/>
-          </svg>
-        <div class="news__list-item-content-text-wrapper">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </p>
-        </div>
-
-        <date class="news__list-item-content-date" datetime="2023-12-08">
-          08.12.2023
-        </date>
-      </div>
-    </li>
-    <li class="news__list-item swiper-slide">
-      <div class="news__list-item-content">
-        <h3>
-          <a href="#">Сезонные скидки на популярные запчасти</a>
-        </h3>
-        <svg class="news__list-item-content-icon" width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="59" height="59"/>
-          <line x1="8" y1="14" x2="31" y2="14" stroke="white" stroke-width="4"/>
-          <path d="M8 25H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 34H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 43H49.5" stroke="white" stroke-width="4"/>
-          </svg>
-        <div class="news__list-item-content-text-wrapper">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </p>
-        </div>
-
-        <date class="news__list-item-content-date" datetime="2023-12-08">
-          08.12.2023
-        </date>
-      </div>
-    </li>
-    <li class="news__list-item swiper-slide">
-      <div class="news__list-item-content">
-        <h3>
-          <a href="#">Сезонные скидки на популярные запчасти</a>
-        </h3>
-        <svg class="news__list-item-content-icon" width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="59" height="59"/>
-          <line x1="8" y1="14" x2="31" y2="14" stroke="white" stroke-width="4"/>
-          <path d="M8 25H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 34H49.5" stroke="white" stroke-width="4"/>
-          <path d="M8 43H49.5" stroke="white" stroke-width="4"/>
-          </svg>
-        <div class="news__list-item-content-text-wrapper">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </p>
-        </div>
-
-        <date class="news__list-item-content-date" datetime="2023-12-08">
-          08.12.2023
-        </date>
-      </div>
-    </li>
-  </ul>
-  <div class="news__swiper-utility">
-    <div class="swiper-pagination site__swiper-pagination"></div>
-  </div>
-      </div>
-
-  </div>
-
- </section>
-
-
-    <section class="about-us">
-  <div class="container about-us-wrapper">
-    <h2 class="about-us__title">О нас</h2>
-    <h3 class="about-us__pretitle">
-      Компания широкого профиля по обслуживанию грузовых автомобилей
-    </h3>
-    <div class="about-us__content">
-      <div class="about-us__content-left">
-        <picture>
-          <source
-          srcset="img/about_img_1280.jpg"
-            media="(min-width: 901px) and (max-width: 1200px)"
-          />
-          <source
-          srcset="img/about_img_640.jpg"
-            media="(min-width: 640px) and (max-width: 900px)"
-          />
-          <img
+            class="header__logo"
+            src="img/united_logo.svg"
+            alt="Логотип Юнайтед Сервис"
             loading="lazy"
-            src="img/about_details.jpg"
-            class="about-us__content-left-image"
-            alt="Детали"
           />
-        </picture>
+        </a>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-list-item">
+              <a href="#" class="link header__nav-link">На главную</a>
+            </li>
+            <li class="header__nav-list-item">
+              <a href="#" class="link header__nav-link">Запчасти</a>
+            </li>
+            <li class="header__nav-list-item">
+              <a href="#" class="link header__nav-link">Сервис</a>
+            </li>
+            <li class="header__nav-list-item">
+              <a href="#" class="link header__nav-link">О компании</a>
+            </li>
+            <li class="header__nav-list-item">
+              <a href="#" class="link header__nav-link">Новости</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__buttons-block">
+          <button type="button" class="header__btn header__search-btn">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.9 16.776C20.4965 14.6424 21.2255 11.9832 20.9403 9.33375C20.6551 6.68427 19.3767 4.24121 17.3627 2.49634C15.3486 0.751469 12.7483 -0.165652 10.0852 -0.0704088C7.42209 0.0248339 4.89395 1.12537 3.00966 3.00966C1.12537 4.89395 0.0248339 7.42209 -0.0704088 10.0852C-0.165652 12.7483 0.751469 15.3486 2.49634 17.3627C4.24121 19.3767 6.68427 20.6551 9.33375 20.9403C11.9832 21.2255 14.6424 20.4965 16.776 18.9L21.876 24L24 21.88L18.9 16.776ZM10.5 18C9.01664 18 7.56659 17.5601 6.33322 16.736C5.09985 15.9119 4.13856 14.7406 3.5709 13.3701C3.00324 11.9997 2.85472 10.4917 3.14411 9.03682C3.4335 7.58196 4.1478 6.24559 5.19669 5.19669C6.24559 4.1478 7.58196 3.4335 9.03682 3.14411C10.4917 2.85472 11.9997 3.00324 13.3701 3.5709C14.7406 4.13856 15.9119 5.09985 16.736 6.33322C17.5601 7.56659 18 9.01664 18 10.5C17.9981 12.4886 17.2074 14.3951 15.8013 15.8012C14.3951 17.2074 12.4886 17.9981 10.5 18Z"
+              />
+            </svg>
+          </button>
 
+          <button class="header__btn header__join-visible-btn">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="24" height="24" transform="translate(8 8)" />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M17.7927 8.0683C17.4298 8.15607 16.884 8.44907 16.5811 8.71885C16.2365 9.02556 15.9036 9.53626 15.7541 9.98741C15.6383 10.3369 15.6316 10.4035 15.6289 11.2362V12.2358C15.6289 12.2358 15.8359 12.2358 15.9367 12.2358C16.2398 12.2358 16.2232 12.2358 16.5429 12.2358C16.8623 12.2358 17.5841 12.2358 17.5841 12.2358C17.5841 12.2358 17.5841 12.1349 17.5841 11.3489C17.6099 10.4991 17.6346 10.4112 17.9171 10.1635C18.0043 10.087 18.1521 10.0032 18.2456 9.97729C18.3541 9.94723 19.2133 9.93092 20.6202 9.93222C22.694 9.93415 22.8141 9.9386 22.6448 10.0068C21.994 10.2689 21.5369 10.821 21.4079 11.5008C21.3786 11.6549 21.3625 14.3006 21.3625 18.9687V26.1978L19.889 26.1976C18.9997 26.1974 18.3482 26.1787 18.2456 26.1502C18.1521 26.1243 18.0043 26.0405 17.9171 25.964C17.6117 25.6961 17.6081 25.6787 17.5832 24.3104C17.5622 23.1567 17.5532 22.933 17.5532 22.933C17.5532 22.933 16.9396 22.933 16.5429 22.933C16.1462 22.933 15.6275 22.933 15.6275 22.933C15.6275 22.933 15.6261 23.1268 15.6275 24.4227V25.5569L15.7527 26.1401C15.9938 26.8593 16.5116 27.4665 17.1802 27.814C17.7547 28.1125 17.887 28.1289 19.7316 28.1296L21.3625 28.1303V28.6634C21.3625 29.5511 21.4907 29.9607 21.9056 30.3988C22.3397 30.8573 22.7669 31.0278 23.4031 30.9964C23.797 30.9769 23.9443 30.9325 26.845 29.9591C28.5117 29.3998 29.9614 28.8918 30.0664 28.8304C30.3549 28.6615 30.7419 28.2185 30.8632 27.9184L30.9682 27.6584L30.9907 22.6027C31.0031 19.822 31.0031 15.7168 30.9907 13.4799L30.9682 9.41285L30.8433 9.14636C30.5942 8.61517 30.186 8.25318 29.6475 8.08601C29.3689 7.99954 29.2168 7.99734 23.7086 8.00098C18.9985 8.00413 18.0118 8.01536 17.7927 8.0683ZM12.7241 12.8118V13.4495C12.7241 13.4495 12.7241 14.2342 12.7241 15.1626V16.6257H10.6912C8.70808 16.6257 8.40414 16.6257 8.40414 16.6257L8 16.6257C8 16.6257 8 17.2104 8 17.5559C8 17.9664 8 18.5581 8 18.5581C8 18.5581 8.53689 18.5581 10.7184 18.5581H12.7198L12.7332 20.1197L12.7466 21.6814V22.3697L13.6451 22.3697C13.6451 22.3697 13.9754 22.3683 14.1279 22.2945C14.2618 22.2297 14.954 21.5672 16.3756 20.1435C18.5762 17.9396 18.5286 17.997 18.5268 17.5469C18.5264 17.4481 18.4882 17.2863 18.442 17.1874C18.3855 17.0664 17.6759 16.33 16.2722 14.9352C14.3255 13.0011 14.1723 12.8594 13.9752 12.8118C13.6219 12.8118 12.7241 12.8118 12.7241 12.8118Z"
+                fill="#1A202C"
+              />
+            </svg>
+          </button>
+          <button class="header__burger burger">
+            <span class="burger__line"></span>
+          </button>
+          <div class="header__login-block">
+            <span class="header__login-block-triangle"></span>
+            <a href="#" class="link header__registration-link">Регистрация</a>
+            <button type="button" class="btn header__join-btn">Вход</button>
+          </div>
+        </div>
       </div>
-      <div class="about-us__content-right">
-        <p class="about-us__content-right-descr">
-          Lorem ipsum dolor sit amet consectetur. Euismod mauris augue ipsum
-          consequat id gravida in tortor sed. Arcu tincidunt lacus sed dolor
-          nisl nibh duis mollis mattis. At tellus ac arcu congue sed risus enim
-          feugiat est. Sagittis convallis tortor ornare viverra parturient et
-          et. Nec turpis odio pulvinar interdum viverra. Pellentesque in dictum
-          donec placerat at. Egestas posuere eget quis tincidunt ornare urna
-          dolor ultrices urna. Cursus magnis ultrices ac etiam malesuada at in.
-          Dolor lacus amet varius nullam. Eget cras tellus consectetur et velit
-          ac. Elementum et tristique nulla morbi vitae. Habitasse nisl mi id
-          egestas eu. In dolor suspendisse morbi vitae mi. Ac vel posuere
-          scelerisque tincidunt quis massa. Tristique bibendum tempus platea
-          placerat diam malesuada sit at ut. Sed nec non justo magna auctor
-          eget. Odio vulputate lobortis eget vitae consequat sed volutpat.
-        </p>
-        <p class="about-us__content-right-descr">
-          Faucibus quis amet platea neque nec id. Nullam a lacinia sit eget sed
-          cursus aliquet nibh. Malesuada tempor nisi pretium gravida est at. Et
-          lobortis sed consectetur varius dis id eleifend eros malesuada.
-          Tincidunt aliquam nisl ipsum elementum. Mi nunc nisl facilisi nullam
-          dolor non enim nisl. Ornare erat ipsum lacus quisque mattis. Eu tellus
-          nunc semper sed. Sed tempor sed lacinia elit arcu. Massa tortor a
-          dignissim erat scelerisque cursus a. Ultricies sed morbi amet erat.
-        </p>
+
+      <div class="header__search">
+        <form action="#" class="container header__search-form">
+          <label class="header__search-form-label">
+            <input
+              name="Поиск"
+              class="header__search-form-input"
+              placeholder="Поиск по VIN, артикулу, названию, бренду, услугам, работам"
+            />
+            <button type="button" class="header__search-clear-btn">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_438_1281)">
+                  <mask id="path-1-inside-1_438_1281" fill="white">
+                    <path
+                      d="M15.3333 1.34887L13.9845 0L7.66667 6.31844L1.34887 0L0 1.34887L6.31844 7.66667L0 13.9845L1.34887 15.3333L7.66667 9.0149L13.9845 15.3333L15.3333 13.9845L9.0149 7.66667L15.3333 1.34887Z"
+                    />
+                  </mask>
+                  <path
+                    d="M15.3333 1.34887L13.9845 0L7.66667 6.31844L1.34887 0L0 1.34887L6.31844 7.66667L0 13.9845L1.34887 15.3333L7.66667 9.0149L13.9845 15.3333L15.3333 13.9845L9.0149 7.66667L15.3333 1.34887Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M15.3333 1.34887L30.4175 16.4346L45.504 1.34962L30.4183 -13.7361L15.3333 1.34887ZM13.9845 0L29.0694 -15.085L13.9837 -30.1706L-1.10124 -15.0842L13.9845 0ZM7.66667 6.31844L-7.41904 21.4026L7.66667 36.4898L22.7524 21.4026L7.66667 6.31844ZM1.34887 0L16.4346 -15.0842L1.34962 -30.1706L-13.7361 -15.0849L1.34887 0ZM0 1.34887L-15.0849 -13.7361L-30.1706 1.34962L-15.0842 16.4346L0 1.34887ZM6.31844 7.66667L21.4026 22.7524L36.4898 7.66667L21.4026 -7.41904L6.31844 7.66667ZM0 13.9845L-15.0842 -1.10124L-30.1706 13.9837L-15.085 29.0694L0 13.9845ZM1.34887 15.3333L-13.7361 30.4183L1.34962 45.504L16.4346 30.4175L1.34887 15.3333ZM7.66667 9.0149L22.7524 -6.06929L7.66667 -21.1565L-7.41904 -6.06929L7.66667 9.0149ZM13.9845 15.3333L-1.10124 30.4175L13.9837 45.504L29.0694 30.4183L13.9845 15.3333ZM15.3333 13.9845L30.4183 29.0694L45.504 13.9837L30.4175 -1.10124L15.3333 13.9845ZM9.0149 7.66667L-6.06929 -7.41904L-21.1565 7.66667L-6.06929 22.7524L9.0149 7.66667ZM30.4183 -13.7361L29.0694 -15.085L-1.10047 15.085L0.248392 16.4338L30.4183 -13.7361ZM-1.10124 -15.0842L-7.41904 -8.76575L22.7524 21.4026L29.0702 15.0842L-1.10124 -15.0842ZM22.7524 -8.76575L16.4346 -15.0842L-13.7368 15.0842L-7.41904 21.4026L22.7524 -8.76575ZM-13.7361 -15.0849L-15.0849 -13.7361L15.0849 16.4338L16.4338 15.0849L-13.7361 -15.0849ZM-15.0842 16.4346L-8.76575 22.7524L21.4026 -7.41904L15.0842 -13.7368L-15.0842 16.4346ZM-8.76575 -7.41904L-15.0842 -1.10124L15.0842 29.0702L21.4026 22.7524L-8.76575 -7.41904ZM-15.085 29.0694L-13.7361 30.4183L16.4338 0.248392L15.085 -1.10047L-15.085 29.0694ZM16.4346 30.4175L22.7524 24.0991L-7.41904 -6.06929L-13.7368 0.249148L16.4346 30.4175ZM-7.41904 24.0991L-1.10124 30.4175L29.0702 0.249147L22.7524 -6.06929L-7.41904 24.0991ZM29.0694 30.4183L30.4183 29.0694L0.248387 -1.10048L-1.10048 0.248387L29.0694 30.4183ZM30.4175 -1.10124L24.0991 -7.41904L-6.06929 22.7524L0.249147 29.0702L30.4175 -1.10124ZM24.0991 22.7524L30.4175 16.4346L0.249148 -13.7368L-6.06929 -7.41904L24.0991 22.7524Z"
+                    fill="#E31E24"
+                    mask="url(#path-1-inside-1_438_1281)"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_438_1281">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <button class="btn header__search-form-btn" type="button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.9 16.776C20.4965 14.6424 21.2255 11.9832 20.9403 9.33375C20.6551 6.68427 19.3767 4.24121 17.3627 2.49634C15.3486 0.751469 12.7483 -0.165652 10.0852 -0.0704088C7.42209 0.0248339 4.89395 1.12537 3.00966 3.00966C1.12537 4.89395 0.0248339 7.42209 -0.0704088 10.0852C-0.165652 12.7483 0.751469 15.3486 2.49634 17.3627C4.24121 19.3767 6.68427 20.6551 9.33375 20.9403C11.9832 21.2255 14.6424 20.4965 16.776 18.9L21.876 24L24 21.88L18.9 16.776ZM10.5 18C9.01664 18 7.56659 17.5601 6.33322 16.736C5.09985 15.9119 4.13856 14.7406 3.5709 13.3701C3.00324 11.9997 2.85472 10.4917 3.14411 9.03682C3.4335 7.58196 4.1478 6.24559 5.19669 5.19669C6.24559 4.1478 7.58196 3.4335 9.03682 3.14411C10.4917 2.85472 11.9997 3.00324 13.3701 3.5709C14.7406 4.13856 15.9119 5.09985 16.736 6.33322C17.5601 7.56659 18 9.01664 18 10.5C17.9981 12.4886 17.2074 14.3951 15.8013 15.8012C14.3951 17.2074 12.4886 17.9981 10.5 18Z"
+                />
+              </svg>
+            </button>
+          </label>
+        </form>
       </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-    <section class="find">
-    <div class="container find__header">
-        <h2 class="find__header-title">Как нас найти</h2>
-        <p class="find__header-descr">Контакты и расположение компании и сервиса</p>
-    </div>
-    <div class="find__map-wrapper">
-        <div class="find__map-container" >
-
+    <main class="main home">
+      <div class="site-wrapper">
+        <section class="hero">
+          <div class="container hero-wrapper">
+            <div class="hero__content">
+              <span class="hero__pretitle"
+                >Сервисный центр, продажа грузовиков и запчастей</span
+              >
+              <h1 class="hero__title">
+                <span class="hero__title-fragment">ЮнайтедСервис</span>
+              </h1>
+              <p class="hero__descr">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation
+              </p>
+              <address class="hero__content-contacts">
+                <a href="88005556050" class="link hero__tel">8-800-555-60-50</a>
+                <a href="88127405835" class="link hero__tel">8-812-740-58-35</a>
+              </address>
             </div>
-        <address class="find__contacts">
-            <div class="find__contacts-phone">
-                <a href="tel:88005556050" class="link find__contacts-phone-number">8 (800) 555-60-50</a>
-                <a href="tel:88127405835" class="link find__contacts-phone-number">8 (812) 740-58-35</a>
-            </div>
-            <a target="_blank" href="https://yandex.ru/maps/2/saint-petersburg/house/poselkovaya_ulitsa_7/Z0kYdQ5oS0UPQFtjfXRwdH5qZg==/?ll=30.398208%2C59.815292&z=17" class="link find__contacts-address"> 
-                Санкт-Петербург, п. Шушары, 
-ул. Поселковая, д.7
-            </a>
-            <a href="mailto:service@united24.ru" class="link find__contacts-email">service@united24.ru</a>
-        </address>
-    </div>
-</section>
-    </div>
-</main>
+          </div>
+        </section>
 
-<footer class="footer">
-    <div class="container footer__content">
-        <div class="footer__content-left">
-            <a href="#" class="link footer__content-left-logo-link">
-                <img loading="lazy" src="img/united_logo.svg" class="footer__logo" alt="Логотип Юнайтед Сервис">
-            </a>
-            <p class="footer__content-left-descr">
-                Продажа американских и европейских грузовиков,
-                запасных частей из США и Европы,
-                ремонт и сервисное обслуживание, грузовой автосервис.
+        <div class="search">
+          <div class="container search-wrapper">
+            <form action="#" class="search__form">
+              <label class="search__form-label">
+                <input
+                  name="Поиск"
+                  class="search__form-input"
+                  placeholder="Поиск по VIN, артикулу, названию, бренду, услугам, работам"
+                />
+              </label>
+              <button class="btn search__form-btn" type="button">
+                <span>Поиск</span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.9 16.776C20.4965 14.6424 21.2255 11.9832 20.9403 9.33375C20.6551 6.68427 19.3767 4.24121 17.3627 2.49634C15.3486 0.751469 12.7483 -0.165652 10.0852 -0.0704088C7.42209 0.0248339 4.89395 1.12537 3.00966 3.00966C1.12537 4.89395 0.0248339 7.42209 -0.0704088 10.0852C-0.165652 12.7483 0.751469 15.3486 2.49634 17.3627C4.24121 19.3767 6.68427 20.6551 9.33375 20.9403C11.9832 21.2255 14.6424 20.4965 16.776 18.9L21.876 24L24 21.88L18.9 16.776ZM10.5 18C9.01664 18 7.56659 17.5601 6.33322 16.736C5.09985 15.9119 4.13856 14.7406 3.5709 13.3701C3.00324 11.9997 2.85472 10.4917 3.14411 9.03682C3.4335 7.58196 4.1478 6.24559 5.19669 5.19669C6.24559 4.1478 7.58196 3.4335 9.03682 3.14411C10.4917 2.85472 11.9997 3.00324 13.3701 3.5709C14.7406 4.13856 15.9119 5.09985 16.736 6.33322C17.5601 7.56659 18 9.01664 18 10.5C17.9981 12.4886 17.2074 14.3951 15.8013 15.8012C14.3951 17.2074 12.4886 17.9981 10.5 18Z"
+                  />
+                </svg>
+              </button>
+              <span class="search__form-low-placeholder"
+                >Поиск по VIN, артикулу, названию, бренду, услугам,
+                работам</span
+              >
+            </form>
+          </div>
+        </div>
+        <section class="popular">
+          <div class="container popular-wrapper">
+            <h2 class="popular__title">Популярные запчасти</h2>
+            <div class="popular__content">
+              <div class="popular__nav">
+                <button
+                  class="popular__nav-btn tabs__nav-btn tab-active secondary-btn"
+                  type="button"
+                  data-tab="#tab-1"
+                >
+                  Запчасти
+                </button>
+                <button
+                  class="popular__nav-btn tabs__nav-btn secondary-btn"
+                  type="button"
+                  data-tab="#tab-2"
+                >
+                  Услуги
+                </button>
+              </div>
+              <ul class="popular__list tabs__item tab-active" id="tab-1">
+                <li class="product-item">
+                  <div class="product-item__content">
+                    <div class="product-item__photo">
+                      <img
+                        src="img/details_two.png"
+                        alt="Горелка дизельная (без штифта)"
+                      />
+                    </div>
+
+                    <h3 class="product-item__name">
+                      Горелка дизельная (без штифта)
+                    </h3>
+                  </div>
+                  <div class="product-item__order">
+                    <span>7 200 р.</span>
+                    <button class="btn product-item__order-btn" type="button">
+                      Заказать
+                    </button>
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-item__content">
+                    <div class="product-item__photo">
+                      <img
+                        src="img/default_wheel.svg"
+                        alt="Втулка рычага переключения передач"
+                      />
+                    </div>
+
+                    <h3 class="product-item__name">
+                      Втулка рычага переключения передач
+                    </h3>
+                  </div>
+                  <div class="product-item__order">
+                    <span>7 350 р.</span>
+                    <button class="btn product-item__order-btn" type="button">
+                      Заказать
+                    </button>
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-item__content">
+                    <div class="product-item__photo">
+                      <img
+                        src="img/default_engine.svg"
+                        alt="Втулка рычага переключения передач"
+                      />
+                    </div>
+
+                    <h3 class="product-item__name">
+                      Втулка рычага переключения передач
+                    </h3>
+                  </div>
+                  <div class="product-item__order">
+                    <span>7 350 р.</span>
+                    <button class="btn product-item__order-btn" type="button">
+                      Заказать
+                    </button>
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-item__content">
+                    <div class="product-item__photo">
+                      <img
+                        src="img/details_one.png"
+                        alt="Втулка рычага переключения передач"
+                      />
+                    </div>
+
+                    <h3 class="product-item__name">
+                      Втулка рычага переключения передач
+                    </h3>
+                  </div>
+                  <div class="product-item__order">
+                    <span>97 350 р.</span>
+                    <button class="btn product-item__order-btn" type="button">
+                      Заказать
+                    </button>
+                  </div>
+                </li>
+              </ul>
+
+              <ul class="popular__list tabs__item" id="tab-2">
+                <li class="product-item">
+                  <div class="product-item__content">
+                    <div class="product-item__photo">
+                      <img
+                        src="img/details_one.png"
+                        alt="Втулка рычага переключения передач"
+                      />
+                    </div>
+
+                    <h3 class="product-item__name">
+                      Втулка рычага переключения передач
+                    </h3>
+                  </div>
+                  <div class="product-item__order">
+                    <span>97 350 р.</span>
+                    <button class="btn product-item__order-btn" type="button">
+                      Заказать
+                    </button>
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-item__content">
+                    <div class="product-item__photo">
+                      <img
+                        src="img/details_one.png"
+                        alt="Втулка рычага переключения передач"
+                      />
+                    </div>
+
+                    <h3 class="product-item__name">
+                      Втулка рычага переключения передач
+                    </h3>
+                  </div>
+                  <div class="product-item__order">
+                    <span>97 350 р.</span>
+                    <button class="btn product-item__order-btn" type="button">
+                      Заказать
+                    </button>
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-item__content">
+                    <div class="product-item__photo">
+                      <img
+                        src="img/details_one.png"
+                        alt="Втулка рычага переключения передач"
+                      />
+                    </div>
+
+                    <h3 class="product-item__name">
+                      Втулка рычага переключения передач
+                    </h3>
+                  </div>
+                  <div class="product-item__order">
+                    <span>97 350 р.</span>
+                    <button class="btn product-item__order-btn" type="button">
+                      Заказать
+                    </button>
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-item__content">
+                    <div class="product-item__photo">
+                      <img
+                        src="img/details_one.png"
+                        alt="Втулка рычага переключения передач"
+                      />
+                    </div>
+
+                    <h3 class="product-item__name">
+                      Втулка рычага переключения передач
+                    </h3>
+                  </div>
+                  <div class="product-item__order">
+                    <span>97 350 р.</span>
+                    <button class="btn product-item__order-btn" type="button">
+                      Заказать
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <div class="popular__bottom-content">
+                <button
+                  class="popular__bottom-content-btn secondary-btn"
+                  type="button"
+                >
+                  Все запчасти
+                </button>
+                <span class="popular__bottom-content-descr">
+                  &gt;&gt; 55&nbsp;000 запчастей
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="discount">
+          <div class="container discount-wrapper">
+            <h2 class="discount__title hidden">Накопительные скидки</h2>
+            <div class="discount__swiper swiper">
+              <div class="swiper-wrapper discount__swiper-wrapper">
+                <div class="swiper-slide discount__swiper-slide">
+                  <div class="discount__slide-content">
+                    <picture>
+                      <source
+                        srcset="img/product_slide_img_one_1280.jpg"
+                        media="(min-width: 901px) and (max-width: 1200px)"
+                      />
+
+                      <source
+                        srcset="img/sl
+              ide_img_640.jpg"
+                        media="(min-width: 551px) and (max-width: 900px)"
+                      />
+                      <source
+                        srcset="img/slide_img_320.jpg"
+                        media="(min-width: 320px) and (max-width: 550px)"
+                      />
+                      <img
+                        class="discount__slide-img"
+                        src="img/product_slide_img_one.jpg"
+                        alt="Картинка товара"
+                      />
+                    </picture>
+
+                    <div class="discount__slide-content-right">
+                      <h3 class="discount__slide-content-title">
+                        НАКОПИТЕЛЬНЫЕ СКИДКИ
+                      </h3>
+                      <p class="discount__slide-content-descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide discount__swiper-slide">
+                  <div class="discount__slide-content">
+                    <picture>
+                      <source
+                        srcset="img/product_slide_img_one_1280.jpg"
+                        media="(min-width: 901px) and (max-width: 1200px)"
+                      />
+
+                      <source
+                        srcset="img/sl
+              ide_img_640.jpg"
+                        media="(min-width: 551px) and (max-width: 900px)"
+                      />
+                      <source
+                        srcset="img/slide_img_320.jpg"
+                        media="(min-width: 320px) and (max-width: 550px)"
+                      />
+                      <img
+                        class="discount__slide-img"
+                        src="img/product_slide_img_one.jpg"
+                        alt="Картинка товара"
+                      />
+                    </picture>
+                    <div class="discount__slide-content-right">
+                      <h3 class="discount__slide-content-title">
+                        НАКОПИТЕЛЬНЫЕ СКИДКИ
+                      </h3>
+                      <p class="discount__slide-content-descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide discount__swiper-slide">
+                  <div class="discount__slide-content">
+                    <picture>
+                      <source
+                        srcset="img/product_slide_img_one_1280.jpg"
+                        media="(min-width: 901px) and (max-width: 1200px)"
+                      />
+
+                      <source
+                        srcset="img/sl
+              ide_img_640.jpg"
+                        media="(min-width: 551px) and (max-width: 900px)"
+                      />
+                      <source
+                        srcset="img/slide_img_320.jpg"
+                        media="(min-width: 320px) and (max-width: 550px)"
+                      />
+                      <img
+                        class="discount__slide-img"
+                        src="img/product_slide_img_one.jpg"
+                        alt="Картинка товара"
+                      />
+                    </picture>
+                    <div class="discount__slide-content-right">
+                      <h3 class="discount__slide-content-title">
+                        НАКОПИТЕЛЬНЫЕ СКИДКИ
+                      </h3>
+                      <p class="discount__slide-content-descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide discount__swiper-slide">
+                  <div class="discount__slide-content">
+                    <picture>
+                      <source
+                        srcset="img/product_slide_img_one_1280.jpg"
+                        media="(min-width: 901px) and (max-width: 1200px)"
+                      />
+
+                      <source
+                        srcset="img/sl
+              ide_img_640.jpg"
+                        media="(min-width: 551px) and (max-width: 900px)"
+                      />
+                      <source
+                        srcset="img/slide_img_320.jpg"
+                        media="(min-width: 320px) and (max-width: 550px)"
+                      />
+                      <img
+                        class="discount__slide-img"
+                        src="img/product_slide_img_one.jpg"
+                        alt="Картинка товара"
+                      />
+                    </picture>
+                    <div class="discount__slide-content-right">
+                      <h3 class="discount__slide-content-title">
+                        НАКОПИТЕЛЬНЫЕ СКИДКИ
+                      </h3>
+                      <p class="discount__slide-content-descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide discount__swiper-slide">
+                  <div class="discount__slide-content">
+                    <picture>
+                      <source
+                        srcset="img/product_slide_img_one_1280.jpg"
+                        media="(min-width: 901px) and (max-width: 1200px)"
+                      />
+
+                      <source
+                        srcset="img/sl
+              ide_img_640.jpg"
+                        media="(min-width: 551px) and (max-width: 900px)"
+                      />
+                      <source
+                        srcset="img/slide_img_320.jpg"
+                        media="(min-width: 320px) and (max-width: 550px)"
+                      />
+                      <img
+                        class="discount__slide-img"
+                        src="img/product_slide_img_one.jpg"
+                        alt="Картинка товара"
+                      />
+                    </picture>
+                    <div class="discount__slide-content-right">
+                      <h3 class="discount__slide-content-title">
+                        НАКОПИТЕЛЬНЫЕ СКИДКИ
+                      </h3>
+                      <p class="discount__slide-content-descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="discount__swiper-utility">
+                <div class="discount__swiper-utility-nav">
+                  <button
+                    type="button"
+                    class="swiper-button-next discount__slider-btn--next"
+                  >
+                    <svg
+                      width="37"
+                      height="30"
+                      viewBox="0 0 37 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M29 13.7496H11.21L16.655 8.29961C16.9096 8.04434 17.0321 7.71524 16.9955 7.38471C16.959 7.05417 16.7663 6.74929 16.46 6.53711C16.1537 6.32494 15.7588 6.22286 15.3621 6.25334C14.9655 6.28381 14.5996 6.44434 14.345 6.69961L6.845 14.1996C6.79454 14.2593 6.74942 14.3219 6.71 14.3871C6.71 14.4496 6.71 14.4871 6.605 14.5496C6.53701 14.6929 6.50141 14.8455 6.5 14.9996C6.50141 15.1537 6.53701 15.3063 6.605 15.4496C6.605 15.5121 6.605 15.5496 6.71 15.6121C6.74942 15.6773 6.79454 15.74 6.845 15.7996L14.345 23.2996C14.486 23.4407 14.6626 23.5542 14.8623 23.632C15.0619 23.7097 15.2796 23.7499 15.5 23.7496C15.8505 23.7502 16.1901 23.6485 16.46 23.4621C16.6119 23.3572 16.7374 23.2283 16.8295 23.0829C16.9215 22.9374 16.9782 22.7783 16.9963 22.6146C17.0144 22.4509 16.9936 22.2858 16.935 22.1288C16.8765 21.9718 16.7813 21.8259 16.655 21.6996L11.21 16.2496H29C29.3978 16.2496 29.7794 16.1179 30.0607 15.8835C30.342 15.6491 30.5 15.3311 30.5 14.9996C30.5 14.6681 30.342 14.3501 30.0607 14.1157C29.7794 13.8813 29.3978 13.7496 29 13.7496Z"
+                        fill="#1A202C"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="swiper-button-prev discount__slider-btn--prev"
+                  >
+                    <svg
+                      width="37"
+                      height="30"
+                      viewBox="0 0 37 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M29 13.7496H11.21L16.655 8.29961C16.9096 8.04434 17.0321 7.71524 16.9955 7.38471C16.959 7.05417 16.7663 6.74929 16.46 6.53711C16.1537 6.32494 15.7588 6.22286 15.3621 6.25334C14.9655 6.28381 14.5996 6.44434 14.345 6.69961L6.845 14.1996C6.79454 14.2593 6.74942 14.3219 6.71 14.3871C6.71 14.4496 6.71 14.4871 6.605 14.5496C6.53701 14.6929 6.50141 14.8455 6.5 14.9996C6.50141 15.1537 6.53701 15.3063 6.605 15.4496C6.605 15.5121 6.605 15.5496 6.71 15.6121C6.74942 15.6773 6.79454 15.74 6.845 15.7996L14.345 23.2996C14.486 23.4407 14.6626 23.5542 14.8623 23.632C15.0619 23.7097 15.2796 23.7499 15.5 23.7496C15.8505 23.7502 16.1901 23.6485 16.46 23.4621C16.6119 23.3572 16.7374 23.2283 16.8295 23.0829C16.9215 22.9374 16.9782 22.7783 16.9963 22.6146C17.0144 22.4509 16.9936 22.2858 16.935 22.1288C16.8765 21.9718 16.7813 21.8259 16.655 21.6996L11.21 16.2496H29C29.3978 16.2496 29.7794 16.1179 30.0607 15.8835C30.342 15.6491 30.5 15.3311 30.5 14.9996C30.5 14.6681 30.342 14.3501 30.0607 14.1157C29.7794 13.8813 29.3978 13.7496 29 13.7496Z"
+                        fill="#1A202C"
+                      />
+                    </svg>
+                  </button>
+
+                  <div
+                    class="discount__swiper-pagination swiper-pagination site__swiper-pagination"
+                  ></div>
+                </div>
+
+                <div class="swiper discount__swiper-thumbs">
+                  <div class="swiper-wrapper">
+                    <button
+                      type="button"
+                      class="swiper-slide discount__swiper-thumbs-slide"
+                      style="background-image: url(img/product_one_thumb.png)"
+                    ></button>
+                    <button
+                      type="button"
+                      class="swiper-slide discount__swiper-thumbs-slide"
+                      style="
+                        background-image: url(img/default_thumbs_element.png);
+                      "
+                    ></button>
+                    <button
+                      type="button"
+                      class="swiper-slide discount__swiper-thumbs-slide"
+                      style="background-image: url(img/thumbs_oil.png)"
+                    ></button>
+                    <button
+                      type="button"
+                      class="swiper-slide discount__swiper-thumbs-slide"
+                      style="background-image: url(img/thumbs_truck.png)"
+                    ></button>
+                    <button
+                      type="button"
+                      class="swiper-slide discount__swiper-thumbs-slide"
+                      style="background-image: url(img/product_one_thumb.png)"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="news">
+          <div class="container news-wrapper">
+            <h2 class="news__title">Новости и статьи</h2>
+            <div class="swiper news__swiper">
+              <ul class="news__list swiper-wrapper news-swiper-wrapper">
+                <li class="news__list-item swiper-slide">
+                  <div class="news__list-item-content">
+                    <h3>
+                      <a href="#">Сезонные скидки на популярные запчасти</a>
+                    </h3>
+                    <svg
+                      class="news__list-item-content-icon"
+                      width="59"
+                      height="59"
+                      viewBox="0 0 59 59"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="59" height="59" />
+                      <line
+                        x1="8"
+                        y1="14"
+                        x2="31"
+                        y2="14"
+                        stroke="white"
+                        stroke-width="4"
+                      />
+                      <path d="M8 25H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 34H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 43H49.5" stroke="white" stroke-width="4" />
+                    </svg>
+                    <div class="news__list-item-content-text-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.
+                      </p>
+                    </div>
+
+                    <date
+                      class="news__list-item-content-date"
+                      datetime="2023-12-08"
+                    >
+                      08.12.2023
+                    </date>
+                  </div>
+                </li>
+                <li class="news__list-item swiper-slide">
+                  <div class="news__list-item-content">
+                    <h3>
+                      <a href="#">Сезонные скидки на популярные запчасти</a>
+                    </h3>
+                    <svg
+                      class="news__list-item-content-icon"
+                      width="59"
+                      height="59"
+                      viewBox="0 0 59 59"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="59" height="59" />
+                      <line
+                        x1="8"
+                        y1="14"
+                        x2="31"
+                        y2="14"
+                        stroke="white"
+                        stroke-width="4"
+                      />
+                      <path d="M8 25H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 34H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 43H49.5" stroke="white" stroke-width="4" />
+                    </svg>
+                    <div class="news__list-item-content-text-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.
+                      </p>
+                    </div>
+
+                    <date
+                      class="news__list-item-content-date"
+                      datetime="2023-12-08"
+                    >
+                      08.12.2023
+                    </date>
+                  </div>
+                </li>
+                <li class="news__list-item swiper-slide">
+                  <div class="news__list-item-content">
+                    <h3>
+                      <a href="#">Сезонные скидки на популярные запчасти</a>
+                    </h3>
+                    <svg
+                      class="news__list-item-content-icon"
+                      width="59"
+                      height="59"
+                      viewBox="0 0 59 59"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="59" height="59" />
+                      <line
+                        x1="8"
+                        y1="14"
+                        x2="31"
+                        y2="14"
+                        stroke="white"
+                        stroke-width="4"
+                      />
+                      <path d="M8 25H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 34H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 43H49.5" stroke="white" stroke-width="4" />
+                    </svg>
+                    <div class="news__list-item-content-text-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.
+                      </p>
+                    </div>
+
+                    <date
+                      class="news__list-item-content-date"
+                      datetime="2023-12-08"
+                    >
+                      08.12.2023
+                    </date>
+                  </div>
+                </li>
+                <li class="news__list-item swiper-slide">
+                  <div class="news__list-item-content">
+                    <h3>
+                      <a href="#">Сезонные скидки на популярные запчасти</a>
+                    </h3>
+                    <svg
+                      class="news__list-item-content-icon"
+                      width="59"
+                      height="59"
+                      viewBox="0 0 59 59"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="59" height="59" />
+                      <line
+                        x1="8"
+                        y1="14"
+                        x2="31"
+                        y2="14"
+                        stroke="white"
+                        stroke-width="4"
+                      />
+                      <path d="M8 25H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 34H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 43H49.5" stroke="white" stroke-width="4" />
+                    </svg>
+                    <div class="news__list-item-content-text-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.
+                      </p>
+                    </div>
+
+                    <date
+                      class="news__list-item-content-date"
+                      datetime="2023-12-08"
+                    >
+                      08.12.2023
+                    </date>
+                  </div>
+                </li>
+                <li class="news__list-item swiper-slide">
+                  <div class="news__list-item-content">
+                    <h3>
+                      <a href="#">Сезонные скидки на популярные запчасти</a>
+                    </h3>
+                    <svg
+                      class="news__list-item-content-icon"
+                      width="59"
+                      height="59"
+                      viewBox="0 0 59 59"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="59" height="59" />
+                      <line
+                        x1="8"
+                        y1="14"
+                        x2="31"
+                        y2="14"
+                        stroke="white"
+                        stroke-width="4"
+                      />
+                      <path d="M8 25H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 34H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 43H49.5" stroke="white" stroke-width="4" />
+                    </svg>
+                    <div class="news__list-item-content-text-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.
+                      </p>
+                    </div>
+
+                    <date
+                      class="news__list-item-content-date"
+                      datetime="2023-12-08"
+                    >
+                      08.12.2023
+                    </date>
+                  </div>
+                </li>
+                <li class="news__list-item swiper-slide">
+                  <div class="news__list-item-content">
+                    <h3>
+                      <a href="#">Сезонные скидки на популярные запчасти</a>
+                    </h3>
+                    <svg
+                      class="news__list-item-content-icon"
+                      width="59"
+                      height="59"
+                      viewBox="0 0 59 59"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="59" height="59" />
+                      <line
+                        x1="8"
+                        y1="14"
+                        x2="31"
+                        y2="14"
+                        stroke="white"
+                        stroke-width="4"
+                      />
+                      <path d="M8 25H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 34H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 43H49.5" stroke="white" stroke-width="4" />
+                    </svg>
+                    <div class="news__list-item-content-text-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.
+                      </p>
+                    </div>
+
+                    <date
+                      class="news__list-item-content-date"
+                      datetime="2023-12-08"
+                    >
+                      08.12.2023
+                    </date>
+                  </div>
+                </li>
+                <li class="news__list-item swiper-slide">
+                  <div class="news__list-item-content">
+                    <h3>
+                      <a href="#">Сезонные скидки на популярные запчасти</a>
+                    </h3>
+                    <svg
+                      class="news__list-item-content-icon"
+                      width="59"
+                      height="59"
+                      viewBox="0 0 59 59"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="59" height="59" />
+                      <line
+                        x1="8"
+                        y1="14"
+                        x2="31"
+                        y2="14"
+                        stroke="white"
+                        stroke-width="4"
+                      />
+                      <path d="M8 25H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 34H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 43H49.5" stroke="white" stroke-width="4" />
+                    </svg>
+                    <div class="news__list-item-content-text-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.
+                      </p>
+                    </div>
+
+                    <date
+                      class="news__list-item-content-date"
+                      datetime="2023-12-08"
+                    >
+                      08.12.2023
+                    </date>
+                  </div>
+                </li>
+                <li class="news__list-item swiper-slide">
+                  <div class="news__list-item-content">
+                    <h3>
+                      <a href="#">Сезонные скидки на популярные запчасти</a>
+                    </h3>
+                    <svg
+                      class="news__list-item-content-icon"
+                      width="59"
+                      height="59"
+                      viewBox="0 0 59 59"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="59" height="59" />
+                      <line
+                        x1="8"
+                        y1="14"
+                        x2="31"
+                        y2="14"
+                        stroke="white"
+                        stroke-width="4"
+                      />
+                      <path d="M8 25H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 34H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 43H49.5" stroke="white" stroke-width="4" />
+                    </svg>
+                    <div class="news__list-item-content-text-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.
+                      </p>
+                    </div>
+
+                    <date
+                      class="news__list-item-content-date"
+                      datetime="2023-12-08"
+                    >
+                      08.12.2023
+                    </date>
+                  </div>
+                </li>
+                <li class="news__list-item swiper-slide">
+                  <div class="news__list-item-content">
+                    <h3>
+                      <a href="#">Сезонные скидки на популярные запчасти</a>
+                    </h3>
+                    <svg
+                      class="news__list-item-content-icon"
+                      width="59"
+                      height="59"
+                      viewBox="0 0 59 59"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="59" height="59" />
+                      <line
+                        x1="8"
+                        y1="14"
+                        x2="31"
+                        y2="14"
+                        stroke="white"
+                        stroke-width="4"
+                      />
+                      <path d="M8 25H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 34H49.5" stroke="white" stroke-width="4" />
+                      <path d="M8 43H49.5" stroke="white" stroke-width="4" />
+                    </svg>
+                    <div class="news__list-item-content-text-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation.Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.
+                      </p>
+                    </div>
+
+                    <date
+                      class="news__list-item-content-date"
+                      datetime="2023-12-08"
+                    >
+                      08.12.2023
+                    </date>
+                  </div>
+                </li>
+              </ul>
+              <div class="news__swiper-utility">
+                <div class="swiper-pagination site__swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-us">
+          <div class="container about-us-wrapper">
+            <h2 class="about-us__title">О нас</h2>
+            <h3 class="about-us__pretitle">
+              Компания широкого профиля по обслуживанию грузовых автомобилей
+            </h3>
+            <div class="about-us__content">
+              <div class="about-us__content-left">
+                <picture>
+                  <source
+                    srcset="img/about_img_1280.jpg"
+                    media="(min-width: 901px) and (max-width: 1200px)"
+                  />
+                  <source
+                    srcset="img/about_img_640.jpg"
+                    media="(min-width: 640px) and (max-width: 900px)"
+                  />
+                  <img
+                    loading="lazy"
+                    src="img/about_details.jpg"
+                    class="about-us__content-left-image"
+                    alt="Детали"
+                  />
+                </picture>
+              </div>
+              <div class="about-us__content-right">
+                <p class="about-us__content-right-descr">
+                  Lorem ipsum dolor sit amet consectetur. Euismod mauris augue
+                  ipsum consequat id gravida in tortor sed. Arcu tincidunt lacus
+                  sed dolor nisl nibh duis mollis mattis. At tellus ac arcu
+                  congue sed risus enim feugiat est. Sagittis convallis tortor
+                  ornare viverra parturient et et. Nec turpis odio pulvinar
+                  interdum viverra. Pellentesque in dictum donec placerat at.
+                  Egestas posuere eget quis tincidunt ornare urna dolor ultrices
+                  urna. Cursus magnis ultrices ac etiam malesuada at in. Dolor
+                  lacus amet varius nullam. Eget cras tellus consectetur et
+                  velit ac. Elementum et tristique nulla morbi vitae. Habitasse
+                  nisl mi id egestas eu. In dolor suspendisse morbi vitae mi. Ac
+                  vel posuere scelerisque tincidunt quis massa. Tristique
+                  bibendum tempus platea placerat diam malesuada sit at ut. Sed
+                  nec non justo magna auctor eget. Odio vulputate lobortis eget
+                  vitae consequat sed volutpat.
+                </p>
+                <p class="about-us__content-right-descr">
+                  Faucibus quis amet platea neque nec id. Nullam a lacinia sit
+                  eget sed cursus aliquet nibh. Malesuada tempor nisi pretium
+                  gravida est at. Et lobortis sed consectetur varius dis id
+                  eleifend eros malesuada. Tincidunt aliquam nisl ipsum
+                  elementum. Mi nunc nisl facilisi nullam dolor non enim nisl.
+                  Ornare erat ipsum lacus quisque mattis. Eu tellus nunc semper
+                  sed. Sed tempor sed lacinia elit arcu. Massa tortor a
+                  dignissim erat scelerisque cursus a. Ultricies sed morbi amet
+                  erat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="find">
+          <div class="container find__header">
+            <h2 class="find__header-title">Как нас найти</h2>
+            <p class="find__header-descr">
+              Контакты и расположение компании и сервиса
             </p>
+          </div>
+          <div class="find__map-wrapper">
+            <div class="find__map-container"></div>
+            <address class="find__contacts">
+              <div class="find__contacts-phone">
+                <a
+                  href="tel:88005556050"
+                  class="link find__contacts-phone-number"
+                  >8 (800) 555-60-50</a
+                >
+                <a
+                  href="tel:88127405835"
+                  class="link find__contacts-phone-number"
+                  >8 (812) 740-58-35</a
+                >
+              </div>
+              <a
+                target="_blank"
+                href="https://yandex.ru/maps/2/saint-petersburg/house/poselkovaya_ulitsa_7/Z0kYdQ5oS0UPQFtjfXRwdH5qZg==/?ll=30.398208%2C59.815292&z=17"
+                class="link find__contacts-address"
+              >
+                Санкт-Петербург, п. Шушары, ул. Поселковая, д.7
+              </a>
+              <a
+                href="mailto:service@united24.ru"
+                class="link find__contacts-email"
+                >service@united24.ru</a
+              >
+            </address>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <div class="footer__content-left">
+          <a href="#" class="link footer__content-left-logo-link">
+            <img
+              loading="lazy"
+              src="img/united_logo.svg"
+              class="footer__logo"
+              alt="Логотип Юнайтед Сервис"
+            />
+          </a>
+          <p class="footer__content-left-descr">
+            Продажа американских и европейских грузовиков, запасных частей из
+            США и Европы, ремонт и сервисное обслуживание, грузовой автосервис.
+          </p>
         </div>
         <div class="footer__content-right">
-            <ul class="footer__content-right-company-list">
-                <li class="footer__content-right-company-list-item">
-                    <h3 class="footer__content-right-list-title">Компания</h3>
-                </li>
-                <li class="footer__content-right-company-list-item">
-                    <a href="#" class="link footer__content-right-link">Запчасти</a>
-                </li>
-                <li class="footer__content-right-company-list-item">
-                    <a href="#" class="link footer__content-right-link">Сервис</a>
-                </li>
-                <li class="footer__content-right-company-list-item">
-                    <a href="#" class="link footer__content-right-link">Новости</a>
-                </li>
-                <li class="footer__content-right-company-list-item">
-                    <a href="#" class="link footer__content-right-link">О нас</a>
-                </li>
-            </ul>
-            <ul class="footer__content-right-document-list">
-                <li class="footer__content-right-document-list-item">
-                    <h3 class="footer__content-right-list-title">Документы</h3>
-                </li>
-                <li class="footer__content-right-document-list-item">
-                    <a href="#" class="link footer__content-right-link">Оплата и доставка</a>
-                </li>
-                <li class="footer__content-right-document-list-item">
-                    <a href="#" class="link footer__content-right-link">Политика конфиденциальности</a>
-                </li>
-                <li class="footer__content-right-document-list-item">
-                    <a href="#" class="link footer__content-right-link">Реквизиты</a>
-                </li>
-                <li class="footer__content-right-document-list-item">
-                    <a href="#" class="link footer__content-right-link">Контакты</a>
-                </li>
-            </ul>
+          <ul class="footer__content-right-company-list">
+            <li class="footer__content-right-company-list-item">
+              <h3 class="footer__content-right-list-title">Компания</h3>
+            </li>
+            <li class="footer__content-right-company-list-item">
+              <a href="#" class="link footer__content-right-link">Запчасти</a>
+            </li>
+            <li class="footer__content-right-company-list-item">
+              <a href="#" class="link footer__content-right-link">Сервис</a>
+            </li>
+            <li class="footer__content-right-company-list-item">
+              <a href="#" class="link footer__content-right-link">Новости</a>
+            </li>
+            <li class="footer__content-right-company-list-item">
+              <a href="#" class="link footer__content-right-link">О нас</a>
+            </li>
+          </ul>
+          <ul class="footer__content-right-document-list">
+            <li class="footer__content-right-document-list-item">
+              <h3 class="footer__content-right-list-title">Документы</h3>
+            </li>
+            <li class="footer__content-right-document-list-item">
+              <a href="#" class="link footer__content-right-link"
+                >Оплата и доставка</a
+              >
+            </li>
+            <li class="footer__content-right-document-list-item">
+              <a href="#" class="link footer__content-right-link"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li class="footer__content-right-document-list-item">
+              <a href="#" class="link footer__content-right-link">Реквизиты</a>
+            </li>
+            <li class="footer__content-right-document-list-item">
+              <a href="#" class="link footer__content-right-link">Контакты</a>
+            </li>
+          </ul>
         </div>
-    </div>
-    <div class="container footer__copyright-block">
-        <span class="footer__copyright">©2023 UnitedService. All rights reserved</span>
-    </div>
-</footer>
+      </div>
+      <div class="container footer__copyright-block">
+        <span class="footer__copyright"
+          >©2023 UnitedService. All rights reserved</span
+        >
+      </div>
+    </footer>
 
-<script defer src="js/main.min.js"></script>
-</body>
-
+    <script defer src="js/main.min.js"></script>
+  </body>
 </html>
-
-
-
