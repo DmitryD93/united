@@ -74,6 +74,9 @@ const discountThumbs = new Swiper(discountThumbsContent, {
     550: {
       slidesPerView: 5,
     },
+    420: {
+      slidesPerView: 4,
+    },
     320: {
       slidesPerView: 3,
     }
@@ -110,24 +113,34 @@ const discountSwiper = new Swiper(discountSwiperContent, {
 const newsSwiperContent = document.querySelector(".news__swiper");
 
 const newsSwiper = new Swiper(newsSwiperContent, {
-  slidesPerView: 2.2,
-  spaceBetween: 30,
+  // slidesPerView: 2.2,
+  // spaceBetween: 30,
   grabCursor: true,
   slideToClickedSlide: true,
   initialSlide: 1,
-  centeredSlides: true,
-  loop: true,
 
   breakpoints: {
-    1280: {
-      slidesPerView: 2.2,
-    },
-    640: {
-      slidesPerView: 1.6,
-      centeredSlides: false,
+   280 : {
+      slidesPerView: 1,
+      centeredSlides: true,
       spaceBetween: 30,
       loop: false,
     },
+
+    640: {
+      slidesPerView: 1.6,
+      centeredSlides: true,
+      spaceBetween: 50,
+      loop: true,
+    },
+
+    1280: {
+      slidesPerView: 2.2,
+      loop : true,
+      centeredSlides: true,
+      spaceBetween: 20
+    },
+    
   },
 
   pagination: {
@@ -186,8 +199,15 @@ let headerSearch = document.querySelector(".header__search");
 
 function search() {
   searchBtn.addEventListener("click", () => {
-    headerSearch.classList.add("fixed");
+    if(headerSearch.classList.contains("fixed")) {
+      headerSearch.classList.remove("fixed");
+    } else {
+      headerSearch.classList.add("fixed");
+    }
   });
+  // searchBtn.addEventListener("click", () => {
+  //   headerSearch.classList.add("fixed");
+  // });
   if (!header.fixed) {
     headerSearch.classList.remove("fixed");
   };

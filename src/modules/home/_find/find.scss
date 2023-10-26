@@ -16,6 +16,11 @@
     @include _880 {
       font-size: 32px;
     }
+
+    @include _550 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
   }
 
   &__header-descr {
@@ -30,10 +35,19 @@
     @include _880 {
       font-size: 14px;
     }
+
+    @include _550 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__map-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   &__map-container {
-    position: relative;
     height: 720px;
     max-width: 100%;
     margin: 0 auto;
@@ -78,6 +92,13 @@
       left: 50%;
       top: 4%;
       transform: translateX(-50%);
+    }
+
+    @include _550 {
+      max-width: 100%;
+      width: 100%;
+      transform: none;
+      position: static;
     }
 
 

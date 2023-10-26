@@ -10,7 +10,7 @@
   }
 
   &__swiper {
-    padding: 24px 0;
+    padding: 24px 0 0 0;
   }
   &__title {
     font-size: 40px;
@@ -22,6 +22,11 @@
     @include _880 {
       font-size: 32px;
     }
+
+    @include _550 {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
   }
 
   &__swiper-utility {
@@ -29,6 +34,7 @@
     display: flex;
     text-align: center;
     height: 80px;
+    overflow: hidden;
   }
   &__list {
     display: flex;
@@ -39,13 +45,14 @@
       background-color: inherit;
       height: 100%;
       filter: grayscale(1);
-      scale: 0.8;
+      scale: 0.9;
       opacity: 0.7;
+      border-radius: 12px;
+      justify-content: right;
+      background-color: transparent;
       transition: opacity 0.4s ease, scale 0.4s ease, filter 0.4s ease;
 
      @include _880 {
-      padding-left: 30px;
-      // padding-right: 30px;
         scale: 1;
       }
 
@@ -65,18 +72,23 @@
         text-align: start;
         padding: 32px 64px 45px 60px;
         background-color: var(--grey);
-        border-radius: 10px;
         display: flex;
         flex-direction: column;
-
-      
+        max-width: calc(100% - 155px);
+        border-radius: 12px;
 
         @include _only-hover {
           &:hover &-icon {
             fill: var(--red);
           }
         }
-
+        // @include _880 {
+        //   max-width: calc(100% - 155px);
+        // }
+        @include _550 {
+          padding: 28px 48px 55px 45px;
+          max-width: calc(100% - 123px);
+        }
         
 
         &-icon {
@@ -121,6 +133,11 @@
             font-size: 20px;
             letter-spacing: 0.6px;
             margin-bottom: 16px;
+          }
+
+          @include _550 {
+            font-size: 18px;
+            letter-spacing: 0.54px;
           }
           
           & a {
