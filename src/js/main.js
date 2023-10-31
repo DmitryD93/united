@@ -127,10 +127,10 @@ const newsSwiper = new Swiper(newsSwiperContent, {
       loop: false,
     },
 
-    640: {
+    551: {
       slidesPerView: 1.6,
       centeredSlides: true,
-      spaceBetween: 50,
+      spaceBetween: 30,
       loop: true,
     },
 
