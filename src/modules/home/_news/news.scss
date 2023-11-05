@@ -87,9 +87,19 @@
   &__swiper-utility {
     position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     height: 80px;
     overflow: hidden;
+
+    &-nav {
+      position: relative;
+      right: 0;
+      height: 60px;
+      width: 260px;
+      overflow: hidden;
+    }
   }
   &__list {
     display: flex;

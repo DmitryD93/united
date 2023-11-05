@@ -117,21 +117,21 @@
       }
     }
   }
-  &__slider-btn--prev,
-  &__slider-btn--next {
-    z-index: 15;
+  // &__slider-btn--prev,
+  // &__slider-btn--next {
+  //   z-index: 15;
 
-    @include _1280 {
-      display: none;
-    }
-  }
-  &__slider-btn--prev::after,
-  &__slider-btn--next::after {
-    content: none;
-  }
-  &__slider-btn--next {
-    transform: rotate(180deg);
-  }
+  //   @include _1280 {
+  //     display: none;
+  //   }
+  // }
+  // &__slider-btn--prev::after,
+  // &__slider-btn--next::after {
+  //   content: none;
+  // }
+  // &__slider-btn--next {
+  //   transform: rotate(180deg);
+  // }
 
   &__slide-content-title {
     font-family: "Russo One", sans-serif;

@@ -148,6 +148,12 @@ const newsSwiper = new Swiper(newsSwiperContent, {
     type: "bullets",
     clickable: true,
   },
+  
+  navigation: {
+    nextEl: ".news__slider-btn--next",
+    prevEl: ".news__slider-btn--prev",
+    clickable: true,
+  },
 });
 // Проверка на наличие в блоке элемента с тегом img
 // Если тег есть - у контента убирается заглушка
@@ -246,3 +252,13 @@ joinDoorBtn.addEventListener("click", () => {
 })
 
 
+
+// Тест сделать подгрузку изображения в фон и в контент
+// const newsImage = document.querySelector(".news-hero__picture img");
+// const background = document.querySelector(".news-hero__background");
+
+// if (newsImage && background !== undefined) {
+// newsImage.addEventListener("load", () => {
+//   background.style.backgroundImage = `url(${newsImage.src})`;
+// })
+// }
