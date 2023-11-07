@@ -7,6 +7,7 @@
 @import "ui";
 // Переиспользуемые
 @import "../modules/common/_product-card/product-card";
+@import "../modules/common/_product-basket/product-basket";
 
 // Главная страница
 @import "../modules/common/_header/header";
@@ -23,4 +24,8 @@
 
 @import "../modules/news_page/_hero/news_hero";
 @import "../modules/news_page/_content/news_content";
+
+// Запчасти
+
+@import "../modules/details/_hero/hero";
 

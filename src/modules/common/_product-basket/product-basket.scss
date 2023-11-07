@@ -1,0 +1,25 @@
+.product-basket {
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        padding: 8px 28px;
+        gap: 24px;
+
+   &-basket {
+       fill: var(--white);
+       rotate: 90deg;
+   }
+
+   &-arrow {
+       fill: var(--white);
+       rotate: 90deg;
+   }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+    }
+}

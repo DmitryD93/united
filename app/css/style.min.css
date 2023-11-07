@@ -1494,6 +1494,35 @@ body.lock {
   line-height: 1.5;
 }
 
+.product-basket__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 28px;
+  gap: 24px;
+}
+.product-basket__btn-basket {
+  fill: var(--white);
+  rotate: 90deg;
+}
+.product-basket__btn-arrow {
+  fill: var(--white);
+  rotate: 90deg;
+}
+.product-basket__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -2339,6 +2368,7 @@ body.lock {
   background-color: var(--white);
 }
 .search__form-low-placeholder {
+  display: none;
   position: absolute;
   top: 60%;
   left: 0;
@@ -2351,6 +2381,11 @@ body.lock {
   font-weight: 500;
   color: var(--white);
   max-width: 250px;
+}
+@media (max-width: 550px) {
+  .search__form-low-placeholder {
+    display: block;
+  }
 }
 @media (max-width: 1280px) {
   .search__form {
@@ -3574,4 +3609,54 @@ body.lock {
   letter-spacing: 0.72px;
   color: var(--black);
   margin-bottom: 32px;
+}
+
+.details-hero {
+  background-image: none;
+  padding-top: 165px;
+  padding-bottom: 64px;
+  min-height: 365px;
+}
+.details-hero__content-descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 16px;
+  max-width: 80%;
+}
+.details-hero__content-descr h1 {
+  font-family: "Russo One", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.details-hero__content-descr p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.details-hero__content-descr p:last-child {
+  margin-bottom: 0;
+}
+
+.details-search {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: transparent;
+}
+.details-search__form {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
 }

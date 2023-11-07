@@ -1,0 +1,44 @@
+.details-hero {
+background-image: none;
+padding-top: 165px;
+padding-bottom: 64px;
+min-height: 365px;
+
+&__content-descr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    max-width: 80%;
+
+    h1 {
+        font-family: "Russo One", sans-serif;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 1.5px;
+        color: var(--black);
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--black);
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+}
+
+.details-search {
+    height: fit-content;
+    background-color: transparent;
+    &__form {
+        transform: none;
+    }
+}
