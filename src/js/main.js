@@ -262,3 +262,15 @@ joinDoorBtn.addEventListener("click", () => {
 //   background.style.backgroundImage = `url(${newsImage.src})`;
 // })
 // }
+
+// Открытие интерактивной корзины в правой границе сайта
+
+const basketBtn = document.querySelector(".product-basket__btn");
+const productBasket = document.querySelector(".product-basket");
+const productBasketContent = document.querySelector(".product-basket__content");
+
+basketBtn.addEventListener("click", () => {
+  productBasket.classList.toggle("active");
+  basketBtn.classList.toggle("active");
+
+})
