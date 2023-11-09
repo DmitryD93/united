@@ -272,5 +272,6 @@ const productBasketContent = document.querySelector(".product-basket__content");
 basketBtn.addEventListener("click", () => {
   productBasket.classList.toggle("active");
   basketBtn.classList.toggle("active");
+  productBasketContent.classList.toggle("active");
 
 })

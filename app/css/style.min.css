@@ -1497,6 +1497,7 @@ body.lock {
 .product-basket {
   max-width: 620px;
   min-height: 248px;
+  max-height: 248px;
   position: fixed;
   right: 15px;
   top: 180px;
@@ -1523,6 +1524,9 @@ body.lock {
 }
 .product-basket.active {
   min-height: 248px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
@@ -1588,6 +1592,12 @@ body.lock {
   max-width: 100%;
   max-height: 100%;
   height: 100%;
+  visibility: hidden;
+  -webkit-transition: visibility 0.3s ease;
+  transition: visibility 0.3s ease;
+}
+.product-basket__content.active {
+  visibility: visible;
 }
 .product-basket__list {
   display: -webkit-box;
