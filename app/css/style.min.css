@@ -3979,15 +3979,14 @@ body.lock {
   opacity: 0;
 }
 .details-filter__bottom-form {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 8px;
-  -ms-grid-columns: (1fr)[5];
-  grid-template-columns: repeat(5, 1fr);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .details-filter__bottom-label-content {
-  -ms-grid-column-span: 1;
-  grid-column: 1 span;
   padding: 8px 14px;
   position: relative;
   display: -webkit-box;

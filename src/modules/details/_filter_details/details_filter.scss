@@ -90,13 +90,14 @@
       opacity: 0;
     }
     &-form {
-      display: grid;
+      display: flex;
       gap: 8px;
-      grid-template-columns: repeat(5, 1fr);
+      flex-wrap: wrap;
+    //   grid-template-columns: repeat(5, 1fr);
     }
     &-label {
-      &-content {
-        grid-column: 1 span;
+        // grid-column: 1 span;
+      &-content {   
         padding: 8px 14px;
         position: relative;
         display: flex;
