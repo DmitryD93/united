@@ -3876,3 +3876,183 @@ body.lock {
       -ms-transform: none;
           transform: none;
 }
+
+.details-filter {
+  padding: 64px 0;
+}
+.details-filter__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.details-filter__top-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px;
+}
+.details-filter__top-btn svg {
+  rotate: -90deg;
+}
+.details-filter__top-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+.details-filter__top-label {
+  width: 230px;
+}
+.details-filter__top-label-content {
+  padding: 8px 16px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--black-grey);
+  background-color: var(--grey);
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.details-filter__top-label-content .checkbox-close svg {
+  opacity: 0;
+  fill: transparent;
+  -webkit-transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+.details-filter__top-label-content svg {
+  fill: var(--dark-grey);
+  -webkit-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
+}
+.details-filter__top-label > input:checked + .details-filter__top-label-content {
+  background-color: var(--black-grey);
+}
+.details-filter__top-label > input:checked + .details-filter__top-label-content span {
+  color: var(--white);
+}
+.details-filter__top-label > input:checked + .details-filter__top-label-content svg {
+  fill: var(--white);
+}
+.details-filter__top-label > input:checked + .details-filter__top-label-content .checkbox-close svg {
+  opacity: 1;
+  fill: var(--white);
+  -webkit-transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+.details-filter__top-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.details-filter__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+.details-filter__bottom-checkbox {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.details-filter__bottom-form {
+  display: -ms-grid;
+  display: grid;
+  gap: 8px;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+}
+.details-filter__bottom-label-content {
+  -ms-grid-column-span: 1;
+  grid-column: 1 span;
+  padding: 8px 14px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.details-filter__bottom-label-content .checkbox-close svg {
+  opacity: 0;
+  fill: transparent;
+  -webkit-transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+.details-filter__bottom-label-content span {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--black);
+  text-wrap: nowrap;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.details-filter__bottom-label > input:checked + .details-filter__bottom-label-content span {
+  color: var(--dark-red);
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.details-filter__bottom-label > input:checked + .details-filter__bottom-label-content .checkbox-close svg {
+  opacity: 1;
+  fill: var(--dark-red);
+  -webkit-transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+.details-filter__bottom-btn {
+  background-color: var(--super-silver);
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.details-filter__bottom-btn svg {
+  fill: var(--black-grey);
+  -webkit-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
+}
+.details-filter__bottom-btn:focus-within svg {
+  fill: var(--white);
+}
+.details-filter__bottom-btn:hover svg {
+  fill: var(--white);
+}
+
+.checkbox-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}

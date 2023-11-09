@@ -5,6 +5,7 @@
 @import "_fonts";
 @import "_global";
 @import "ui";
+
 // Переиспользуемые
 @import "../modules/common/_product-card/product-card";
 @import "../modules/common/_product-basket/product-basket";
@@ -28,4 +29,5 @@
 // Запчасти
 
 @import "../modules/details/_hero/hero";
+@import "../modules/details/_filter_details/details_filter";
 
