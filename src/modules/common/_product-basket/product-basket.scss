@@ -14,6 +14,10 @@
   transform: translateX(calc(100% - 48px));
   transition: transform 0.4s ease, background-color 0.4s ease;
 
+  @include _no-hover {
+    right: 0;
+  }
+
   &.active {
     min-height: 248px;
     max-height: fit-content;
