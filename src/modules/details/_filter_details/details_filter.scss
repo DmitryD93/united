@@ -1,0 +1,177 @@
+.details-filter {
+  padding: 64px 0;
+
+  &__wrapper {
+    max-width: 1312px ;
+  }
+
+  &__top {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+
+      svg {
+        rotate: -90deg;
+      }
+    }
+  }
+
+  &__top-form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__top-label {
+    width: 230px;
+    &-content {
+      padding: 8px 16px;
+      position: relative;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--black-grey);
+      background-color: var(--grey);
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+      @include _880 {
+        font-size: 18px;
+      }
+
+      & .checkbox-close svg {
+        opacity: 0;
+        fill: transparent;
+        transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+      }
+
+      & svg {
+        fill: var(--dark-grey);
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+
+    & > input:checked + &-content {
+      background-color: var(--black-grey);
+
+      & span {
+        color: var(--white);
+      }
+
+      & svg {
+        fill: var(--white);
+      }
+
+      & .checkbox-close svg {
+        opacity: 1;
+        fill: var(--white);
+        transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &__top-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;    
+    gap: 16px;
+    padding-right: 25px;
+
+    &-checkbox {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    &-form {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    //   grid-template-columns: repeat(5, 1fr);
+    }
+    &-label {
+        // grid-column: 1 span;
+      &-content {   
+        padding: 8px 14px;
+        position: relative;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+
+        & .checkbox-close svg {
+            opacity: 0;
+            fill: transparent;
+            transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+          }
+
+        span {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1.5;
+          color: var(--black);
+          text-wrap:nowrap;
+          transition: color 0.3s ease-in-out;
+
+          @include _880 {
+            font-size: 14px;
+          }
+        }
+      }
+
+      & > input:checked + &-content {
+        span {
+          color: var(--dark-red);
+          transition: color 0.3s ease-in-out;
+        }
+
+        & .checkbox-close svg {
+          opacity: 1;
+          fill: var(--dark-red);
+          transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+        }
+      }
+    }
+
+    &-btn {
+       background-color: var(--super-silver); 
+       padding: 16px;
+       display: flex;
+       align-items: center;
+
+       svg {
+        fill: var(--black-grey);
+        transition: fill 0.3s ease-in-out;
+       }
+
+       &:focus-within svg {
+           fill: var(--white);
+       }
+
+       &:hover svg {
+           fill: var(--white);
+       }
+    }
+  }
+}
+
+.checkbox-close {
+    display: flex;
+    align-items: center;
+}

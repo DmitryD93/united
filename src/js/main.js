@@ -262,3 +262,25 @@ joinDoorBtn.addEventListener("click", () => {
 //   background.style.backgroundImage = `url(${newsImage.src})`;
 // })
 // }
+
+// Открытие интерактивной корзины в правой границе сайта
+
+const basketBtn = document.querySelector(".product-basket__btn");
+const productBasket = document.querySelector(".product-basket");
+const productBasketContent = document.querySelector(".product-basket__content");
+
+const productBasketBtnText = document.querySelector(".product-basket__btn-text span");
+
+console.log(productBasketBtnText);
+
+basketBtn.addEventListener("click", () => {
+  productBasket.classList.toggle("active");
+  basketBtn.classList.toggle("active");
+  productBasketContent.classList.toggle("active");
+
+})
+
+// видимость корзины при наличии товара
+
+
+

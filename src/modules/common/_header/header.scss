@@ -6,6 +6,11 @@
   z-index: 2;
   background-color: inherit;
 
+  &__btn {
+    width: 32px;
+    height: 32px;
+  }
+
   &__link {
     z-index: 10;
   }
@@ -17,7 +22,7 @@
     position: relative;
 
     @include _550 {
-      gap: 12px;
+      gap: 6px;
       z-index: 10;
     }
   }
@@ -25,7 +30,19 @@
   &__join-visible-btn {
     display: none;
     align-items: center;
+    justify-content: center;
     background-color: transparent;
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      @include _550 {
+        width: 16px;
+        height: 16px;
+      }
+
+    }
 
     svg rect {
       fill: none;
@@ -34,12 +51,8 @@
     @include _880 {
       display: flex;
     }
-  
 
-    @include _550 {
-      width: 32px;
-      height: 32px;
-    }
+
   }
 
   &__search {
@@ -61,22 +74,15 @@
     
 
     &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: absolute;
       top: -1000px;
       visibility: hidden;
       opacity: 0;
       transition: visibility 0.6s ease, opacity 0.6s ease, scale 0.4s ease;
       outline: none;
-
-      @include _550 {
-        width: 32px;
-        height: 32px;
-
-        svg {
-          width: 16px;
-          height: 16px;
-        }
-      }
 
     
   
@@ -112,6 +118,13 @@
           fill: var(--black);
           width: 24px;
           height: 24px;
+        }
+      }
+
+      @include _550 {
+        svg {
+          width: 16px;
+          height: 16px;
         }
       }
     }
@@ -276,17 +289,15 @@
     @include _550 {
       padding-top: 8px;
       padding-bottom: 8px;
+      gap: 8px;
     }
   }
 
-  &__logo {
-    width: 220px;
-    height: 35px;
-
-    @include _550 {
-      width: 132px ;
-    }
-  }
+  // &__logo {
+  //   @include _550 {
+  //     width: 80px ;
+  //   }
+  // }
   &__nav {
     padding-right: 10px;
 
@@ -433,4 +444,68 @@
     }
   }
 
+  &__call-btn {
+    display: none;
+
+    svg {
+      fill: var(--black);
+      transition: fill .4s ease;
+
+      @include _550 {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    @include _880 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:focus-within {
+        svg {
+          fill: var(--red);
+        }
+      }
+
+      &:active {
+        svg {
+          fill: var(--dark-red);
+        }
+      }
+    }
+  }
+
+  &__basket-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 6px;
+      height: 6px;
+      background-color: var(--red);
+      border-radius: 100%;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--black);
+      transition: fill .4s ease;
+
+      @include _550 {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    @include _550 {
+      display: flex;
+    }
+  }
 }

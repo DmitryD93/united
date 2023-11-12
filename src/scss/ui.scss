@@ -37,6 +37,7 @@
           opacity: 1;
         }
       }
+      
       @include _only-hover {
          &:hover {
         background-color: var(--dark-red);

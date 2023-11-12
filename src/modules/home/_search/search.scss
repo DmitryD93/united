@@ -23,6 +23,7 @@
     background-color: var(--white);
 
     &-low-placeholder {
+      display: none;
       position: absolute;
       top: 60%;
       left: 0;
@@ -31,8 +32,12 @@
       font-size: 12px;
       font-style: italic;
       font-weight: 500;
-      color: var(--white);
+      // color: var(--black);
       max-width: 250px;
+
+      @include _550 {
+        display: block;
+      }
     }
 
     @include _1280 {

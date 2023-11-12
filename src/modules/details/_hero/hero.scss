@@ -1,0 +1,70 @@
+.details-hero {
+background-image: none;
+padding-top: 165px;
+padding-bottom: 64px;
+min-height: 365px;
+background-position: 100%;
+
+@include _880 {
+    padding-top: 115px;
+    padding-bottom: 32px;
+}
+
+&__wrapper {
+    padding-right: 50px;
+
+    @include _880 {
+        max-width: 100%;
+    }
+}
+
+&__content-descr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    max-width: 80%;
+
+    @include _880 {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-family: "Russo One", sans-serif;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 1.5px;
+        color: var(--black);
+        margin-bottom: 8px;
+
+        @include _880 {
+            font-size: 40px;
+        }
+    }
+
+    p {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--black);
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include _880 {
+            font-size: 14px;
+        }
+    }
+}
+}
+
+.details-search {
+    height: fit-content;
+    background-color: transparent;
+    &__form {
+        transform: none;
+    }
+}

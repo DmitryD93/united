@@ -1,0 +1,29 @@
+<!-------- Заголовок и описание страницы -------->
+@@include('modules/common/_header/_head.html',
+{
+"title": "Юнайтед Сервис",
+"description" : "Автозапчасти в Санкт-Петербурге"
+})
+</head>
+
+<!------------ Header ------------>
+@@include('modules/common/_header/_header.html')
+<main class="main home">
+    <div class="site-wrapper">
+    @@include('modules/details/_hero/_hero.html')
+    @@include('modules/details/_filter_details/_details_filter.html')
+    @@include('modules/common/_product-list/_product-list.html')
+    @@include('modules/home/_popular/_popular.html')
+    @@include('modules/common/_product-basket/_product-basket.html')
+    </div>
+</main>
+
+@@include('modules/common/_footer/_footer.html')
+
+<!-- 1)Картинка для главной страницы - ждем обновленную
+    2)карточка популярные запчасти - заглушка тегом img
+    3) поиск под фиксированной шапкой
+    4) Фиксированная шапка
+    5) Слайдер для блока новостей
+ -->
+
