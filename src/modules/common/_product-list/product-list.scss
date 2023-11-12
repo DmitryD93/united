@@ -1,6 +1,20 @@
 .product-list {
   padding: 28px 0;
 
+  &__mobile-title {
+    padding: 16px;
+    background-color: var(--grey);
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    display: none;
+
+    @include _880 {
+      display: block;
+    }
+  }
+
   &__wrapper {
     max-width: 1312px;
   }
@@ -8,11 +22,16 @@
   &__list {
     display: flex;
     flex-direction: column;
+    // padding-right: 25px;
 
     &-item {
-      display: flex;
-      flex-direction: column;
-      padding: 16px 0;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      padding: 16px 25px 16px 0;
+
+      @include _640 {
+        grid-template-columns: repeat(6, 1fr);
+      }
 
 
       &:nth-child(even) {
@@ -23,13 +42,28 @@
         background-color: var(--white);
       }
 
-      &:first-child {
-        gap: 32px;
+      &:first-child { 
 
         & .product-list__names-list {
           display: grid;
+          grid-row-start: 1;
+          grid-column: 7 span;
           background-color: var(--grey);
           padding: 16px;
+          margin-bottom: 16px;
+
+          @include _880 {
+            display: flex;
+            flex-direction: column;
+            grid-row-start: 2;
+            grid-column: 2 span;
+            margin-bottom: 0;
+            background-color: transparent;
+          }
+
+          @include _640 {
+            grid-column: 3 span;
+        }
         }
       }
     }
@@ -37,53 +71,87 @@
 
   &__names-list {
     display: none;
-    grid-template-columns: repeat(22, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 32px;
     width: 100%;
+
+    @include _880 {
+      display: flex;
+      flex-direction: column;
+      grid-row-start: 2;
+      grid-column: 2 span;
+      padding: 16px;
+      background-color: transparent;
+    }
+
+    @include _640 {
+        grid-column: 3 span;
+    }
 
 
     &-item {
       display: flex;
+      gap: 20px;
+      align-items: center;
 
+      @include _880 {
+
+        &:nth-child(1) {
+            display: none;
+        }
+
+        &:nth-child(3) {
+            display: none;
+        }
+      }
+
+       
       span {
         color: var(--black);
         font-size: 16px;
         font-weight: 600;
         line-height: 1.2;
+        text-align: center;
+
+        @include _880 {
+          font-size: 14px;
+        }
       }
 
       &:nth-child(1) {
-        grid-column: 1 span;
+        grid-column: 2 span;
       }
 
       &:nth-child(2) {
-        grid-column: 5 span;
+        grid-column: 4 span;
+
+        div {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+
+            span {
+                display: flex;
+                justify-content: center;  
+
+                @include _880 {
+                  justify-content: left;  
+                }
+            }
+
+            @include _880 {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+        }
+
       }
 
       &:nth-child(3) {
         justify-content: center;
-        grid-column: 3 span;
-      }
-
-      &:nth-child(4) {
-        justify-content: center;
-        grid-column: 3 span;
-      }
-
-      &:nth-child(5) {
-        justify-content: center;
-        grid-column: 3 span;
-      }
-
-      &:nth-child(6) {
-        justify-content: center;
-        grid-column: 3 span;
-      }
-
-      &:nth-child(7) {
-        justify-content: center;
-        padding-right: 70px;
-        grid-column: 4 span;
+        grid-column: 1 span;
       }
 
 
@@ -91,50 +159,58 @@
   }
 
   &__product-item-list {
+    grid-column: 4 span;
     display: grid;
-    grid-template-columns: repeat(22, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     width: 100%;
-    padding: 16px;
+    padding: 16px 0;
+
+    @include _880 {
+        grid-template-columns: 1fr;
+        grid-row-start: 2;
+        grid-column: 2 span;
+    }
+
+    @include _640 {
+        grid-column: 3 span;
+    }
 
 
     &-item {
       display: flex;
       align-items: center;
+      justify-content: center;
+
+      @include _880 {
+        justify-content: left;
+      }
+
+      @include _640 {
+        justify-content: center;
+    }
 
       &:nth-child(1) {
         grid-column: 1 span;
       }
 
       &:nth-child(2) {
-        grid-column: 5 span;
+        grid-column: 1 span;
       }
 
       &:nth-child(3) {
-        justify-content: center;
-        grid-column: 3 span;
+        grid-column: 1 span;
 
       }
 
       &:nth-child(4) {
-        justify-content: center;
-        grid-column: 3 span;
+        grid-column: 1 span;
+
+        @include _640 {
+            justify-content: center;
+        }
       }
 
-      &:nth-child(5) {
-        justify-content: center;
-        grid-column: 3 span;
-      }
-
-      &:nth-child(6) {
-        justify-content: center;
-        grid-column: 3 span;
-      }
-
-      &:nth-child(7) {
-        justify-content: center;
-        grid-column: 4 span;
-      }
 
       span {
         display: flex;
@@ -145,6 +221,10 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 1.2;
+
+        @include _880 {
+          font-size: 14px;
+        }
       }
 
       div {
@@ -173,10 +253,157 @@
     }
   }
 
+  &__adaptive-name-list {
+    grid-column: 2 span;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 100%;
+    padding: 16px 0 16px 16px;
+
+    @include _880 {
+        grid-column: 7 span;
+        display: flex;
+        gap: 32px;
+    }
+
+    @include _640 {
+        grid-column: 6 span;
+    }
+
+
+    &-item {
+        display: flex;
+        align-items: center;
+  
+        &:nth-child(1) {
+          grid-column: 1 span;
+
+          @include _640 {
+            display: none;
+          }
+        }
+  
+        &:nth-child(2) {
+          grid-column: 7 span;
+
+          @include _640 {
+            width: 100%;
+          }
+        }
+
+        // a{ 
+        //     display: flex;
+        //     align-items: center;
+        // }
+  
+        span {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          height: fit-content;
+          font-family: "Ubuntu", sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.2;
+        }
+  
+        div {
+          position: relative;
+          width: 52px;
+          height: 52px;
+          margin-right: 20px;
+  
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+  
+        a {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+
+          @include _640 {
+            flex-direction: column;
+            gap: 16px;
+          }
+        }
+      }
+  }
+
+  &__adaptive-price-block {
+    grid-column: 1 span;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+
+    span {
+        text-wrap: nowrap;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--black);
+
+        @include _880 {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 600;
+          letter-spacing: 0.48px;
+        }
+    }
+
+    @include _880 {
+        grid-column: 3 span;
+        justify-content: right;
+    }
+
+    @include _640 {
+        grid-row-start: 3;
+        grid-column: 7 span ;
+        flex-direction: column;
+    }
+  }
+
   &__basket-btn {
     padding: 12px;
     max-width: 50px;
     max-height: 50px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--white);
+
+
+    span {
+        display: none;
+        color: var(--white);
+    }
+
+    @include _880 {
+
+        max-width: fit-content;
+        max-height: fit-content;
+        span {
+            display: block;
+        }
+
+        svg {
+            display: none;
+        }
+    }
+  }
+
+  &__pagination-btn {
+    font-size: 20px;
   }
 
   &__pagination-block {
@@ -185,6 +412,7 @@
     align-items: center;
     justify-content: center;
     gap: 24px;
+
   }
 
   &__pagination-list {
@@ -216,4 +444,6 @@
       rotate: 180deg;
     }
   }
+
+  
 }
