@@ -2,7 +2,7 @@
   padding: 64px 0;
 
   &__wrapper {
-    max-width: 1312px ;
+    max-width: 1312px;
   }
 
   &__top {
@@ -10,14 +10,125 @@
     gap: 16px;
     margin-bottom: 32px;
 
+    @include _550 {
+      flex-direction: column-reverse;
+    }
+
     &-btn {
       display: flex;
       align-items: center;
+      justify-content: center;
       padding: 16px;
 
-      svg {
-        rotate: -90deg;
+      @include _550 {
+        display: none;
+
+        &::before {
+          display: none;
+        }
+
+        &:focus-within,
+        &:active {
+          background-color: transparent;
+        }
       }
+
+      svg:nth-child(1) {
+        display: block;
+        rotate: -90deg;
+
+        @include _550 {
+          display: none;
+        }
+      }
+      svg:nth-child(2) {
+        display: none;
+        fill: var(--red);
+
+        @include _550 {
+          display: block;
+        }
+      }
+
+      svg:nth-child(3) {
+        display: none;
+      }
+
+      &.modal__btn.active {
+        max-width: 50px;
+        transform: translateX(calc(100% + 25px));
+
+        @include _640 {
+          transform: translateX(100%);
+        }
+      
+        svg:nth-child(1) {
+          display: none;
+        }
+
+        svg:nth-child(2) {
+          display: none;
+        }
+
+        svg:nth-child(3) {
+          display: block;
+          fill: var(--white);
+        }
+      }
+    }
+
+    &-mobile-open-list-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+
+      @include _550 {
+        display: flex;
+      }
+
+      &::before {
+        display: none;
+      }
+      svg {
+        fill: var(--red);
+        transform: rotate(90deg);
+      }
+
+      &:focus-within {
+        background-color: transparent;
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+    // Заголовок модалки
+   &-modal-title {
+    display: none;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.6px;
+    color: var(--black);
+    text-align: center;
+
+    &.active {
+      display: inline-block;
+    }
+   }
+    // Блок модального окна основной
+    &.modal-content.active {
+      padding: 24px 62px 24px 62px;
+      position: fixed;
+      display: grid;
+      // justify-content: center;
+      // grid-template-columns: 1fr 50px;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--white);
     }
   }
 
@@ -25,14 +136,44 @@
     display: flex;
     align-items: center;
     gap: 16px;
+
+    @include _550 {
+      flex-direction: column;
+    }
+    // Кнопка применить для формы
+
+    &-accept-btn {
+      display: none;
+
+      &.active {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    // Форма модального окна
+    &.modal-content.active {
+      grid-row-start: 2;
+      grid-column: 2 span;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     padding-bottom: 70px;
+     padding-top: 20px;
+    }
   }
 
   &__top-label {
     width: 230px;
+    height: 60px;
     &-content {
+      width: 100%;
+      height: 100%;
       padding: 8px 16px;
       position: relative;
       display: flex;
+      justify-content: space-between;
       gap: 24px;
       align-items: center;
       text-align: center;
@@ -88,9 +229,9 @@
 
   &__bottom {
     display: flex;
-    align-items: center;    
+    align-items: center;
     gap: 16px;
-    padding-right: 25px;
+    padding-right: 35px;
 
     &-checkbox {
       position: absolute;
@@ -102,11 +243,11 @@
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-    //   grid-template-columns: repeat(5, 1fr);
+      //   grid-template-columns: repeat(5, 1fr);
     }
     &-label {
-        // grid-column: 1 span;
-      &-content {   
+      // grid-column: 1 span;
+      &-content {
         padding: 8px 14px;
         position: relative;
         display: flex;
@@ -116,17 +257,17 @@
         cursor: pointer;
 
         & .checkbox-close svg {
-            opacity: 0;
-            fill: transparent;
-            transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
-          }
+          opacity: 0;
+          fill: transparent;
+          transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+        }
 
         span {
           font-size: 16px;
           font-weight: 600;
           line-height: 1.5;
           color: var(--black);
-          text-wrap:nowrap;
+          text-wrap: nowrap;
           transition: color 0.3s ease-in-out;
 
           @include _880 {
@@ -150,28 +291,31 @@
     }
 
     &-btn {
-       background-color: var(--super-silver); 
-       padding: 16px;
-       display: flex;
-       align-items: center;
+      background-color: var(--super-silver);
+      padding: 16px;
+      display: flex;
+      align-items: center;
 
-       svg {
+      svg {
         fill: var(--black-grey);
         transition: fill 0.3s ease-in-out;
-       }
+      }
 
-       &:focus-within svg {
-           fill: var(--white);
-       }
+      &:focus-within svg {
+        fill: var(--white);
+      }
 
-       &:hover svg {
-           fill: var(--white);
-       }
+      &:hover svg {
+        fill: var(--white);
+      }
     }
   }
+
+ 
+
 }
 
 .checkbox-close {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
