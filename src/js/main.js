@@ -263,46 +263,46 @@ joinDoorBtn.addEventListener("click", () => {
 
 // Открытие интерактивной корзины в правой границе сайта
 
-const basketBtn = document.querySelector(".product-basket__btn");
-const productBasket = document.querySelector(".product-basket");
-const productBasketContent = document.querySelector(".product-basket__content");
+const basketBtn = document?.querySelector(".product-basket__btn");
+const productBasket = document?.querySelector(".product-basket");
+const productBasketContent = document?.querySelector(".product-basket__content");
 
-const productBasketBtnText = document.querySelector(
+const productBasketBtnText = document?.querySelector(
   ".product-basket__btn-text span"
 );
 
 console.log(productBasketBtnText);
 
-basketBtn.addEventListener("click", () => {
-  productBasket.classList.toggle("active");
-  basketBtn.classList.toggle("active");
-  productBasketContent.classList.toggle("active");
+basketBtn?.addEventListener("click", () => {
+  productBasket?.classList.toggle("active");
+  basketBtn?.classList.toggle("active");
+  productBasketContent?.classList.toggle("active");
 });
 
 // Модальное окно (секция страницы "Запчасти")
 
-const modalBtn = document.querySelectorAll(".modal__btn");
-const modalWindow = document.querySelector(".modal-container");
-const modalContent = document.querySelectorAll(".modal-content");
-const modalTitle = document.querySelector(".details-filter__top-modal-title");
+const modalBtn = document?.querySelectorAll(".modal__btn");
+const modalWindow = document?.querySelector(".modal-container");
+const modalContent = document?.querySelectorAll(".modal-content");
+const modalTitle = document?.querySelector(".details-filter__top-modal-title");
 
-modalBtn.forEach((item) => {
+modalBtn?.forEach((item) => {
   item.addEventListener("click", () => {
-    modalWindow.classList.toggle("active");
-    modalBtn.forEach((item) => {
+    modalWindow?.classList.toggle("active");
+    modalBtn?.forEach((item) => {
       item.classList.toggle("active");
     });
-    modalContent.forEach((item) => {
+    modalContent?.forEach((item) => {
       item.classList.toggle("active");
     });
-    modalTitle.classList.toggle("active");
+    modalTitle?.classList.toggle("active");
   });
 });
 
 window.addEventListener("click", (event) => {
   let isClickInsideModal = false;
 
-  modalContent.forEach((item) => {
+  modalContent?.forEach((item) => {
     if (item.contains(event.target)) {
       isClickInsideModal = true;
     }
@@ -311,14 +311,14 @@ window.addEventListener("click", (event) => {
   if (isClickInsideModal) {
     return;
   } else {
-    modalBtn.forEach((item) => {
+    modalBtn?.forEach((item) => {
       item.classList.remove("active");
     });
-    modalWindow.classList.remove("active");
-    modalContent.forEach((item) => {
+    modalWindow?.classList.remove("active");
+    modalContent?.forEach((item) => {
       item.classList.remove("active");
     });
-    modalTitle.classList.remove("active");
+    modalTitle?.classList.remove("active");
   }
 });
 
@@ -326,12 +326,13 @@ window.addEventListener("click", (event) => {
 // Показ чекбоксов марки авто для мобильной версии 
 
 
-const showElBtn = document.querySelector(".details-filter__top-mobile-open-list-btn");
-const productsLength = document.querySelectorAll(".details-filter__top-label").length;
+const showElBtn = document?.querySelector(".details-filter__top-mobile-open-list-btn");
+const productsLength = document?.querySelectorAll(".details-filter__top-label").length;
 let items = 2;
-const arr = Array.from(document.querySelector(".details-filter__top-form").children);
 
 const handleClick = () => {
+  const arr = Array.from(document.querySelector(".details-filter__top-form").children);
+
   items += 4;
   const visItems = arr.slice(0, items);
   visItems.forEach((item) => {
@@ -346,7 +347,7 @@ const handleClick = () => {
     showElBtn.removeEventListener("click", handleClick);
     items = 2;
 
-    showElBtn.addEventListener("click", () => {
+    showElBtn?.addEventListener("click", () => {
       arr.forEach((item, index) => {
         if (index >= items) {
           item.classList.remove("visible");
@@ -361,59 +362,18 @@ const handleClick = () => {
   }
 };
 
-showElBtn.addEventListener("click", handleClick);
+showElBtn?.addEventListener("click", handleClick);
 
 
 // Пока чекбоксов категории
 
-// window.addEventListener("resize", () => {
-//   if(window.innerWidth <= 550) {
-//     const showElBtnCategories = document.querySelector(".details-filter__bottom-btn");
-//     const productsLengthCategories = document.querySelectorAll(".details-filter__bottom-label").length;
-//     let itemsCategories = 2;
-//     const arrCategories = Array.from(document.querySelector(".details-filter__bottom-form").children);
-    
-//     const handleClickCategories = () => {
-//       itemsCategories += 4;
-//       const visItems = arrCategories.slice(0, itemsCategories);
-//       visItems.forEach((item) => {
-//         if (!item.classList.contains("visible")) {
-//           item.classList.add("visible");
-//         }
-    
-//       });
-    
-//       if (visItems.length === productsLengthCategories) {
-//         showElBtnCategories.style.rotate = "180deg";
-//         showElBtnCategories.removeEventListener("click", handleClickCategories);
-//         itemsCategories = 2;
-    
-//         showElBtnCategories.addEventListener("click", () => {
-//           arrCategories.forEach((item, index) => {
-//             if (index >= itemsCategories) {
-//               item.classList.remove("visible");
-//             }
-//           });
-    
-//           showElBtnCategories.style.rotate = "0deg";
-//           showElBtnCategories.addEventListener("click", handleClickCategories);
-//         });
-//       } else {
-//         showElBtnCategories.style.rotate = "0deg";
-//       }
-//     };
-    
-//     showElBtnCategories.addEventListener("click", handleClickCategories);
-//   }
-// })
-
-
-const showElBtnCategories = document.querySelector(".details-filter__bottom-btn");
-const productsLengthCategories = document.querySelectorAll(".details-filter__bottom-label").length;
+const showElBtnCategories = document?.querySelector(".details-filter__bottom-btn");
+const productsLengthCategories = document?.querySelectorAll(".details-filter__bottom-label").length;
 let itemsCategories = 5;
-const arrCategories = Array.from(document.querySelector(".details-filter__bottom-form").children);
 
 const handleClickCategories = () => {
+  const arrCategories = Array.from(document.querySelector(".details-filter__bottom-form").children);
+
   itemsCategories += 4;
   const visItems = arrCategories.slice(0, itemsCategories);
   visItems.forEach((item) => {
@@ -443,7 +403,7 @@ const handleClickCategories = () => {
   }
 };
 
-showElBtnCategories.addEventListener("click", handleClickCategories);
+showElBtnCategories?.addEventListener("click", handleClickCategories);
 
 
 
