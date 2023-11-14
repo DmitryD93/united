@@ -12,6 +12,8 @@
 
     @include _550 {
       flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
     }
 
     &-btn {
@@ -93,12 +95,19 @@
       svg {
         fill: var(--red);
         transform: rotate(90deg);
+        
       }
 
       &:focus-within {
         background-color: transparent;
-      }
 
+        & svg {
+          fill: var(--dark-red);
+        }
+      }
+      &:hover {
+        background-color: transparent;
+      }
       &:active {
         background-color: transparent;
       }
@@ -167,6 +176,17 @@
   &__top-label {
     width: 230px;
     height: 60px;
+
+    @include _550 {
+
+      &:nth-child(n + 3) {
+        display: none;
+      }
+
+      &.visible {
+        display: block;
+      }
+    }
     &-content {
       width: 100%;
       height: 100%;
@@ -233,6 +253,11 @@
     gap: 16px;
     padding-right: 35px;
 
+    @include _550 {
+      flex-direction: column;
+      padding-right: 0;
+    }
+
     &-checkbox {
       position: absolute;
       width: 0;
@@ -243,10 +268,18 @@
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      //   grid-template-columns: repeat(5, 1fr);
     }
     &-label {
-      // grid-column: 1 span;
+
+      @include _550 {
+        &:nth-child(n + 5) {
+          display: none;
+        }
+
+        &.visible {
+          display: block;
+        }
+      }
       &-content {
         padding: 8px 14px;
         position: relative;
@@ -296,17 +329,36 @@
       display: flex;
       align-items: center;
 
+      &:focus-within {
+        background-color: transparent;
+      }
+
+      @include _550 {
+        transform: rotate(90deg);
+        background-color: transparent;
+
+        &::before {
+          display: none;
+        }
+      }
+
       svg {
         fill: var(--black-grey);
         transition: fill 0.3s ease-in-out;
+
+        @include _550 {
+          fill: var(--red);
+        }
       }
 
       &:focus-within svg {
-        fill: var(--white);
+        fill: var(--dark-red);
       }
 
-      &:hover svg {
-        fill: var(--white);
+      @include _only-hover {
+        &:hover svg {
+          fill: var(--white);
+        }
       }
     }
   }

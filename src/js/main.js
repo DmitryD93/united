@@ -321,3 +321,93 @@ window.addEventListener("click", (event) => {
     modalTitle.classList.remove("active");
   }
 });
+
+
+// Показ чекбоксов марки авто для мобильной версии 
+
+
+const showElBtn = document.querySelector(".details-filter__top-mobile-open-list-btn");
+const productsLength = document.querySelectorAll(".details-filter__top-label").length;
+let items = 2;
+const arr = Array.from(document.querySelector(".details-filter__top-form").children);
+
+const handleClick = () => {
+  items += 4;
+  const visItems = arr.slice(0, items);
+  visItems.forEach((item) => {
+    if (!item.classList.contains("visible")) {
+      item.classList.add("visible");
+    }
+
+  });
+
+  if (visItems.length === productsLength) {
+    showElBtn.style.rotate = "180deg";
+    showElBtn.removeEventListener("click", handleClick);
+    items = 2;
+
+    showElBtn.addEventListener("click", () => {
+      arr.forEach((item, index) => {
+        if (index >= items) {
+          item.classList.remove("visible");
+        }
+      });
+
+      showElBtn.style.rotate = "0deg";
+      showElBtn.addEventListener("click", handleClick);
+    });
+  } else {
+    showElBtn.style.rotate = "0deg";
+  }
+};
+
+showElBtn.addEventListener("click", handleClick);
+
+
+// Пока чекбоксов категории
+
+const showElBtnCategories = document.querySelector(".details-filter__bottom-btn");
+const productsLengthCategories = document.querySelectorAll(".details-filter__bottom-label").length;
+let itemsCategories = 2;
+const arrCategories = Array.from(document.querySelector(".details-filter__bottom-form").children);
+
+const handleClickCategories = () => {
+  itemsCategories += 4;
+  const visItems = arrCategories.slice(0, itemsCategories);
+  visItems.forEach((item) => {
+    if (!item.classList.contains("visible")) {
+      item.classList.add("visible");
+    }
+
+  });
+
+  if (visItems.length === productsLengthCategories) {
+    showElBtnCategories.style.rotate = "180deg";
+    showElBtnCategories.removeEventListener("click", handleClickCategories);
+    itemsCategories = 2;
+
+    showElBtnCategories.addEventListener("click", () => {
+      arrCategories.forEach((item, index) => {
+        if (index >= itemsCategories) {
+          item.classList.remove("visible");
+        }
+      });
+
+      showElBtnCategories.style.rotate = "0deg";
+      showElBtnCategories.addEventListener("click", handleClickCategories);
+    });
+  } else {
+    showElBtnCategories.style.rotate = "0deg";
+  }
+};
+
+showElBtnCategories.addEventListener("click", handleClickCategories);
+
+
+
+
+
+
+
+
+
