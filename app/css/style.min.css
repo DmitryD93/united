@@ -1764,7 +1764,7 @@ body.lock {
   grid-template-columns: repeat(7, 1fr);
   gap: 16px;
   width: 100%;
-  padding: 16px;
+  padding: 16px 35px 16px 0;
   background-color: var(--grey);
 }
 @media (max-width: 900px) {
@@ -1796,12 +1796,11 @@ body.lock {
 .product-list__title-list-item:nth-child(1) {
   -ms-grid-column-span: 2;
   grid-column: 2 span;
+  padding-left: 16px;
 }
 .product-list__title-list-item:nth-child(2) {
   -ms-grid-column-span: 4;
   grid-column: 4 span;
-}
-.product-list__title-list-item:nth-child(2) div {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -1809,7 +1808,7 @@ body.lock {
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
-.product-list__title-list-item:nth-child(2) div span {
+.product-list__title-list-item:nth-child(2) span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1821,14 +1820,14 @@ body.lock {
           align-items: center;
 }
 @media (max-width: 900px) {
-  .product-list__title-list-item:nth-child(2) div span {
+  .product-list__title-list-item:nth-child(2) span {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
   }
 }
 @media (max-width: 900px) {
-  .product-list__title-list-item:nth-child(2) div {
+  .product-list__title-list-item:nth-child(2) {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -1836,9 +1835,9 @@ body.lock {
   }
 }
 .product-list__title-list-item:nth-child(3) {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -ms-grid-column-span: 1;
   grid-column: 1 span;
 }
@@ -1875,6 +1874,7 @@ body.lock {
   -ms-grid-columns: (1fr)[7];
   grid-template-columns: repeat(7, 1fr);
   padding: 16px 35px 16px 0;
+  gap: 16px;
 }
 @media (max-width: 640px) {
   .product-list__list-item {
@@ -2229,10 +2229,10 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 16px;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  gap: 32px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
