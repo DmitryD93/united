@@ -7,7 +7,7 @@ background-position: 100%;
 
 @include _880 {
     padding-top: 115px;
-    padding-bottom: 32px;
+    padding-bottom: 70px;
 }
 
 &__wrapper {
@@ -15,6 +15,10 @@ background-position: 100%;
 
     @include _880 {
         max-width: 100%;
+    }
+
+    @include _550 {
+        padding-right: 24px;
     }
 }
 

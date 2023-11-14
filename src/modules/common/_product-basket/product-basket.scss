@@ -18,6 +18,10 @@
     right: 0;
   }
 
+  @include _550 {
+    display: none;
+  }
+
   &.active {
     min-height: 248px;
     max-height: fit-content;

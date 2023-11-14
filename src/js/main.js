@@ -1,29 +1,29 @@
-const burger = document.querySelector('.burger')
-const menu = document.querySelector('.header__nav')
-const body = document.body
-const link = document.querySelectorAll('.link')
-const headerbBtn = document.querySelectorAll('.header__btn')
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".header__nav");
+const body = document.body;
+const link = document.querySelectorAll(".link");
+const headerbBtn = document.querySelectorAll(".header__btn");
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('active')
-  menu.classList.toggle('active')
-  body.classList.toggle('lock')
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  menu.classList.toggle("active");
+  body.classList.toggle("lock");
 
-  link.forEach(e => {
-    e.addEventListener('click', () => {
-      burger.classList.remove('active')
-      menu.classList.remove('active')
-      body.classList.remove('lock')
-    })
-  })
-  headerbBtn.forEach(e => {
-    e.addEventListener('click', () => {
-      burger.classList.remove('active')
-      menu.classList.remove('active')
-      body.classList.remove('lock')
-    })
-  })
-})
+  link.forEach((e) => {
+    e.addEventListener("click", () => {
+      burger.classList.remove("active");
+      menu.classList.remove("active");
+      body.classList.remove("lock");
+    });
+  });
+  headerbBtn.forEach((e) => {
+    e.addEventListener("click", () => {
+      burger.classList.remove("active");
+      menu.classList.remove("active");
+      body.classList.remove("lock");
+    });
+  });
+});
 
 // tabs
 
@@ -79,7 +79,7 @@ const discountThumbs = new Swiper(discountThumbsContent, {
     },
     320: {
       slidesPerView: 3,
-    }
+    },
   },
 });
 
@@ -120,7 +120,7 @@ const newsSwiper = new Swiper(newsSwiperContent, {
   initialSlide: 1,
 
   breakpoints: {
-   280 : {
+    280: {
       slidesPerView: 1,
       centeredSlides: true,
       spaceBetween: 30,
@@ -136,11 +136,10 @@ const newsSwiper = new Swiper(newsSwiperContent, {
 
     1280: {
       slidesPerView: 2.2,
-      loop : true,
+      loop: true,
       centeredSlides: true,
-      spaceBetween: 20
+      spaceBetween: 20,
     },
-    
   },
 
   pagination: {
@@ -148,7 +147,7 @@ const newsSwiper = new Swiper(newsSwiperContent, {
     type: "bullets",
     clickable: true,
   },
-  
+
   navigation: {
     nextEl: ".news__slider-btn--next",
     prevEl: ".news__slider-btn--prev",
@@ -170,8 +169,6 @@ const newsSwiper = new Swiper(newsSwiperContent, {
 //     }
 //   });
 // });
-
-
 
 // Фиксированная шапка
 // Обсервер для появления кнопки и плашки поиска
@@ -205,11 +202,11 @@ let headerSearch = document.querySelector(".header__search");
 function search() {
   if (!searchBtn.fixed) {
     headerSearch.classList.remove("fixed");
-  };
+  }
 }
 
 searchBtn.addEventListener("click", () => {
-  if(headerSearch.classList.contains("fixed")) {
+  if (headerSearch.classList.contains("fixed")) {
     headerSearch.classList.remove("fixed");
   } else {
     headerSearch.classList.add("fixed");
@@ -219,18 +216,21 @@ searchBtn.addEventListener("click", () => {
 // Убрать поиск шапки при клике на пустую область
 
 document.addEventListener("click", (e) => {
-    let elem = e.target;
+  let elem = e.target;
 
-    if(!elem.classList.contains("header__search") && !elem.closest(".fixed")) {
-      headerSearch.classList.remove("fixed"); 
-    }
+  if (!elem.classList.contains("header__search") && !elem.closest(".fixed")) {
+    headerSearch.classList.remove("fixed");
+  }
 
-    //  Убрать блок входа на низком разрешении при клике на пустую область
+  //  Убрать блок входа на низком разрешении при клике на пустую область
 
-    if(!elem.classList.contains("header__login-block") && !elem.closest(".header__join-visible-btn")) {
-      loginBlock.classList.remove("active"); 
-    }
-})
+  if (
+    !elem.classList.contains("header__login-block") &&
+    !elem.closest(".header__join-visible-btn")
+  ) {
+    loginBlock.classList.remove("active");
+  }
+});
 
 // кнопка сброса формы поиска
 
@@ -239,7 +239,7 @@ const clearBtn = document.querySelector(".header__search-clear-btn");
 
 clearBtn.addEventListener("click", () => {
   searchInput.value = "";
-})
+});
 
 // логика кнопки входа для открытия блока на низком разрешении
 
@@ -249,9 +249,7 @@ const loginBlock = document.querySelector(".header__login-block");
 joinDoorBtn.addEventListener("click", () => {
   loginBlock.classList.toggle("active");
   headerSearch.classList.remove("fixed");
-})
-
-
+});
 
 // Тест сделать подгрузку изображения в фон и в контент
 // const newsImage = document.querySelector(".news-hero__picture img");
@@ -269,7 +267,9 @@ const basketBtn = document.querySelector(".product-basket__btn");
 const productBasket = document.querySelector(".product-basket");
 const productBasketContent = document.querySelector(".product-basket__content");
 
-const productBasketBtnText = document.querySelector(".product-basket__btn-text span");
+const productBasketBtnText = document.querySelector(
+  ".product-basket__btn-text span"
+);
 
 console.log(productBasketBtnText);
 
@@ -277,10 +277,178 @@ basketBtn.addEventListener("click", () => {
   productBasket.classList.toggle("active");
   basketBtn.classList.toggle("active");
   productBasketContent.classList.toggle("active");
+});
 
-})
+// Модальное окно (секция страницы "Запчасти")
 
-// видимость корзины при наличии товара
+const modalBtn = document.querySelectorAll(".modal__btn");
+const modalWindow = document.querySelector(".modal-container");
+const modalContent = document.querySelectorAll(".modal-content");
+const modalTitle = document.querySelector(".details-filter__top-modal-title");
+
+modalBtn.forEach((item) => {
+  item.addEventListener("click", () => {
+    modalWindow.classList.toggle("active");
+    modalBtn.forEach((item) => {
+      item.classList.toggle("active");
+    });
+    modalContent.forEach((item) => {
+      item.classList.toggle("active");
+    });
+    modalTitle.classList.toggle("active");
+  });
+});
+
+window.addEventListener("click", (event) => {
+  let isClickInsideModal = false;
+
+  modalContent.forEach((item) => {
+    if (item.contains(event.target)) {
+      isClickInsideModal = true;
+    }
+  });
+
+  if (isClickInsideModal) {
+    return;
+  } else {
+    modalBtn.forEach((item) => {
+      item.classList.remove("active");
+    });
+    modalWindow.classList.remove("active");
+    modalContent.forEach((item) => {
+      item.classList.remove("active");
+    });
+    modalTitle.classList.remove("active");
+  }
+});
+
+
+// Показ чекбоксов марки авто для мобильной версии 
+
+
+const showElBtn = document.querySelector(".details-filter__top-mobile-open-list-btn");
+const productsLength = document.querySelectorAll(".details-filter__top-label").length;
+let items = 2;
+const arr = Array.from(document.querySelector(".details-filter__top-form").children);
+
+const handleClick = () => {
+  items += 4;
+  const visItems = arr.slice(0, items);
+  visItems.forEach((item) => {
+    if (!item.classList.contains("visible")) {
+      item.classList.add("visible");
+    }
+
+  });
+
+  if (visItems.length === productsLength) {
+    showElBtn.style.rotate = "180deg";
+    showElBtn.removeEventListener("click", handleClick);
+    items = 2;
+
+    showElBtn.addEventListener("click", () => {
+      arr.forEach((item, index) => {
+        if (index >= items) {
+          item.classList.remove("visible");
+        }
+      });
+
+      showElBtn.style.rotate = "0deg";
+      showElBtn.addEventListener("click", handleClick);
+    });
+  } else {
+    showElBtn.style.rotate = "0deg";
+  }
+};
+
+showElBtn.addEventListener("click", handleClick);
+
+
+// Пока чекбоксов категории
+
+// window.addEventListener("resize", () => {
+//   if(window.innerWidth <= 550) {
+//     const showElBtnCategories = document.querySelector(".details-filter__bottom-btn");
+//     const productsLengthCategories = document.querySelectorAll(".details-filter__bottom-label").length;
+//     let itemsCategories = 2;
+//     const arrCategories = Array.from(document.querySelector(".details-filter__bottom-form").children);
+    
+//     const handleClickCategories = () => {
+//       itemsCategories += 4;
+//       const visItems = arrCategories.slice(0, itemsCategories);
+//       visItems.forEach((item) => {
+//         if (!item.classList.contains("visible")) {
+//           item.classList.add("visible");
+//         }
+    
+//       });
+    
+//       if (visItems.length === productsLengthCategories) {
+//         showElBtnCategories.style.rotate = "180deg";
+//         showElBtnCategories.removeEventListener("click", handleClickCategories);
+//         itemsCategories = 2;
+    
+//         showElBtnCategories.addEventListener("click", () => {
+//           arrCategories.forEach((item, index) => {
+//             if (index >= itemsCategories) {
+//               item.classList.remove("visible");
+//             }
+//           });
+    
+//           showElBtnCategories.style.rotate = "0deg";
+//           showElBtnCategories.addEventListener("click", handleClickCategories);
+//         });
+//       } else {
+//         showElBtnCategories.style.rotate = "0deg";
+//       }
+//     };
+    
+//     showElBtnCategories.addEventListener("click", handleClickCategories);
+//   }
+// })
+
+
+const showElBtnCategories = document.querySelector(".details-filter__bottom-btn");
+const productsLengthCategories = document.querySelectorAll(".details-filter__bottom-label").length;
+let itemsCategories = 5;
+const arrCategories = Array.from(document.querySelector(".details-filter__bottom-form").children);
+
+const handleClickCategories = () => {
+  itemsCategories += 4;
+  const visItems = arrCategories.slice(0, itemsCategories);
+  visItems.forEach((item) => {
+    if (!item.classList.contains("visible")) {
+      item.classList.add("visible");
+    }
+
+  });
+
+  if (visItems.length === productsLengthCategories) {
+    showElBtnCategories.style.rotate = "180deg";
+    showElBtnCategories.removeEventListener("click", handleClickCategories);
+    itemsCategories = 5;
+
+    showElBtnCategories.addEventListener("click", () => {
+      arrCategories.forEach((item, index) => {
+        if (index >= itemsCategories) {
+          item.classList.remove("visible");
+        }
+      });
+
+      showElBtnCategories.style.rotate = "0deg";
+      showElBtnCategories.addEventListener("click", handleClickCategories);
+    });
+  } else {
+    showElBtnCategories.style.rotate = "0deg";
+  }
+};
+
+showElBtnCategories.addEventListener("click", handleClickCategories);
+
+
+
+
+
 
 
 
