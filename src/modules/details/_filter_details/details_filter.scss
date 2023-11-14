@@ -271,15 +271,14 @@
     }
     &-label {
 
-      @include _550 {
-        &:nth-child(n + 5) {
+        &:nth-child(n + 6) {
           display: none;
         }
 
         &.visible {
           display: block;
         }
-      }
+      
       &-content {
         padding: 8px 14px;
         position: relative;

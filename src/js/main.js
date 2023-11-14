@@ -366,9 +366,51 @@ showElBtn.addEventListener("click", handleClick);
 
 // Пока чекбоксов категории
 
+// window.addEventListener("resize", () => {
+//   if(window.innerWidth <= 550) {
+//     const showElBtnCategories = document.querySelector(".details-filter__bottom-btn");
+//     const productsLengthCategories = document.querySelectorAll(".details-filter__bottom-label").length;
+//     let itemsCategories = 2;
+//     const arrCategories = Array.from(document.querySelector(".details-filter__bottom-form").children);
+    
+//     const handleClickCategories = () => {
+//       itemsCategories += 4;
+//       const visItems = arrCategories.slice(0, itemsCategories);
+//       visItems.forEach((item) => {
+//         if (!item.classList.contains("visible")) {
+//           item.classList.add("visible");
+//         }
+    
+//       });
+    
+//       if (visItems.length === productsLengthCategories) {
+//         showElBtnCategories.style.rotate = "180deg";
+//         showElBtnCategories.removeEventListener("click", handleClickCategories);
+//         itemsCategories = 2;
+    
+//         showElBtnCategories.addEventListener("click", () => {
+//           arrCategories.forEach((item, index) => {
+//             if (index >= itemsCategories) {
+//               item.classList.remove("visible");
+//             }
+//           });
+    
+//           showElBtnCategories.style.rotate = "0deg";
+//           showElBtnCategories.addEventListener("click", handleClickCategories);
+//         });
+//       } else {
+//         showElBtnCategories.style.rotate = "0deg";
+//       }
+//     };
+    
+//     showElBtnCategories.addEventListener("click", handleClickCategories);
+//   }
+// })
+
+
 const showElBtnCategories = document.querySelector(".details-filter__bottom-btn");
 const productsLengthCategories = document.querySelectorAll(".details-filter__bottom-label").length;
-let itemsCategories = 2;
+let itemsCategories = 5;
 const arrCategories = Array.from(document.querySelector(".details-filter__bottom-form").children);
 
 const handleClickCategories = () => {
@@ -384,7 +426,7 @@ const handleClickCategories = () => {
   if (visItems.length === productsLengthCategories) {
     showElBtnCategories.style.rotate = "180deg";
     showElBtnCategories.removeEventListener("click", handleClickCategories);
-    itemsCategories = 2;
+    itemsCategories = 5;
 
     showElBtnCategories.addEventListener("click", () => {
       arrCategories.forEach((item, index) => {
@@ -402,7 +444,6 @@ const handleClickCategories = () => {
 };
 
 showElBtnCategories.addEventListener("click", handleClickCategories);
-
 
 
 

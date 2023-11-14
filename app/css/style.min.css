@@ -4940,13 +4940,11 @@ body.lock {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media (max-width: 550px) {
-  .details-filter__bottom-label:nth-child(n+5) {
-    display: none;
-  }
-  .details-filter__bottom-label.visible {
-    display: block;
-  }
+.details-filter__bottom-label:nth-child(n+6) {
+  display: none;
+}
+.details-filter__bottom-label.visible {
+  display: block;
 }
 .details-filter__bottom-label-content {
   padding: 8px 14px;
