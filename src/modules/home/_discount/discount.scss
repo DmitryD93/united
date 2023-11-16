@@ -15,6 +15,11 @@
       flex-direction: column;
     }
 
+    img {
+    border-radius: 0 20px 20px 20px;
+
+    }
+
     &-right {
       max-width: 45%;
 
@@ -26,20 +31,50 @@
         max-width: 100%;
         text-align: center;
       }
+
+      h3 {
+        font-family: "Russo One", sans-serif;
+        font-size: 45px;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: 0.48px;
+        text-transform: uppercase;
+        color: var(--black);
+        margin-bottom: 20px;
+        word-wrap: break-word;
+    
+        @include _880 {
+          font-size: 36px;
+          line-height: 1.2;
+          letter-spacing: 0.36px;
+        }
+    
+        @include _550 {
+          margin-bottom: 28px;
+          font-size: 26px;
+          line-height: 1.2;
+          letter-spacing: 0.2px;
+          text-align: start;
+        }
+      }
+
+      p {
+        color: var(--black);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: start;
+
+    @include _880 {
+      font-size: 14px;
+    }
+      }
     }
 
     
   }
 
-  &__slide-img {
-    // max-width: 546px;
-    // max-height: 300px;
-    border-radius: 0 20px 20px 20px;
-
-    @include _1280 {
-      // max-width: 420px;
-    }
-  }
 
   &__swiper-utility {
     position: relative;
@@ -112,63 +147,22 @@
 
       &.swiper-slide-thumb-active {
         opacity: 1;
-        // scale: 1.2;
         transition: opacity 0.3s ease, scale 0.3s ease;
       }
     }
   }
-  // &__slider-btn--prev,
-  // &__slider-btn--next {
-  //   z-index: 15;
 
-  //   @include _1280 {
-  //     display: none;
+  // &__slide-content-descr {
+  //   color: var(--black);
+  //   font-family: "Ubuntu", sans-serif;
+  //   font-size: 16px;
+  //   font-weight: 400;
+  //   line-height: 1.2;
+  //   text-align: start;
+
+  //   @include _880 {
+  //     font-size: 14px;
   //   }
   // }
-  // &__slider-btn--prev::after,
-  // &__slider-btn--next::after {
-  //   content: none;
-  // }
-  // &__slider-btn--next {
-  //   transform: rotate(180deg);
-  // }
-
-  &__slide-content-title {
-    font-family: "Russo One", sans-serif;
-    font-size: 45px;
-    font-weight: 400;
-    line-height: 1.3;
-    letter-spacing: 0.48px;
-    text-transform: uppercase;
-    color: var(--black);
-    margin-bottom: 20px;
-    word-wrap: break-word;
-
-    @include _880 {
-      font-size: 36px;
-      line-height: 1.2;
-      letter-spacing: 0.36px;
-    }
-
-    @include _550 {
-      margin-bottom: 28px;
-      font-size: 26px;
-      line-height: 1.2;
-      letter-spacing: 0.2px;
-      text-align: start;
-    }
-  }
-  &__slide-content-descr {
-    color: var(--black);
-    font-family: "Ubuntu", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.2;
-    text-align: start;
-
-    @include _880 {
-      font-size: 14px;
-    }
-  }
 
 }

@@ -1,0 +1,137 @@
+.target-details-product {
+
+    &__cross-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    &__slide-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 65%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+  h1 {
+    font-family: "Russo One", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    color: var(--black);
+    margin-bottom: 32px;
+  }
+
+  &__wrapper {
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-bottom: 64px;
+
+    &-description {
+      grid-column-start: 2;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    &-properties {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      span {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.6px;
+        color: var(--black);
+      }
+
+      ul {
+        list-style: disc;
+        padding-left: 20px;
+
+        li {
+          font-family: "Ubuntu", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.2;
+          color: var(--black);
+        }
+      }
+
+      p {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--black);
+      }
+    }
+
+    &-purchase {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--black);
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--dark-grey);
+      }
+    }
+
+    &-buy-block {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+
+      span {
+        grid-column: 1 span;
+        align-self: center;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.6px;
+        color: var(--black);
+      }
+    }
+
+    &-count {
+      grid-column: 1 span;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      border-bottom: 4px solid var(--red);
+    }
+
+    &-buy-btn {
+      grid-column: 2 span;
+    }
+  }
+}

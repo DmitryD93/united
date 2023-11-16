@@ -328,9 +328,6 @@
       display: flex;
       align-items: center;
 
-      &:focus-within {
-        background-color: transparent;
-      }
 
       @include _550 {
         transform: rotate(90deg);
@@ -351,7 +348,11 @@
       }
 
       &:focus-within svg {
-        fill: var(--dark-red);
+        fill: var(--white);
+
+        @include _550 {
+          fill: var(--dark-red);
+        }
       }
 
       @include _only-hover {
