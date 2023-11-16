@@ -415,7 +415,6 @@ window.onload = function() {
 
   if(targetElement.classList.contains("product-list__basket-btn")) {
     const productId = targetElement.closest(".product-list__list-item").dataset.pid;
-    console.log(productId);
     addToBasket(targetElement,productId);
     e.preventDefault();
   }
@@ -429,7 +428,7 @@ function addToBasket(productButton, productId) {
     const cart = document?.querySelector(".product-basket");
     const mobileCart = document?.querySelector(".header__basket-btn");
     const product = document?.querySelector(`[data-pid="${productId}"]`);
-    const productItem = product?.querySelector(".product-list__adaptive-name-list-item a ");
+    const productItem = product?.querySelector(".product-list__adaptive-name-list-item a div");
 
     const productItemClone = productItem?.cloneNode(true);
 
@@ -444,7 +443,7 @@ function addToBasket(productButton, productId) {
     top: ${productItemCloneTop}px;
     width: ${productItemCloneWidth}px;
     height: ${productItemCloneHeight}px;
-    scale: 1.5;
+    scale: 2.5;
     `;
 
     document.body.append(productItemClone);
@@ -461,8 +460,8 @@ function addToBasket(productButton, productId) {
       productItemClone.style.cssText = `
     left: ${mobileCartFlyLeft}px;
     top: ${mobileCartFlyTop}px;
-    width: 0;
-    height: 0;
+    width: 50px;
+    height: 50px;
     scale: 0;
     rotate: 180deg;
     opacity: 0;
@@ -471,8 +470,8 @@ function addToBasket(productButton, productId) {
       productItemClone.style.cssText = `
     left: ${cartFlyLeft}px;
     top: ${cartFlyTop}px;
-    width: 0;
-    height: 0;
+    width: 50px;
+    height: 50px;
     scale: 0;
     rotate: 180deg;
     opacity: 0;
