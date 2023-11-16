@@ -234,3 +234,23 @@
   }
 }
  
+// Полет
+
+._flyItem._ibg {
+  opacity: 1;
+  position: fixed;
+  z-index: 100;
+  transition: all 2s ease 0s;
+  display: flex;
+  gap: 16px;
+}
+
+._hold {
+  cursor: not-allowed;
+  opacity: 0.6;
+  filter: grayscale(1);
+ 
+}
+
+
+

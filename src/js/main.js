@@ -170,6 +170,7 @@ const newsSwiper = new Swiper(newsSwiperContent, {
 //   });
 // });
 
+
 // Фиксированная шапка
 // Обсервер для появления кнопки и плашки поиска
 
@@ -265,7 +266,9 @@ joinDoorBtn.addEventListener("click", () => {
 
 const basketBtn = document?.querySelector(".product-basket__btn");
 const productBasket = document?.querySelector(".product-basket");
-const productBasketContent = document?.querySelector(".product-basket__content");
+const productBasketContent = document?.querySelector(
+  ".product-basket__content"
+);
 
 const productBasketBtnText = document?.querySelector(
   ".product-basket__btn-text span"
@@ -322,16 +325,20 @@ window.addEventListener("click", (event) => {
   }
 });
 
+// Показ чекбоксов марки авто для мобильной версии
 
-// Показ чекбоксов марки авто для мобильной версии 
-
-
-const showElBtn = document?.querySelector(".details-filter__top-mobile-open-list-btn");
-const productsLength = document?.querySelectorAll(".details-filter__top-label").length;
+const showElBtn = document?.querySelector(
+  ".details-filter__top-mobile-open-list-btn"
+);
+const productsLength = document?.querySelectorAll(
+  ".details-filter__top-label"
+).length;
 let items = 2;
 
 const handleClick = () => {
-  const arr = Array.from(document.querySelector(".details-filter__top-form").children);
+  const arr = Array.from(
+    document.querySelector(".details-filter__top-form").children
+  );
 
   items += 4;
   const visItems = arr.slice(0, items);
@@ -339,7 +346,6 @@ const handleClick = () => {
     if (!item.classList.contains("visible")) {
       item.classList.add("visible");
     }
-
   });
 
   if (visItems.length === productsLength) {
@@ -364,15 +370,20 @@ const handleClick = () => {
 
 showElBtn?.addEventListener("click", handleClick);
 
-
 // Пока чекбоксов категории
 
-const showElBtnCategories = document?.querySelector(".details-filter__bottom-btn");
-const productsLengthCategories = document?.querySelectorAll(".details-filter__bottom-label").length;
+const showElBtnCategories = document?.querySelector(
+  ".details-filter__bottom-btn"
+);
+const productsLengthCategories = document?.querySelectorAll(
+  ".details-filter__bottom-label"
+).length;
 let itemsCategories = 5;
 
 const handleClickCategories = () => {
-  const arrCategories = Array.from(document.querySelector(".details-filter__bottom-form").children);
+  const arrCategories = Array.from(
+    document.querySelector(".details-filter__bottom-form").children
+  );
 
   itemsCategories += 4;
   const visItems = arrCategories.slice(0, itemsCategories);
@@ -380,7 +391,6 @@ const handleClickCategories = () => {
     if (!item.classList.contains("visible")) {
       item.classList.add("visible");
     }
-
   });
 
   if (visItems.length === productsLengthCategories) {
@@ -405,10 +415,143 @@ const handleClickCategories = () => {
 
 showElBtnCategories?.addEventListener("click", handleClickCategories);
 
+// Полет товара в корзину
+
+window.onload = function () {
+  document.addEventListener("click", flyProductToBasket);
+
+  function flyProductToBasket(e) {
+    const targetElement = e.target;
+
+    if (targetElement.classList.contains("product-list__basket-btn")) {
+      const productId = targetElement.closest(".product-list__list-item")
+        .dataset.pid;
+      addToBasket(targetElement, productId);
+      e.preventDefault();
+    }
+  }
+
+  function addToBasket(productButton, productId) {
+    if (!productButton.classList.contains("_hold")) {
+      productButton.classList.add("_hold");
+      productButton.classList.add("_flyItem");
+
+      const cart = document?.querySelector(".product-basket");
+      const mobileCart = document?.querySelector(".header__basket-btn");
+      const product = document?.querySelector(`[data-pid="${productId}"]`);
+      const productItem = product?.querySelector(
+        ".product-list__adaptive-name-list-item a div"
+      );
+
+      const productItemClone = productItem?.cloneNode(true);
+
+      const productItemCloneWidth = productItem?.offsetWidth;
+      const productItemCloneHeight = productItem?.offsetHeight;
+      const productItemCloneTop = productItem?.getBoundingClientRect().top;
+      const productItemCloneLeft = productItem?.getBoundingClientRect().left;
+
+      productItemClone.setAttribute("class", "_flyItem _ibg");
+      productItemClone.style.cssText = `
+    left: ${productItemCloneLeft}px;
+    top: ${productItemCloneTop}px;
+    width: ${productItemCloneWidth}px;
+    height: ${productItemCloneHeight}px;
+    scale: 2.5;
+    `;
+
+      document.body.append(productItemClone);
+
+      let cartFlyLeft = cart?.getBoundingClientRect().left;
+      let cartFlyTop = cart?.getBoundingClientRect().top;
+
+      let mobileCartFlyLeft = mobileCart?.getBoundingClientRect().left;
+      let mobileCartFlyTop = mobileCart?.getBoundingClientRect().top;
+
+      if (window.innerWidth <= 550) {
+        productItemClone.style.cssText = `
+    left: ${mobileCartFlyLeft}px;
+    top: ${mobileCartFlyTop}px;
+    width: 50px;
+    height: 50px;
+    scale: 0;
+    rotate: 180deg;
+    opacity: 0;
+    `;
+      } else {
+        productItemClone.style.cssText = `
+    left: ${cartFlyLeft}px;
+    top: ${cartFlyTop}px;
+    width: 50px;
+    height: 50px;
+    scale: 0;
+    rotate: 180deg;
+    opacity: 0;
+    `;
+      }
+
+      setTimeout(() => {
+        productItemClone?.remove();
+      }, 2500);
+    }
+  }
+};
 
 
+// Слайдер для подробных запчастей
 
+const targetDetailsThumbsContent = document.querySelector(
+  ".target-details-product__swiper-thumbs"
+);
+const targetDetailsThumbs = new Swiper(targetDetailsThumbsContent, {
+  spaceBetween: 30,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  watchOverflow: true,
 
+  // брейкпоинты миниатюр
+  breakpoints: {
+    1280: {
+      slidesPerView: 5,
+    },
+    900: {
+      slidesPerView: 4,
+    },
+    // 550: {
+    //   slidesPerView: 5,
+    // },
+    420: {
+      slidesPerView: 4,
+    },
+    320: {
+      slidesPerView: 3,
+    },
+  },
+});
 
+const targetDetailsSwiperContent = document.querySelector(".target-details-product__swiper");
 
+const targetDetailsSwiper = new Swiper(targetDetailsSwiperContent, {
+  slidesPerView: "auto",
+  spaceBetween: 50,
+  grabCursor: true,
+  watchOverflow: true,
 
+  // navigation: {
+  //   nextEl: ".target-details-product__slider-btn--next",
+  //   prevEl: ".target-details-product__slider-btn--prev",
+  //   clickable: true,
+  // },
+
+  pagination: {
+    el: ".site__swiper-pagination",
+    type: "bullets",
+    clickable: true,
+    // renderBullet: function(index, className) {
+    //   return '<span class="' + className + '">' + (index + 1) + '</span>';
+    // },
+  },
+  thumbs: {
+    swiper: targetDetailsThumbs,
+  },
+});
