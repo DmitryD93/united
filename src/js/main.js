@@ -405,6 +405,89 @@ const handleClickCategories = () => {
 
 showElBtnCategories?.addEventListener("click", handleClickCategories);
 
+// Полет товара в корзину
+
+window.onload = function() {
+  document.addEventListener("click", flyProductToBasket);
+
+ function flyProductToBasket(e) {
+  const targetElement = e.target;
+
+  if(targetElement.classList.contains("product-list__basket-btn")) {
+    const productId = targetElement.closest(".product-list__list-item").dataset.pid;
+    console.log(productId);
+    addToBasket(targetElement,productId);
+    e.preventDefault();
+  }
+}
+
+function addToBasket(productButton, productId) {
+  if(!productButton.classList.contains("_hold")) {
+    productButton.classList.add("_hold");
+    productButton.classList.add("_flyItem");
+
+    const cart = document?.querySelector(".product-basket");
+    const mobileCart = document?.querySelector(".header__basket-btn");
+    const product = document?.querySelector(`[data-pid="${productId}"]`);
+    const productItem = product?.querySelector(".product-list__adaptive-name-list-item a ");
+
+    const productItemClone = productItem?.cloneNode(true);
+
+    const productItemCloneWidth = productItem?.offsetWidth;
+    const productItemCloneHeight = productItem?.offsetHeight;
+    const productItemCloneTop = productItem?.getBoundingClientRect().top ;
+    const productItemCloneLeft = productItem?.getBoundingClientRect().left;
+
+    productItemClone.setAttribute("class", "_flyItem _ibg");
+    productItemClone.style.cssText = `
+    left: ${productItemCloneLeft}px;
+    top: ${productItemCloneTop}px;
+    width: ${productItemCloneWidth}px;
+    height: ${productItemCloneHeight}px;
+    scale: 1.5;
+    `;
+
+    document.body.append(productItemClone);
+    
+    let cartFlyLeft = cart?.getBoundingClientRect().left;
+    let cartFlyTop = cart?.getBoundingClientRect().top;
+
+    let mobileCartFlyLeft = mobileCart?.getBoundingClientRect().left;
+    let mobileCartFlyTop = mobileCart?.getBoundingClientRect().top;
+
+    
+
+    if(window.innerWidth <= 550) {
+      productItemClone.style.cssText = `
+    left: ${mobileCartFlyLeft}px;
+    top: ${mobileCartFlyTop}px;
+    width: 0;
+    height: 0;
+    scale: 0;
+    rotate: 180deg;
+    opacity: 0;
+    `
+    } else {
+      productItemClone.style.cssText = `
+    left: ${cartFlyLeft}px;
+    top: ${cartFlyTop}px;
+    width: 0;
+    height: 0;
+    scale: 0;
+    rotate: 180deg;
+    opacity: 0;
+    `
+    }
+
+    setTimeout(() => {
+      productItemClone.remove();
+    }, 2500);
+    
+  }
+}
+
+
+}
 
 
 

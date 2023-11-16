@@ -1414,6 +1414,25 @@ body.lock {
           transform: rotate(180deg);
 }
 
+._flyItem._ibg {
+  opacity: 1;
+  position: fixed;
+  z-index: 100;
+  -webkit-transition: all 3s ease 0s;
+  transition: all 3s ease 0s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+._hold {
+  cursor: not-allowed;
+  opacity: 0.6;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
 .product-item {
   display: -webkit-box;
   display: -ms-flexbox;
