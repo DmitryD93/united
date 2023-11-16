@@ -160,6 +160,10 @@
       letter-spacing: 1.2px;
       line-height: 1.2;
     }
+
+    @include _640 {
+        font-size: 32px;
+    }
   }
 
   &__wrapper {

@@ -1514,7 +1514,7 @@ body.lock {
 }
 
 .product-basket {
-  max-width: 620px;
+  max-width: 50px;
   min-height: 248px;
   max-height: 248px;
   position: fixed;
@@ -1536,10 +1536,10 @@ body.lock {
   -webkit-transform: translateX(calc(100% - 48px));
       -ms-transform: translateX(calc(100% - 48px));
           transform: translateX(calc(100% - 48px));
-  -webkit-transition: background-color 0.4s ease, -webkit-transform 0.4s ease;
-  transition: background-color 0.4s ease, -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease, background-color 0.4s ease;
-  transition: transform 0.4s ease, background-color 0.4s ease, -webkit-transform 0.4s ease;
+  -webkit-transition: background-color 0.4s ease, max-width 0.4s ease, -webkit-transform 0.4s ease;
+  transition: background-color 0.4s ease, max-width 0.4s ease, -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease, background-color 0.4s ease, max-width 0.4s ease;
+  transition: transform 0.4s ease, background-color 0.4s ease, max-width 0.4s ease, -webkit-transform 0.4s ease;
 }
 @media screen and (any-hover: none) {
   .product-basket {
@@ -1553,6 +1553,7 @@ body.lock {
 }
 .product-basket.active {
   min-height: 248px;
+  max-width: 620px;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -1560,6 +1561,10 @@ body.lock {
       -ms-transform: translateX(0);
           transform: translateX(0);
   background-color: var(--grey);
+  -webkit-transition: background-color 0.4s ease, max-width 0.4s ease, -webkit-transform 0.4s ease;
+  transition: background-color 0.4s ease, max-width 0.4s ease, -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease, background-color 0.4s ease, max-width 0.4s ease;
+  transition: transform 0.4s ease, background-color 0.4s ease, max-width 0.4s ease, -webkit-transform 0.4s ease;
 }
 .product-basket__btn {
   position: absolute;
@@ -1622,8 +1627,6 @@ body.lock {
   max-height: 100%;
   height: 100%;
   visibility: hidden;
-  -webkit-transition: visibility 0.3s ease;
-  transition: visibility 0.3s ease;
 }
 .product-basket__content.active {
   visibility: visible;
@@ -5265,6 +5268,11 @@ body.lock {
     font-size: 40px;
     letter-spacing: 1.2px;
     line-height: 1.2;
+  }
+}
+@media (max-width: 640px) {
+  .target-details-product h1 {
+    font-size: 32px;
   }
 }
 .target-details-product__wrapper {
