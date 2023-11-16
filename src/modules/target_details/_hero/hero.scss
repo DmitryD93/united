@@ -3,4 +3,14 @@
     padding-bottom: 64px;
     min-height: fit-content;
     background-position: 80% 40%;
+
+    @include _880 {
+        padding-top: 115px;
+        padding-bottom: 32px;
+    }
+
+    @include _550 {
+        padding-top: 80px;
+        padding-bottom: 64px;
+    }
 }

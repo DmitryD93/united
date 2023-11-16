@@ -1,15 +1,18 @@
 .target-details-product {
+  &__item-galery {
+    max-width: 49%;
 
-    &__item-galery {
-        max-width: 49%;
+    @include _880 {
+      max-width: 100%;
     }
+  }
 
-    // Стрелки свайпера
+  // Стрелки свайпера
 
-    &__slider-btn--prev,
-    &__slider-btn--next {
-        display: none;
-    }
+  &__slider-btn--prev,
+  &__slider-btn--next {
+    display: none;
+  }
   // Свайпер
   &__swiper {
     width: 100%;
@@ -18,9 +21,8 @@
 
     // pagination
 
-    
     &-wrapper {
-        margin-bottom: 16px;
+      margin-bottom: 16px;
     }
 
     &-utility {
@@ -50,7 +52,7 @@
         overflow: hidden;
 
         @include _1280 {
-            display: flex;
+          display: flex;
         }
 
         @include _550 {
@@ -59,50 +61,70 @@
         }
       }
     }
-// Миниатюры
+    // Миниатюры
     &-thumbs {
-        height: 55px;
-        width: 545px;
-        margin-right: 0;
-        margin-left: 0;
-        background-size: cover;
-    
-        @include _1280 {
-          width: 420px;
+      height: 55px;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      background-size: cover;
+
+      @include _880 {
+        width: 100%;
+      }
+
+      @include _550 {
+        display: none;
+      }
+
+      &-slide {
+        opacity: 0.4;
+        border-radius: 0 20px 20px 20px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s ease, scale 0.3s ease;
+
+        &:focus {
+          opacity: 1;
         }
-    
-        @include _880 {
-          width: 100%;
+        &:hover {
+          opacity: 1;
         }
-    
-        &-slide {
-          opacity: 0.4;
-          // scale: 1;
-          border-radius: 0 20px 20px 20px;
-          background-size: contain;
-          background-position: center;
-          background-repeat: no-repeat;
+
+        &.swiper-slide-thumb-active {
+          opacity: 1;
           transition: opacity 0.3s ease, scale 0.3s ease;
-    
-          &:focus {
-            opacity: 1;
-          }
-          &:hover {
-            opacity: 1;
-          }
-    
-          &.swiper-slide-thumb-active {
-            opacity: 1;
-            transition: opacity 0.3s ease, scale 0.3s ease;
-          }
         }
       }
+    }
   }
 
   &__cross-details {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--black);
+      text-align: center;
+
+      @include _1280 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include _880 {
+        font-size: 32px;
+      }
+
+      span {
+        text-transform: uppercase;
+      }
+    }
   }
 
   &__slide-content {
@@ -132,6 +154,12 @@
     letter-spacing: 1.5px;
     color: var(--black);
     margin-bottom: 32px;
+
+    @include _880 {
+      font-size: 40px;
+      letter-spacing: 1.2px;
+      line-height: 1.2;
+    }
   }
 
   &__wrapper {
@@ -144,6 +172,10 @@
     gap: 32px;
     margin-bottom: 64px;
 
+    @include _880 {
+      flex-direction: column;
+    }
+
     &-description {
       grid-column-start: 2;
       padding: 40px;
@@ -153,7 +185,7 @@
       background-color: var(--super-silver);
 
       @include _1280 {
-          justify-content: space-between;
+        justify-content: space-between;
       }
     }
 
@@ -210,6 +242,11 @@
         color: var(--black);
         padding-bottom: 8px;
         border-bottom: 1px solid var(--dark-grey);
+
+        @include _640 {
+          flex-direction: column;
+          gap: 16px;
+        }
       }
     }
 
@@ -217,6 +254,15 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
+
+      @include _880 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include _640 {
+        grid-template-columns: 1fr;
+        align-self: center;
+      }
 
       span {
         grid-column: 1 span;
@@ -228,9 +274,22 @@
         color: var(--black);
 
         @include _1280 {
-            grid-column: 4 span;
-            grid-row-start: 1;
-            text-align: center;
+          grid-column: 4 span;
+          grid-row-start: 1;
+          text-align: center;
+        }
+
+        @include _880 {
+          grid-column: 1 span;
+        }
+
+        @include _640 {
+          grid-row-start: 1;
+          grid-column: 1 span;
+
+          &:first-child {
+            margin-bottom: 20px;
+          }
         }
       }
     }
@@ -246,10 +305,37 @@
       @include _1280 {
         grid-column: 2 span;
       }
+
+      @include _1024 {
+        grid-column: 1 span;
+      }
+
+      @include _640 {
+        max-width: 100%;
+        grid-row-start: 2;
+      }
     }
 
     &-buy-btn {
       grid-column: 2 span;
+      padding: 8px 12px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+
+      @include _1024 {
+        grid-column: 3 span;
+      }
+
+      @include _880 {
+        grid-column: 1 span;
+      }
+
+      @include _640 {
+        max-width: fit-content;
+        grid-row-start: 3;
+        font-size: 16px;
+      }
     }
   }
 }

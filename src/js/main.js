@@ -517,9 +517,9 @@ const targetDetailsThumbs = new Swiper(targetDetailsThumbsContent, {
     900: {
       slidesPerView: 4,
     },
-    550: {
-      slidesPerView: 5,
-    },
+    // 550: {
+    //   slidesPerView: 5,
+    // },
     420: {
       slidesPerView: 4,
     },
