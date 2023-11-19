@@ -1,5 +1,13 @@
 .news-content {
   padding: 32px 0;
+
+  @include _640 {
+    padding: 190px 0 32px 0;
+  }
+
+  @include _550 {
+    padding: 150px 0 32px 0;
+  }
 }
 
 .news-content__inner {
@@ -15,6 +23,15 @@
     margin-bottom: 32px;
     color: var(--black);
 
+    @include _1280 {
+      font-size: 24px;
+    }
+
+    @include _640 {
+      font-size: 20px;
+      max-width: 100%;
+    }
+
     span {
       color: var(--dark-red);
     }
@@ -26,6 +43,10 @@
     font-weight: 400;
     line-height: 1.2;
     color: var(--black);
+
+    @include _1280 {
+      font-size: 14px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 32px;
@@ -45,5 +66,13 @@
     letter-spacing: 0.72px;
     color: var(--black);
     margin-bottom: 32px;
+
+    @include _1280 {
+      font-size: 20px;
+    }
+
+    @include _640 {
+      font-size: 18px;
+    }
   }
 }

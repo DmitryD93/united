@@ -35,5 +35,10 @@
 
 // Запчасти целевая
 @import "../modules/target_details/_hero/hero.scss";
-@import "../modules/target_details/_product/target_details_product"
+@import "../modules/target_details/_product/target_details_product";
+
+// Сервис
+
+@import "../modules/service/_hero/service_hero";
+@import "../modules/service/services/services";
 

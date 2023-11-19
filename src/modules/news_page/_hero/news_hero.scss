@@ -1,8 +1,19 @@
 .news-hero {
-    position: relative;
-    padding: 198px 0 64px 0;
-    min-height: 428px;
-    background-image: none;
+  position: relative;
+  padding: 198px 0 64px 0;
+  min-height: 428px;
+  background-image: none;
+
+  @include _640 {
+    padding: 140px 0 32px 0;
+    min-height: 260px;
+  }
+
+  @include _550 {
+    padding: 100px 0 32px 0;
+  }
+
+
 
   &__background {
     position: absolute;
@@ -17,80 +28,109 @@
     filter: grayscale(100%);
 
     &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        background: linear-gradient(to right, #FFFFFF, transparent 90%);
-        z-index: 1;
-        opacity: 0.8;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: linear-gradient(to right, #ffffff, transparent 90%);
+      z-index: 1;
+      opacity: 0.8;
     }
-
   }
 
+  &__wrapper {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+  }
 
-    &__wrapper {
-        position: relative;
-        display: flex;
-        gap: 30px;
-        justify-content: space-between;
+  &__content-descr {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    max-width: 50%;
+
+    @include _880 {
+      max-width: 80%;
     }
 
-    &__content-descr {
-        display: flex;
-        flex-direction: column;
-        z-index: 1;
-        padding: 32px 20px 32px 0;
-        max-width: 50%;
+    @include _640 {
+        max-width: 100%;
+        padding-bottom: 40px;
+    }
 
-       h1 {
-        font-family: "Russo One", sans-serif;
-        font-size: 45px;
-        font-weight: 400;
-        line-height: 1.3;
-        letter-spacing: 0.45px;
-        text-transform: uppercase; 
-        margin-bottom: 16px;
-        color: var(--black);
-    } 
-    
-    time {
-        font-size: 20px;
-        font-weight: 600;
+    h1 {
+      font-family: "Russo One", sans-serif;
+      font-size: 45px;
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: 0.45px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: var(--black);
+
+      @include _1024 {
+        font-size: 36px;
         line-height: 1.2;
-        letter-spacing: 0.6px;
-        color: var(--black);
-    }
-    }
-  
-    &__content-graph {
-       width: 100%; 
-       height: 100%;
-       max-width: 45%;
-       position: relative;
+        letter-spacing: 0.36px;
+      }
+
+      @include _640 {
+        font-size: 26px;
+        letter-spacing: 0.26px;
+      }
     }
 
-    &__picture {
+    time {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.6px;
+      color: var(--black);
+    }
+  }
+
+  &__graph {
+    position: absolute;
+    max-width: 575px;
+    max-height: 430px;
+    right: 30px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    width: 45%;
+    bottom: 0;
+    z-index: 1;
+    padding-top: 30%;
+    transform: translateY(42%);
+
+    @include _880 {
+        width: 45%;
+      max-width: 245px;
+      max-height: 185px;
+      transform: translateY(85%);
+    }
+
+    @include _640 {
+        max-width: calc(100% - 48px);
+        max-height: 204px;
+        width: 100%;
+        padding-top: 35%;
+        left: 50%;
+        transform: translate(-50%, 95%);
+    }
+
+    img {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        padding-top: 75%;
-        z-index: 1;
-        overflow: hidden;
-        border-radius: 0 24px 24px 24px ;
-
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            object-fit: cover;
-            height: 100%;
-        }
+      border-radius: 0 24px 24px 24px;
+      height: 100%;
+      object-fit: cover;
     }
+  }
 }
-

@@ -1,45 +1,80 @@
-.hero {
+.service-hero {
+    position: relative;
+  min-height: 450px;
+  padding-bottom: 64px;
   padding-top: 195px;
-  padding-bottom: 120px;
-  // background-image: url(../img/truck_test.jfif);
-  background-repeat: no-repeat;
+  background-position: 0 40%;
   background-size: cover;
-  background-position: 80% 90%;
-  min-height: 745px;
+  
 
-    @include _1280 {
-      min-height: 510px;
-    }
+  @include _1280 {
+    background-position: 0 30%;
+  }
+
   @include _880 {
-    padding-top: 110px;
-    background-position: 60% 90%;
-    padding-bottom: 80px;
-    min-height: 425px;
+    padding-top: 145px;
   }
 
   @include _550 {
-    padding: 84px 0 150px 0;
-    min-height: 450px;
-    background-position: 45% 90%;
+    padding-top: 100px;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
+    filter: grayscale(1);
+
+
+    @include _1280 {
+      background-position: center 15%;
+    }
+
+    @include _640 {
+      background-position: center 50px;
+    }
+    
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: linear-gradient(88deg, #ffffff 48%, transparent 90%);
+        z-index: 1;
+        opacity: 0.8;
+      }
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 2;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 55%;
+    max-width: 60%;
+
     @include _1280 {
       max-width: 55%;
     }
 
     @include _880 {
-      max-width: 70%;
+      max-width: 80%;
     }
 
-    @include _550 {
-      max-width: 280px;
-    }
-    
+   
+
     &-contacts {
       display: flex;
       flex-direction: column;
@@ -48,21 +83,6 @@
       @include _1280 {
         gap: 8px;
       }
-
-    }
-  }
-
-  &__pretitle {
-    display: inline-block;
-    color: var(--black);
-    font-family: "Ubuntu", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 16px;
-
-    @include _880 {
-      font-size: 14px;
     }
   }
 
@@ -74,17 +94,18 @@
     line-height: 1.5;
     letter-spacing: 1.5px;
     margin-bottom: 12px;
+    text-transform: uppercase;
+
 
     &-fragment {
       display: inline-block;
       width: 100%;
+
+      @include _880 {
+        display: inline;
+      }
     }
-    &-fragment:nth-child(odd) {
-      text-align: start;
-    }
-    &-fragment:nth-child(even) {
-      text-align: end;
-    }
+   
 
     @include _880 {
       font-size: 40px;

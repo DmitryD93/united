@@ -3150,7 +3150,6 @@ body.lock {
 .hero {
   padding-top: 195px;
   padding-bottom: 120px;
-  background-image: url(../img/truck_test.jfif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 80% 90%;
@@ -4029,6 +4028,8 @@ body.lock {
   }
 }
 .news__title {
+  display: inline-block;
+  width: calc(100% - 60px);
   font-size: 40px;
   font-weight: 700;
   line-height: 1.2;
@@ -4430,6 +4431,17 @@ body.lock {
   min-height: 428px;
   background-image: none;
 }
+@media (max-width: 640px) {
+  .news-hero {
+    padding: 140px 0 32px 0;
+    min-height: 260px;
+  }
+}
+@media (max-width: 550px) {
+  .news-hero {
+    padding: 100px 0 32px 0;
+  }
+}
 .news-hero__background {
   position: absolute;
   top: 0;
@@ -4451,8 +4463,8 @@ body.lock {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), color-stop(90%, transparent));
-  background: linear-gradient(to right, #FFFFFF, transparent 90%);
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(90%, transparent));
+  background: linear-gradient(to right, #ffffff, transparent 90%);
   z-index: 1;
   opacity: 0.8;
 }
@@ -4475,8 +4487,18 @@ body.lock {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 1;
-  padding: 32px 20px 32px 0;
   max-width: 50%;
+}
+@media (max-width: 900px) {
+  .news-hero__content-descr {
+    max-width: 80%;
+  }
+}
+@media (max-width: 640px) {
+  .news-hero__content-descr {
+    max-width: 100%;
+    padding-bottom: 40px;
+  }
 }
 .news-hero__content-descr h1 {
   font-family: "Russo One", sans-serif;
@@ -4488,6 +4510,19 @@ body.lock {
   margin-bottom: 16px;
   color: var(--black);
 }
+@media (max-width: 1024px) {
+  .news-hero__content-descr h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.36px;
+  }
+}
+@media (max-width: 640px) {
+  .news-hero__content-descr h1 {
+    font-size: 26px;
+    letter-spacing: 0.26px;
+  }
+}
 .news-hero__content-descr time {
   font-size: 20px;
   font-weight: 600;
@@ -4495,34 +4530,66 @@ body.lock {
   letter-spacing: 0.6px;
   color: var(--black);
 }
-.news-hero__content-graph {
-  width: 100%;
-  height: 100%;
-  max-width: 45%;
-  position: relative;
-}
-.news-hero__picture {
+.news-hero__graph {
   position: absolute;
-  top: 0;
-  left: 0;
+  max-width: 575px;
+  max-height: 430px;
+  right: 30px;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  padding-top: 75%;
+  width: 45%;
+  bottom: 0;
   z-index: 1;
-  overflow: hidden;
-  border-radius: 0 24px 24px 24px;
+  padding-top: 30%;
+  -webkit-transform: translateY(42%);
+      -ms-transform: translateY(42%);
+          transform: translateY(42%);
 }
-.news-hero__picture img {
+@media (max-width: 900px) {
+  .news-hero__graph {
+    width: 45%;
+    max-width: 245px;
+    max-height: 185px;
+    -webkit-transform: translateY(85%);
+        -ms-transform: translateY(85%);
+            transform: translateY(85%);
+  }
+}
+@media (max-width: 640px) {
+  .news-hero__graph {
+    max-width: calc(100% - 48px);
+    max-height: 204px;
+    width: 100%;
+    padding-top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 95%);
+        -ms-transform: translate(-50%, 95%);
+            transform: translate(-50%, 95%);
+  }
+}
+.news-hero__graph img {
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 0 24px 24px 24px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
 }
 
 .news-content {
   padding: 32px 0;
+}
+@media (max-width: 640px) {
+  .news-content {
+    padding: 190px 0 32px 0;
+  }
+}
+@media (max-width: 550px) {
+  .news-content {
+    padding: 150px 0 32px 0;
+  }
 }
 
 .news-content__inner {
@@ -4543,6 +4610,17 @@ body.lock {
   margin-bottom: 32px;
   color: var(--black);
 }
+@media (max-width: 1280px) {
+  .news-content__inner h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .news-content__inner h2 {
+    font-size: 20px;
+    max-width: 100%;
+  }
+}
 .news-content__inner h2 span {
   color: var(--dark-red);
 }
@@ -4552,6 +4630,11 @@ body.lock {
   font-weight: 400;
   line-height: 1.2;
   color: var(--black);
+}
+@media (max-width: 1280px) {
+  .news-content__inner p {
+    font-size: 14px;
+  }
 }
 .news-content__inner p:not(:last-child) {
   margin-bottom: 32px;
@@ -4568,6 +4651,16 @@ body.lock {
   letter-spacing: 0.72px;
   color: var(--black);
   margin-bottom: 32px;
+}
+@media (max-width: 1280px) {
+  .news-content__inner h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .news-content__inner h3 {
+    font-size: 18px;
+  }
 }
 
 .details-hero {
@@ -5231,6 +5324,11 @@ body.lock {
     font-size: 32px;
   }
 }
+@media (max-width: 640px) {
+  .target-details-product__cross-details h2 {
+    font-size: 24px;
+  }
+}
 .target-details-product__cross-details h2 span {
   text-transform: uppercase;
 }
@@ -5272,7 +5370,7 @@ body.lock {
 }
 @media (max-width: 640px) {
   .target-details-product h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 .target-details-product__wrapper {
@@ -5507,5 +5605,167 @@ body.lock {
     -ms-grid-row: 3;
         grid-row-start: 3;
     font-size: 16px;
+  }
+}
+
+.service-hero {
+  position: relative;
+  min-height: 450px;
+  padding-bottom: 64px;
+  padding-top: 195px;
+  background-position: 0 40%;
+  background-size: cover;
+}
+@media (max-width: 1280px) {
+  .service-hero {
+    background-position: 0 30%;
+  }
+}
+@media (max-width: 900px) {
+  .service-hero {
+    padding-top: 145px;
+  }
+}
+@media (max-width: 550px) {
+  .service-hero {
+    padding-top: 100px;
+  }
+}
+.service-hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+@media (max-width: 1280px) {
+  .service-hero__background {
+    background-position: center 15%;
+  }
+}
+@media (max-width: 640px) {
+  .service-hero__background {
+    background-position: center 50px;
+  }
+}
+.service-hero__background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(88deg, #ffffff 48%, transparent 90%);
+  z-index: 1;
+  opacity: 0.8;
+}
+.service-hero__wrapper {
+  position: relative;
+  z-index: 2;
+}
+.service-hero__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 60%;
+}
+@media (max-width: 1280px) {
+  .service-hero__content {
+    max-width: 55%;
+  }
+}
+@media (max-width: 900px) {
+  .service-hero__content {
+    max-width: 80%;
+  }
+}
+.service-hero__content-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 1280px) {
+  .service-hero__content-contacts {
+    gap: 8px;
+  }
+}
+.service-hero__title {
+  color: var(--black);
+  font-family: "Russo One", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.service-hero__title-fragment {
+  display: inline-block;
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .service-hero__title-fragment {
+    display: inline;
+  }
+}
+@media (max-width: 900px) {
+  .service-hero__title {
+    font-size: 40px;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 550px) {
+  .service-hero__title {
+    font-size: 30px;
+    letter-spacing: 0.9px;
+  }
+}
+.service-hero__descr {
+  color: var(--black);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+@media (max-width: 900px) {
+  .service-hero__descr {
+    font-size: 14px;
+  }
+}
+.service-hero__tel {
+  color: var(--black);
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2;
+}
+@media (max-width: 900px) {
+  .service-hero__tel {
+    font-size: 24px;
+  }
+}
+@media (max-width: 550px) {
+  .service-hero__tel {
+    font-size: 20px;
   }
 }
