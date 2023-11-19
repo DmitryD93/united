@@ -4891,15 +4891,15 @@ body.lock {
 }
 .details-filter__top-modal-title.active {
   display: inline-block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 .details-filter__top.modal-content.active {
   padding: 24px 62px 24px 62px;
   position: fixed;
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -5768,4 +5768,75 @@ body.lock {
   .service-hero__tel {
     font-size: 20px;
   }
+}
+
+.services {
+  padding: 64px 0;
+}
+.services__title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.services__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.services__list-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+.services__list-item-description {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  padding: 32px;
+  background: var(--grey-gradient);
+}
+.services__list-item-description span {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--black-grey);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.services__list-item-description span:nth-child(2) {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.services__list-item-background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.services__list-item-btn {
+  translate: -20px 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+.services__list-item:focus-within .services__list-item-btn {
+  opacity: 1;
+}
+.services__list-item:hover .services__list-item-btn {
+  opacity: 1;
 }
