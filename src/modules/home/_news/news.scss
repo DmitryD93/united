@@ -68,6 +68,8 @@
     }
   }
   &__title {
+    display: inline-block;
+    width: calc(100% - 60px);
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2;

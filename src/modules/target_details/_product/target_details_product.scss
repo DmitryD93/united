@@ -121,6 +121,10 @@
         font-size: 32px;
       }
 
+      @include _640 {
+        font-size: 24px;
+      }
+
       span {
         text-transform: uppercase;
       }
@@ -162,7 +166,7 @@
     }
 
     @include _640 {
-        font-size: 32px;
+        font-size: 30px;
     }
   }
 
