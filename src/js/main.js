@@ -113,8 +113,6 @@ const discountSwiper = new Swiper(discountSwiperContent, {
 const newsSwiperContent = document.querySelector(".news__swiper");
 
 const newsSwiper = new Swiper(newsSwiperContent, {
-  // slidesPerView: 2.2,
-  // spaceBetween: 30,
   grabCursor: true,
   slideToClickedSlide: true,
   initialSlide: 1,
@@ -553,5 +551,59 @@ const targetDetailsSwiper = new Swiper(targetDetailsSwiperContent, {
   },
   thumbs: {
     swiper: targetDetailsThumbs,
+  },
+});
+
+// Слайдер галереи сервиса
+
+const galerySwiperContent = document.querySelector(".galery__swiper");
+
+const galerySwiper = new Swiper(galerySwiperContent, {
+  grabCursor: true,
+  slideToClickedSlide: true,
+  initialSlide: 1,
+  loopedSlides: 3,
+  speed: 800,
+
+
+
+  breakpoints: {
+    280: {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 30,
+      loop: false,
+    },
+
+    551: {
+      slidesPerView: 1.6,
+      centeredSlides: true,
+      spaceBetween: 30,
+      loop: true,
+    },
+
+    1280: {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      loop: true,
+      centeredSlides: true,
+      spaceBetween: 30,
+      
+    },
+  },
+
+  pagination: {
+    el: ".site__swiper-pagination",
+    type: "bullets",
+    clickable: true,
+    dynamicBullets: true,
+    dynamicMainBullets:3
+  },
+
+  navigation: {
+    nextEl: ".galery__slider-btn--next",
+    prevEl: ".galery__slider-btn--prev",
+    clickable: true,
+   
   },
 });
