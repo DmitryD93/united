@@ -5277,6 +5277,9 @@ body.lock {
             transform: rotate(90deg);
     background-color: transparent;
   }
+  .details-filter__bottom-btn:focus {
+    background-color: transparent;
+  }
   .details-filter__bottom-btn::before {
     display: none;
   }
