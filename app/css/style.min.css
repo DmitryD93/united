@@ -2757,8 +2757,8 @@ body.lock {
 @media (max-width: 550px) {
   .header__search-form-btn {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 15px;
+    left: 24px;
     background-color: transparent;
   }
   .header__search-form-btn svg {
@@ -2861,29 +2861,6 @@ body.lock {
   .header__search-form-input {
     height: 40px;
     padding: 0 10px 0 40px;
-  }
-}
-.header__search-clear-btn {
-  display: none;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  top: 13px;
-  right: 10px;
-}
-@media (max-width: 1280px) {
-  .header__search-clear-btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-@media (max-width: 550px) {
-  .header__search-clear-btn {
-    display: none;
   }
 }
 .header-container {

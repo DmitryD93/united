@@ -152,8 +152,8 @@
 
         @include _550 {
           position: absolute;
-          top: 0;
-          left: 0;
+          top: 15px;
+          left: 24px;
           background-color: transparent;
           svg {
             fill: var(--red);
@@ -208,23 +208,23 @@
       }
     }
 
-    &-clear-btn {
-      display: none;
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      align-items: center;
-      top: 13px;
-      right: 10px;
+    // &-clear-btn {
+    //   display: none;
+    //   position: absolute;
+    //   width: 20px;
+    //   height: 20px;
+    //   align-items: center;
+    //   top: 13px;
+    //   right: 10px;
 
-      @include _1280 {
-        display: flex;
-      }
+    //   @include _1280 {
+    //     display: flex;
+    //   }
 
-      @include _550 {
-        display: none;
-      }
-    }
+    //   @include _550 {
+    //     display: none;
+    //   }
+    // }
   }
 
   // &__search-btn {
