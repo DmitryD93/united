@@ -233,17 +233,17 @@ document.addEventListener("click", (e) => {
 
 // кнопка сброса формы поиска
 
-const searchInput = document.querySelector(".header__search-form-input");
-const clearBtn = document.querySelector(".header__search-clear-btn");
+const searchInput = document?.querySelector(".header__search-form-input");
+const clearBtn = document?.querySelector(".header__search-clear-btn");
 
-clearBtn.addEventListener("click", () => {
+clearBtn?.addEventListener("click", () => {
   searchInput.value = "";
 });
 
 // логика кнопки входа для открытия блока на низком разрешении
 
-const joinDoorBtn = document.querySelector(".header__join-visible-btn");
-const loginBlock = document.querySelector(".header__login-block");
+const joinDoorBtn = document?.querySelector(".header__join-visible-btn");
+const loginBlock = document?.querySelector(".header__login-block");
 
 joinDoorBtn.addEventListener("click", () => {
   loginBlock.classList.toggle("active");
@@ -290,7 +290,7 @@ if(window.innerWidth > 550) {
     productBasketContent?.classList.add("active");
   });
 
-  basketBtn.addEventListener("click", () => {
+  basketBtn?.addEventListener("click", () => {
     productBasket?.classList.remove("active");
     basketBtn?.classList.remove("active");
     productBasketContent?.classList.remove("active");
