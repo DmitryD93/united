@@ -267,6 +267,7 @@ const productBasket = document?.querySelector(".product-basket");
 const productBasketContent = document?.querySelector(
   ".product-basket__content"
 );
+const headerBasketBtn = document?.querySelector(".header__basket-btn");
 
 const productBasketBtnText = document?.querySelector(
   ".product-basket__btn-text span"
@@ -274,11 +275,32 @@ const productBasketBtnText = document?.querySelector(
 
 console.log(productBasketBtnText);
 
-basketBtn?.addEventListener("click", () => {
+if(window.innerWidth > 550) {
+  basketBtn?.addEventListener("click", () => {
   productBasket?.classList.toggle("active");
   basketBtn?.classList.toggle("active");
   productBasketContent?.classList.toggle("active");
 });
+} else {
+  
+
+  headerBasketBtn?.addEventListener("click", () => {
+    productBasket?.classList.add("active");
+    basketBtn?.classList.add("active");
+    productBasketContent?.classList.add("active");
+  });
+
+  basketBtn.addEventListener("click", () => {
+    productBasket?.classList.remove("active");
+    basketBtn?.classList.remove("active");
+    productBasketContent?.classList.remove("active");
+    
+  })
+
+
+}
+
+
 
 // Модальное окно (секция страницы "Запчасти")
 
@@ -573,17 +595,19 @@ const galerySwiper = new Swiper(galerySwiperContent, {
       centeredSlides: true,
       spaceBetween: 30,
       loop: false,
+
+     
     },
 
     551: {
-      slidesPerView: 1.6,
+      slidesPerView: 2.2,
       centeredSlides: true,
       spaceBetween: 30,
       loop: true,
     },
 
     1280: {
-      slidesPerView: 3,
+      slidesPerView: 2.4,
       slidesPerGroup: 1,
       loop: true,
       centeredSlides: true,
