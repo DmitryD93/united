@@ -1,0 +1,87 @@
+.address {
+  padding: 64px 0 0 0;
+
+  &__map {
+    height: 570px;
+    max-height: 570px;
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+  &__title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--black);
+
+    @include _880 {
+      font-size: 32px;
+    }
+  }
+
+  &__descr {
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--black);
+
+    @include _880 {
+      font-size: 14px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    padding: 64px 0;
+
+    &-tel {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      a {
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.72px;
+        color: var(--black);
+      }
+    }
+
+    &-mail {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-width: 260px;
+
+      a {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+//   Серый фильтр для карты
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}

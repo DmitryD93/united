@@ -583,36 +583,34 @@ const galerySwiperContent = document.querySelector(".galery__swiper");
 const galerySwiper = new Swiper(galerySwiperContent, {
   grabCursor: true,
   slideToClickedSlide: true,
-  initialSlide: 1,
-  loopedSlides: 3,
   speed: 800,
 
 
 
   breakpoints: {
-    280: {
+   
+    300: {
       slidesPerView: 1,
-      centeredSlides: true,
-      spaceBetween: 30,
-      loop: false,
-
-     
+      spaceBetween: 10,  
+      // slidesPerColumn: 2,
+      // slidesPerGroup: 1,
+      autoheight: false,
+      centeredSlides: false,
+      initialSlide: 0,
+      grid: {
+        rows: 3,
+        fill: "row",
+      }
     },
 
-    551: {
+    550: {
       slidesPerView: 2.2,
-      centeredSlides: true,
-      spaceBetween: 30,
-      loop: true,
-    },
-
-    1280: {
-      slidesPerView: 2.4,
       slidesPerGroup: 1,
       loop: true,
       centeredSlides: true,
-      spaceBetween: 30,
-      
+      spaceBetween: 30,     
+      initialSlide: 1,
+      loopedSlides: 3,
     },
   },
 
@@ -631,3 +629,57 @@ const galerySwiper = new Swiper(galerySwiperContent, {
    
   },
 });
+
+
+// Яндекс карта [59.812049, 30.397624]
+function init(ymaps) {
+  let map = new ymaps.Map('map', {
+    center: [59.815292, 30.398208],
+    zoom: 16,
+    controls: ['routePanelControl']
+  });
+
+  let control = map.controls.get('routePanelControl');
+  let city = 'Санкт-Петербург'
+  // let startPoint = [59.800978, 30.398845]
+  control.routePanel.state.set({
+      type: 'masstransit',
+      fromEnabled: true,
+      toEnabled: false,
+      to: [59.815017, 30.397554],
+      from: [59.800978, 30.398845],
+  })
+
+  let placemark = new ymaps.Placemark([59.815292, 30.398208], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '../img/placemark_one.png',
+    iconImageSize: [56, 73],
+    iconImageOffset: [-20, -50]
+  });
+  let placemark1 = new ymaps.Placemark([59.800978, 30.398845], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/placemark_two.png',
+    iconImageSize: [56, 73],
+    iconImageOffset: [-20, -50]
+  });
+    map.controls.remove('geolocationControl'); // удаляем геолокацию
+  map.controls.remove('searchControl'); // удаляем поиск
+  map.controls.remove('trafficControl'); // удаляем контроль трафика
+  map.controls.remove('typeSelector'); // удаляем тип
+  map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+  map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+  map.controls.remove('rulerControl'); // удаляем контрол правил
+  map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+  map.geoObjects.add(placemark) // передаем переменную placemark
+  map.geoObjects.add(placemark1) // передаем переменную placemark
+
+}
+
+const mapBlock = document?.getElementById('map');
+
+if(mapBlock) {
+  ymaps.ready(init); // вызов функции карты
+}
+
+
+

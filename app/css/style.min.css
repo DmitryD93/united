@@ -5933,7 +5933,21 @@ body.lock {
 }
 .services__title {
   text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 32px;
+  color: var(--black);
+}
+@media (max-width: 900px) {
+  .services__title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 640px) {
+  .services__title {
+    font-size: 24px;
+  }
 }
 .services__list {
   display: -webkit-box;
@@ -5952,6 +5966,12 @@ body.lock {
   grid-template-columns: repeat(2, 1fr);
   position: relative;
 }
+@media (max-width: 640px) {
+  .services__list-item {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
 .services__list-item-description {
   display: -ms-grid;
   display: grid;
@@ -5959,6 +5979,26 @@ body.lock {
   grid-template-columns: repeat(2, 1fr);
   padding: 32px;
   background: var(--grey-gradient);
+}
+@media (max-width: 900px) {
+  .services__list-item-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+@media (max-width: 640px) {
+  .services__list-item-description {
+    padding: 16px 16px 30px 16px;
+  }
 }
 .services__list-item-description span {
   font-size: 20px;
@@ -5969,13 +6009,28 @@ body.lock {
       -ms-grid-row-align: center;
       align-self: center;
 }
+@media (max-width: 900px) {
+  .services__list-item-description span {
+    font-size: 16px;
+    -ms-flex-item-align: normal;
+        -ms-grid-row-align: normal;
+        align-self: normal;
+  }
+}
 .services__list-item-description span:nth-child(2) {
   text-align: center;
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
 }
+@media (max-width: 900px) {
+  .services__list-item-description span:nth-child(2) {
+    font-size: 22px;
+    text-align: left;
+  }
+}
 .services__list-item-background {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5986,11 +6041,24 @@ body.lock {
   background-size: cover;
   background-position: center center;
 }
+@media (max-width: 640px) {
+  .services__list-item-background {
+    min-height: 100px;
+  }
+}
 .services__list-item-btn {
   translate: -20px 0;
   opacity: 0;
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
+}
+@media (max-width: 640px) {
+  .services__list-item-btn {
+    position: absolute;
+    top: -50%;
+    right: 20px;
+    translate: 0 50%;
+  }
 }
 .services__list-item:focus-within .services__list-item-btn {
   opacity: 1;
@@ -6027,9 +6095,27 @@ body.lock {
   line-height: 1.2;
   color: var(--black);
 }
+@media (max-width: 900px) {
+  .order__title {
+    font-size: 32px;
+  }
+}
 
 .galery {
   padding: 64px 0;
+}
+@media (max-width: 550px) {
+  .galery__wrapper {
+    padding: 0 30px;
+  }
+}
+.galery__slider-btn--prev {
+  left: var(--swiper-navigation-sides-offset, 35px);
+}
+@media (max-width: 900px) {
+  .galery__slider-btn--prev {
+    left: var(--swiper-navigation-sides-offset, 25px);
+  }
 }
 .galery__title {
   font-size: 40px;
@@ -6042,6 +6128,11 @@ body.lock {
 .galery__swiper {
   position: relative;
   padding: 30px 0;
+}
+@media (max-width: 550px) {
+  .galery__swiper {
+    height: 800px;
+  }
 }
 .galery__swiper-utility {
   position: relative;
@@ -6066,22 +6157,151 @@ body.lock {
   overflow: hidden;
   padding: 0 35px;
 }
+@media (max-width: 550px) {
+  .galery__list {
+    height: calc(100% - 80px);
+  }
+}
 .galery__list-item {
   scale: 0.8 1;
   -webkit-transition: scale 0.5s ease-in;
   transition: scale 0.5s ease-in;
+}
+@media (max-width: 550px) {
+  .galery__list-item {
+    scale: 1 1;
+    height: calc((100% - 10px) / 3);
+  }
 }
 .galery__list-item.swiper-slide-active {
   scale: 1.2 1;
   -webkit-transition: scale 0.5s ease-in;
   transition: scale 0.5s ease-in;
 }
+@media (max-width: 550px) {
+  .galery__list-item.swiper-slide-active {
+    scale: 1 1;
+  }
+}
 .galery__list-item-content {
-  height: 620px;
+  height: 550px;
+}
+@media (max-width: 900px) {
+  .galery__list-item-content {
+    height: 450px;
+  }
+}
+@media (max-width: 550px) {
+  .galery__list-item-content {
+    height: 100%;
+  }
 }
 .galery__list-item-content img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 16px;
   height: 100%;
+}
+
+.address {
+  padding: 64px 0 0 0;
+}
+.address__map {
+  height: 570px;
+  max-height: 570px;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+.address__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+}
+.address__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--black);
+}
+@media (max-width: 900px) {
+  .address__title {
+    font-size: 32px;
+  }
+}
+.address__descr {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+}
+@media (max-width: 900px) {
+  .address__descr {
+    font-size: 14px;
+  }
+}
+.address__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 64px;
+  padding: 64px 0;
+}
+.address__contacts-tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.address__contacts-tel a {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.72px;
+  color: var(--black);
+}
+.address__contacts-mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  max-width: 260px;
+}
+.address__contacts-mail a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+[class*=copyrights-pane] {
+  display: none !important;
+}
+
+[class*=ground-pane] {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
