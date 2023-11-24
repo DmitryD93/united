@@ -6109,6 +6109,11 @@ body.lock {
     padding: 0 30px;
   }
 }
+@media (max-width: 550px) {
+  .galery__swiper-pagination, .galery .swiper-pagination-bullets {
+    top: var(--swiper-pagination-top, 10px);
+  }
+}
 .galery__slider-btn--prev {
   left: var(--swiper-navigation-sides-offset, 35px);
 }
@@ -6125,14 +6130,14 @@ body.lock {
   color: var(--black);
   text-align: center;
 }
+@media (max-width: 550px) {
+  .galery__title {
+    margin-bottom: 16px;
+  }
+}
 .galery__swiper {
   position: relative;
   padding: 30px 0;
-}
-@media (max-width: 550px) {
-  .galery__swiper {
-    height: 800px;
-  }
 }
 .galery__swiper-utility {
   position: relative;
@@ -6157,11 +6162,6 @@ body.lock {
   overflow: hidden;
   padding: 0 35px;
 }
-@media (max-width: 550px) {
-  .galery__list {
-    height: calc(100% - 80px);
-  }
-}
 .galery__list-item {
   scale: 0.8 1;
   -webkit-transition: scale 0.5s ease-in;
@@ -6170,7 +6170,6 @@ body.lock {
 @media (max-width: 550px) {
   .galery__list-item {
     scale: 1 1;
-    height: calc((100% - 10px) / 3);
   }
 }
 .galery__list-item.swiper-slide-active {
@@ -6238,6 +6237,11 @@ body.lock {
     font-size: 32px;
   }
 }
+@media (max-width: 640px) {
+  .address__title {
+    font-size: 24px;
+  }
+}
 .address__descr {
   text-align: center;
   font-family: "Ubuntu", sans-serif;
@@ -6261,6 +6265,19 @@ body.lock {
   gap: 64px;
   padding: 64px 0;
 }
+@media (max-width: 640px) {
+  .address__contacts {
+    padding: 32px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 32px;
+  }
+}
 .address__contacts-tel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6279,6 +6296,16 @@ body.lock {
   letter-spacing: 0.72px;
   color: var(--black);
 }
+@media (max-width: 900px) {
+  .address__contacts-tel a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .address__contacts-tel a {
+    font-size: 18px;
+  }
+}
 .address__contacts-mail {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6290,11 +6317,26 @@ body.lock {
   gap: 8px;
   max-width: 260px;
 }
+@media (max-width: 640px) {
+  .address__contacts-mail {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .address__contacts-mail a {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
+}
+@media (max-width: 640px) {
+  .address__contacts-mail a {
+    text-align: center;
+  }
 }
 
 [class*=copyrights-pane] {

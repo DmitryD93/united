@@ -583,7 +583,16 @@ const galerySwiperContent = document.querySelector(".galery__swiper");
 const galerySwiper = new Swiper(galerySwiperContent, {
   grabCursor: true,
   slideToClickedSlide: true,
-  speed: 800,
+  speed: 1000,
+  // effect: 'cube',
+
+  // cubeEffect: {
+  //   slideShadows: true,
+  //   shadow: true,
+  //   shadowOffset: 20,
+  //   shadowScale: 0.94,
+  // },
+  
 
 
 
@@ -595,15 +604,17 @@ const galerySwiper = new Swiper(galerySwiperContent, {
       // slidesPerColumn: 2,
       // slidesPerGroup: 1,
       autoheight: false,
-      centeredSlides: false,
-      initialSlide: 0,
-      grid: {
-        rows: 3,
-        fill: "row",
-      }
+      centeredSlides: true,
+      initialSlide: 1,
+      // grid: {
+      //   rows: 3,
+      //   fill: "row",
+      // },
+      loop: true,
+
     },
 
-    550: {
+    551: {
       slidesPerView: 2.2,
       slidesPerGroup: 1,
       loop: true,
@@ -619,7 +630,18 @@ const galerySwiper = new Swiper(galerySwiperContent, {
     type: "bullets",
     clickable: true,
     dynamicBullets: true,
-    dynamicMainBullets:3
+    
+
+    551: { 
+      dynamicMainBullets:3,
+      dynamicBullets: true,
+    },
+
+    300: {
+      dynamicMainBullets:2,
+      dynamicBullets: true,
+    }
+
   },
 
   navigation: {
