@@ -6347,3 +6347,199 @@ body.lock {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
+
+.main-news {
+  position: relative;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding-top: 164px;
+  padding-bottom: 64px;
+}
+.main-news__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+.main-news__background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: var(--white);
+  opacity: 0.6;
+}
+.main-news__content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  z-index: 1;
+}
+.main-news__content h1 {
+  font-family: "Russo One", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  color: var(--black);
+}
+.main-news__content p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+}
+
+.main-news-content {
+  padding: 64px 0;
+}
+.main-news-content__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 28px;
+  padding-bottom: 64px;
+}
+.main-news-content__list-item {
+  position: relative;
+  -ms-grid-column-span: 1;
+  grid-column: 1 span;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+.main-news-content__list-item:first-child {
+  -ms-grid-column-span: 2;
+  grid-column: 2 span;
+}
+.main-news-content__list-item img {
+  border-radius: 0 0 0 24px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-news-content__list-item svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-20px, 30px);
+      -ms-transform: translate(-20px, 30px);
+          transform: translate(-20px, 30px);
+  fill: var(--red);
+}
+.main-news-content__list-item-content {
+  -ms-grid-column-span: 2;
+  grid-column: 2 span;
+  background-color: var(--super-silver);
+  padding: 32px;
+  border-radius: 0 12px 12px 0;
+}
+.main-news-content__list-item-content h2 {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.72px;
+  margin-bottom: 16px;
+  color: var(--black);
+}
+.main-news-content__list-item-content-text-wrapper {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 16px;
+}
+.main-news-content__list-item-content-text-wrapper p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+}
+.main-news-content__list-item-btn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--black);
+}
+.main-news-content__link-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-news-content__pagination-btn {
+  font-size: 20px;
+}
+.main-news-content__pagination-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 24px;
+}
+.main-news-content__pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+.main-news-content__pagination-list li {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.6px;
+}
+.main-news-content__pagination-list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-news-content__pagination-list li svg {
+  fill: var(--black);
+}
+.main-news-content__pagination-list li:first-child {
+  margin-right: 10px;
+}
+.main-news-content__pagination-list li:last-child {
+  margin-left: 10px;
+  rotate: 180deg;
+}
