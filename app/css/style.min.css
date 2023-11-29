@@ -2902,7 +2902,7 @@ body.lock {
     width: 100%;
     height: 100vh;
     padding: 120px 20px 20px 20px;
-    background: linear-gradient(105deg, #F1F1F1 45.85%, #DBDBDB 98.6%);
+    background: linear-gradient(105deg, #f1f1f1 45.85%, #dbdbdb 98.6%);
     -webkit-box-shadow: 5px 3px 9px 5px rgba(0, 0, 0, 0.3);
             box-shadow: 5px 3px 9px 5px rgba(0, 0, 0, 0.3);
     z-index: 5;
@@ -2998,7 +2998,7 @@ body.lock {
   display: none;
   height: 20px;
   width: 20px;
-  background: linear-gradient(105deg, #F1F1F1 45.85%, #DBDBDB 98.6%);
+  background: linear-gradient(105deg, #f1f1f1 45.85%, #dbdbdb 98.6%);
   border: inherit;
   position: absolute;
   top: -10px;
@@ -3028,7 +3028,7 @@ body.lock {
 @media (max-width: 900px) {
   .header__login-block {
     position: absolute;
-    background: linear-gradient(105deg, #F1F1F1 45.85%, #DBDBDB 98.6%);
+    background: linear-gradient(105deg, #f1f1f1 45.85%, #dbdbdb 98.6%);
     top: 64px;
     padding: 32px;
     right: 10%;
@@ -3101,7 +3101,7 @@ body.lock {
           justify-content: center;
   position: relative;
 }
-.header__basket-btn::after {
+.header__basket-btn span {
   content: "";
   position: absolute;
   top: 4px;
@@ -5768,7 +5768,9 @@ body.lock {
 
 .service-hero {
   position: relative;
-  min-height: 450px;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   padding-bottom: 64px;
   padding-top: 195px;
   background-position: 0 40%;
@@ -6109,10 +6111,11 @@ body.lock {
     padding: 0 30px;
   }
 }
-@media (max-width: 550px) {
-  .galery__swiper-pagination, .galery .swiper-pagination-bullets {
-    top: var(--swiper-pagination-top, 10px);
-  }
+.galery .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 10px);
+}
+.galery__swiper-pagination .swiper-pagination-bullet-active {
+  width: 20px;
 }
 .galery__slider-btn--prev {
   left: var(--swiper-navigation-sides-offset, 35px);
@@ -6157,33 +6160,24 @@ body.lock {
 .galery__swiper-utility-nav {
   position: relative;
   right: 0;
-  height: 30px;
+  height: 40px;
   width: 260px;
   overflow: hidden;
   padding: 0 35px;
 }
-.galery__list-item {
-  scale: 0.8 1;
-  -webkit-transition: scale 0.5s ease-in;
-  transition: scale 0.5s ease-in;
-}
-@media (max-width: 550px) {
-  .galery__list-item {
-    scale: 1 1;
-  }
-}
-.galery__list-item.swiper-slide-active {
-  scale: 1.2 1;
-  -webkit-transition: scale 0.5s ease-in;
-  transition: scale 0.5s ease-in;
-}
-@media (max-width: 550px) {
-  .galery__list-item.swiper-slide-active {
-    scale: 1 1;
-  }
+.galery__list-item.swiper-slide-active .galery__list-item-content {
+  -webkit-filter: grayscale(0%) sepia(0%) blur(0px);
+          filter: grayscale(0%) sepia(0%) blur(0px);
 }
 .galery__list-item-content {
   height: 550px;
+  filter: grayscale(100%) sepia(10%);
+  -webkit-filter: grayscale(100%) sepia(10%);
+  -moz-filter: grayscale(100%) sepia(10%);
+  -webkit-transition: -webkit-filter 0.6s ease-in-out;
+  transition: -webkit-filter 0.6s ease-in-out;
+  transition: filter 0.6s ease-in-out;
+  transition: filter 0.6s ease-in-out, -webkit-filter 0.6s ease-in-out;
 }
 @media (max-width: 900px) {
   .galery__list-item-content {
@@ -6192,7 +6186,7 @@ body.lock {
 }
 @media (max-width: 550px) {
   .galery__list-item-content {
-    height: 100%;
+    height: 350px;
   }
 }
 .galery__list-item-content img {
@@ -6542,4 +6536,54 @@ body.lock {
 .main-news-content__pagination-list li:last-child {
   margin-left: 10px;
   rotate: 180deg;
+}
+
+.registration-hero {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding-top: 195px;
+  padding-bottom: 64px;
+  position: relative;
+}
+.registration-hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+.registration-hero__background::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  opacity: 0.9;
+}
+.registration-hero__title {
+  text-transform: uppercase;
+  font-family: "Russo One", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  color: var(--black);
+}
+.registration-hero__descr {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
 }

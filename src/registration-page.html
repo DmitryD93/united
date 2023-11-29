@@ -1,0 +1,29 @@
+<!-------- Заголовок и описание страницы -------->
+@@include('modules/common/_header/_head.html',
+{
+"title": "Регистрация",
+"description" : "Автозапчасти в Санкт-Петербурге"
+})
+</head>
+
+<!------------ Header ------------>
+@@include('modules/common/_header/_header.html')
+<main class="main home">
+    <div class="site-wrapper">
+    @@include('modules/registration/_registration-hero/_registration-hero.html')
+    @@include('modules/registration/_registration-form/_registration-main.html')
+
+   
+
+    </div>
+</main>
+
+@@include('modules/common/_footer/_footer.html')
+
+<!-- 1)Картинка для главной страницы - ждем обновленную
+    2)карточка популярные запчасти - заглушка тегом img
+    3) поиск под фиксированной шапкой
+    4) Фиксированная шапка
+    5) Слайдер для блока новостей
+ -->
+

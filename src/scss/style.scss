@@ -1,4 +1,3 @@
-
 // Глобальные стили
 @import "_vars";
 @import "_reset";
@@ -49,3 +48,8 @@
 
 @import "../modules/main_news_page/_hero/main_news_hero";
 @import "../modules/main_news_page/_content/main_news_content";
+
+// Регистрация
+
+@import "../modules/registration/_registration-hero/registration-hero";
+@import "../modules/registration/_registration-form/registration-main";
