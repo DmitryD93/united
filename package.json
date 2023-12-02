@@ -33,6 +33,7 @@
     "stylelint-order": "^5.0.0"
   },
   "dependencies": {
+    "choices.js": "^10.2.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-strip-comments": "^2.5.2",

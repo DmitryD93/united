@@ -27,8 +27,8 @@ burger.addEventListener("click", () => {
 
 // tabs
 
-const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
-const tabsItems = document.querySelectorAll(".tabs__item");
+const tabsBtn = document?.querySelectorAll(".tabs__nav-btn");
+const tabsItems = document?.querySelectorAll(".tabs__item");
 
 tabsBtn.forEach((item) => {
   item.addEventListener("click", () => {
@@ -687,3 +687,39 @@ const mapBlock = document?.getElementById("map");
 if (mapBlock) {
   ymaps.ready(init); // вызов функции карты
 }
+
+// Табы для регистрации
+// const tabsBtn = document?.querySelectorAll(".tabs__nav-btn");
+// const tabsItems = document?.querySelectorAll(".tabs__item");
+
+// tabsBtn.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     let currentBtn = item;
+//     let tabId = currentBtn.getAttribute("data-tab");
+//     let currentTab = document.querySelector(tabId);
+
+//     tabsBtn.forEach((item) => {
+//       item.classList.remove("tab-active");
+//     });
+
+//     tabsItems.forEach((item) => {
+//       item.classList.remove("tab-active");
+//     });
+
+//     currentBtn.classList.add("tab-active");
+//     currentTab.classList.add("tab-active");
+//   });
+// });
+
+// Селект формы
+
+const formSelectRegion = document.querySelectorAll(
+  ".registration-main__form-select"
+);
+
+formSelectRegion.forEach((item) => {
+  new Choices(item, {
+    searchEnabled: true,
+    itemSelectText: " ",
+  });
+});

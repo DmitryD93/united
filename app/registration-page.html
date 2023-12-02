@@ -211,7 +211,110 @@
 </section>
 
     <section class="registration-main">
-  <div class="container registration-main__wrapper"></div>
+  <div class="container registration-main__wrapper">
+    <div class="registration-main__nav">
+      <button class="secondary-btn registration-main__nav-btn">
+        Физическое лицо
+      </button>
+      <button class="secondary-btn registration-main__nav-btn">
+        Юридическое лицо
+      </button>
+    </div>
+    <form class="registration-main__form">
+      <div class="registration-main__form-main">
+        <h2 class="registration-main__form-main-title">
+          Основные регистрационные данные
+        </h2>
+        <input
+          type="text"
+          class="registration-main__form-input registration-main__form-main-input"
+          placeholder="Имя"
+        />
+        <input
+          type="text"
+          class="registration-main__form-input registration-main__form-main-input"
+          placeholder="Фамилия"
+        />
+        <input
+          type="text"
+          class="registration-main__form-input registration-main__form-main-input"
+          placeholder="Отчество"
+        />
+        <input
+          type="text"
+          class="registration-main__form-input registration-main__form-main-input"
+          placeholder="E-mail"
+        />
+        <input
+          type="number"
+          class="registration-main__form-input registration-main__form-main-input"
+          placeholder="Телефон/Логин: +7 (000) 000-00-00"
+        />
+        <input
+          autocomplete="disabled"
+          type="password"
+          class="registration-main__form-input registration-main__form-main-input"
+          placeholder="Пароль"
+        />
+        <select
+          class="registration-main__form-select"
+          name="region"
+          id="region"
+        >
+          <option value="" disabled="disabled" selected="selected">
+            Регион
+          </option>
+          <option value="value1">Самара</option>
+        </select>
+        <select
+          class="registration-main__form-select"
+          name="dealer"
+          id="client-type"
+        >
+          <option value="" disabled="disabled" selected="selected">
+            Тип: дилер / опт
+          </option>
+          <option value="value1">Самара</option>
+        </select>
+      </div>
+      <div class="registration-main__form-company">
+        <h2 class="registration-main__form-company-title">
+          Информация о компании
+        </h2>
+        <input
+          type="text"
+          class="registration-main__form-input"
+          placeholder="Наименование ООО или ИП"
+        />
+        <input
+          type="text"
+          class="registration-main__form-input"
+          placeholder="ИНН"
+        />
+        <label class="registration-main__form-label">
+          <span>Поле не обязательно для заполнения</span>
+          <input
+            type="text"
+            class="registration-main__form-input"
+            placeholder="Дополнительная информация"
+          />
+        </label>
+      </div>
+
+      <div class="registration-main__form-submit-block">
+        <p class="registration-main__form-submit-block-descr">
+          Нажимая кнопку “Зарегистрироваться”, я подтверждаю, что принимаю
+          условия <a href="#">“политики конфиденциальности”</a> .
+        </p>
+        <button
+          type="submit"
+          class="btn registration-main__form-submit-block-btn"
+        >
+          Зарегистрироваться
+        </button>
+      </div>
+    </form>
+  </div>
 </section>
 
 
