@@ -576,6 +576,10 @@ const galerySwiperContent = document.querySelector(".galery__swiper");
 const galerySwiper = new Swiper(galerySwiperContent, {
   grabCursor: true,
   slideToClickedSlide: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
 
   breakpoints: {
     300: {
@@ -584,27 +588,29 @@ const galerySwiper = new Swiper(galerySwiperContent, {
       autoheight: false,
       centeredSlides: true,
       initialSlide: 1,
-      loop: false,
     },
 
     550: {
       slidesPerView: 1.5,
       slidesPerGroup: 1,
-      loop: false,
       centeredSlides: true,
       spaceBetween: 30,
       initialSlide: 1,
-      loopedSlides: 3,
     },
 
     750: {
-      slidesPerView: 2.5,
+      slidesPerView: 2.1,
       slidesPerGroup: 1,
-      loop: false,
       centeredSlides: true,
       spaceBetween: 30,
       initialSlide: 1,
-      loopedSlides: 3,
+    },
+    1000: {
+      slidesPerView: 2.4,
+      slidesPerGroup: 1,
+      centeredSlides: true,
+      spaceBetween: 30,
+      initialSlide: 1,
     },
   },
 
@@ -735,7 +741,7 @@ const showPassword = document?.querySelector(
 );
 const passwordInput = document?.getElementById("password");
 
-showPassword.addEventListener("click", () => {
+showPassword?.addEventListener("click", () => {
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
     showPassword.classList.add("visible");
@@ -743,4 +749,9 @@ showPassword.addEventListener("click", () => {
     passwordInput.type = "password";
     showPassword.classList.remove("visible");
   }
+});
+
+// Галерея сервиса
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
 });
