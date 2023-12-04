@@ -661,7 +661,7 @@ function init(ymaps) {
     {},
     {
       iconLayout: "default#image",
-      iconImageHref: "../img/placemark_one.png",
+      iconImageHref: "img/placemark_one.png",
       iconImageSize: [56, 73],
       iconImageOffset: [-20, -50],
     }
