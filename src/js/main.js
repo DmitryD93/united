@@ -689,27 +689,31 @@ if (mapBlock) {
 }
 
 // Табы для регистрации
-// const tabsBtn = document?.querySelectorAll(".tabs__nav-btn");
-// const tabsItems = document?.querySelectorAll(".tabs__item");
+const regTabsBtn = document?.querySelectorAll(".registration-main__nav-btn");
+const regTabsItems = document?.querySelector(
+  ".registration-main__form-company"
+);
 
-// tabsBtn.forEach((item) => {
-//   item.addEventListener("click", () => {
-//     let currentBtn = item;
-//     let tabId = currentBtn.getAttribute("data-tab");
-//     let currentTab = document.querySelector(tabId);
+regTabsBtn.forEach((item) => {
+  item.addEventListener("click", () => {
+    let currentBtn = item;
+    let tabId = currentBtn.getAttribute("data-tab");
+    let currentTab = document.querySelector(tabId);
 
-//     tabsBtn.forEach((item) => {
-//       item.classList.remove("tab-active");
-//     });
+    regTabsBtn.forEach((item) => {
+      item.classList.remove("active");
+    });
 
-//     tabsItems.forEach((item) => {
-//       item.classList.remove("tab-active");
-//     });
+    if (tabId === "entity") {
+      regTabsItems.classList.add("active");
+    } else {
+      regTabsItems.classList.remove("active");
+    }
 
-//     currentBtn.classList.add("tab-active");
-//     currentTab.classList.add("tab-active");
-//   });
-// });
+    currentBtn.classList.add("active");
+    currentTab.classList.add("active");
+  });
+});
 
 // Селект формы
 
@@ -719,7 +723,24 @@ const formSelectRegion = document.querySelectorAll(
 
 formSelectRegion.forEach((item) => {
   new Choices(item, {
-    searchEnabled: true,
+    searchEnabled: false,
     itemSelectText: " ",
   });
+});
+
+// Показ пароля
+
+const showPassword = document?.querySelector(
+  ".registration-main__form-password-visible"
+);
+const passwordInput = document?.getElementById("password");
+
+showPassword.addEventListener("click", () => {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    showPassword.classList.add("visible");
+  } else {
+    passwordInput.type = "password";
+    showPassword.classList.remove("visible");
+  }
 });

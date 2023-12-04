@@ -5,9 +5,9 @@ html {
 }
 
 .site-wrapper {
- max-width: 1920px;
- margin: 0 auto;
- width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 body {
@@ -21,7 +21,6 @@ body {
   color: var(--black);
   background-color: var(--white);
   scroll-behavior: smooth;
-
 
   &.lock {
     overflow: hidden;
@@ -73,9 +72,6 @@ body {
   margin: 0 auto;
   max-width: 1920px;
 }
-
-
-
 
 .main {
   position: relative;
@@ -329,3 +325,12 @@ body {
   width: 1px;
   height: 1px;
 }
+
+// Сброс чойса
+
+// a,
+// a:focus,
+// a:visited {
+//   text-decoration: unset;
+//   color: unset;
+// }
