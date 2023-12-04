@@ -23,7 +23,10 @@ function browsersync() {
 function styles() {
   return src([
     "node_modules/swiper/swiper-bundle.min.css",
-    "src/scss/style.scss"
+    "node_modules/choices.js/public/assets/styles/choices.min.css",
+    "node_modules/choices.js/public/assets/styles/base.min.css",
+    "node_modules/@fancyapps/ui/dist/fancybox/fancybox.css",
+    "src/scss/style.scss",
   ])
     .pipe(scss({ outputStyle: "expanded" }))
     .pipe(concat("style.min.css"))
@@ -38,7 +41,12 @@ function styles() {
 }
 
 function scripts() {
-  return src(["node_modules/swiper/swiper-bundle.min.js", "src/js/main.js"])
+  return src([
+    "node_modules/swiper/swiper-bundle.min.js",
+    "node_modules/choices.js/public/assets/scripts/choices.min.js",
+    "node_modules/@fancyapps/ui/dist/index.umd.js",
+    "src/js/main.js",
+  ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -127,7 +135,16 @@ exports.watching = watching;
 exports.images = images;
 exports.font = font;
 exports.cleanapp = cleanapp;
-exports.build = series(cleanapp, images, build, font, html, svgSprites, styles, scripts);
+exports.build = series(
+  cleanapp,
+  images,
+  build,
+  font,
+  html,
+  svgSprites,
+  styles,
+  scripts
+);
 
 // exports.build = series(cleanapp, images, build, font);
 

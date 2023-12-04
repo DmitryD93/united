@@ -17,5 +17,9 @@
     font-weight: 700;
     line-height: 1.2;
     color: var(--black);
+
+    @include _880 {
+      font-size: 32px;
+    }
   }
 }

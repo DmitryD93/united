@@ -1,0 +1,74 @@
+.registration-hero {
+  min-height: fit-content;
+  padding-top: 195px;
+  padding-bottom: 64px;
+  position: relative;
+
+  @include _880 {
+    padding-top: 140px;
+  }
+
+  @include _640 {
+    padding-top: 120px;
+    padding-bottom: 32px;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+    filter: grayscale(1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--white);
+      opacity: 0.9;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: "Russo One", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+    color: var(--black);
+
+    @include _1024 {
+      font-size: 40px;
+      letter-spacing: 1.2px;
+      line-height: 1.2;
+    }
+
+    @include _640 {
+      font-size: 30px;
+      letter-spacing: 0.9px;
+    }
+  }
+
+  &__descr {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--black);
+
+    @include _880 {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.main-news-content {
+  padding: 64px 0;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 28px;
+    padding-bottom: 64px;
+
+    &-item {
+      position: relative;
+      grid-column: 1 span;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      &:first-child {
+        grid-column: 2 span;
+      }
+
+      img {
+        border-radius: 0 0 0 24px;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-20px, 30px);
+        fill: var(--red);
+      }
+
+      &-content {
+        grid-column: 2 span;
+        background-color: var(--super-silver);
+        padding: 32px;
+        border-radius: 0 12px 12px 0;
+
+        h2 {
+          font-size: 24px;
+          font-style: italic;
+          font-weight: 700;
+          line-height: 1.2;
+          letter-spacing: 0.72px;
+          margin-bottom: 16px;
+          color: var(--black);
+        }
+
+        &-text-wrapper {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 6;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-bottom: 16px;
+
+          p {
+            font-family: "Ubuntu", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--black);
+          }
+        }
+      }
+
+      &-btn {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+        color: var(--black);
+      }
+    }
+  }
+
+  &__link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__pagination-btn {
+    font-size: 20px;
+  }
+
+  &__pagination-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  &__pagination-list {
+    display: flex;
+    gap: 16px;
+
+    li {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: 0.6px;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      svg {
+        fill: var(--black);
+      }
+    }
+
+    li:first-child {
+      margin-right: 10px;
+    }
+
+    li:last-child {
+      margin-left: 10px;
+      rotate: 180deg;
+    }
+  }
+}

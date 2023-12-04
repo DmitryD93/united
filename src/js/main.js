@@ -27,8 +27,8 @@ burger.addEventListener("click", () => {
 
 // tabs
 
-const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
-const tabsItems = document.querySelectorAll(".tabs__item");
+const tabsBtn = document?.querySelectorAll(".tabs__nav-btn");
+const tabsItems = document?.querySelectorAll(".tabs__item");
 
 tabsBtn.forEach((item) => {
   item.addEventListener("click", () => {
@@ -168,7 +168,6 @@ const newsSwiper = new Swiper(newsSwiperContent, {
 //   });
 // });
 
-
 // Фиксированная шапка
 // Обсервер для появления кнопки и плашки поиска
 
@@ -275,15 +274,13 @@ const productBasketBtnText = document?.querySelector(
 
 console.log(productBasketBtnText);
 
-if(window.innerWidth > 550) {
+if (window.innerWidth > 550) {
   basketBtn?.addEventListener("click", () => {
-  productBasket?.classList.toggle("active");
-  basketBtn?.classList.toggle("active");
-  productBasketContent?.classList.toggle("active");
-});
+    productBasket?.classList.toggle("active");
+    basketBtn?.classList.toggle("active");
+    productBasketContent?.classList.toggle("active");
+  });
 } else {
-  
-
   headerBasketBtn?.addEventListener("click", () => {
     productBasket?.classList.add("active");
     basketBtn?.classList.add("active");
@@ -294,13 +291,8 @@ if(window.innerWidth > 550) {
     productBasket?.classList.remove("active");
     basketBtn?.classList.remove("active");
     productBasketContent?.classList.remove("active");
-    
-  })
-
-
+  });
 }
-
-
 
 // Модальное окно (секция страницы "Запчасти")
 
@@ -516,7 +508,6 @@ window.onload = function () {
   }
 };
 
-
 // Слайдер для подробных запчастей
 
 const targetDetailsThumbsContent = document.querySelector(
@@ -549,7 +540,9 @@ const targetDetailsThumbs = new Swiper(targetDetailsThumbsContent, {
   },
 });
 
-const targetDetailsSwiperContent = document.querySelector(".target-details-product__swiper");
+const targetDetailsSwiperContent = document.querySelector(
+  ".target-details-product__swiper"
+);
 
 const targetDetailsSwiper = new Swiper(targetDetailsSwiperContent, {
   slidesPerView: "auto",
@@ -583,36 +576,41 @@ const galerySwiperContent = document.querySelector(".galery__swiper");
 const galerySwiper = new Swiper(galerySwiperContent, {
   grabCursor: true,
   slideToClickedSlide: true,
-  initialSlide: 1,
-  loopedSlides: 3,
-  speed: 800,
-
-
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
 
   breakpoints: {
-    280: {
+    300: {
       slidesPerView: 1,
-      centeredSlides: true,
       spaceBetween: 30,
-      loop: false,
-
-     
+      autoheight: false,
+      centeredSlides: true,
+      initialSlide: 1,
     },
 
-    551: {
-      slidesPerView: 2.2,
+    550: {
+      slidesPerView: 1.5,
+      slidesPerGroup: 1,
       centeredSlides: true,
       spaceBetween: 30,
-      loop: true,
+      initialSlide: 1,
     },
 
-    1280: {
+    750: {
+      slidesPerView: 2.1,
+      slidesPerGroup: 1,
+      centeredSlides: true,
+      spaceBetween: 30,
+      initialSlide: 1,
+    },
+    1000: {
       slidesPerView: 2.4,
       slidesPerGroup: 1,
-      loop: true,
       centeredSlides: true,
       spaceBetween: 30,
-      
+      initialSlide: 1,
     },
   },
 
@@ -621,13 +619,139 @@ const galerySwiper = new Swiper(galerySwiperContent, {
     type: "bullets",
     clickable: true,
     dynamicBullets: true,
-    dynamicMainBullets:3
+    dynamicMainBullets: 2,
+
+    551: {
+      // dynamicMainBullets: 5,
+    },
+
+    300: {
+      // dynamicMainBullets: 2,
+    },
   },
 
   navigation: {
     nextEl: ".galery__slider-btn--next",
     prevEl: ".galery__slider-btn--prev",
     clickable: true,
-   
   },
+});
+
+// Яндекс карта [59.812049, 30.397624]
+function init(ymaps) {
+  let map = new ymaps.Map("map", {
+    center: [59.815292, 30.398208],
+    zoom: 16,
+    controls: ["routePanelControl"],
+  });
+
+  let control = map.controls.get("routePanelControl");
+  let city = "Санкт-Петербург";
+  // let startPoint = [59.800978, 30.398845]
+  control.routePanel.state.set({
+    type: "masstransit",
+    fromEnabled: true,
+    toEnabled: false,
+    to: [59.815017, 30.397554],
+    from: [59.800978, 30.398845],
+  });
+
+  let placemark = new ymaps.Placemark(
+    [59.815292, 30.398208],
+    {},
+    {
+      iconLayout: "default#image",
+      iconImageHref: "../img/placemark_one.png",
+      iconImageSize: [56, 73],
+      iconImageOffset: [-20, -50],
+    }
+  );
+  let placemark1 = new ymaps.Placemark(
+    [59.800978, 30.398845],
+    {},
+    {
+      iconLayout: "default#image",
+      iconImageHref: "img/placemark_two.png",
+      iconImageSize: [56, 73],
+      iconImageOffset: [-20, -50],
+    }
+  );
+  map.controls.remove("geolocationControl"); // удаляем геолокацию
+  map.controls.remove("searchControl"); // удаляем поиск
+  map.controls.remove("trafficControl"); // удаляем контроль трафика
+  map.controls.remove("typeSelector"); // удаляем тип
+  map.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
+  map.controls.remove("zoomControl"); // удаляем контрол зуммирования
+  map.controls.remove("rulerControl"); // удаляем контрол правил
+  map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+  map.geoObjects.add(placemark); // передаем переменную placemark
+  map.geoObjects.add(placemark1); // передаем переменную placemark
+}
+
+const mapBlock = document?.getElementById("map");
+
+if (mapBlock) {
+  ymaps.ready(init); // вызов функции карты
+}
+
+// Табы для регистрации
+const regTabsBtn = document?.querySelectorAll(".registration-main__nav-btn");
+const regTabsItems = document?.querySelector(
+  ".registration-main__form-company"
+);
+
+regTabsBtn.forEach((item) => {
+  item.addEventListener("click", () => {
+    let currentBtn = item;
+    let tabId = currentBtn.getAttribute("data-tab");
+    let currentTab = document.querySelector(tabId);
+
+    regTabsBtn.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    if (tabId === "entity") {
+      regTabsItems.classList.add("active");
+    } else {
+      regTabsItems.classList.remove("active");
+    }
+
+    currentBtn.classList.add("active");
+    currentTab.classList.add("active");
+  });
+});
+
+// Селект формы
+
+const formSelectRegion = document.querySelectorAll(
+  ".registration-main__form-select"
+);
+
+formSelectRegion.forEach((item) => {
+  new Choices(item, {
+    searchEnabled: false,
+    itemSelectText: " ",
+  });
+});
+
+// Показ пароля
+
+const showPassword = document?.querySelector(
+  ".registration-main__form-password-visible"
+);
+const passwordInput = document?.getElementById("password");
+
+showPassword?.addEventListener("click", () => {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    showPassword.classList.add("visible");
+  } else {
+    passwordInput.type = "password";
+    showPassword.classList.remove("visible");
+  }
+});
+
+// Галерея сервиса
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
 });
