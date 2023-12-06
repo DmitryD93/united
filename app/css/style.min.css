@@ -4854,12 +4854,14 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 5px;
   font-family: "Ubuntu", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.2;
-  padding: 5px 5px;
+  padding: 15px 15px;
   color: var(--black);
   position: relative;
   z-index: 1;
