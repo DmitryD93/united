@@ -661,21 +661,21 @@ function init(ymaps) {
     {},
     {
       iconLayout: "default#image",
-      iconImageHref: "img/placemark_one.png",
-      iconImageSize: [56, 73],
-      iconImageOffset: [-20, -50],
+      iconImageHref: "img/map_logo.svg",
+      iconImageSize: [50, 70],
+      iconImageOffset: [-15, -10],
     }
   );
-  let placemark1 = new ymaps.Placemark(
-    [59.800978, 30.398845],
-    {},
-    {
-      iconLayout: "default#image",
-      iconImageHref: "img/placemark_two.png",
-      iconImageSize: [56, 73],
-      iconImageOffset: [-20, -50],
-    }
-  );
+  // let placemark1 = new ymaps.Placemark(
+  //   [59.800978, 30.398845],
+  //   {},
+  //   {
+  //     iconLayout: "default#image",
+  //     iconImageHref: "img/placemark_two.png",
+  //     iconImageSize: [56, 73],
+  //     iconImageOffset: [-20, -50],
+  //   }
+  // );
   map.controls.remove("geolocationControl"); // удаляем геолокацию
   map.controls.remove("searchControl"); // удаляем поиск
   map.controls.remove("trafficControl"); // удаляем контроль трафика
@@ -685,7 +685,7 @@ function init(ymaps) {
   map.controls.remove("rulerControl"); // удаляем контрол правил
   map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
   map.geoObjects.add(placemark); // передаем переменную placemark
-  map.geoObjects.add(placemark1); // передаем переменную placemark
+  // map.geoObjects.add(placemark1); // передаем переменную placemark
 }
 
 const mapBlock = document?.getElementById("map");
