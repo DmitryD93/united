@@ -748,8 +748,10 @@ showPassword?.addEventListener("click", () => {
 });
 
 // Галерея сервиса
+
 Fancybox.bind("[data-fancybox]", {
   // Your custom options
+  
 });
 
 // Модалки сервиса и регистрации
