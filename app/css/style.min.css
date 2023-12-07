@@ -1255,7 +1255,7 @@ html {
   position: relative;
   margin: 0;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 body {
@@ -3427,7 +3427,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -3594,6 +3593,18 @@ body.lock {
   position: absolute;
   width: 1px;
   height: 1px;
+}
+
+.fancybox__backdrop {
+  background: rgba(24, 24, 27, 0.8);
+}
+
+.fancybox__toolbar.is-absolute,
+.is-compact .fancybox__toolbar {
+  position: static;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .btn {
@@ -5726,17 +5737,24 @@ body.lock {
 
 .service-modal {
   max-width: 600px;
-  padding: 45px 45px 20px 45px;
+  padding: 40px;
+}
+.service-modal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
 }
 .service-modal__close {
+  position: relative;
   width: 30px;
   height: 30px;
-  top: 15px;
-  right: 15px;
-  padding: 5px;
+  top: unset;
+  right: unset;
   background-image: none;
-  background-color: var(--red);
-  border-radius: 5px;
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
@@ -5747,7 +5765,7 @@ body.lock {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: var(--white);
+  background-color: var(--black);
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -5759,19 +5777,12 @@ body.lock {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: var(--white);
+  background-color: var(--black);
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.service-modal__close:hover {
-  background-color: var(--dark-red);
-}
-.service-modal__close:active {
-  background-color: var(--cherrywood);
-}
 .service-modal__title {
-  margin-bottom: 20px;
   font-size: 23px;
   font-weight: 700;
   line-height: 1.2;
@@ -5877,7 +5888,7 @@ body.lock {
 
 .login-modal {
   max-width: 600px;
-  padding: 55px 45px 20px 45px;
+  padding: 55px 55px 20px 55px;
 }
 .login-modal__close {
   width: 30px;
@@ -5886,8 +5897,6 @@ body.lock {
   right: 15px;
   padding: 5px;
   background-image: none;
-  background-color: var(--red);
-  border-radius: 5px;
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
@@ -5898,7 +5907,7 @@ body.lock {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: var(--white);
+  background-color: var(--black);
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -5910,16 +5919,10 @@ body.lock {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: var(--white);
+  background-color: var(--black);
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-}
-.login-modal__close:hover {
-  background-color: var(--dark-red);
-}
-.login-modal__close:active {
-  background-color: var(--cherrywood);
 }
 .login-modal__form {
   display: -webkit-box;
@@ -5967,6 +5970,29 @@ body.lock {
 }
 .login-modal__form-input::placeholder {
   color: var(--dark-grey);
+}
+.login-modal__form-link {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.login-modal__form-link:focus {
+  color: var(--dark-red);
+}
+@media screen and (any-hover: hover) {
+  .login-modal__form-link:hover {
+    color: var(--red);
+  }
+}
+.login-modal__form-link:active {
+  color: var(--cherrywood);
 }
 
 .hero {
@@ -9117,6 +9143,16 @@ body.lock {
 .main-news-content__list-item-content {
   -ms-grid-column-span: 2;
   grid-column: 2 span;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: var(--super-silver);
   padding: 32px;
   border-radius: 0 12px 12px 0;
@@ -9133,7 +9169,7 @@ body.lock {
 .main-news-content__list-item-content-text-wrapper {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 8;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 16px;

@@ -1942,9 +1942,11 @@
 
 <div class="graph-modal">
 	<div class="graph-modal__container service-modal" role="dialog" aria-modal="true" data-graph-target="service-modal">
-		<button class="btn-reset graph-modal__close js-modal-close service-modal__close" aria-label="Закрыть модальное окно"></button>
-		<div class="graph-modal__content service-modal__content">
+        <div class="service-modal__wrapper">
             <h2 class="service-modal__title">Записаться на сервис</h2>
+            <button class="btn-reset graph-modal__close js-modal-close service-modal__close" aria-label="Закрыть модальное окно"></button>
+        </div>
+		<div class="graph-modal__content service-modal__content">
 			<form class="service-modal__form">
                 <input type="text" class="service-modal__form-input" placeholder="Имя">
                 <input type="tel" class="service-modal__form-input" placeholder="Телефон">
@@ -1962,9 +1964,9 @@
 			<form class="login-modal__form">
                 <input type="text" class="login-modal__form-input" placeholder="Логин">
                 <input type="password" class="login-modal__form-input" placeholder="Пароль">
-                <a href="#" class="link-reset login-modal__form-link">Забыли пароль?</a>
+                <a href="#" class="link login-modal__form-link">Забыли пароль?</a>
                 <div class="login-modal__wrapper">
-                    <button type="submit" class="btn-reset btn login-modal__form-btn">Войти</button>
+                    <button type="button" class="btn-reset btn login-modal__form-btn">Войти</button>
                 </div>
             </form>
 		</div>

@@ -576,10 +576,6 @@ const galerySwiperContent = document.querySelector(".galery__swiper");
 const galerySwiper = new Swiper(galerySwiperContent, {
   grabCursor: true,
   slideToClickedSlide: true,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
 
   breakpoints: {
     300: {
