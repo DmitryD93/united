@@ -26,6 +26,7 @@ function styles() {
     "node_modules/choices.js/public/assets/styles/choices.min.css",
     "node_modules/choices.js/public/assets/styles/base.min.css",
     "node_modules/@fancyapps/ui/dist/fancybox/fancybox.css",
+    "src/css/*.css",
     "src/scss/style.scss",
   ])
     .pipe(scss({ outputStyle: "expanded" }))
@@ -45,7 +46,7 @@ function scripts() {
     "node_modules/swiper/swiper-bundle.min.js",
     "node_modules/choices.js/public/assets/scripts/choices.min.js",
     "node_modules/@fancyapps/ui/dist/index.umd.js",
-    "src/js/main.js",
+    "src/js/*.js",
   ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())

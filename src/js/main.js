@@ -755,3 +755,6 @@ showPassword?.addEventListener("click", () => {
 Fancybox.bind("[data-fancybox]", {
   // Your custom options
 });
+
+// Модалки сервиса и регистрации
+const modal = new GraphModal();

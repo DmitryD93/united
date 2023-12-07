@@ -1,5 +1,5 @@
 .footer {
- padding: 64px 0;
+  padding: 64px 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -37,8 +37,6 @@
       flex-direction: column;
     }
 
-    
-
     &-left {
       display: flex;
       flex-direction: column;
@@ -54,7 +52,6 @@
         flex-direction: column;
         gap: 25px;
       }
-
 
       &-descr {
         color: var(--black);
@@ -79,12 +76,12 @@
       justify-content: space-between;
       max-width: 35%;
       @include _1280 {
-          max-width: 100%;
-        }
+        max-width: 100%;
+      }
 
-        @include _550 {
-          flex-direction: column;
-        }
+      @include _550 {
+        flex-direction: column;
+      }
 
       &-list-title {
         color: var(--black);
@@ -94,8 +91,6 @@
         line-height: 1.2;
         letter-spacing: 0.72px;
         text-transform: uppercase;
-
-       
       }
       &-link {
         color: var(--black-grey);
@@ -123,6 +118,206 @@
         @include _1280 {
           max-width: 47%;
         }
+      }
+    }
+  }
+}
+
+// Стили для модалок
+
+.service-modal {
+  max-width: 600px;
+  padding: 45px 45px 20px 45px;
+
+  &__close {
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    right: 15px;
+    padding: 5px;
+    background-image: none;
+    background-color: var(--red);
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 45%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--white);
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--white);
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      background-color: var(--dark-red);
+    }
+    &:active {
+      background-color: var(--cherrywood);
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.72px;
+    color: var(--black);
+
+    @include _880 {
+      font-size: 20px;
+      letter-spacing: 0.6px;
+    }
+
+    @include _550 {
+      font-size: 18px;
+      letter-spacing: 0.54px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+
+    &-btn {
+      max-width: fit-content;
+    }
+
+    &-input {
+      background-color: var(--white);
+      color: var(--black);
+      padding: 12px 20px;
+      width: 100%;
+      border: 1px solid var(--dark-grey);
+      border-radius: 5px;
+      outline: none;
+      transition: border 0.4s ease;
+
+      &:focus {
+        border: 1px solid var(--black);
+      }
+
+      &:hover {
+        border: 1px solid var(--black);
+      }
+
+      &::placeholder {
+        color: var(--dark-grey);
+      }
+    }
+  }
+  &__textarea {
+    min-height: 150px;
+    resize: none;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 12px 20px;
+    width: 100%;
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.4s ease;
+
+    &:focus {
+      border: 1px solid var(--black);
+    }
+
+    &:hover {
+      border: 1px solid var(--black);
+    }
+
+    &::placeholder {
+      color: var(--dark-grey);
+    }
+  }
+}
+
+.login-modal {
+  max-width: 600px;
+  padding: 55px 45px 20px 45px;
+
+  &__close {
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    right: 15px;
+    padding: 5px;
+    background-image: none;
+    background-color: var(--red);
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 45%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--white);
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--white);
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      background-color: var(--dark-red);
+    }
+    &:active {
+      background-color: var(--cherrywood);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &-btn {
+      max-width: fit-content;
+    }
+
+    &-input {
+      background-color: var(--white);
+      color: var(--black);
+      padding: 12px 20px;
+      width: 100%;
+      border: 1px solid var(--dark-grey);
+      border-radius: 5px;
+      outline: none;
+      transition: border 0.4s ease;
+
+      &:focus {
+        border: 1px solid var(--black);
+      }
+
+      &:hover {
+        border: 1px solid var(--black);
+      }
+
+      &::placeholder {
+        color: var(--dark-grey);
       }
     }
   }
