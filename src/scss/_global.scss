@@ -22,7 +22,7 @@ body {
   color: var(--black);
   background-color: var(--white);
   scroll-behavior: smooth;
-  overflow-x: unset;
+  overflow-x: hidden;
 
   &.lock {
     overflow: hidden;
@@ -37,6 +37,11 @@ body {
   //   font-size: 14px;
   //   line-height: 1.28;
   // }
+}
+
+label,
+p {
+  margin-bottom: unset;
 }
 
 .container {

@@ -272,8 +272,6 @@ const productBasketBtnText = document?.querySelector(
   ".product-basket__btn-text span"
 );
 
-console.log(productBasketBtnText);
-
 if (window.innerWidth > 550) {
   basketBtn?.addEventListener("click", () => {
     productBasket?.classList.toggle("active");
@@ -285,12 +283,14 @@ if (window.innerWidth > 550) {
     productBasket?.classList.add("active");
     basketBtn?.classList.add("active");
     productBasketContent?.classList.add("active");
+    document.body.classList.add("lock");
   });
 
   basketBtn?.addEventListener("click", () => {
     productBasket?.classList.remove("active");
     basketBtn?.classList.remove("active");
     productBasketContent?.classList.remove("active");
+    document.body.classList.remove("lock");
   });
 }
 
