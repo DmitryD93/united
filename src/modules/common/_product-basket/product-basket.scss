@@ -3,7 +3,7 @@
   min-height: 248px;
   max-height: 248px;
   position: fixed;
-  right: 15px;
+  right: 0;
   top: 180px;
   display: flex;
   flex-direction: column;
@@ -57,36 +57,36 @@
 
   &__btn {
     position: absolute;
-    left: -92px;
-    top: 92px;
+    left: 0;
+    top: 0;
     display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
-    padding: 8px 16px;
+    padding: 16px 8px;
     gap: 16px;
-    rotate: -90deg;
 
     @include _550 {
-      left: 0;
-      top: 0;
-      rotate: 0deg;
-      justify-content: center;
       width: 100%;
     }
 
-    span {
+    &-text {
       display: flex;
       gap: 8px;
+      writing-mode: vertical-lr; /* вертикально сверху вниз */
+      rotate: 180deg;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
     }
 
     &-basket {
       fill: var(--white);
-      rotate: 90deg;
     }
 
     &-arrow {
       display: block;
       fill: var(--white);
-      rotate: 90deg;
       transition: rotate 0.4s ease;
 
       @include _550 {
@@ -105,9 +105,10 @@
 
     &.active {
       background-color: var(--black-grey);
+      height: 100%;
 
       .product-basket__btn-arrow {
-        rotate: -90deg;
+        rotate: -180deg;
       }
     }
   }
@@ -143,9 +144,8 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    overflow: scroll;
+    overflow: auto;
     max-height: calc(100vh - 450px);
-
 
     @include _550 {
       gap: 10px;
@@ -325,9 +325,9 @@
 
       @include _550 {
         font-size: 16px;
-font-weight: 600;
-line-height: 1.2; 
-letter-spacing: 0.48px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.48px;
       }
     }
   }
