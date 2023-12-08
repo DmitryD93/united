@@ -1,7 +1,8 @@
 // npx stylelint '**/*.scss'
 
 html {
-  // height: 100%;
+  height: 100%;
+  overflow-x: unset;
 }
 
 .site-wrapper {
@@ -21,6 +22,7 @@ body {
   color: var(--black);
   background-color: var(--white);
   scroll-behavior: smooth;
+  overflow-x: unset;
 
   &.lock {
     overflow: hidden;
@@ -348,6 +350,10 @@ body {
   right: 0;
 }
 
-// html.with-fancybox body.hide-scrollbar {
-//   height: auto;
-// }
+.hide-scrollbar .header {
+  padding-right: 17px;
+}
+
+.fancybox__slide.has-image > .fancybox__content {
+  padding: 0 65px;
+}

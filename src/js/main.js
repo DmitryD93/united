@@ -751,8 +751,20 @@ showPassword?.addEventListener("click", () => {
 
 Fancybox.bind("[data-fancybox]", {
   // Your custom options
-  
 });
 
 // Модалки сервиса и регистрации
 const modal = new GraphModal();
+
+// Фикс для хедера
+
+// let header = document?.querySelector(".header");
+// let galeryEl = document?.querySelectorAll(".galery__list-item");
+
+// galleryEl.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     if(window) {
+
+//     }
+//   });
+// })
