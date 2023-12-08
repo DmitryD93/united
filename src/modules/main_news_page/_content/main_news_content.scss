@@ -33,6 +33,9 @@
 
       &-content {
         grid-column: 2 span;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         background-color: var(--super-silver);
         padding: 32px;
         border-radius: 0 12px 12px 0;
@@ -50,7 +53,7 @@
         &-text-wrapper {
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 6;
+          -webkit-line-clamp: 8;
           overflow: hidden;
           text-overflow: ellipsis;
           margin-bottom: 16px;

@@ -63,7 +63,7 @@
         @include _640 {
           transform: translateX(100%);
         }
-      
+
         svg:nth-child(1) {
           display: none;
         }
@@ -95,7 +95,6 @@
       svg {
         fill: var(--red);
         transform: rotate(90deg);
-        
       }
 
       &:focus-within {
@@ -113,21 +112,20 @@
       }
     }
     // Заголовок модалки
-   &-modal-title {
-    display: none;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: 0.6px;
-    color: var(--black);
-    text-align: center;
+    &-modal-title {
+      display: none;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.6px;
+      color: var(--black);
+      text-align: center;
 
-    &.active {
-      display: inline-block;
-      align-self: center;
-
+      &.active {
+        display: inline-block;
+        align-self: center;
+      }
     }
-   }
     // Блок модального окна основной
     &.modal-content.active {
       padding: 24px 62px 24px 62px;
@@ -168,19 +166,19 @@
     &.modal-content.active {
       grid-row-start: 2;
       grid-column: 2 span;
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     padding-bottom: 70px;
-     padding-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 70px;
+      padding-top: 20px;
     }
   }
 
   &__top-label {
     width: 230px;
     height: 60px;
+    margin-bottom: 0;
 
     @include _550 {
-
       &:nth-child(n + 3) {
         display: none;
       }
@@ -272,15 +270,14 @@
       flex-wrap: wrap;
     }
     &-label {
+      &:nth-child(n + 6) {
+        display: none;
+      }
 
-        &:nth-child(n + 6) {
-          display: none;
-        }
+      &.visible {
+        display: block;
+      }
 
-        &.visible {
-          display: block;
-        }
-      
       &-content {
         padding: 8px 14px;
         position: relative;
@@ -330,7 +327,6 @@
       display: flex;
       align-items: center;
 
-
       @include _550 {
         transform: rotate(90deg);
         background-color: transparent;
@@ -368,9 +364,6 @@
       }
     }
   }
-
- 
-
 }
 
 .checkbox-close {

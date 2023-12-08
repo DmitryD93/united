@@ -576,10 +576,6 @@ const galerySwiperContent = document.querySelector(".galery__swiper");
 const galerySwiper = new Swiper(galerySwiperContent, {
   grabCursor: true,
   slideToClickedSlide: true,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
 
   breakpoints: {
     300: {
@@ -752,6 +748,11 @@ showPassword?.addEventListener("click", () => {
 });
 
 // Галерея сервиса
+
 Fancybox.bind("[data-fancybox]", {
   // Your custom options
+  
 });
+
+// Модалки сервиса и регистрации
+const modal = new GraphModal();
