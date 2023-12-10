@@ -9,9 +9,23 @@
 
   &__nav {
     display: flex;
+    position: relative;
     width: 100%;
     border-bottom: 2px solid var(--gainsboro);
-    margin-bottom: 32px;
+    margin: 0 auto 30px auto;
+    max-width: 1232px;
+    padding: 0 30px;
+
+    @include _1280 {
+      max-width: 956px;
+    }
+
+    @include _880 {
+      max-width: 640px;
+      overflow: auto;
+      text-wrap: nowrap;
+      margin: 0 auto 20px auto;
+    }
 
     &-btn {
       font-size: 20px;
@@ -19,6 +33,16 @@
       line-height: 1.5;
       opacity: 0.6;
       color: var(--black);
+
+      @include _1024 {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      @include _640 {
+        font-size: 16px;
+        line-height: 1.5;
+      }
 
       &::before {
         width: 0;
@@ -31,6 +55,16 @@
         line-height: 1.2;
         letter-spacing: 0.72px;
         opacity: 1;
+
+        @include _1024 {
+          font-size: 20px;
+          letter-spacing: 0.6px;
+        }
+
+        @include _640 {
+          font-size: 18px;
+          letter-spacing: 0.54px;
+        }
 
         &::before {
           width: 100%;

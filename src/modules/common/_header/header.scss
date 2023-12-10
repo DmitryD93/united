@@ -6,6 +6,14 @@
   z-index: 3;
   background-color: inherit;
 
+  &.lock {
+    overflow: hidden;
+
+    @include _only-hover {
+      padding-right: 17px;
+    }
+  }
+
   &__btn {
     width: 32px;
     height: 32px;

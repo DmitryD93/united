@@ -3,11 +3,13 @@ const menu = document.querySelector(".header__nav");
 const body = document.body;
 const link = document.querySelectorAll(".link");
 const headerbBtn = document.querySelectorAll(".header__btn");
+const header = document.querySelector(".header");
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("active");
   menu.classList.toggle("active");
   body.classList.toggle("lock");
+  header.classList.toggle("lock");
 
   link.forEach((e) => {
     e.addEventListener("click", () => {
