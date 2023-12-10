@@ -78,10 +78,19 @@
       font-size: 20px;
       font-weight: 600;
       line-height: 1.5;
+
+      @include _550 {
+        rotate: none;
+        writing-mode: unset;
+      }
     }
 
     &-basket {
       fill: var(--white);
+
+      @include _550 {
+        rotate: 90deg;
+      }
     }
 
     &-arrow {
@@ -106,6 +115,12 @@
     &.active {
       background-color: var(--black-grey);
       height: 100%;
+
+      @include _550 {
+        height: fit-content;
+        width: 100%;
+        flex-direction: row;
+      }
 
       .product-basket__btn-arrow {
         rotate: -180deg;

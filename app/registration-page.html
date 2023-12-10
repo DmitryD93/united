@@ -160,7 +160,11 @@
         </button>
         <div class="header__login-block">
           <span class="header__login-block-triangle"></span>
-          <a href="#" class="link header__registration-link">Регистрация</a>
+          <a
+            href="registration-page.html"
+            class="link header__registration-link"
+            >Регистрация</a
+          >
           <button
             type="button"
             class="btn header__join-btn"
@@ -217,21 +221,18 @@
 </section>
 
     <section class="registration-main">
+  <div class="registration-main__nav">
+    <button
+      class="secondary-btn registration-main__nav-btn active"
+      data-tab="#person"
+    >
+      Физическое лицо
+    </button>
+    <button class="secondary-btn registration-main__nav-btn" data-tab="#entity">
+      Юридическое лицо
+    </button>
+  </div>
   <div class="container registration-main__wrapper">
-    <div class="registration-main__nav">
-      <button
-        class="secondary-btn registration-main__nav-btn active"
-        data-tab="#person"
-      >
-        Физическое лицо
-      </button>
-      <button
-        class="secondary-btn registration-main__nav-btn"
-        data-tab="#entity"
-      >
-        Юридическое лицо
-      </button>
-    </div>
     <form class="registration-main__form">
       <div class="registration-main__form-main">
         <h2 class="registration-main__form-main-title">
@@ -454,6 +455,7 @@
     <div class="graph-modal__container login-modal" role="dialog" aria-modal="true" data-graph-target="login-modal">
 		<button class="btn-reset graph-modal__close js-modal-close login-modal__close" aria-label="Закрыть модальное окно"></button>
 		<div class="graph-modal__content login-modal__content">
+            <h2 class="login-modal__title">Вход в личный кабинет</h2>
 			<form class="login-modal__form">
                 <input type="text" class="login-modal__form-input" placeholder="Логин">
                 <input type="password" class="login-modal__form-input" placeholder="Пароль">

@@ -3437,11 +3437,21 @@ body {
   color: var(--black);
   background-color: var(--white);
   scroll-behavior: smooth;
-  overflow-x: unset;
+  overflow-x: hidden;
 }
 body.lock {
   overflow: hidden;
   height: 100vh;
+}
+@media screen and (any-hover: hover) {
+  body.lock {
+    padding-right: 17px;
+  }
+}
+
+label,
+p {
+  margin-bottom: unset;
 }
 
 .container {
@@ -4046,8 +4056,21 @@ body.lock {
   font-weight: 600;
   line-height: 1.5;
 }
+@media (max-width: 550px) {
+  .product-basket__btn-text {
+    rotate: none;
+    -webkit-writing-mode: unset;
+        -ms-writing-mode: unset;
+            writing-mode: unset;
+  }
+}
 .product-basket__btn-basket {
   fill: var(--white);
+}
+@media (max-width: 550px) {
+  .product-basket__btn-basket {
+    rotate: 90deg;
+  }
 }
 .product-basket__btn-arrow {
   display: block;
@@ -4072,6 +4095,18 @@ body.lock {
 .product-basket__btn.active {
   background-color: var(--black-grey);
   height: 100%;
+}
+@media (max-width: 550px) {
+  .product-basket__btn.active {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 .product-basket__btn.active .product-basket__btn-arrow {
   rotate: -180deg;
@@ -5038,6 +5073,14 @@ body.lock {
   left: 0;
   z-index: 3;
   background-color: inherit;
+}
+.header.lock {
+  overflow: hidden;
+}
+@media screen and (any-hover: hover) {
+  .header.lock {
+    padding-right: 17px;
+  }
 }
 .header__btn {
   width: 32px;
@@ -6011,6 +6054,13 @@ body.lock {
 }
 .login-modal__form-link:active {
   color: var(--cherrywood);
+}
+.login-modal__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
 }
 
 .hero {
@@ -8766,6 +8816,11 @@ body.lock {
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
+@media (max-width: 1024px) {
+  .services__list-item-btn {
+    opacity: 1;
+  }
+}
 @media (max-width: 640px) {
   .services__list-item-btn {
     position: absolute;
@@ -9364,9 +9419,25 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   width: 100%;
   border-bottom: 2px solid var(--gainsboro);
-  margin-bottom: 32px;
+  margin: 0 auto 30px auto;
+  max-width: 1232px;
+  padding: 0 30px;
+}
+@media (max-width: 1280px) {
+  .registration-main__nav {
+    max-width: 956px;
+  }
+}
+@media (max-width: 900px) {
+  .registration-main__nav {
+    max-width: 640px;
+    overflow: auto;
+    text-wrap: nowrap;
+    margin: 0 auto 20px auto;
+  }
 }
 .registration-main__nav-btn {
   font-size: 20px;
@@ -9374,6 +9445,18 @@ body.lock {
   line-height: 1.5;
   opacity: 0.6;
   color: var(--black);
+}
+@media (max-width: 1024px) {
+  .registration-main__nav-btn {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 640px) {
+  .registration-main__nav-btn {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 .registration-main__nav-btn::before {
   width: 0;
@@ -9385,6 +9468,18 @@ body.lock {
   line-height: 1.2;
   letter-spacing: 0.72px;
   opacity: 1;
+}
+@media (max-width: 1024px) {
+  .registration-main__nav-btn.active {
+    font-size: 20px;
+    letter-spacing: 0.6px;
+  }
+}
+@media (max-width: 640px) {
+  .registration-main__nav-btn.active {
+    font-size: 18px;
+    letter-spacing: 0.54px;
+  }
 }
 .registration-main__nav-btn.active::before {
   width: 100%;

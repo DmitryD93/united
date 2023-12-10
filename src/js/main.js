@@ -3,11 +3,13 @@ const menu = document.querySelector(".header__nav");
 const body = document.body;
 const link = document.querySelectorAll(".link");
 const headerbBtn = document.querySelectorAll(".header__btn");
+const header = document.querySelector(".header");
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("active");
   menu.classList.toggle("active");
   body.classList.toggle("lock");
+  header.classList.toggle("lock");
 
   link.forEach((e) => {
     e.addEventListener("click", () => {
@@ -272,8 +274,6 @@ const productBasketBtnText = document?.querySelector(
   ".product-basket__btn-text span"
 );
 
-console.log(productBasketBtnText);
-
 if (window.innerWidth > 550) {
   basketBtn?.addEventListener("click", () => {
     productBasket?.classList.toggle("active");
@@ -285,12 +285,14 @@ if (window.innerWidth > 550) {
     productBasket?.classList.add("active");
     basketBtn?.classList.add("active");
     productBasketContent?.classList.add("active");
+    document.body.classList.add("lock");
   });
 
   basketBtn?.addEventListener("click", () => {
     productBasket?.classList.remove("active");
     basketBtn?.classList.remove("active");
     productBasketContent?.classList.remove("active");
+    document.body.classList.remove("lock");
   });
 }
 
