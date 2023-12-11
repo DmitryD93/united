@@ -53,7 +53,7 @@
         &-text-wrapper {
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 8;
+          -webkit-line-clamp: 6;
           overflow: hidden;
           text-overflow: ellipsis;
           margin-bottom: 16px;
@@ -73,6 +73,20 @@
         font-weight: 600;
         line-height: 1.5;
         color: var(--black);
+      }
+
+      @include _880 {
+        &:nth-child(2) {
+          img {
+            grid-column: 3 span;
+            border-radius: 0;
+          }
+
+          .main-news-content__list-item-content {
+            grid-column: 3 span;
+            grid-row: 2 span;
+          }
+        }
       }
     }
   }

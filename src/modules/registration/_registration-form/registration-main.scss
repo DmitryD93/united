@@ -192,6 +192,22 @@
       top: 55%;
       transform: translateY(-50%);
       cursor: pointer;
+
+      svg:nth-child(1) {
+        display: block;
+      }
+      svg:nth-child(2) {
+        display: none;
+      }
+
+      &.visible {
+        svg:nth-child(1) {
+          display: none;
+        }
+        svg:nth-child(2) {
+          display: block;
+        }
+      }
     }
 
     &-label {
