@@ -363,6 +363,14 @@ p {
   padding-right: 17px;
 }
 
-.fancybox__slide.has-image > .fancybox__content {
-  padding: 0 65px;
+// .fancybox__slide.has-image > .fancybox__content {
+//   padding: 0 60px;
+
+//   @include _550 {
+//     padding: 0 30px;
+//   }
+// }
+
+.fancybox__slide {
+  padding: 0 60px;
 }
