@@ -3264,18 +3264,22 @@ html {
   --grey: #f5f5f5;
   --red: #e31e24;
   --dark-red: #9e2021;
-  --cherrywood:#651515;
-  --red-brown: #A62B2F;
+  --cherrywood: #651515;
+  --red-brown: #a62b2f;
   --semi-black: #303030;
   --silver: #c9c9c9;
   --alabaster: #fafbfd;
   --super-silver: #eeeeee;
-  --gainsboro: #DCDCDC;
-  --iron: #DDE0E4;
-  --grey2: #D9D9D9;
-  --dark-grey: #9B9B9B;
-  --grey-gradient: linear-gradient(105deg, #F1F1F1 45.85%, #DBDBDB 98.6%);
-  --grey-gradient2: linear-gradient(90deg, #F1F1F1 0%, rgba(255, 255, 255, 0.00) 72.17%);
+  --gainsboro: #dcdcdc;
+  --iron: #dde0e4;
+  --grey2: #d9d9d9;
+  --dark-grey: #9b9b9b;
+  --grey-gradient: linear-gradient(105deg, #f1f1f1 45.85%, #dbdbdb 98.6%);
+  --grey-gradient2: linear-gradient(
+    90deg,
+    #f1f1f1 0%,
+    rgba(255, 255, 255, 0) 72.17%
+  );
   --swiper-theme-color: #007aff;
   --swiper-navigation-size: 44px;
 }
@@ -3625,8 +3629,8 @@ p {
   padding-right: 17px;
 }
 
-.fancybox__slide.has-image > .fancybox__content {
-  padding: 0 65px;
+.fancybox__slide {
+  padding: 0 60px;
 }
 
 .btn {
@@ -6061,6 +6065,75 @@ p {
   line-height: 1.2;
   letter-spacing: 0.6px;
   margin-bottom: 20px;
+  color: var(--black);
+}
+
+.policy-modal {
+  padding: 50px;
+}
+@media (max-width: 640px) {
+  .policy-modal {
+    padding: 40px;
+  }
+}
+.policy-modal__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+@media (max-width: 640px) {
+  .policy-modal__title {
+    font-size: 16px;
+  }
+}
+.policy-modal p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+}
+@media (max-width: 640px) {
+  .policy-modal p {
+    font-size: 14px;
+  }
+}
+.policy-modal__close {
+  width: 30px;
+  height: 30px;
+  top: 15px;
+  right: 15px;
+  padding: 5px;
+  background-image: none;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+.policy-modal__close::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--black);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.policy-modal__close::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--black);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .hero {
@@ -7217,10 +7290,9 @@ p {
   max-width: 100%;
   margin: 0 auto;
   width: 100%;
-  background-image: url(../img/main_map.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 100%;
 }
 @media (max-width: 1280px) {
   .find__map-container {
@@ -7230,7 +7302,7 @@ p {
 @media (max-width: 1024px) {
   .find__map-container {
     height: 495px;
-    background-position: 10%;
+    background-position: 100%;
   }
 }
 .find__contacts {
@@ -9403,6 +9475,11 @@ p {
 .registration-main {
   padding: 64px 0;
 }
+@media (max-width: 900px) {
+  .registration-main {
+    padding: 32px 0;
+  }
+}
 .registration-main__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9415,6 +9492,34 @@ p {
       -ms-flex-align: center;
           align-items: center;
 }
+.registration-main-nav-container {
+  margin: 0 auto 30px auto;
+  max-width: 1232px;
+  padding: 0 30px;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 1280px) {
+  .registration-main-nav-container {
+    max-width: 956px;
+  }
+}
+@media (max-width: 900px) {
+  .registration-main-nav-container {
+    max-width: 640px;
+    overflow: auto;
+    text-wrap: nowrap;
+    margin: 0 auto 20px auto;
+  }
+}
+.registration-main-nav-container::-webkit-scrollbar {
+  height: 3px;
+  background-color: var(--dark-grey);
+}
+.registration-main-nav-container::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  border-radius: 5px;
+}
 .registration-main__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9422,21 +9527,10 @@ p {
   position: relative;
   width: 100%;
   border-bottom: 2px solid var(--gainsboro);
-  margin: 0 auto 30px auto;
-  max-width: 1232px;
-  padding: 0 30px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 450px) {
   .registration-main__nav {
-    max-width: 956px;
-  }
-}
-@media (max-width: 900px) {
-  .registration-main__nav {
-    max-width: 640px;
-    overflow: auto;
-    text-wrap: nowrap;
-    margin: 0 auto 20px auto;
+    border-bottom: none;
   }
 }
 .registration-main__nav-btn {
@@ -9452,10 +9546,13 @@ p {
     line-height: 1.2;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 550px) {
   .registration-main__nav-btn {
     font-size: 16px;
     line-height: 1.5;
+  }
+  .registration-main__nav-btn::after {
+    display: none;
   }
 }
 .registration-main__nav-btn::before {
@@ -9484,6 +9581,11 @@ p {
 .registration-main__nav-btn.active::before {
   width: 100%;
 }
+@media (max-width: 550px) {
+  .registration-main__nav-btn.active::before {
+    display: none;
+  }
+}
 .registration-main__form {
   max-width: 600px;
   padding: 64px 0;
@@ -9495,6 +9597,11 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
+}
+@media (max-width: 900px) {
+  .registration-main__form {
+    padding: 32px 0;
+  }
 }
 .registration-main__form-input {
   background-color: var(--white);
@@ -9515,18 +9622,23 @@ p {
 }
 .registration-main__form-input::-webkit-input-placeholder {
   color: var(--dark-grey);
+  font-size: 16px;
 }
 .registration-main__form-input::-moz-placeholder {
   color: var(--dark-grey);
+  font-size: 16px;
 }
 .registration-main__form-input:-ms-input-placeholder {
   color: var(--dark-grey);
+  font-size: 16px;
 }
 .registration-main__form-input::-ms-input-placeholder {
   color: var(--dark-grey);
+  font-size: 16px;
 }
 .registration-main__form-input::placeholder {
   color: var(--dark-grey);
+  font-size: 16px;
 }
 .registration-main__form-main {
   display: -ms-grid;
@@ -9588,7 +9700,7 @@ p {
 .registration-main__form-password-visible {
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 55%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -9652,6 +9764,11 @@ p {
   font-weight: 400;
   line-height: 1.2;
   color: var(--black);
+}
+@media (max-width: 550px) {
+  .registration-main__form-submit-block-descr {
+    font-size: 14px;
+  }
 }
 .registration-main__form-submit-block-descr a {
   font-weight: 700;

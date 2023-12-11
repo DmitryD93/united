@@ -6,18 +6,22 @@
   --grey: #f5f5f5;
   --red: #e31e24;
   --dark-red: #9e2021;
-  --cherrywood:#651515;
-  --red-brown: #A62B2F;
+  --cherrywood: #651515;
+  --red-brown: #a62b2f;
   --semi-black: #303030;
   --silver: #c9c9c9;
   --alabaster: #fafbfd;
   --super-silver: #eeeeee;
-  --gainsboro: #DCDCDC;
-  --iron: #DDE0E4;
-  --grey2: #D9D9D9;
-  --dark-grey: #9B9B9B;
-  --grey-gradient: linear-gradient(105deg, #F1F1F1 45.85%, #DBDBDB 98.6%);
-  --grey-gradient2: linear-gradient(90deg, #F1F1F1 0%, rgba(255, 255, 255, 0.00) 72.17%);
+  --gainsboro: #dcdcdc;
+  --iron: #dde0e4;
+  --grey2: #d9d9d9;
+  --dark-grey: #9b9b9b;
+  --grey-gradient: linear-gradient(105deg, #f1f1f1 45.85%, #dbdbdb 98.6%);
+  --grey-gradient2: linear-gradient(
+    90deg,
+    #f1f1f1 0%,
+    rgba(255, 255, 255, 0) 72.17%
+  );
   --swiper-theme-color: #007aff;
   --swiper-navigation-size: 44px;
 }
@@ -62,6 +66,11 @@
   }
 }
 
+@mixin _450 {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
 // @mixin _767 {
 //   @media (max-width: 767px) {
 //     @content;
@@ -81,15 +90,13 @@
 // }
 
 @mixin _no-hover {
- @media screen and (any-hover: none) {
-   @content;
-  
- }
+  @media screen and (any-hover: none) {
+    @content;
+  }
 }
 
 @mixin _only-hover {
   @media screen and (any-hover: hover) {
     @content;
-   
   }
- }
+}

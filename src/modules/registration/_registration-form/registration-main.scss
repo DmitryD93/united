@@ -1,20 +1,22 @@
 .registration-main {
   padding: 64px 0;
 
+  @include _880 {
+    padding: 32px 0;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  &__nav {
-    display: flex;
-    position: relative;
-    width: 100%;
-    border-bottom: 2px solid var(--gainsboro);
+  &-nav-container {
     margin: 0 auto 30px auto;
     max-width: 1232px;
     padding: 0 30px;
+    width: 100%;
+    position: relative;
 
     @include _1280 {
       max-width: 956px;
@@ -25,6 +27,26 @@
       overflow: auto;
       text-wrap: nowrap;
       margin: 0 auto 20px auto;
+    }
+
+    &::-webkit-scrollbar {
+      height: 3px;
+      background-color: var(--dark-grey);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--red);
+      border-radius: 5px;
+    }
+  }
+  &__nav {
+    display: flex;
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid var(--gainsboro);
+
+    @include _450 {
+      border-bottom: none;
     }
 
     &-btn {
@@ -39,9 +61,13 @@
         line-height: 1.2;
       }
 
-      @include _640 {
+      @include _550 {
         font-size: 16px;
         line-height: 1.5;
+
+        &::after {
+          display: none;
+        }
       }
 
       &::before {
@@ -69,6 +95,12 @@
         &::before {
           width: 100%;
         }
+
+        @include _550 {
+          &::before {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -79,6 +111,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @include _880 {
+      padding: 32px 0;
+    }
 
     &-input {
       background-color: var(--white);
@@ -100,6 +136,7 @@
 
       &::placeholder {
         color: var(--dark-grey);
+        font-size: 16px;
       }
     }
 
@@ -152,7 +189,7 @@
     &-password-visible {
       position: absolute;
       right: 10px;
-      top: 50%;
+      top: 55%;
       transform: translateY(-50%);
       cursor: pointer;
     }
@@ -202,6 +239,10 @@
         font-weight: 400;
         line-height: 1.2;
         color: var(--black);
+
+        @include _550 {
+          font-size: 14px;
+        }
 
         a {
           font-weight: 700;
