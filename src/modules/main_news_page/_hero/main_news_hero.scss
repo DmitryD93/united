@@ -1,8 +1,8 @@
 .main-news {
   position: relative;
   min-height: fit-content;
-  padding-top: 164px;
-  padding-bottom: 64px;
+  padding-top: 142px;
+  padding-bottom: 32px;
 
   &__background {
     position: absolute;
@@ -41,6 +41,12 @@
       line-height: 1.5;
       letter-spacing: 1.5px;
       color: var(--black);
+
+      @include _1024 {
+        font-size: 40px;
+        letter-spacing: 1.2px;
+        line-height: 1.2;
+      }
     }
 
     p {
@@ -49,6 +55,10 @@
       font-weight: 400;
       line-height: 1.2;
       color: var(--black);
+
+      @include _1024 {
+        font-size: 14px;
+      }
     }
   }
 }
