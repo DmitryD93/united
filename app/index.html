@@ -1142,7 +1142,7 @@
   </div>
 </section>
 
-    <div class="product-basket">
+<div class="product-basket">
   <button class="btn product-basket__btn">
     <svg
       class="product-basket__btn-basket"
@@ -1183,22 +1183,32 @@
         </clipPath>
       </defs>
     </svg>
-    <svg class="product-basket__btn-close" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20.33 2.24443L18.5856 0.5L10.415 8.67139L2.24443 0.5L0.5 2.24443L8.67139 10.415L0.5 18.5856L2.24443 20.33L10.415 12.1586L18.5856 20.33L20.33 18.5856L12.1586 10.415L20.33 2.24443Z"/>
-      </svg>      
+    <svg
+      class="product-basket__btn-close"
+      width="21"
+      height="21"
+      viewBox="0 0 21 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20.33 2.24443L18.5856 0.5L10.415 8.67139L2.24443 0.5L0.5 2.24443L8.67139 10.415L0.5 18.5856L2.24443 20.33L10.415 12.1586L18.5856 20.33L20.33 18.5856L12.1586 10.415L20.33 2.24443Z"
+      />
+    </svg>
   </button>
   <div class="product-basket__content">
     <h3 class="product-basket__title">Товары</h3>
 
+    <div class="list-item-title">
+      <ul class="product-basket__list-title">
+        <li class="product-basket__list-title-item">№</li>
+        <li class="product-basket__list-title-item">Название</li>
+        <li class="product-basket__list-title-item">Кол-во</li>
+        <li class="product-basket__list-title-item">Цена</li>
+      </ul>
+    </div>
+
     <ul class="product-basket__list">
-      <li class="product-basket__list-item">
-        <ul class="product-basket__list-title">
-          <li class="product-basket__list-title-item">№</li>
-          <li class="product-basket__list-title-item">Название</li>
-          <li class="product-basket__list-title-item">Кол-во</li>
-          <li class="product-basket__list-title-item">Цена</li>
-        </ul>
-      </li>
       <li class="product-basket__list-item">
         <ul>
           <li><span>1</span></li>
@@ -2198,6 +2208,10 @@
       <div class="product-basket__total-buy-block">
         <button class="btn product-basket__total-buy-btn">Купить</button>
       </div>
+    </div>
+
+    <div class="product-basket__empty">
+      <p>Ваша корзина пуста</p>
     </div>
   </div>
 </div>
