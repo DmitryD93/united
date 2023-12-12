@@ -4,6 +4,14 @@
   padding-top: 142px;
   padding-bottom: 32px;
 
+  @include _1024 {
+    padding-top: 122px;
+  }
+
+  @include _550 {
+    padding-top: 72px;
+  }
+
   &__background {
     position: absolute;
     top: 0;

@@ -1,11 +1,20 @@
 .main-news-content {
   padding: 64px 0;
 
+  @include _880 {
+    padding: 32px 0;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 28px;
     padding-bottom: 64px;
+
+    @include _640 {
+      display: flex;
+      flex-direction: column;
+    }
 
     &-item {
       position: relative;
@@ -15,12 +24,54 @@
 
       &:first-child {
         grid-column: 2 span;
+
+        img {
+          max-height: 310px;
+        }
+      }
+
+      @include _1024 {
+        &:not(:first-child) {
+          img {
+            grid-column: 3 span;
+            border-radius: 0;
+            max-height: 180px;
+          }
+
+          .main-news-content__list-item-content {
+            grid-column: 3 span;
+            grid-row: 2 span;
+          }
+        }
+      }
+
+      @include _640 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include _640 {
+        &:not(:first-child) {
+          img {
+            border-radius: 0 12px 0 0;
+            max-height: 180px;
+          }
+
+          .main-news-content__list-item-content {
+            grid-column: 3 span;
+            grid-row: 2 span;
+          }
+        }
       }
 
       img {
         border-radius: 0 0 0 24px;
         height: 100%;
         object-fit: cover;
+
+        @include _640 {
+          border-radius: 0 12px 0 0;
+        }
       }
 
       svg {
@@ -40,6 +91,10 @@
         padding: 32px;
         border-radius: 0 12px 12px 0;
 
+        @include _640 {
+          padding: 24px;
+        }
+
         h2 {
           font-size: 24px;
           font-style: italic;
@@ -48,6 +103,10 @@
           letter-spacing: 0.72px;
           margin-bottom: 16px;
           color: var(--black);
+
+          @include _1024 {
+            font-size: 20px;
+          }
         }
 
         &-text-wrapper {
@@ -64,6 +123,10 @@
             font-weight: 400;
             line-height: 1.2;
             color: var(--black);
+
+            @include _1024 {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -73,18 +136,19 @@
         font-weight: 600;
         line-height: 1.5;
         color: var(--black);
-      }
 
-      @include _880 {
-        &:nth-child(2) {
-          img {
-            grid-column: 3 span;
-            border-radius: 0;
-          }
+        @include _1024 {
+          grid-column-start: 1;
+          grid-row-start: 2;
+        }
 
-          .main-news-content__list-item-content {
-            grid-column: 3 span;
-            grid-row: 2 span;
+        @include _640 {
+          grid-column: 4 span;
+
+          &::before {
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 120px;
           }
         }
       }
@@ -95,10 +159,48 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include _1024 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include _640 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    time {
+      color: var(--black);
+      font-family: "Ubuntu", sans-serif;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.5;
+
+      @include _1024 {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        font-size: 14px;
+      }
+
+      @include _640 {
+        grid-column: 4 span;
+        text-align: end;
+      }
+    }
   }
 
   &__pagination-btn {
     font-size: 20px;
+
+    @include _1024 {
+      font-size: 16px;
+    }
+
+    @include _550 {
+      font-size: 14px;
+    }
   }
 
   &__pagination-block {
@@ -116,8 +218,15 @@
     li {
       font-size: 20px;
       font-weight: 600;
-      line-height: 120%;
+      line-height: 1.2;
       letter-spacing: 0.6px;
+      display: flex;
+      align-items: center;
+
+      @include _1024 {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+      }
 
       a {
         display: flex;
