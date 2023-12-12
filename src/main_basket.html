@@ -1,0 +1,25 @@
+<!-------- Заголовок и описание страницы -------->
+@@include('modules/common/_header/_head.html',
+{
+"title": "Юнайтед Сервис - Корзина",
+"description" : "Корзина"
+})
+</head>
+
+<!------------ Header ------------>
+@@include('modules/common/_header/_header.html')
+<main class="main home">
+    <div class="site-wrapper">
+    @@include('modules/basket/_basket-hero/_basket-hero.html')
+    </div>
+</main>
+
+@@include('modules/common/_footer/_footer.html')
+
+<!-- 1)Картинка для главной страницы - ждем обновленную
+    2)карточка популярные запчасти - заглушка тегом img
+    3) поиск под фиксированной шапкой
+    4) Фиксированная шапка
+    5) Слайдер для блока новостей
+ -->
+

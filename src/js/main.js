@@ -281,11 +281,20 @@ if (window.innerWidth > 550) {
     productBasketContent?.classList.toggle("active");
   });
 } else {
-  headerBasketBtn?.addEventListener("click", () => {
-    productBasket?.classList.add("active");
-    basketBtn?.classList.add("active");
-    productBasketContent?.classList.add("active");
-    document.body.classList.add("lock");
+  headerBasketBtn?.addEventListener("click", (e) => {
+    // Проверяем, есть ли блок с корзиной на странице. Если ессть
+    // выполняем первое условие
+    if (productBasket) {
+      e.preventDefault();
+      productBasket?.classList.add("active");
+      basketBtn?.classList.add("active");
+      productBasketContent?.classList.add("active");
+      document.body.classList.add("lock");
+    } else {
+      // Если блока нет, переводим пользователя на страницу "Корзина"
+      // headerBasketBtn.href = "main_basket.html";
+      return;
+    }
   });
 
   basketBtn?.addEventListener("click", () => {
