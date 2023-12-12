@@ -145,7 +145,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    overflow: auto;
+    // overflow: auto;
 
     @include _550 {
       flex-direction: column;
