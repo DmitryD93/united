@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -19,17 +20,18 @@
   <meta name="apple-mobile-web-app-title" content="Stat4market.com">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="robots" content="">
-  
-  
-  <title>Юнайтед Сервис</title>
-  <meta name="description" content="Автозапчасти в Санкт-Петербурге">
+
+
+      <title>Юнайтед Сервис - Корзина</title>
+  <meta name="description" content="Корзина">
   <link rel="stylesheet" href="css/style.min.css">
   <script src="https://api-maps.yandex.ru/2.1?apikey=5143295b-6e4c-4762-80f7-dd25151c4c7a&lang=ru_RU" type="text/javascript"></script>
 
-  
 
 
-</head>
+
+  </head>
+
 
 <body>
   <header class="header">
@@ -182,7 +184,6 @@
             class="header__search-form-input"
             placeholder="Поиск по VIN, артикулу, названию, бренду, услугам, работам"
           />
-          
         </label>
         <button class="btn header__search-form-btn" type="button">
           <svg
@@ -197,8 +198,6 @@
             />
           </svg>
         </button>
-        
-        
       </form>
     </div>
   </header>
@@ -206,627 +205,326 @@
 
 <main class="main home">
     <div class="site-wrapper">
-    <section class="hero service-hero">
+    <section class="basket-hero hero">
   <div
-    class="service-hero__background"
-    style="background-image: url(./img/original_service_bg.png)"
+    class="basket-hero__background"
+    style="background-image: url(./img/registration_bg.jfif)"
   ></div>
-  <div class="container service-hero__wrapper">
-    <div class="service-hero__content">
-      <h1 class="service-hero__title">
-        <span class="service-hero__title-fragment">Сервис грузовых авто</span>
-        <span class="service-hero__title-fragment">/ Сто</span>
-      </h1>
-      <p class="service-hero__descr">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation
-      </p>
-      <address class="service-hero__content-contacts">
-        <a href="tel:88005556050" class="link service-hero__tel">8-800-555-60-50</a>
-        <a href="tel:88127405835" class="link service-hero__tel">8-812-740-58-35</a>
-      </address>
+  <div class="container basket-hero__wrapper">
+    <div class="breadcrumbs">
+      <a href="#">Главная</a> /
+      <span>Корзина</span>
     </div>
+    <h1 class="basket-hero__title">Корзина</h1>
+    <p class="basket-hero__descr">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation
+    </p>
   </div>
 </section>
 
-    <section class="services">
-  <div class="container services__wrapper">
-    <h2 class="services__title">Услуги сервиса</h2>
-    <ul class="services__list">
-      <li class="services__list-item">
-        <div class="services__list-item-description">
-          <span>Ремонт кузова</span>
-          <span>7 200 р.</span>
-        </div>
-        <div
-          class="services__list-item-background"
-          style="background-image: url(./img/service_list_1.png)"
-        >
-          <a
-            href="#"
-            class="btn services__list-item-btn"
-            data-graph-path="service-modal"
-            >Заказать</a
-          >
+    <div class="basket-content">
+  <div class="basket-content__wrapper container">
+    <ul class="basket-content__title-list">
+      <li class="basket-content__title-list-item">
+        <span>№</span><span>Название</span>
+      </li>
+      <li class="basket-content__title-list-item">
+        <span>№ по каталогу</span>
+        <span>Производитель</span>
+        <span>Склад</span>
+        <span>Наличие</span>
+      </li>
+      <li class="basket-content__title-list-item"><span>Цена</span></li>
+    </ul>
+    <div class="basket-content__mobile-title">
+      <span>Товары</span>
+    </div>
+    <ul class="basket-content__list">
+      <li class="basket-content__list-item" data-pid="1">
+        <ul class="basket-content__names-list">
+          <li class="basket-content__names-list-item">
+            <span>№</span><span>Название</span>
+          </li>
+          <li class="basket-content__names-list-item">
+            <div>
+              <span>№ по каталогу</span>
+              <span>Производитель</span>
+              <span>Склад</span>
+              <span>Наличие</span>
+            </div>
+          </li>
+          <li class="basket-content__names-list-item"><span>Цена</span></li>
+        </ul>
+
+        <ul class="basket-content__adaptive-name-list">
+          <li class="basket-content__adaptive-name-list-item">
+            <span>1</span>
+          </li>
+          <li class="basket-content__adaptive-name-list-item">
+            <a href="target_details.html">
+              <div>
+                <img src="img/truck.png" alt="Грузовик" />
+              </div>
+              <span>Трубка вакуумная</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="basket-content__product-item-list">
+          <li class="basket-content__product-item-list-item">
+            <span>981850</span>
+          </li>
+          <li class="basket-content__product-item-list-item">
+            <span>Volvo</span>
+          </li>
+          <li class="basket-content__product-item-list-item">
+            <span>Спб</span>
+          </li>
+          <li class="basket-content__product-item-list-item">
+            <span>10</span>
+          </li>
+        </ul>
+        <div class="basket-content__adaptive-price-block">
+          <span>10 000 Р. </span>
+          <button class="btn basket-content__basket-btn">
+            <svg
+              width="24"
+              height="24"
+              viewBox="12 10 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M35 14.875H16.0653L16.025 14.5386C15.9426 13.8394 15.6066 13.1948 15.0806 12.7269C14.5545 12.259 13.8751 12.0003 13.1711 12H12V13.9167H13.1711C13.4058 13.9167 13.6324 14.0029 13.8078 14.1589C13.9832 14.3148 14.0952 14.5298 14.1227 14.7629L15.6417 27.6697C15.724 28.3689 16.0601 29.0136 16.5861 29.4815C17.1121 29.9494 17.7916 30.208 18.4956 30.2083H31.1667V28.2917H18.4956C18.2607 28.2916 18.034 28.2053 17.8586 28.0491C17.6832 27.893 17.5712 27.6778 17.544 27.4445L17.4184 26.375H32.9262L35 14.875Z"
+                fill="white"
+              />
+              <path
+                d="M19 35C20.1046 35 21 34.1046 21 33C21 31.8954 20.1046 31 19 31C17.8954 31 17 31.8954 17 33C17 34.1046 17.8954 35 19 35Z"
+              />
+              <path
+                d="M29 35C30.1046 35 31 34.1046 31 33C31 31.8954 30.1046 31 29 31C27.8954 31 27 31.8954 27 33C27 34.1046 27.8954 35 29 35Z"
+              />
+            </svg>
+
+            <span>Заказать</span>
+          </button>
         </div>
       </li>
-      <li class="services__list-item">
-        <div class="services__list-item-description">
-          <span>Трансмиссия</span>
-          <span>17 200 р.</span>
-        </div>
-        <div
-          class="services__list-item-background"
-          style="background-image: url(./img/service_list_2.png)"
-        >
-          <a
-            href="#"
-            class="btn services__list-item-btn"
-            data-graph-path="service-modal"
-            >Заказать</a
-          >
+      <li class="basket-content__list-item" data-pid="2">
+        <ul class="basket-content__names-list">
+          <li class="basket-content__names-list-item">
+            <span>№</span><span>Название</span>
+          </li>
+          <li class="basket-content__names-list-item">
+            <div>
+              <span>№ по каталогу</span>
+              <span>Производитель</span>
+              <span>Склад</span>
+              <span>Наличие</span>
+            </div>
+          </li>
+          <li class="basket-content__names-list-item"><span>Цена</span></li>
+        </ul>
+
+        <ul class="basket-content__adaptive-name-list">
+          <li class="basket-content__adaptive-name-list-item">
+            <span>1</span>
+          </li>
+          <li class="basket-content__adaptive-name-list-item">
+            <a href="target_details.html">
+              <div>
+                <img src="img/truck.png" alt="Грузовик" />
+              </div>
+              <span>Трубка вакуумная</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="basket-content__product-item-list">
+          <li class="basket-content__product-item-list-item">
+            <span>981850</span>
+          </li>
+          <li class="basket-content__product-item-list-item">
+            <span>Volvo</span>
+          </li>
+          <li class="basket-content__product-item-list-item">
+            <span>Спб</span>
+          </li>
+          <li class="basket-content__product-item-list-item">
+            <span>10</span>
+          </li>
+        </ul>
+        <div class="basket-content__adaptive-price-block">
+          <span>10 000 Р. </span>
+          <button class="btn basket-content__basket-btn">
+            <svg
+              width="24"
+              height="24"
+              viewBox="12 10 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M35 14.875H16.0653L16.025 14.5386C15.9426 13.8394 15.6066 13.1948 15.0806 12.7269C14.5545 12.259 13.8751 12.0003 13.1711 12H12V13.9167H13.1711C13.4058 13.9167 13.6324 14.0029 13.8078 14.1589C13.9832 14.3148 14.0952 14.5298 14.1227 14.7629L15.6417 27.6697C15.724 28.3689 16.0601 29.0136 16.5861 29.4815C17.1121 29.9494 17.7916 30.208 18.4956 30.2083H31.1667V28.2917H18.4956C18.2607 28.2916 18.034 28.2053 17.8586 28.0491C17.6832 27.893 17.5712 27.6778 17.544 27.4445L17.4184 26.375H32.9262L35 14.875Z"
+                fill="white"
+              />
+              <path
+                d="M19 35C20.1046 35 21 34.1046 21 33C21 31.8954 20.1046 31 19 31C17.8954 31 17 31.8954 17 33C17 34.1046 17.8954 35 19 35Z"
+              />
+              <path
+                d="M29 35C30.1046 35 31 34.1046 31 33C31 31.8954 30.1046 31 29 31C27.8954 31 27 31.8954 27 33C27 34.1046 27.8954 35 29 35Z"
+              />
+            </svg>
+            <span>Заказать</span>
+          </button>
         </div>
       </li>
-      <li class="services__list-item">
-        <div class="services__list-item-description">
-          <span>Электрика</span>
-          <span>75 580 р.</span>
-        </div>
-        <div
-          class="services__list-item-background"
-          style="background-image: url(./img/service_list_3.png)"
-        >
-          <a
-            href="#"
-            class="btn services__list-item-btn"
-            data-graph-path="service-modal"
-            >Заказать</a
-          >
-        </div>
-      </li>
-      <li class="services__list-item">
-        <div class="services__list-item-description">
-          <span>Двигатель</span>
-          <span>75 200 р.</span>
-        </div>
-        <div
-          class="services__list-item-background"
-          style="background-image: url(./img/service_list_4.png)"
-        >
-          <a
-            href="#"
-            class="btn services__list-item-btn"
-            data-graph-path="service-modal"
-            >Заказать</a
-          >
-        </div>
-      </li>
-      <li class="services__list-item">
-        <div class="services__list-item-description">
-          <span>Ходовая</span>
-          <span>17 200 р.</span>
-        </div>
-        <div
-          class="services__list-item-background"
-          style="background-image: url(./img/service_list_5.png)"
-        >
-          <a
-            href="#"
-            class="btn services__list-item-btn"
-            data-graph-path="service-modal"
-            >Заказать</a
-          >
+      <li class="basket-content__list-item" data-pid="3">
+        <ul class="basket-content__names-list">
+          <li class="basket-content__names-list-item">
+            <span>№</span><span>Название</span>
+          </li>
+          <li class="basket-content__names-list-item">
+            <div>
+              <span>№ по каталогу</span>
+              <span>Производитель</span>
+              <span>Склад</span>
+              <span>Наличие</span>
+            </div>
+          </li>
+          <li class="basket-content__names-list-item"><span>Цена</span></li>
+        </ul>
+
+        <ul class="basket-content__adaptive-name-list">
+          <li class="basket-content__adaptive-name-list-item">
+            <span>1</span>
+          </li>
+          <li class="basket-content__adaptive-name-list-item">
+            <a href="target_details.html">
+              <div>
+                <img src="img/truck.png" alt="Грузовик" />
+              </div>
+              <span>Трубка вакуумная</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="basket-content__product-item-list">
+          <li class="basket-content__product-item-list-item">
+            <span>981850</span>
+          </li>
+          <li class="basket-content__product-item-list-item">
+            <span>Volvo</span>
+          </li>
+          <li class="basket-content__product-item-list-item">
+            <span>Спб</span>
+          </li>
+          <li class="basket-content__product-item-list-item">
+            <span>10</span>
+          </li>
+        </ul>
+        <div class="basket-content__adaptive-price-block">
+          <span>10 000 Р. </span>
+          <button class="btn basket-content__basket-btn">
+            <svg
+              width="24"
+              height="24"
+              viewBox="12 10 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M35 14.875H16.0653L16.025 14.5386C15.9426 13.8394 15.6066 13.1948 15.0806 12.7269C14.5545 12.259 13.8751 12.0003 13.1711 12H12V13.9167H13.1711C13.4058 13.9167 13.6324 14.0029 13.8078 14.1589C13.9832 14.3148 14.0952 14.5298 14.1227 14.7629L15.6417 27.6697C15.724 28.3689 16.0601 29.0136 16.5861 29.4815C17.1121 29.9494 17.7916 30.208 18.4956 30.2083H31.1667V28.2917H18.4956C18.2607 28.2916 18.034 28.2053 17.8586 28.0491C17.6832 27.893 17.5712 27.6778 17.544 27.4445L17.4184 26.375H32.9262L35 14.875Z"
+                fill="white"
+              />
+              <path
+                d="M19 35C20.1046 35 21 34.1046 21 33C21 31.8954 20.1046 31 19 31C17.8954 31 17 31.8954 17 33C17 34.1046 17.8954 35 19 35Z"
+              />
+              <path
+                d="M29 35C30.1046 35 31 34.1046 31 33C31 31.8954 30.1046 31 29 31C27.8954 31 27 31.8954 27 33C27 34.1046 27.8954 35 29 35Z"
+              />
+            </svg>
+            <span>Заказать</span>
+          </button>
         </div>
       </li>
     </ul>
-  </div>
-</section>
-
-    <div class="order">
-   <div class="container order__wrapper">
-    <div class="order__content">
-        <h2 class="order__title">Записаться на сервис</h2>
-        <a href="#" class="btn order__btn">Заказать</a>
-    </div>
-</div> 
-</div>
-
-    <section class="discount">
-  <div class="container discount-wrapper">
-    <h2 class="discount__title hidden">Накопительные скидки</h2>
-    <div class="discount__swiper swiper">
-      <div class="swiper-wrapper discount__swiper-wrapper">
-        <div class="swiper-slide discount__swiper-slide">
-          <div class="discount__slide-content">
-            <picture>
-              <source
-                srcset="img/product_slide_img_one_1280.jpg"
-                media="(min-width: 901px) and (max-width: 1200px)"
-              />
-
-              <source
-                srcset="img/slide_img_640.jpg"
-                media="(min-width: 551px) and (max-width: 900px)"
-              />
-              <source
-                srcset="img/slide_img_320.jpg"
-                media="(min-width: 320px) and (max-width: 550px)"
-              />
-              <img src="img/product_slide_img_one.jpg" alt="Картинка товара" />
-            </picture>
-
-            <div class="discount__slide-content-right">
-              <h3>НАКОПИТЕЛЬНЫЕ СКИДКИ</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide discount__swiper-slide">
-          <div class="discount__slide-content">
-            <picture>
-              <source
-                srcset="img/product_slide_img_one_1280.jpg"
-                media="(min-width: 901px) and (max-width: 1200px)"
-              />
-
-              <source
-                srcset="img/slide_img_640.jpg"
-                media="(min-width: 551px) and (max-width: 900px)"
-              />
-              <source
-                srcset="img/slide_img_320.jpg"
-                media="(min-width: 320px) and (max-width: 550px)"
-              />
-              <img src="img/product_slide_img_one.jpg" alt="Картинка товара" />
-            </picture>
-            <div class="discount__slide-content-right">
-              <h3>НАКОПИТЕЛЬНЫЕ СКИДКИ</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide discount__swiper-slide">
-          <div class="discount__slide-content">
-            <picture>
-              <source
-                srcset="img/product_slide_img_one_1280.jpg"
-                media="(min-width: 901px) and (max-width: 1200px)"
-              />
-
-              <source
-                srcset="img/slide_img_640.jpg"
-                media="(min-width: 551px) and (max-width: 900px)"
-              />
-              <source
-                srcset="img/slide_img_320.jpg"
-                media="(min-width: 320px) and (max-width: 550px)"
-              />
-              <img src="img/product_slide_img_one.jpg" alt="Картинка товара" />
-            </picture>
-            <div class="discount__slide-content-right">
-              <h3>НАКОПИТЕЛЬНЫЕ СКИДКИ</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide discount__swiper-slide">
-          <div class="discount__slide-content">
-            <picture>
-              <source
-                srcset="img/product_slide_img_one_1280.jpg"
-                media="(min-width: 901px) and (max-width: 1200px)"
-              />
-
-              <source
-                srcset="img/slide_img_640.jpg"
-                media="(min-width: 551px) and (max-width: 900px)"
-              />
-              <source
-                srcset="img/slide_img_320.jpg"
-                media="(min-width: 320px) and (max-width: 550px)"
-              />
-              <img src="img/product_slide_img_one.jpg" alt="Картинка товара" />
-            </picture>
-            <div class="discount__slide-content-right">
-              <h3>НАКОПИТЕЛЬНЫЕ СКИДКИ</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide discount__swiper-slide">
-          <div class="discount__slide-content">
-            <picture>
-              <source
-                srcset="img/product_slide_img_one_1280.jpg"
-                media="(min-width: 901px) and (max-width: 1200px)"
-              />
-
-              <source
-                srcset="img/slide_img_640.jpg"
-                media="(min-width: 551px) and (max-width: 900px)"
-              />
-              <source
-                srcset="img/slide_img_320.jpg"
-                media="(min-width: 320px) and (max-width: 550px)"
-              />
-              <img src="img/product_slide_img_one.jpg" alt="Картинка товара" />
-            </picture>
-            <div class="discount__slide-content-right">
-              <h3>НАКОПИТЕЛЬНЫЕ СКИДКИ</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="discount__swiper-utility">
-        <div class="discount__swiper-utility-nav">
-          <button
-            type="button"
-            class="swiper-button-next site__slider-btn--next discount__slider-btn--next"
-          >
+    <div class="basket-content__pagination-block">
+      <button class="secondary-btn basket-content__pagination-btn">
+        ЗАГРУЗИТЬ ЕЩЁ
+      </button>
+      <ul class="basket-content__pagination-list">
+        <li>
+          <a href="#">
             <svg
-              width="41"
-              height="41"
-              viewBox="0 0 41 41"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_588_4637)">
-                <g clip-path="url(#clip1_588_4637)">
-                  <path
-                    d="M25.252 32.494L15.379 22.621C14.8166 22.0584 14.5006 21.2955 14.5006 20.5C14.5006 19.7045 14.8166 18.9415 15.379 18.379L25.246 8.51196L26.66 9.92596L16.793 19.793C16.6055 19.9805 16.5002 20.2348 16.5002 20.5C16.5002 20.7651 16.6055 21.0194 16.793 21.207L26.666 31.08L25.252 32.494Z"
-                    fill="#383838"
-                  />
-                </g>
+              <g clip-path="url(#clip0_898_1416)">
+                <path
+                  d="M18.1477 1.41365L8.26869 11.2927C8.0862 11.4828 7.9843 11.7361 7.9843 11.9997C7.9843 12.2632 8.0862 12.5165 8.26869 12.7067L18.1417 22.5797L16.7277 23.9937L6.85469 14.1207C6.30922 13.549 6.00488 12.7893 6.00488 11.9992C6.00488 11.209 6.30922 10.4493 6.85469 9.87765L16.7337 -0.000347606L18.1477 1.41365Z"
+                />
               </g>
               <defs>
-                <clipPath id="clip0_588_4637">
+                <clipPath id="clip0_898_1416">
                   <rect
                     width="24"
                     height="24"
                     fill="white"
-                    transform="translate(8.5 8.5)"
-                  />
-                </clipPath>
-                <clipPath id="clip1_588_4637">
-                  <rect
-                    width="24"
-                    height="24"
-                    fill="white"
-                    transform="translate(8.5 8.5)"
+                    transform="translate(0 24) rotate(-90)"
                   />
                 </clipPath>
               </defs>
             </svg>
-          </button>
-          <button
-            type="button"
-            class="swiper-button-prev site__slider-btn--prev discount__slider-btn--prev"
-          >
+          </a>
+        </li>
+        <li><a href="#" style="color: var(--red)">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><span>...</span></li>
+        <li><a href="#">18</a></li>
+        <li>
+          <a href="#">
             <svg
-              width="41"
-              height="41"
-              viewBox="0 0 41 41"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_588_4637)">
-                <g clip-path="url(#clip1_588_4637)">
-                  <path
-                    d="M25.252 32.494L15.379 22.621C14.8166 22.0584 14.5006 21.2955 14.5006 20.5C14.5006 19.7045 14.8166 18.9415 15.379 18.379L25.246 8.51196L26.66 9.92596L16.793 19.793C16.6055 19.9805 16.5002 20.2348 16.5002 20.5C16.5002 20.7651 16.6055 21.0194 16.793 21.207L26.666 31.08L25.252 32.494Z"
-                    fill="#383838"
-                  />
-                </g>
+              <g clip-path="url(#clip0_898_1416)">
+                <path
+                  d="M18.1477 1.41365L8.26869 11.2927C8.0862 11.4828 7.9843 11.7361 7.9843 11.9997C7.9843 12.2632 8.0862 12.5165 8.26869 12.7067L18.1417 22.5797L16.7277 23.9937L6.85469 14.1207C6.30922 13.549 6.00488 12.7893 6.00488 11.9992C6.00488 11.209 6.30922 10.4493 6.85469 9.87765L16.7337 -0.000347606L18.1477 1.41365Z"
+                />
               </g>
               <defs>
-                <clipPath id="clip0_588_4637">
+                <clipPath id="clip0_898_1416">
                   <rect
                     width="24"
                     height="24"
                     fill="white"
-                    transform="translate(8.5 8.5)"
-                  />
-                </clipPath>
-                <clipPath id="clip1_588_4637">
-                  <rect
-                    width="24"
-                    height="24"
-                    fill="white"
-                    transform="translate(8.5 8.5)"
+                    transform="translate(0 24) rotate(-90)"
                   />
                 </clipPath>
               </defs>
             </svg>
-          </button>
-
-          <div
-            class="discount__swiper-pagination swiper-pagination site__swiper-pagination"
-          ></div>
-        </div>
-
-        <div class="swiper discount__swiper-thumbs">
-          <div class="swiper-wrapper">
-            <button
-              type="button"
-              class="swiper-slide discount__swiper-thumbs-slide"
-              style="background-image: url(img/product_one_thumb.png)"
-            ></button>
-            <button
-              type="button"
-              class="swiper-slide discount__swiper-thumbs-slide"
-              style="background-image: url(img/default_thumbs_element.png)"
-            ></button>
-            <button
-              type="button"
-              class="swiper-slide discount__swiper-thumbs-slide"
-              style="background-image: url(img/thumbs_oil.png)"
-            ></button>
-            <button
-              type="button"
-              class="swiper-slide discount__swiper-thumbs-slide"
-              style="background-image: url(img/thumbs_truck.png)"
-            ></button>
-            <button
-              type="button"
-              class="swiper-slide discount__swiper-thumbs-slide"
-              style="background-image: url(img/product_one_thumb.png)"
-            ></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <section class="galery">
-  <div class="galery__wrapper container-fluid">
-    <h2 class="galery__title">Галерея</h2>
-
-    <div class="swiper galery__swiper">
-      <ul class="galery__list swiper-wrapper galery-swiper-wrapper">
-        <li class="galery__list-item swiper-slide">
-          <a href="./img/truck.png">
-            <img
-              src="./img/truck.png"
-              alt="Галерея"
-              data-fancybox="gallery"
-              data-caption="Ремонт грузовика в Санкт-Петербурге"
-            />
-          </a>
-        </li>
-        <li class="galery__list-item swiper-slide">
-          <a
-            href="./img/hero_bg.jpg"
-            data-fancybox="gallery"
-            data-caption="Юнайтед Сервис"
-          >
-            <img src="./img/hero_bg.jpg" alt="Автосервис" />
-          </a>
-        </li>
-        <li class="galery__list-item swiper-slide">
-          <a
-            href="./img/truck_index.jfif"
-            data-fancybox="gallery"
-            data-caption="Юнайтед Сервис"
-          >
-            <img src="./img/truck_index.jfif" alt="Автосервис" />
-          </a>
-        </li>
-        <li class="galery__list-item swiper-slide">
-          <a
-            href="./img/united3.jpg"
-            data-fancybox="gallery"
-            data-caption="Volvo привезла в Россию новый грузовик"
-          >
-            <img src="./img/united3.jpg" alt="Автосервис" />
-          </a>
-        </li>
-        <li class="galery__list-item swiper-slide">
-          <a
-            href="./img/united1.jpg"
-            data-fancybox="gallery"
-            data-caption="Работа наших мастеров"
-          >
-            <img src="./img/united1.jpg" alt="Автосервис" />
-          </a>
-        </li>
-        <li class="galery__list-item swiper-slide">
-          <a
-            href="./img/united2.jpg"
-            data-fancybox="gallery"
-            data-caption="Один в поле не воин"
-          >
-            <img src="./img/united2.jpg" alt="Автосервис" />
-          </a>
-        </li>
-        <li class="galery__list-item swiper-slide">
-          <a
-            href="./img/registration_bg.jfif"
-            data-fancybox="gallery"
-            data-caption="Сердце вашего авто"
-          >
-            <img src="./img/registration_bg.jfif" alt="Автосервис" />
-          </a>
-        </li>
-        <li class="galery__list-item swiper-slide">
-          <a
-            href="./img/galery_img.jpg"
-            data-fancybox="gallery"
-            data-caption="Caption #1"
-          >
-            <img src="./img/galery_img.jpg" alt="Автосервис" />
-          </a>
-        </li>
-        <li class="galery__list-item swiper-slide">
-          <a
-            href="./img/galery_img.jpg"
-            data-fancybox="gallery"
-            data-caption="Caption #1"
-          >
-            <img src="./img/galery_img.jpg" alt="Автосервис" />
-          </a>
-        </li>
-        <li class="galery__list-item swiper-slide">
-          <a
-            href="./img/truck.png"
-            data-fancybox="gallery"
-            data-caption="Caption #1"
-          >
-            <img src="./img/truck.png" alt="Автосервис" />
-          </a>
-        </li>
-        <li class="galery__list-item swiper-slide">
-          <a
-            href="./img/galery_img.jpg"
-            data-fancybox="gallery"
-            data-caption="Caption #1"
-          >
-            <img src="./img/galery_img.jpg" alt="Автосервис" />
-          </a>
-        </li>
-        <li class="galery__list-item swiper-slide">
-          <a
-            href="./img/galery_img.jpg"
-            data-fancybox="gallery"
-            data-caption="Caption #1"
-          >
-            <img src="./img/galery_img.jpg" alt="Автосервис" />
           </a>
         </li>
       </ul>
-      <div class="galery__swiper-utility">
-        <div class="galery__swiper-utility-nav">
-          <button
-            type="button"
-            class="swiper-button-next site__slider-btn--next galery__slider-btn--next"
-          >
-            <svg
-              width="41"
-              height="41"
-              viewBox="0 0 41 41"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_588_4637)">
-                <g clip-path="url(#clip1_588_4637)">
-                  <path
-                    d="M25.252 32.494L15.379 22.621C14.8166 22.0584 14.5006 21.2955 14.5006 20.5C14.5006 19.7045 14.8166 18.9415 15.379 18.379L25.246 8.51196L26.66 9.92596L16.793 19.793C16.6055 19.9805 16.5002 20.2348 16.5002 20.5C16.5002 20.7651 16.6055 21.0194 16.793 21.207L26.666 31.08L25.252 32.494Z"
-                    fill="#383838"
-                  />
-                </g>
-              </g>
-              <defs>
-                <clipPath id="clip0_588_4637">
-                  <rect
-                    width="24"
-                    height="24"
-                    fill="white"
-                    transform="translate(8.5 8.5)"
-                  />
-                </clipPath>
-                <clipPath id="clip1_588_4637">
-                  <rect
-                    width="24"
-                    height="24"
-                    fill="white"
-                    transform="translate(8.5 8.5)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-          </button>
-          <button
-            type="button"
-            class="swiper-button-prev site__slider-btn--prev galery__slider-btn--prev"
-          >
-            <svg
-              width="41"
-              height="41"
-              viewBox="0 0 41 41"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_588_4637)">
-                <g clip-path="url(#clip1_588_4637)">
-                  <path
-                    d="M25.252 32.494L15.379 22.621C14.8166 22.0584 14.5006 21.2955 14.5006 20.5C14.5006 19.7045 14.8166 18.9415 15.379 18.379L25.246 8.51196L26.66 9.92596L16.793 19.793C16.6055 19.9805 16.5002 20.2348 16.5002 20.5C16.5002 20.7651 16.6055 21.0194 16.793 21.207L26.666 31.08L25.252 32.494Z"
-                    fill="#383838"
-                  />
-                </g>
-              </g>
-              <defs>
-                <clipPath id="clip0_588_4637">
-                  <rect
-                    width="24"
-                    height="24"
-                    fill="white"
-                    transform="translate(8.5 8.5)"
-                  />
-                </clipPath>
-                <clipPath id="clip1_588_4637">
-                  <rect
-                    width="24"
-                    height="24"
-                    fill="white"
-                    transform="translate(8.5 8.5)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-          </button>
-          <div
-            class="swiper-pagination site__swiper-pagination galery__swiper-pagination"
-          ></div>
-        </div>
-      </div>
     </div>
   </div>
-</section>
-
-    <section class="address">
-  <div class="container address__wrapper">
-    <h2 class="address__title">Как нас найти</h2>
-    <p class="address__descr">Контакты и расположение компании и сервиса</p>
-    <address class="address__contacts">
-      <div class="address__contacts-tel">
-        <a class="link" href="tel:88005556050">8 (800) 555-60-50</a>
-        <a class="link" href="tel:88127405835">8 (812) 740-58-35</a>
-      </div>
-      <div class="address__contacts-mail">
-        <a class="link" target="_blank" href="https://yandex.ru/maps/2/saint-petersburg/house/poselkovaya_ulitsa_7/Z0kYdQ5oS0UPQFtjfXRwdH5qZg==/?ll=30.398208%2C59.815292&z=17" >Санкт-Петербург, п. Шушары, 
-            ул. Поселковая, д.7</a>
-        <a class="link" href="service@united24.ru">service@united24.ru</a>
-      </div>
-    </address>
-  </div>
-  <div class="address__map" id="map"></div>
-</section>
+</div>
 
 
-
-        </div>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 90px; font-size: 24px; color: red; background-color: gray;">IN PROGRESS</div>
+    </div>
 </main>
 
 <footer class="footer">
@@ -884,7 +582,6 @@
 </footer>
 
 
-
 <div class="graph-modal">
 	<div class="graph-modal__container service-modal" role="dialog" aria-modal="true" data-graph-target="service-modal">
         <div class="service-modal__wrapper">
@@ -902,7 +599,6 @@
 		</div>
 	</div>
 
-    
     <div class="graph-modal__container login-modal" role="dialog" aria-modal="true" data-graph-target="login-modal">
 		<button class="btn-reset graph-modal__close js-modal-close login-modal__close" aria-label="Закрыть модальное окно"></button>
 		<div class="graph-modal__content login-modal__content">
@@ -918,7 +614,6 @@
 		</div>
 	</div>
 
-    
     <div class="graph-modal__container policy-modal" role="dialog" aria-modal="true" data-graph-target="policy-modal">
 		<button class="btn-reset graph-modal__close js-modal-close policy-modal__close" aria-label="Закрыть модальное окно"></button>
 		<div class="graph-modal__content policy-modal__content">
@@ -938,5 +633,6 @@
 </body>
 
 </html>
+
 
 
