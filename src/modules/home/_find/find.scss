@@ -63,7 +63,18 @@
     @include _1024 {
       height: 495px;
       // max-width: 880px;
-      background-position: 100%;
+    }
+
+    @include _880 {
+      background-position: 80%;
+    }
+
+    @include _640 {
+      background-position: 65%;
+    }
+
+    @include _550 {
+      background-position: 80%;
     }
   }
 
@@ -88,9 +99,9 @@
 
     @include _1024 {
       max-width: 270px;
-      left: 50%;
+      left: 15%;
       top: 4%;
-      transform: translateX(-50%);
+      // transform: translateX(-50%);
     }
 
     @include _550 {

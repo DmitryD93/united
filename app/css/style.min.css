@@ -7344,7 +7344,21 @@ p {
 @media (max-width: 1024px) {
   .find__map-container {
     height: 495px;
-    background-position: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .find__map-container {
+    background-position: 80%;
+  }
+}
+@media (max-width: 640px) {
+  .find__map-container {
+    background-position: 65%;
+  }
+}
+@media (max-width: 550px) {
+  .find__map-container {
+    background-position: 80%;
   }
 }
 .find__contacts {
@@ -7377,11 +7391,8 @@ p {
 @media (max-width: 1024px) {
   .find__contacts {
     max-width: 270px;
-    left: 50%;
+    left: 15%;
     top: 4%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 @media (max-width: 550px) {
