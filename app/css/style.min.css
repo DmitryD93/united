@@ -7334,7 +7334,7 @@ p {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 100%;
+  background-position: 30%;
 }
 @media (max-width: 1280px) {
   .find__map-container {
