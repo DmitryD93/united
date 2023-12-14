@@ -10819,3 +10819,82 @@ p {
   margin-left: 10px;
   rotate: 180deg;
 }
+
+.lk-hero {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding-top: 195px;
+  padding-bottom: 64px;
+  position: relative;
+}
+@media (max-width: 900px) {
+  .lk-hero {
+    padding-top: 140px;
+  }
+}
+@media (max-width: 640px) {
+  .lk-hero {
+    padding-top: 120px;
+    padding-bottom: 32px;
+  }
+}
+.lk-hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+.lk-hero__background::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  opacity: 0.9;
+}
+.lk-hero__title {
+  text-transform: uppercase;
+  font-family: "Russo One", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  color: var(--black);
+}
+@media (max-width: 1024px) {
+  .lk-hero__title {
+    font-size: 40px;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 640px) {
+  .lk-hero__title {
+    font-size: 30px;
+    letter-spacing: 0.9px;
+  }
+}
+.lk-hero__descr {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+}
+@media (max-width: 900px) {
+  .lk-hero__descr {
+    font-size: 14px;
+  }
+}
