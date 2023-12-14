@@ -1,9 +1,9 @@
 .target-details-product {
   &__item-galery {
-    max-width: 49%;
+    width: 49%;
 
     @include _880 {
-      max-width: 100%;
+      width: 100%;
     }
   }
 
@@ -166,7 +166,7 @@
     }
 
     @include _640 {
-        font-size: 30px;
+      font-size: 30px;
     }
   }
 
