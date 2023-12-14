@@ -8284,11 +8284,11 @@ p {
 }
 
 .target-details-product__item-galery {
-  max-width: 49%;
+  width: 49%;
 }
 @media (max-width: 900px) {
   .target-details-product__item-galery {
-    max-width: 100%;
+    width: 100%;
   }
 }
 .target-details-product__slider-btn--prev, .target-details-product__slider-btn--next {
