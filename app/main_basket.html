@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -20,18 +19,17 @@
   <meta name="apple-mobile-web-app-title" content="Stat4market.com">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="robots" content="">
-
-
-      <title>Юнайтед Сервис - Корзина</title>
+  
+  
+  <title>Юнайтед Сервис - Корзина</title>
   <meta name="description" content="Корзина">
   <link rel="stylesheet" href="css/style.min.css">
   <script src="https://api-maps.yandex.ru/2.1?apikey=5143295b-6e4c-4762-80f7-dd25151c4c7a&lang=ru_RU" type="text/javascript"></script>
 
+  
 
 
-
-  </head>
-
+</head>
 
 <body>
   <header class="header">
@@ -156,6 +154,7 @@
           </svg>
         </button>
 
+        
         <a href="#" class="header__btn header__lk-link" style="display: none">
           <svg
             width="40"
@@ -199,10 +198,12 @@
           </button>
         </div>
 
+        
         <div class="header__lk-block" style="display: none">
           <p>Здравствуйте, <span>Имя</span>!</p>
           <a href="#" class="link">Войти в личный кабинет</a>
         </div>
+        
       </div>
     </div>
 
@@ -214,6 +215,7 @@
             class="header__search-form-input"
             placeholder="Поиск по VIN, артикулу, названию, бренду, услугам, работам"
           />
+          
         </label>
         <button class="btn header__search-form-btn" type="button">
           <svg
@@ -228,6 +230,8 @@
             />
           </svg>
         </button>
+        
+        
       </form>
     </div>
   </header>
@@ -258,303 +262,244 @@
   <div class="basket-content__wrapper container">
     <ul class="basket-content__title-list">
       <li class="basket-content__title-list-item">
-        <span>№</span><span>Название</span>
+        <span>Название</span>
       </li>
       <li class="basket-content__title-list-item">
-        <span>№ по каталогу</span>
         <span>Производитель</span>
+      </li>
+      <li class="basket-content__title-list-item">
         <span>Склад</span>
-        <span>Наличие</span>
+      </li>
+      <li class="basket-content__title-list-item">
+        <span>Количество</span>
       </li>
       <li class="basket-content__title-list-item"><span>Цена</span></li>
     </ul>
     <div class="basket-content__mobile-title">
       <span>Товары</span>
     </div>
-    <ul class="basket-content__list">
-      <li class="basket-content__list-item" data-pid="1">
-        <ul class="basket-content__names-list">
-          <li class="basket-content__names-list-item">
-            <span>№</span><span>Название</span>
-          </li>
-          <li class="basket-content__names-list-item">
-            <div>
-              <span>№ по каталогу</span>
-              <span>Производитель</span>
-              <span>Склад</span>
-              <span>Наличие</span>
-            </div>
-          </li>
-          <li class="basket-content__names-list-item"><span>Цена</span></li>
-        </ul>
-
-        <ul class="basket-content__adaptive-name-list">
-          <li class="basket-content__adaptive-name-list-item">
-            <span>1</span>
-          </li>
-          <li class="basket-content__adaptive-name-list-item">
-            <a href="target_details.html">
-              <div>
-                <img src="img/truck.png" alt="Грузовик" />
-              </div>
-              <span>Трубка вакуумная</span>
-            </a>
-          </li>
-        </ul>
-
-        <ul class="basket-content__product-item-list">
-          <li class="basket-content__product-item-list-item">
-            <span>981850</span>
-          </li>
-          <li class="basket-content__product-item-list-item">
-            <span>Volvo</span>
-          </li>
-          <li class="basket-content__product-item-list-item">
-            <span>Спб</span>
-          </li>
-          <li class="basket-content__product-item-list-item">
-            <span>10</span>
-          </li>
-        </ul>
-        <div class="basket-content__adaptive-price-block">
-          <span>10 000 Р. </span>
-          <button class="btn basket-content__basket-btn">
-            <svg
-              width="24"
-              height="24"
-              viewBox="12 10 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M35 14.875H16.0653L16.025 14.5386C15.9426 13.8394 15.6066 13.1948 15.0806 12.7269C14.5545 12.259 13.8751 12.0003 13.1711 12H12V13.9167H13.1711C13.4058 13.9167 13.6324 14.0029 13.8078 14.1589C13.9832 14.3148 14.0952 14.5298 14.1227 14.7629L15.6417 27.6697C15.724 28.3689 16.0601 29.0136 16.5861 29.4815C17.1121 29.9494 17.7916 30.208 18.4956 30.2083H31.1667V28.2917H18.4956C18.2607 28.2916 18.034 28.2053 17.8586 28.0491C17.6832 27.893 17.5712 27.6778 17.544 27.4445L17.4184 26.375H32.9262L35 14.875Z"
-                fill="white"
-              />
-              <path
-                d="M19 35C20.1046 35 21 34.1046 21 33C21 31.8954 20.1046 31 19 31C17.8954 31 17 31.8954 17 33C17 34.1046 17.8954 35 19 35Z"
-              />
-              <path
-                d="M29 35C30.1046 35 31 34.1046 31 33C31 31.8954 30.1046 31 29 31C27.8954 31 27 31.8954 27 33C27 34.1046 27.8954 35 29 35Z"
-              />
-            </svg>
-
-            <span>Заказать</span>
-          </button>
-        </div>
-      </li>
-      <li class="basket-content__list-item" data-pid="2">
-        <ul class="basket-content__names-list">
-          <li class="basket-content__names-list-item">
-            <span>№</span><span>Название</span>
-          </li>
-          <li class="basket-content__names-list-item">
-            <div>
-              <span>№ по каталогу</span>
-              <span>Производитель</span>
-              <span>Склад</span>
-              <span>Наличие</span>
-            </div>
-          </li>
-          <li class="basket-content__names-list-item"><span>Цена</span></li>
-        </ul>
-
-        <ul class="basket-content__adaptive-name-list">
-          <li class="basket-content__adaptive-name-list-item">
-            <span>1</span>
-          </li>
-          <li class="basket-content__adaptive-name-list-item">
-            <a href="target_details.html">
-              <div>
-                <img src="img/truck.png" alt="Грузовик" />
-              </div>
-              <span>Трубка вакуумная</span>
-            </a>
-          </li>
-        </ul>
-
-        <ul class="basket-content__product-item-list">
-          <li class="basket-content__product-item-list-item">
-            <span>981850</span>
-          </li>
-          <li class="basket-content__product-item-list-item">
-            <span>Volvo</span>
-          </li>
-          <li class="basket-content__product-item-list-item">
-            <span>Спб</span>
-          </li>
-          <li class="basket-content__product-item-list-item">
-            <span>10</span>
-          </li>
-        </ul>
-        <div class="basket-content__adaptive-price-block">
-          <span>10 000 Р. </span>
-          <button class="btn basket-content__basket-btn">
-            <svg
-              width="24"
-              height="24"
-              viewBox="12 10 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M35 14.875H16.0653L16.025 14.5386C15.9426 13.8394 15.6066 13.1948 15.0806 12.7269C14.5545 12.259 13.8751 12.0003 13.1711 12H12V13.9167H13.1711C13.4058 13.9167 13.6324 14.0029 13.8078 14.1589C13.9832 14.3148 14.0952 14.5298 14.1227 14.7629L15.6417 27.6697C15.724 28.3689 16.0601 29.0136 16.5861 29.4815C17.1121 29.9494 17.7916 30.208 18.4956 30.2083H31.1667V28.2917H18.4956C18.2607 28.2916 18.034 28.2053 17.8586 28.0491C17.6832 27.893 17.5712 27.6778 17.544 27.4445L17.4184 26.375H32.9262L35 14.875Z"
-                fill="white"
-              />
-              <path
-                d="M19 35C20.1046 35 21 34.1046 21 33C21 31.8954 20.1046 31 19 31C17.8954 31 17 31.8954 17 33C17 34.1046 17.8954 35 19 35Z"
-              />
-              <path
-                d="M29 35C30.1046 35 31 34.1046 31 33C31 31.8954 30.1046 31 29 31C27.8954 31 27 31.8954 27 33C27 34.1046 27.8954 35 29 35Z"
-              />
-            </svg>
-            <span>Заказать</span>
-          </button>
-        </div>
-      </li>
-      <li class="basket-content__list-item" data-pid="3">
-        <ul class="basket-content__names-list">
-          <li class="basket-content__names-list-item">
-            <span>№</span><span>Название</span>
-          </li>
-          <li class="basket-content__names-list-item">
-            <div>
-              <span>№ по каталогу</span>
-              <span>Производитель</span>
-              <span>Склад</span>
-              <span>Наличие</span>
-            </div>
-          </li>
-          <li class="basket-content__names-list-item"><span>Цена</span></li>
-        </ul>
-
-        <ul class="basket-content__adaptive-name-list">
-          <li class="basket-content__adaptive-name-list-item">
-            <span>1</span>
-          </li>
-          <li class="basket-content__adaptive-name-list-item">
-            <a href="target_details.html">
-              <div>
-                <img src="img/truck.png" alt="Грузовик" />
-              </div>
-              <span>Трубка вакуумная</span>
-            </a>
-          </li>
-        </ul>
-
-        <ul class="basket-content__product-item-list">
-          <li class="basket-content__product-item-list-item">
-            <span>981850</span>
-          </li>
-          <li class="basket-content__product-item-list-item">
-            <span>Volvo</span>
-          </li>
-          <li class="basket-content__product-item-list-item">
-            <span>Спб</span>
-          </li>
-          <li class="basket-content__product-item-list-item">
-            <span>10</span>
-          </li>
-        </ul>
-        <div class="basket-content__adaptive-price-block">
-          <span>10 000 Р. </span>
-          <button class="btn basket-content__basket-btn">
-            <svg
-              width="24"
-              height="24"
-              viewBox="12 10 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M35 14.875H16.0653L16.025 14.5386C15.9426 13.8394 15.6066 13.1948 15.0806 12.7269C14.5545 12.259 13.8751 12.0003 13.1711 12H12V13.9167H13.1711C13.4058 13.9167 13.6324 14.0029 13.8078 14.1589C13.9832 14.3148 14.0952 14.5298 14.1227 14.7629L15.6417 27.6697C15.724 28.3689 16.0601 29.0136 16.5861 29.4815C17.1121 29.9494 17.7916 30.208 18.4956 30.2083H31.1667V28.2917H18.4956C18.2607 28.2916 18.034 28.2053 17.8586 28.0491C17.6832 27.893 17.5712 27.6778 17.544 27.4445L17.4184 26.375H32.9262L35 14.875Z"
-                fill="white"
-              />
-              <path
-                d="M19 35C20.1046 35 21 34.1046 21 33C21 31.8954 20.1046 31 19 31C17.8954 31 17 31.8954 17 33C17 34.1046 17.8954 35 19 35Z"
-              />
-              <path
-                d="M29 35C30.1046 35 31 34.1046 31 33C31 31.8954 30.1046 31 29 31C27.8954 31 27 31.8954 27 33C27 34.1046 27.8954 35 29 35Z"
-              />
-            </svg>
-            <span>Заказать</span>
-          </button>
-        </div>
-      </li>
-    </ul>
-    <div class="basket-content__pagination-block">
-      <button class="secondary-btn basket-content__pagination-btn">
-        ЗАГРУЗИТЬ ЕЩЁ
+    <div class="basket-content__select-block">
+      <label class="basket-content__select-block-label">
+        <input type="checkbox" class="basket-content__select-block-checkbox" />
+        <span> </span>
+      </label>
+      <button type="button" class="basket-content__select-block-btn">Выбрать всё</button>
+      <button type="button" class="basket-content__select-block-btn">
+        Удалить выбранные
       </button>
-      <ul class="basket-content__pagination-list">
-        <li>
-          <a href="#">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_898_1416)">
-                <path
-                  d="M18.1477 1.41365L8.26869 11.2927C8.0862 11.4828 7.9843 11.7361 7.9843 11.9997C7.9843 12.2632 8.0862 12.5165 8.26869 12.7067L18.1417 22.5797L16.7277 23.9937L6.85469 14.1207C6.30922 13.549 6.00488 12.7893 6.00488 11.9992C6.00488 11.209 6.30922 10.4493 6.85469 9.87765L16.7337 -0.000347606L18.1477 1.41365Z"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_898_1416">
-                  <rect
-                    width="24"
-                    height="24"
-                    fill="white"
-                    transform="translate(0 24) rotate(-90)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-        </li>
-        <li><a href="#" style="color: var(--red)">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><span>...</span></li>
-        <li><a href="#">18</a></li>
-        <li>
-          <a href="#">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_898_1416)">
-                <path
-                  d="M18.1477 1.41365L8.26869 11.2927C8.0862 11.4828 7.9843 11.7361 7.9843 11.9997C7.9843 12.2632 8.0862 12.5165 8.26869 12.7067L18.1417 22.5797L16.7277 23.9937L6.85469 14.1207C6.30922 13.549 6.00488 12.7893 6.00488 11.9992C6.00488 11.209 6.30922 10.4493 6.85469 9.87765L16.7337 -0.000347606L18.1477 1.41365Z"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_898_1416">
-                  <rect
-                    width="24"
-                    height="24"
-                    fill="white"
-                    transform="translate(0 24) rotate(-90)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-        </li>
-      </ul>
     </div>
   </div>
 </div>
 
 
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 90px; font-size: 24px; color: red; background-color: gray;">IN PROGRESS</div>
+    <section class="popular">
+  <div class="container popular-wrapper">
+    <h2 class="popular__title">Вы недавно смотрели:</h2>
+    <div class="popular__content">
+      <div class="popular__nav">
+        <button class="popular__nav-btn tabs__nav-btn tab-active secondary-btn" type="button" data-tab="#tab-1">
+          <span>Запчасти</span>  
+        </button>
+        <button class="popular__nav-btn tabs__nav-btn secondary-btn" type="button" data-tab="#tab-2">
+          <span>Услуги</span>
+        </button>
+      </div>
+      <ul class="popular__list tabs__item tab-active" id="tab-1">
+
+        <li class="product-item">
+    <div class="product-item__content">
+      <div class="product-item__photo">
+          <img
+        src="img/details_two.png"
+        alt="Горелка дизельная (без штифта)"
+      />
+      </div>
+
+      <h3 class="product-item__name">
+        Горелка дизельная (без штифта)
+      </h3>
     </div>
+    <div class="product-item__order">
+      <span>7 200 р.</span>
+      <button class="btn product-item__order-btn" type="button">
+        Заказать
+      </button>
+    </div>
+  </li>
+
+
+          <li class="product-item">
+    <div class="product-item__content">
+      <div class="product-item__photo">
+          <img
+        src="img/default_wheel.svg"
+        alt="Втулка рычага переключения передач"
+      />
+      </div>
+
+      <h3 class="product-item__name">
+        Втулка рычага переключения передач
+      </h3>
+    </div>
+    <div class="product-item__order">
+      <span>7 350 р.</span>
+      <button class="btn product-item__order-btn" type="button">
+        Заказать
+      </button>
+    </div>
+  </li>
+
+
+          <li class="product-item">
+    <div class="product-item__content">
+      <div class="product-item__photo">
+          <img
+        src="img/default_engine.svg"
+        alt="Втулка рычага переключения передач"
+      />
+      </div>
+
+      <h3 class="product-item__name">
+        Втулка рычага переключения передач
+      </h3>
+    </div>
+    <div class="product-item__order">
+      <span>7 350 р.</span>
+      <button class="btn product-item__order-btn" type="button">
+        Заказать
+      </button>
+    </div>
+  </li>
+
+
+          <li class="product-item">
+    <div class="product-item__content">
+      <div class="product-item__photo">
+          <img
+        src="img/details_one.png"
+        alt="Втулка рычага переключения передач"
+      />
+      </div>
+
+      <h3 class="product-item__name">
+        Втулка рычага переключения передач
+      </h3>
+    </div>
+    <div class="product-item__order">
+      <span>97 350 р.</span>
+      <button class="btn product-item__order-btn" type="button">
+        Заказать
+      </button>
+    </div>
+  </li>
+
+        </ul>
+
+            <ul class="popular__list tabs__item" id="tab-2">
+
+        <li class="product-item">
+    <div class="product-item__content">
+      <div class="product-item__photo">
+          <img
+        src="img/details_one.png"
+        alt="Втулка рычага переключения передач"
+      />
+      </div>
+
+      <h3 class="product-item__name">
+        Втулка рычага переключения передач
+      </h3>
+    </div>
+    <div class="product-item__order">
+      <span>97 350 р.</span>
+      <button class="btn product-item__order-btn" type="button">
+        Заказать
+      </button>
+    </div>
+  </li>
+
+
+          <li class="product-item">
+    <div class="product-item__content">
+      <div class="product-item__photo">
+          <img
+        src="img/details_one.png"
+        alt="Втулка рычага переключения передач"
+      />
+      </div>
+
+      <h3 class="product-item__name">
+        Втулка рычага переключения передач
+      </h3>
+    </div>
+    <div class="product-item__order">
+      <span>97 350 р.</span>
+      <button class="btn product-item__order-btn" type="button">
+        Заказать
+      </button>
+    </div>
+  </li>
+
+
+
+          <li class="product-item">
+    <div class="product-item__content">
+      <div class="product-item__photo">
+          <img
+        src="img/details_one.png"
+        alt="Втулка рычага переключения передач"
+      />
+      </div>
+
+      <h3 class="product-item__name">
+        Втулка рычага переключения передач
+      </h3>
+    </div>
+    <div class="product-item__order">
+      <span>97 350 р.</span>
+      <button class="btn product-item__order-btn" type="button">
+        Заказать
+      </button>
+    </div>
+  </li>
+
+
+
+          <li class="product-item">
+    <div class="product-item__content">
+      <div class="product-item__photo">
+          <img
+        src="img/details_one.png"
+        alt="Втулка рычага переключения передач"
+      />
+      </div>
+
+      <h3 class="product-item__name">
+        Втулка рычага переключения передач
+      </h3>
+    </div>
+    <div class="product-item__order">
+      <span>97 350 р.</span>
+      <button class="btn product-item__order-btn" type="button">
+        Заказать
+      </button>
+    </div>
+  </li>
+
+
+        </ul>
+      <div class="popular__bottom-content">
+        <a href="main_details.html" class="popular__bottom-content-btn secondary-btn">
+          Все запчасти
+        </a>
+        <span class="popular__bottom-content-descr">
+          &gt;&gt; 55&nbsp;000 запчастей
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="footer">
@@ -612,6 +557,7 @@
 </footer>
 
 
+
 <div class="graph-modal">
 	<div class="graph-modal__container service-modal" role="dialog" aria-modal="true" data-graph-target="service-modal">
         <div class="service-modal__wrapper">
@@ -629,6 +575,7 @@
 		</div>
 	</div>
 
+    
     <div class="graph-modal__container login-modal" role="dialog" aria-modal="true" data-graph-target="login-modal">
 		<button class="btn-reset graph-modal__close js-modal-close login-modal__close" aria-label="Закрыть модальное окно"></button>
 		<div class="graph-modal__content login-modal__content">
@@ -644,6 +591,7 @@
 		</div>
 	</div>
 
+    
     <div class="graph-modal__container policy-modal" role="dialog" aria-modal="true" data-graph-target="policy-modal">
 		<button class="btn-reset graph-modal__close js-modal-close policy-modal__close" aria-label="Закрыть модальное окно"></button>
 		<div class="graph-modal__content policy-modal__content">
@@ -663,6 +611,5 @@
 </body>
 
 </html>
-
 
 

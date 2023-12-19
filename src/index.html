@@ -12,7 +12,9 @@
     <div class="site-wrapper">
     @@include('modules/home/_hero/_hero.html')
     @@include('modules/home/_search/_search.html')
-    @@include('modules/home/_popular/_popular.html')
+    @@include('modules/home/_popular/_popular.html', {
+    "title": "Популярные запчасти",
+    })
     @@include('modules/home/_discount/_discount.html')
     @@include('modules/home/_news/_news.html', {
     "title": "Новости и статьи",
