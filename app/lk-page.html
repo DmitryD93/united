@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -19,17 +20,18 @@
   <meta name="apple-mobile-web-app-title" content="Stat4market.com">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="robots" content="">
-  
-  
-  <title>Юнайтед Сервис - Корзина</title>
-  <meta name="description" content="Корзина">
+
+
+      <title>Личный кабинет</title>
+  <meta name="description" content="Автозапчасти в Санкт-Петербурге">
   <link rel="stylesheet" href="css/style.min.css">
   <script src="https://api-maps.yandex.ru/2.1?apikey=5143295b-6e4c-4762-80f7-dd25151c4c7a&lang=ru_RU" type="text/javascript"></script>
 
-  
 
 
-</head>
+
+  </head>
+
 
 <body>
   <header class="header">
@@ -154,7 +156,6 @@
           </svg>
         </button>
 
-        
         <a href="#" class="header__btn header__lk-link" style="display: none">
           <svg
             width="40"
@@ -198,12 +199,10 @@
           </button>
         </div>
 
-        
         <div class="header__lk-block" style="display: none">
           <p>Здравствуйте, <span>Имя</span>!</p>
           <a href="#" class="link">Войти в личный кабинет</a>
         </div>
-        
       </div>
     </div>
 
@@ -215,7 +214,6 @@
             class="header__search-form-input"
             placeholder="Поиск по VIN, артикулу, названию, бренду, услугам, работам"
           />
-          
         </label>
         <button class="btn header__search-form-btn" type="button">
           <svg
@@ -230,8 +228,6 @@
             />
           </svg>
         </button>
-        
-        
       </form>
     </div>
   </header>
@@ -239,267 +235,27 @@
 
 <main class="main home">
     <div class="site-wrapper">
-    <section class="basket-hero hero">
+    <section class="lk-hero hero">
   <div
-    class="basket-hero__background"
+    class="lk-hero__background"
     style="background-image: url(./img/registration_bg.jfif)"
   ></div>
-  <div class="container basket-hero__wrapper">
+  <div class="container lk-hero__wrapper">
     <div class="breadcrumbs">
       <a href="#">Главная</a> /
-      <span>Корзина</span>
+      <span>Личный кабинет</span>
     </div>
-    <h1 class="basket-hero__title">Корзина</h1>
-    <p class="basket-hero__descr">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation
+    <h1 class="lk-hero__title">Личный кабинет</h1>
+    <p class="lk-hero__descr">
+      Добро пожаловать в личный кабинет. Здесь вы можете управлять своими
+      данными
     </p>
   </div>
 </section>
 
-    <div class="basket-content">
-  <div class="basket-content__wrapper container">
-    <ul class="basket-content__title-list">
-      <li class="basket-content__title-list-item">
-        <span>Название</span>
-      </li>
-      <li class="basket-content__title-list-item">
-        <span>Производитель</span>
-      </li>
-      <li class="basket-content__title-list-item">
-        <span>Склад</span>
-      </li>
-      <li class="basket-content__title-list-item">
-        <span>Количество</span>
-      </li>
-      <li class="basket-content__title-list-item"><span>Цена</span></li>
-    </ul>
-    <div class="basket-content__mobile-title">
-      <span>Товары</span>
-    </div>
-    <div class="basket-content__select-block">
-      <label class="basket-content__select-block-label">
-        <input type="checkbox" class="basket-content__select-block-checkbox" />
-        <span> </span>
-      </label>
-      <button type="button" class="basket-content__select-block-btn">Выбрать всё</button>
-      <button type="button" class="basket-content__select-block-btn">
-        Удалить выбранные
-      </button>
-    </div>
-  </div>
-</div>
 
 
-    <section class="popular">
-  <div class="container popular-wrapper">
-    <h2 class="popular__title">Вы недавно смотрели:</h2>
-    <div class="popular__content">
-      <div class="popular__nav">
-        <button class="popular__nav-btn tabs__nav-btn tab-active secondary-btn" type="button" data-tab="#tab-1">
-          <span>Запчасти</span>  
-        </button>
-        <button class="popular__nav-btn tabs__nav-btn secondary-btn" type="button" data-tab="#tab-2">
-          <span>Услуги</span>
-        </button>
-      </div>
-      <ul class="popular__list tabs__item tab-active" id="tab-1">
-
-        <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/details_two.png"
-        alt="Горелка дизельная (без штифта)"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Горелка дизельная (без штифта)
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>7 200 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/default_wheel.svg"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>7 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/default_engine.svg"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>7 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/details_one.png"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>97 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-        </ul>
-
-            <ul class="popular__list tabs__item" id="tab-2">
-
-        <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/details_one.png"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>97 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/details_one.png"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>97 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/details_one.png"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>97 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-
-          <li class="product-item">
-    <div class="product-item__content">
-      <div class="product-item__photo">
-          <img
-        src="img/details_one.png"
-        alt="Втулка рычага переключения передач"
-      />
-      </div>
-
-      <h3 class="product-item__name">
-        Втулка рычага переключения передач
-      </h3>
-    </div>
-    <div class="product-item__order">
-      <span>97 350 р.</span>
-      <button class="btn product-item__order-btn" type="button">
-        Заказать
-      </button>
-    </div>
-  </li>
-
-
-        </ul>
-      <div class="popular__bottom-content">
-        <a href="main_details.html" class="popular__bottom-content-btn secondary-btn">
-          Все запчасти
-        </a>
-        <span class="popular__bottom-content-descr">
-          &gt;&gt; 55&nbsp;000 запчастей
-        </span>
-      </div>
-    </div>
-  </div>
-</section>
-
+        </div>
 </main>
 
 <footer class="footer">
@@ -557,7 +313,6 @@
 </footer>
 
 
-
 <div class="graph-modal">
 	<div class="graph-modal__container service-modal" role="dialog" aria-modal="true" data-graph-target="service-modal">
         <div class="service-modal__wrapper">
@@ -575,7 +330,6 @@
 		</div>
 	</div>
 
-    
     <div class="graph-modal__container login-modal" role="dialog" aria-modal="true" data-graph-target="login-modal">
 		<button class="btn-reset graph-modal__close js-modal-close login-modal__close" aria-label="Закрыть модальное окно"></button>
 		<div class="graph-modal__content login-modal__content">
@@ -591,7 +345,6 @@
 		</div>
 	</div>
 
-    
     <div class="graph-modal__container policy-modal" role="dialog" aria-modal="true" data-graph-target="policy-modal">
 		<button class="btn-reset graph-modal__close js-modal-close policy-modal__close" aria-label="Закрыть модальное окно"></button>
 		<div class="graph-modal__content policy-modal__content">

@@ -1,0 +1,21 @@
+<!-------- Заголовок и описание страницы -------->
+@@include('modules/common/_header/_head.html',
+{
+"title": "Личный кабинет",
+"description" : "Автозапчасти в Санкт-Петербурге"
+})
+</head>
+
+<!------------ Header ------------>
+@@include('modules/common/_header/_header.html')
+<main class="main home">
+    <div class="site-wrapper">
+    @@include('modules/lk/_hero/_lk-hero.html')
+    @@include('modules/lk/_content/_lk-content.html')
+
+    </div>
+</main>
+
+@@include('modules/common/_footer/_footer.html')
+
+
