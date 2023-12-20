@@ -10446,6 +10446,7 @@ p {
           justify-content: center;
   gap: 16px;
   border-bottom: 4px solid var(--red);
+  padding: 0 5px;
 }
 .basket-content__product-list-item-count span {
   font-size: 16px;
