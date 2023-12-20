@@ -51,7 +51,7 @@
 
   &__title-list {
     display: grid;
-    grid-template-columns: repeat(8, auto);
+    grid-template-columns: repeat(8, 1fr);
     gap: 16px;
     width: 100%;
     padding: 16px 44px;
@@ -65,13 +65,16 @@
     &-item {
       display: flex;
       gap: 20px;
+        
 
       span {
         color: var(--black);
         font-size: 16px;
         font-weight: 600;
         line-height: 1.2;
-        text-align: center;
+        width: 100%;
+
+
 
         @include _880 {
           font-size: 14px;
@@ -84,18 +87,31 @@
 
       &:nth-child(2) {
         grid-column: 1 span;
+
+        span {
+          text-align: center;
+        }
       }
 
       &:nth-child(3) {
         grid-column: 1 span;
+        span {
+          text-align: center;
+        }
       }
 
       &:nth-child(4) {
         grid-column: 1 span;
+        span {
+          text-align: center;
+        }
       }
 
       &:nth-child(5) {
         grid-column: 1 span;
+        span {
+          text-align: center;
+        }
       }
     }
   }
@@ -140,11 +156,11 @@
 
     &-item {
       display: grid;
-      grid-template-columns: repeat(8, auto);
+      grid-template-columns: repeat(8, 1fr);
       gap: 16px;
 
       &-product {
-        grid-column: 2 span;
+        grid-column: 4 span;
         display: flex;
         gap: 28px;
 
@@ -189,6 +205,7 @@
         font-weight: 400;
         line-height: 1.2;
         color: var(--black);
+        text-align: center;
       }
 
       &-count {
@@ -216,10 +233,10 @@
         font-weight: 400;
         line-height: 1.2;
         color: var(--black);
+        gap: 16px;
       }
 
       &-delete {
-        grid-column: 1 span;
         grid-column-start: 8;
         width: fit-content;
         height: fit-content;
