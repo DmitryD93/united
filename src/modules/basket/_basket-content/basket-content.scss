@@ -65,7 +65,6 @@
     &-item {
       display: flex;
       gap: 20px;
-        
 
       span {
         color: var(--black);
@@ -73,8 +72,6 @@
         font-weight: 600;
         line-height: 1.2;
         width: 100%;
-
-
 
         @include _880 {
           font-size: 14px;
@@ -152,12 +149,22 @@
   &__product-list {
     display: flex;
     flex-direction: column;
-    padding: 8px 16px;
+    gap: 8px;
+    margin-bottom: 16px;
 
     &-item {
       display: grid;
       grid-template-columns: repeat(8, 1fr) 30px;
       gap: 16px;
+      padding: 8px 16px;
+
+      &:nth-child(even) {
+        background-color: var(--grey);
+      }
+
+      &:nth-child(odd) {
+        background-color: var(--white);
+      }
 
       &-product {
         grid-column: 4 span;
@@ -165,38 +172,35 @@
         gap: 28px;
 
         a {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        align-items: center;
+          display: flex;
+          height: 100%;
+          align-items: center;
 
-        div {
-          position: relative;
-          width: 52px;
-          height: 52px;
-          margin-right: 28px;
+          div {
+            position: relative;
+            width: 52px;
+            height: 52px;
+            margin-right: 28px;
 
-          img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          span {
+            font-family: "Ubuntu", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--black);
           }
         }
-
-        span {
-          font-family: "Ubuntu", sans-serif;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 1.2;
-          color: var(--black);
-        }
       }
-      }
-
-
 
       span {
         align-self: center;
@@ -243,6 +247,121 @@
         height: fit-content;
         align-self: center;
       }
+    }
+  }
+
+  &__total-order {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 16px 56px;
+    gap: 16px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 112px);
+      height: 1px;
+      background-color: var(--dark-grey);
+    }
+
+    &-text {
+      grid-column: 2 span;
+      color: var(--black);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.6px;
+    }
+
+    &-count {
+      grid-column: 1 span;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      gap: 50px;
+
+
+      span {
+        color: var(--black);
+
+        &:nth-child(1) {
+          font-family: "Ubuntu", sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.2;
+
+          span {
+            font-family: "Ubuntu", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.2; 
+          }
+         
+        }
+
+        &:nth-child(2) {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 1.2;
+          letter-spacing: 0.6px;
+
+          span {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: 0.6px;
+          }
+        }
+      }
+    }
+
+    &-accept {
+      grid-row-start: 2;
+      grid-column: 3 span;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding-top: 16px;
+      margin-bottom: 32px;
+
+      &-descr {
+        color: var(--black);
+        font-family: "Ubuntu", sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.2; 
+      }
+
+      &-btn {
+        font-style: italic;
+      }
+    }
+  }
+
+  &__not-available {
+display: flex;
+flex-direction: column;
+    &-title {
+      text-align: center;
+      color: var(--black);
+      font-size: 20px;
+font-weight: 600;
+line-height: 1; 
+letter-spacing: 0.6px;
+margin-bottom: 28px;
+    }
+
+    &-delete {
+      color: var(--red);
+      font-family: "Ubuntu", sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.2; 
     }
   }
 }
