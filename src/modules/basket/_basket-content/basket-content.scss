@@ -51,7 +51,7 @@
 
   &__title-list {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr) 30px;
     gap: 16px;
     width: 100%;
     padding: 16px 44px;
@@ -108,7 +108,7 @@
       }
 
       &:nth-child(5) {
-        grid-column: 1 span;
+        grid-column: 2 span;
         span {
           text-align: center;
         }
@@ -156,7 +156,7 @@
 
     &-item {
       display: grid;
-      grid-template-columns: repeat(8, 1fr);
+      grid-template-columns: repeat(8, 1fr) 30px;
       gap: 16px;
 
       &-product {
@@ -215,7 +215,7 @@
         justify-content: center;
         gap: 16px;
         border-bottom: 4px solid var(--red);
-        padding: 0 5px;
+        padding: 0 10px;
 
         span {
           font-size: 16px;
@@ -238,7 +238,7 @@
       }
 
       &-delete {
-        grid-column-start: 8;
+        grid-column-start: 9;
         width: fit-content;
         height: fit-content;
         align-self: center;
