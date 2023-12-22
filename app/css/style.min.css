@@ -5545,7 +5545,7 @@ p {
   border: inherit;
   position: absolute;
   top: -10px;
-  left: 50%;
+  left: 15%;
   -webkit-clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
   -webkit-transform: rotate(135deg);
@@ -5555,7 +5555,7 @@ p {
 }
 @media (max-width: 550px) {
   .header__login-block-triangle {
-    left: calc(65% - 10px);
+    left: 40%;
   }
 }
 .header__login-block::before {
@@ -5674,60 +5674,76 @@ p {
     display: flex;
   }
 }
-.header__lk-link {
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-@media (max-width: 1024px) {
-  .header__lk-link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
 .header__lk-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-  padding-left: 16px;
+  position: relative;
+  display: block;
+  padding-right: 30px;
 }
 @media (max-width: 900px) {
   .header__lk-block {
-    display: none;
+    padding-right: 0;
   }
 }
-.header__lk-block::before {
-  content: "";
+.header__lk-block-content {
   position: absolute;
-  left: 0;
-  top: 0px;
-  width: 1px;
-  height: 55px;
-  background-color: var(--grey2);
-  opacity: 0.8;
+  top: 58px;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(105deg, #f1f1f1 45.85%, #dbdbdb 98.6%);
+  border-radius: 10px;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  visibility: hidden;
+  -webkit-transition: visibility 0.4s ease, -webkit-transform 0.4s ease;
+  transition: visibility 0.4s ease, -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease, visibility 0.4s ease;
+  transition: transform 0.4s ease, visibility 0.4s ease, -webkit-transform 0.4s ease;
 }
-.header__lk-block p {
-  color: var(--black);
-  font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 8px;
+.header__lk-block-content-link {
+  font-size: 18px;
 }
-.header__lk-block a {
-  color: var(--black);
-  font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 8px;
+.header__lk-block-content-triangle {
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(105deg, #f1f1f1 45.85%, #dbdbdb 98.6%);
+  border: inherit;
+  position: absolute;
+  top: -8px;
+  right: 35px;
+  -webkit-clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+  border-radius: 0 0 0 0.25em;
+}
+.header__lk-block.active .header__lk-block-content {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+}
+.header__lk-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--red);
+  border-radius: 4px;
+}
+.header__lk-link svg {
+  fill: var(--white);
+}
+@media (max-width: 900px) {
+  .header__lk-link {
+    background-color: transparent;
+  }
+  .header__lk-link svg {
+    fill: var(--black);
+  }
 }
 
 .footer {

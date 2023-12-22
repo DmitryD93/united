@@ -388,13 +388,13 @@
       border: inherit;
       position: absolute;
       top: -10px;
-      left: 50%;
+      left: 15%;
       clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
       transform: rotate(135deg);
       border-radius: 0 0 0 0.25em;
 
       @include _550 {
-        left: calc(65% - 10px);
+        left: 40%;
       }
     }
 
@@ -507,55 +507,93 @@
     }
   }
 
-  &__lk-link {
-    display: none;
-    align-items: center;
-
-    @include _1024 {
-      display: flex;
-    }
-  }
-
   &__lk-block {
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    text-align: center;
-    padding-left: 16px;
+    position: relative;
+    display: block;
+    padding-right: 30px;
 
     @include _880 {
-      display: none;
+      padding-right: 0;
     }
 
-    &::before {
-      content: "";
+    &-content {
       position: absolute;
-      left: 0;
-      top: 0px;
-      width: 1px;
-      height: 55px;
-      background-color: var(--grey2);
-      opacity: 0.8;
+      top: 58px;
+      right: 0;
+      padding: 24px;
+      background: linear-gradient(105deg, #f1f1f1 45.85%, #dbdbdb 98.6%);
+      border-radius: 10px;
+      transform: scale(0);
+      visibility: hidden;
+      transition: transform 0.4s ease, visibility 0.4s ease;
+
+      &-link {
+        font-size: 18px;
+      }
+
+      &-triangle {
+        height: 20px;
+        width: 20px;
+        background: linear-gradient(105deg, #f1f1f1 45.85%, #dbdbdb 98.6%);
+        border: inherit;
+        position: absolute;
+        top: -8px;
+        right: 35px;
+        clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+        transform: rotate(135deg);
+        border-radius: 0 0 0 0.25em;
+      }
     }
 
-    p {
-      color: var(--black);
-      font-family: "Ubuntu", sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 8px;
+    &.active {
+      .header__lk-block-content {
+        transform: scale(1);
+        visibility: visible;
+      }
     }
 
-    a {
-      color: var(--black);
-      font-family: "Ubuntu", sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
   }
+  &__lk-link {
+    display: flex;
+    align-items: center;
+    background-color: var(--red);
+    border-radius: 4px;
+
+    svg {
+      fill: var(--white);
+    }
+
+    @include _880 {
+      background-color: transparent;
+
+      svg {
+        fill: var(--black);
+      }
+    }
+
+  }
+
+  // &__lk-block {
+  //   display: flex;
+  //   -webkit-box-orient: vertical;
+  //   -webkit-box-direction: normal;
+  //   -ms-flex-direction: column;
+  //   flex-direction: column;
+  //   text-align: center;
+
+  //   padding-left: 16px;
+
+  //   @include _880 {
+  //     display: none;
+  //   }
+
+  //   a {
+  //     color: var(--black);
+  //     font-family: "Ubuntu", sans-serif;
+  //     font-size: 16px;
+  //     font-weight: 400;
+  //     line-height: 1.2;
+  //     margin-bottom: 8px;
+  //   }
+  // }
 }

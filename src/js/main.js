@@ -766,3 +766,13 @@ Fancybox.bind("[data-fancybox]", {
 
 // Модалки сервиса и регистрации
 const modal = new GraphModal();
+
+
+// Окно входа в лк 
+
+let lkBtn = document?.querySelector(".header__lk-link");
+let lkContent = document?.querySelector(".header__lk-block");
+
+lkBtn?.addEventListener("click", () => {
+  lkContent.classList.toggle("active");
+})
