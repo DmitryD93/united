@@ -5700,6 +5700,11 @@ p {
   transition: transform 0.4s ease, visibility 0.4s ease;
   transition: transform 0.4s ease, visibility 0.4s ease, -webkit-transform 0.4s ease;
 }
+@media (max-width: 900px) {
+  .header__lk-block-content {
+    right: -30px;
+  }
+}
 .header__lk-block-content-link {
   font-size: 18px;
 }
@@ -10624,7 +10629,11 @@ p {
   margin-bottom: 28px;
 }
 .basket-content__not-available-delete-block {
-  margin-bottom: 8px;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
 }
 .basket-content__not-available-delete {
   color: var(--red);
