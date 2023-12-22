@@ -355,7 +355,9 @@
     }
 
     &-delete-block {
-      margin-bottom: 8px;
+      padding: 16px;
+      display: flex;
+      gap: 16px;
     }
     &-delete {
       color: var(--red);

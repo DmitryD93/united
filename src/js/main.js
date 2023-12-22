@@ -776,3 +776,15 @@ let lkContent = document?.querySelector(".header__lk-block");
 lkBtn?.addEventListener("click", () => {
   lkContent.classList.toggle("active");
 })
+
+document.addEventListener("click", (e) => {
+  let elem = e.target;
+  console.log(elem);
+
+  if (
+    !elem.classList.contains("header__lk-block-content") &&
+    !elem.closest(".header__lk-link")
+  ) {
+    lkContent.classList.remove("active");
+  } 
+});
