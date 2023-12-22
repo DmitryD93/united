@@ -10607,12 +10607,34 @@ p {
   letter-spacing: 0.6px;
   margin-bottom: 28px;
 }
+.basket-content__not-available-delete-block {
+  margin-bottom: 8px;
+}
 .basket-content__not-available-delete {
   color: var(--red);
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
+}
+.basket-content__not-available-list {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+.basket-content__not-available-list-item .basket-content__product-list-item-product a {
+  opacity: 0.6;
+}
+.basket-content__not-available-list-item .basket-content__product-list-item-product + span {
+  opacity: 0.6;
+}
+.basket-content__not-available-list-item .basket-content__product-list-item-product + span + span {
+  opacity: 0.6;
+}
+.basket-content__not-available-list-item .basket-content__product-list-item-count {
+  opacity: 0.6;
+}
+.basket-content__not-available-list-item .basket-content__product-list-item-price {
+  opacity: 0.6;
 }
 
 .lk-hero {
