@@ -779,7 +779,6 @@ lkBtn?.addEventListener("click", () => {
 
 document.addEventListener("click", (e) => {
   let elem = e.target;
-  console.log(elem);
 
   if (
     !elem.classList.contains("header__lk-block-content") &&
