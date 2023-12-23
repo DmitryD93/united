@@ -9,10 +9,10 @@
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="manifest" href="img/site.webmanifest">
-  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="icon" type="image/ico" sizes="32x32" href="img/icon_red_b.ico">
+  <link rel="icon" type="image/ico" sizes="16x16" href="img/icon_red_sm.ico">
+  
+  
   <meta name="msapplication-TileColor" content="#9f00a7">
   <meta name="theme-color" content="#ffffff">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -290,7 +290,7 @@
         Выбрать всё
       </button>
       <button type="button" class="basket-content__select-block-btn">
-        Удалить выбранные
+        Удалить <span>выбранные</span>
       </button>
     </div>
 
@@ -305,70 +305,80 @@
           </label>
           <a href="target_details.html">
             <div>
-              <img src="img/truck.png" alt="Грузовик" />
+              <img src="img/default_wheel.svg" alt="Колесо" />
             </div>
-            <span>Трубка вакуумная</span>
+            <span>Втулка рычага переключения передач </span>
           </a>
         </div>
+        <div class="basket-content__product-list-item-brand">
+          <span class="basket-content__product-list-item-brand-title"
+            >Производитель</span
+          >
+          <span>Volvo</span>
+        </div>
+        <div class="basket-content__product-list-item-store">
+          <span class="basket-content__product-list-item-store-title"
+            >Склад</span
+          >
+          <span>Спб</span>
+        </div>
 
-        <span>Volvo</span>
-
-        <span>Спб</span>
-
-        <div class="basket-content__product-list-item-count">
-          <button type="button">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_953_1071)">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M-3 7H19V9H-3V7Z"
-                  fill="#1A202C"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_953_1071">
-                  <rect width="16" height="16" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </button>
-          <span>10</span>
-          <button type="button">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_953_1075)">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M9 -3V19H7V-3H9Z"
-                  fill="#1A202C"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M-3 7H19V9H-3V7Z"
-                  fill="#1A202C"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_953_1075">
-                  <rect width="16" height="16" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </button>
+        <div class="basket-content__product-list-item-wrapper">
+          <div class="basket-content__product-list-item-count">
+            <button type="button">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_953_1071)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M-3 7H19V9H-3V7Z"
+                    fill="#1A202C"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_953_1071">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <span>10</span>
+            <button type="button">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_953_1075)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9 -3V19H7V-3H9Z"
+                    fill="#1A202C"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M-3 7H19V9H-3V7Z"
+                    fill="#1A202C"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_953_1075">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
         </div>
 
         <div class="basket-content__product-list-item-price">
@@ -422,64 +432,75 @@
           </a>
         </div>
 
-        <span>Volvo</span>
+        <div class="basket-content__product-list-item-brand">
+          <span class="basket-content__product-list-item-brand-title"
+            >Производитель</span
+          >
+          <span>Volvo</span>
+        </div>
+        <div class="basket-content__product-list-item-store">
+          <span class="basket-content__product-list-item-store-title"
+            >Склад</span
+          >
+          <span>Спб</span>
+        </div>
 
-        <span>Спб</span>
-
-        <div class="basket-content__product-list-item-count">
-          <button type="button">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_953_1071)">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M-3 7H19V9H-3V7Z"
-                  fill="#1A202C"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_953_1071">
-                  <rect width="16" height="16" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </button>
-          <span>10</span>
-          <button type="button">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_953_1075)">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M9 -3V19H7V-3H9Z"
-                  fill="#1A202C"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M-3 7H19V9H-3V7Z"
-                  fill="#1A202C"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_953_1075">
-                  <rect width="16" height="16" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </button>
+        <div class="basket-content__product-list-item-wrapper">
+          <div class="basket-content__product-list-item-count">
+            <button type="button">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_953_1071)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M-3 7H19V9H-3V7Z"
+                    fill="#1A202C"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_953_1071">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <span>10</span>
+            <button type="button">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_953_1075)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9 -3V19H7V-3H9Z"
+                    fill="#1A202C"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M-3 7H19V9H-3V7Z"
+                    fill="#1A202C"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_953_1075">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
         </div>
 
         <div class="basket-content__product-list-item-price">
@@ -543,17 +564,21 @@
       </h2>
       <div class="basket-content__not-available-delete-block">
         <label
-              class="basket-content__label basket-content__product-list-item-label"
-            >
-              <input type="checkbox" class="basket-content__checkbox" />
-              <span> </span>
-            </label>
+          class="basket-content__label basket-content__product-list-item-label"
+        >
+          <input type="checkbox" class="basket-content__checkbox" />
+          <span> </span>
+        </label>
         <button type="button" class="basket-content__not-available-delete">
-          Удалить выбранные
+          Удалить <span>выбранные</span>
         </button>
       </div>
-      <ul class="basket-content__not-available-list basket-content__product-list">
-        <li class="basket-content__product-list-item basket-content__not-available-list-item">
+      <ul
+        class="basket-content__not-available-list basket-content__product-list"
+      >
+        <li
+          class="basket-content__product-list-item basket-content__not-available-list-item"
+        >
           <div class="basket-content__product-list-item-product">
             <label
               class="basket-content__label basket-content__product-list-item-label"
@@ -569,70 +594,84 @@
             </a>
           </div>
 
+          <div class="basket-content__product-list-item-brand">
+            <span class="basket-content__product-list-item-brand-title"
+              >Производитель</span
+            >
             <span>Volvo</span>
-
+          </div>
+          <div class="basket-content__product-list-item-store">
+            <span class="basket-content__product-list-item-store-title"
+              >Склад</span
+            >
             <span>Спб</span>
-
-            <div class="basket-content__product-list-item-count">
-            <button type="button">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_953_1071)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-3 7H19V9H-3V7Z"
-                    fill="#1A202C"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_953_1071">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </button>
-            <span>10</span>
-            <button type="button">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_953_1075)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M9 -3V19H7V-3H9Z"
-                    fill="#1A202C"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-3 7H19V9H-3V7Z"
-                    fill="#1A202C"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_953_1075">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </button>
           </div>
 
-            <div class="basket-content__product-list-item-price">
+          <div class="basket-content__product-list-item-wrapper">
+            <div class="basket-content__product-list-item-count">
+              <button type="button">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_953_1071)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M-3 7H19V9H-3V7Z"
+                      fill="#1A202C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_953_1071">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <span>10</span>
+              <button type="button">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_953_1075)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9 -3V19H7V-3H9Z"
+                      fill="#1A202C"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M-3 7H19V9H-3V7Z"
+                      fill="#1A202C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_953_1075">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="basket-content__product-list-item-price">
             <span>10 000 <span>Р.</span></span>
           </div>
-          <button class="basket-content__product-list-item-delete" type="button">
+          <button
+            class="basket-content__product-list-item-delete"
+            type="button"
+          >
             <svg
               width="16"
               height="16"
@@ -664,7 +703,9 @@
             </svg>
           </button>
         </li>
-        <li class="basket-content__product-list-item basket-content__not-available-list-item">
+        <li
+          class="basket-content__product-list-item basket-content__not-available-list-item"
+        >
           <div class="basket-content__product-list-item-product">
             <label
               class="basket-content__label basket-content__product-list-item-label"
@@ -680,70 +721,84 @@
             </a>
           </div>
 
+          <div class="basket-content__product-list-item-brand">
+            <span class="basket-content__product-list-item-brand-title"
+              >Производитель</span
+            >
             <span>Volvo</span>
-
+          </div>
+          <div class="basket-content__product-list-item-store">
+            <span class="basket-content__product-list-item-store-title"
+              >Склад</span
+            >
             <span>Спб</span>
-
-            <div class="basket-content__product-list-item-count">
-            <button type="button">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_953_1071)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-3 7H19V9H-3V7Z"
-                    fill="#1A202C"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_953_1071">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </button>
-            <span>10</span>
-            <button type="button">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_953_1075)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M9 -3V19H7V-3H9Z"
-                    fill="#1A202C"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-3 7H19V9H-3V7Z"
-                    fill="#1A202C"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_953_1075">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </button>
           </div>
 
-            <div class="basket-content__product-list-item-price">
+          <div class="basket-content__product-list-item-wrapper">
+            <div class="basket-content__product-list-item-count">
+              <button type="button">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_953_1071)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M-3 7H19V9H-3V7Z"
+                      fill="#1A202C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_953_1071">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <span>10</span>
+              <button type="button">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_953_1075)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9 -3V19H7V-3H9Z"
+                      fill="#1A202C"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M-3 7H19V9H-3V7Z"
+                      fill="#1A202C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_953_1075">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="basket-content__product-list-item-price">
             <span>10 000 <span>Р.</span></span>
           </div>
-          <button class="basket-content__product-list-item-delete" type="button">
+          <button
+            class="basket-content__product-list-item-delete"
+            type="button"
+          >
             <svg
               width="16"
               height="16"
