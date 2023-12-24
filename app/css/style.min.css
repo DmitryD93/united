@@ -9725,6 +9725,11 @@ p {
     padding-bottom: 32px;
   }
 }
+@media (max-width: 550px) {
+  .registration-hero {
+    padding-top: 80px;
+  }
+}
 .registration-hero__background {
   position: absolute;
   top: 0;
@@ -10538,6 +10543,12 @@ p {
     grid-column: 1/6;
     padding: 0;
     padding-left: 30px;
+    max-width: 70%;
+  }
+}
+@media (max-width: 450px) {
+  .basket-content__product-list-item-brand {
+    max-width: 100%;
   }
 }
 .basket-content__product-list-item-store {
@@ -10591,6 +10602,12 @@ p {
     grid-column: 1/6;
     padding: 0;
     padding-left: 30px;
+    max-width: 70%;
+  }
+}
+@media (max-width: 450px) {
+  .basket-content__product-list-item-store {
+    max-width: 100%;
   }
 }
 .basket-content__product-list-item-wrapper {
@@ -10956,6 +10973,11 @@ p {
     padding-bottom: 32px;
   }
 }
+@media (max-width: 550px) {
+  .lk-hero {
+    padding-top: 80px;
+  }
+}
 .lk-hero__background {
   position: absolute;
   top: 0;
@@ -10978,7 +11000,7 @@ p {
   width: 100%;
   height: 100%;
   background-color: var(--white);
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .lk-hero__title {
   text-transform: uppercase;
@@ -11141,6 +11163,7 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
+  width: 100%;
 }
 @media (max-width: 900px) {
   .lk-content__form {
@@ -11240,11 +11263,26 @@ p {
   -ms-grid-column-span: 3;
   grid-column: 3 span;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.lk-content__form-password-label span {
+  color: var(--dark-red);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 .lk-content__form-password-visible {
   position: absolute;
   right: 10px;
-  top: 55%;
+  top: 50px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -11262,6 +11300,25 @@ p {
 .lk-content__form-password-visible.visible svg:nth-child(2) {
   display: block;
 }
+.lk-content__form-phone-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  -ms-grid-column-span: 3;
+  grid-column: 3 span;
+}
+.lk-content__form-phone-label span {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+}
 .lk-content__form-label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11271,6 +11328,7 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .lk-content__form-label span {
   font-family: "Ubuntu", sans-serif;

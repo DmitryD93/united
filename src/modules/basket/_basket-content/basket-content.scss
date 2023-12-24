@@ -274,6 +274,11 @@
           grid-column: 1/6;
           padding: 0;
           padding-left: 30px;
+          max-width: 70%;
+        }
+
+        @include _450 {
+          max-width: 100%;
         }
       }
 
@@ -316,6 +321,11 @@
           grid-column: 1/6;
           padding: 0;
           padding-left: 30px;
+          max-width: 70%;
+        }
+
+        @include _450 {
+          max-width: 100%;
         }
       }
 
