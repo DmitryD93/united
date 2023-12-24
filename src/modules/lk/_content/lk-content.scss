@@ -1,329 +1,355 @@
 .lk-content {
+  padding: 64px 0;
+
+  @include _880 {
+    padding: 32px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-nav-container {
+    margin: 0 auto 30px auto;
+    max-width: 1232px;
+    padding: 0 30px;
+    width: 100%;
+    position: relative;
+
+    @include _1280 {
+      max-width: 956px;
+    }
+
+    @include _880 {
+      max-width: 640px;
+      overflow: auto;
+      text-wrap: nowrap;
+      margin: 0 auto 20px auto;
+    }
+
+    &::-webkit-scrollbar {
+      height: 3px;
+      background-color: var(--dark-grey);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--red);
+      border-radius: 5px;
+    }
+  }
+  &__nav {
+    display: flex;
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid var(--gainsboro);
+
+    @include _450 {
+      border-bottom: none;
+    }
+
+    &-btn {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      opacity: 0.6;
+      color: var(--black);
+
+      @include _1024 {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      @include _550 {
+        font-size: 16px;
+        line-height: 1.5;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &::before {
+        width: 0;
+      }
+
+      &.active {
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.72px;
+        opacity: 1;
+
+        @include _1024 {
+          font-size: 20px;
+          letter-spacing: 0.6px;
+        }
+
+        @include _640 {
+          font-size: 18px;
+          letter-spacing: 0.54px;
+        }
+
+        &::before {
+          width: 100%;
+        }
+
+        @include _550 {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    max-width: 600px;
     padding: 64px 0;
-  
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+
     @include _880 {
       padding: 32px 0;
     }
-  
-    &__wrapper {
+
+    &-input {
+      background-color: var(--white);
+      color: var(--black);
+      padding: 12px 20px;
+      width: 100%;
+      border: 1px solid var(--dark-grey);
+      border-radius: 5px;
+      outline: none;
+      transition: border 0.4s ease;
+
+      &:focus {
+        border: 1px solid var(--black);
+      }
+
+      &:hover {
+        border: 1px solid var(--black);
+      }
+
+      &::placeholder {
+        color: var(--dark-grey);
+        font-size: 16px;
+      }
+    }
+
+    &-main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding-bottom: 32px;
+
+      &-input {
+        grid-column: 3 span;
+      }
+
+      &-input:nth-child(2) {
+        grid-column: 1 span;
+
+        @include _880 {
+          grid-column: 3 span;
+        }
+      }
+      &-input:nth-child(3) {
+        grid-column: 1 span;
+        @include _880 {
+          grid-column: 3 span;
+        }
+      }
+      &-input:nth-child(4) {
+        grid-column: 1 span;
+        @include _880 {
+          grid-column: 3 span;
+        }
+      }
+
+      &-title {
+        grid-column: 3 span;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.6px;
+        color: var(--black);
+        margin-bottom: 16px;
+      }
+    }
+
+    &-password-label {
+      grid-column: 3 span;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      span {
+        color: var(--dark-red);
+        font-family: "Ubuntu", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+    }
+
+    &-password-visible {
+      position: absolute;
+      right: 10px;
+      top: 50px;
+      transform: translateY(-50%);
+      cursor: pointer;
+
+      svg:nth-child(1) {
+        display: block;
+      }
+      svg:nth-child(2) {
+        display: none;
+      }
+
+      &.visible {
+        svg:nth-child(1) {
+          display: none;
+        }
+        svg:nth-child(2) {
+          display: block;
+        }
+      }
+    }
+
+    &-phone-label {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      grid-column: 3 span;
+
+      span {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--black);
+      }
+    }
+    &-label {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+
+      span {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+    }
+    &-company {
+      display: none;
+      flex-direction: column;
+      gap: 16px;
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    &-submit-block {
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-  
-    &-nav-container {
-      margin: 0 auto 30px auto;
-      max-width: 1232px;
-      padding: 0 30px;
-      width: 100%;
-      position: relative;
-  
-      @include _1280 {
-        max-width: 956px;
-      }
-  
-      @include _880 {
-        max-width: 640px;
-        overflow: auto;
-        text-wrap: nowrap;
-        margin: 0 auto 20px auto;
-      }
-  
-      &::-webkit-scrollbar {
-        height: 3px;
-        background-color: var(--dark-grey);
-      }
-  
-      &::-webkit-scrollbar-thumb {
-        background-color: var(--red);
-        border-radius: 5px;
-      }
-    }
-    &__nav {
-      display: flex;
-      position: relative;
-      width: 100%;
-      border-bottom: 2px solid var(--gainsboro);
-  
-      @include _450 {
-        border-bottom: none;
-      }
-  
-      &-btn {
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.5;
-        opacity: 0.6;
-        color: var(--black);
-  
-        @include _1024 {
-          font-size: 18px;
-          line-height: 1.2;
-        }
-  
-        @include _550 {
-          font-size: 16px;
-          line-height: 1.5;
-  
-          &::after {
-            display: none;
-          }
-        }
-  
-        &::before {
-          width: 0;
-        }
-  
-        &.active {
-          font-size: 24px;
-          font-style: italic;
-          font-weight: 700;
-          line-height: 1.2;
-          letter-spacing: 0.72px;
-          opacity: 1;
-  
-          @include _1024 {
-            font-size: 20px;
-            letter-spacing: 0.6px;
-          }
-  
-          @include _640 {
-            font-size: 18px;
-            letter-spacing: 0.54px;
-          }
-  
-          &::before {
-            width: 100%;
-          }
-  
-          @include _550 {
-            &::before {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-  
-    &__form {
-      max-width: 600px;
-      padding: 64px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-  
-      @include _880 {
-        padding: 32px 0;
-      }
-  
-      &-input {
-        background-color: var(--white);
-        color: var(--black);
-        padding: 12px 20px;
+      gap: 32px;
+
+      &-captcha {
         width: 100%;
-        border: 1px solid var(--dark-grey);
-        border-radius: 5px;
-        outline: none;
-        transition: border 0.4s ease;
-  
-        &:focus {
-          border: 1px solid var(--black);
-        }
-  
-        &:hover {
-          border: 1px solid var(--black);
-        }
-  
-        &::placeholder {
-          color: var(--dark-grey);
-          font-size: 16px;
-        }
-      }
-  
-      &-main {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-        padding-bottom: 32px;
-  
-        &-input {
-          grid-column: 3 span;
-        }
-  
-        &-input:nth-child(2) {
-          grid-column: 1 span;
-  
-          @include _880 {
-            grid-column: 3 span;
-          }
-        }
-        &-input:nth-child(3) {
-          grid-column: 1 span;
-          @include _880 {
-            grid-column: 3 span;
-          }
-        }
-        &-input:nth-child(4) {
-          grid-column: 1 span;
-          @include _880 {
-            grid-column: 3 span;
-          }
-        }
-  
-        &-title {
-          grid-column: 3 span;
-          font-size: 20px;
-          font-weight: 600;
-          line-height: 1.2;
-          letter-spacing: 0.6px;
-          color: var(--black);
-          margin-bottom: 16px;
-        }
-      }
-  
-      &-password-label {
-        grid-column: 3 span;
-        position: relative;
-      }
-  
-      &-password-visible {
-        position: absolute;
-        right: 10px;
-        top: 55%;
-        transform: translateY(-50%);
-        cursor: pointer;
-  
-        svg:nth-child(1) {
-          display: block;
-        }
-        svg:nth-child(2) {
-          display: none;
-        }
-  
-        &.visible {
-          svg:nth-child(1) {
-            display: none;
-          }
-          svg:nth-child(2) {
-            display: block;
-          }
-        }
-      }
-  
-      &-label {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-  
-        span {
-          font-family: "Ubuntu", sans-serif;
-          font-size: 10px;
-          font-weight: 300;
-          line-height: 1.2;
-        }
-      }
-      &-company {
-        display: none;
-        flex-direction: column;
-        gap: 16px;
-  
-        &.active {
-          display: flex;
-        }
-      }
-  
-      &-submit-block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-  
-        &-captcha {
-          width: 100%;
-          &-descr {
-            font-family: "Ubuntu", sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.2;
-            color: var(--black);
-          }
-        }
-  
         &-descr {
           font-family: "Ubuntu", sans-serif;
           font-size: 16px;
           font-weight: 400;
           line-height: 1.2;
           color: var(--black);
-  
-          @include _550 {
-            font-size: 14px;
-          }
-  
-          a {
-            font-weight: 700;
-            color: var(--red);
-          }
+        }
+      }
+
+      &-descr {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--black);
+
+        @include _550 {
+          font-size: 14px;
+        }
+
+        a {
+          font-weight: 700;
+          color: var(--red);
         }
       }
     }
   }
-  
-  // Стили для селекта
-  
-  .choices {
-    grid-column: 3 span;
-    width: 100%;
-    margin-bottom: 0;
-    background-color: transparent;
-    border-radius: 5px;
-    //   border: 1px solid var(--dark-grey);
-  
-    &__inner {
-      padding: 12px 20px;
-      background-color: var(--white);
-      border: none;
-      font-size: 16px;
-      border: 1px solid var(--dark-grey);
-    }
-  }
-  
-  .choices[data-type*="select-one"] .choices__inner {
-    padding-bottom: 12px;
-  }
-  
-  .choices__list--dropdown,
-  .choices__list[aria-expanded] {
+}
+
+// Стили для селекта
+
+.choices {
+  grid-column: 3 span;
+  width: 100%;
+  margin-bottom: 0;
+  background-color: transparent;
+  border-radius: 5px;
+  //   border: 1px solid var(--dark-grey);
+
+  &__inner {
+    padding: 12px 20px;
     background-color: var(--white);
-    //   border: 1px solid var(--dark-grey);
-    //   border-top: none;
-    width: 100%;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  
-  .choices__list--single {
-    padding: 0;
-  }
-  
-  .choices[data-type*="select-one"]::after {
     border: none;
-    background-image: url("../img/select_arrow.svg");
-    width: 10px;
-    height: 10px;
-    z-index: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    transition: rotate 0.3s ease;
+    font-size: 16px;
+    border: 1px solid var(--dark-grey);
   }
-  
-  .choices[data-type*="select-one"].is-open::after {
-    margin-top: 0;
-    rotate: 180deg;
-  }
-  
-  .choices__list[aria-expanded] .choices__item:first-child {
-    display: none;
-  }
-  
+}
+
+.choices[data-type*="select-one"] .choices__inner {
+  padding-bottom: 12px;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  background-color: var(--white);
+  //   border: 1px solid var(--dark-grey);
+  //   border-top: none;
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.choices[data-type*="select-one"]::after {
+  border: none;
+  background-image: url("../img/select_arrow.svg");
+  width: 10px;
+  height: 10px;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: rotate 0.3s ease;
+}
+
+.choices[data-type*="select-one"].is-open::after {
+  margin-top: 0;
+  rotate: 180deg;
+}
+
+.choices__list[aria-expanded] .choices__item:first-child {
+  display: none;
+}
