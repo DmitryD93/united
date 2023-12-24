@@ -707,24 +707,47 @@ const regTabsItems = document?.querySelector(
   ".registration-main__form-company"
 );
 
+// Функция табов
+function tabsLogic(currentBtn, tabContent, tabBtn, id) {
+      let tabId = currentBtn?.getAttribute("data-tab");
+      let currentTab = document?.querySelector(tabId);
+  
+      tabBtn.forEach((item) => {
+        item.classList.remove("active");
+      });
+  
+      if (tabId === id) {
+        tabContent.classList.add("active");
+      } else {
+        tabContent.classList.remove("active");
+      }
+  
+      currentBtn?.classList.add("active");
+      currentTab?.classList.add("active");
+    };
+
 regTabsBtn.forEach((item) => {
   item.addEventListener("click", () => {
-    let currentBtn = item;
-    let tabId = currentBtn.getAttribute("data-tab");
-    let currentTab = document.querySelector(tabId);
 
-    regTabsBtn.forEach((item) => {
-      item.classList.remove("active");
-    });
+    tabsLogic(item, regTabsItems, regTabsBtn, "entity");
+    
 
-    if (tabId === "entity") {
-      regTabsItems.classList.add("active");
-    } else {
-      regTabsItems.classList.remove("active");
-    }
+    // let currentBtn = item;
+    // let tabId = currentBtn.getAttribute("data-tab");
+    // let currentTab = document.querySelector(tabId);
 
-    currentBtn.classList.add("active");
-    currentTab.classList.add("active");
+    // regTabsBtn.forEach((item) => {
+    //   item.classList.remove("active");
+    // });
+
+    // if (tabId === "entity") {
+    //   regTabsItems.classList.add("active");
+    // } else {
+    //   regTabsItems.classList.remove("active");
+    // }
+
+    // currentBtn.classList.add("active");
+    // currentTab.classList.add("active");
   });
 });
 
@@ -787,3 +810,32 @@ document.addEventListener("click", (e) => {
     lkContent.classList.remove("active");
   } 
 });
+
+// Селекты лк
+
+const lkSelect = document.querySelectorAll(
+  ".lk-content__form-select"
+);
+
+lkSelect.forEach((item) => {
+  new Choices(item, {
+    searchEnabled: false,
+    itemSelectText: " ",
+  });
+});
+
+// табы лк
+
+const lkTabsBtn = document?.querySelectorAll(".lk-content__nav-btn");
+const lkTabsItems = document?.querySelector(
+  ".lk-content__form-company"
+);
+
+lkTabsBtn.forEach((item) => {
+  item.addEventListener("click", () => {
+    tabsLogic(item, lkTabsItems, lkTabsBtn, "entity");
+  })
+})
+
+
+
