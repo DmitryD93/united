@@ -6,7 +6,26 @@
   }
 
   @include _550 {
-    padding: 150px 0 32px 0;
+    padding: 165px 0 32px 0;
+  }
+
+  &__wrapper {
+    min-height: 40px;
+    max-width: calc(100% - 600px);
+
+    @include _1280 {
+      max-width: calc(100% - 450px);
+    }
+
+    @include _880 {
+      min-height: 75px;
+      max-width: calc(100% - 260px);
+    }
+
+    @include _640 {
+        min-height: 0;
+      max-width: 100%;
+    }
   }
 }
 
@@ -14,12 +33,13 @@
   display: flex;
   flex-direction: column;
 
+
   h2 {
     font-size: 36px;
     font-style: italic;
     font-weight: 700;
     line-height: 1.2;
-    max-width: 48%;
+    max-width: 100%;
     margin-bottom: 32px;
     color: var(--black);
 
@@ -29,7 +49,6 @@
 
     @include _640 {
       font-size: 20px;
-      max-width: 100%;
     }
 
     span {
