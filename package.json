@@ -8,7 +8,7 @@
     "stylelint": "stylelint '**/*.scss'",
     "stylelint-fix": "stylelint '**/*.scss' --fix"
   },
-  "author": "Lena Erofeeva",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.27.7",
